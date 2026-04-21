@@ -1,0 +1,425 @@
+<configs>
+	<append xpath="/recipes">
+		<recipe name="plantedBananaTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropBananaAOO" count="3"/>
+        </recipe>
+				
+        <recipe name="plantedBroccoliSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropBroccoliAOO" count="3"/>
+        </recipe>
+        
+        <recipe name="plantedCabbageSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropCabbageAOO" count="3"/>
+        </recipe>
+		
+        <recipe name="plantedCarrotSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropCarrotAOO" count="3"/>
+        </recipe>
+	
+        <recipe name="plantedCelerySeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropCeleryAOO" count="3"/>
+        </recipe>
+		
+		<recipe name="plantedCherryTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropCherryAOO" count="3"/>
+        </recipe>
+
+		<recipe name="plantedCoconutTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropCoconutAOO" count="3"/>
+        </recipe>	
+		
+        <recipe name="plantedCucumberSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropCucumberAOO" count="3"/>
+        </recipe>
+
+		<recipe name="plantedMixedHerbsSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropMixedHerbsAOO" count="3"/>
+		</recipe>
+		
+		<recipe name="plantedIcebergLettuceSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropIcebergLettuceAOO" count="3"/>
+		</recipe>
+		
+		<recipe name="plantedJalapenoSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropJalapenoPepperAOO" count="3"/>
+		</recipe>
+
+		<recipe name="plantedLemonTreeSeedTSK_AOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropLemonTSK_AOO" count="3"/>
+		</recipe>
+		
+		<recipe name="plantedLimeTreeSeedTSK_AOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropLimeTSK_AOO" count="3"/>
+		</recipe>
+		
+		<recipe name="plantedMangoTreeSeedTSK_AOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropMangoTSK_AOO" count="3"/>
+		</recipe>
+		
+ 		<recipe name="plantedMarijuanaSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropHempAOO" count="3"/>
+		</recipe>
+		
+
+
+        <recipe name="plantedOnionSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropOnionAOO" count="3"/>
+        </recipe>
+		
+		<recipe name="plantedOrangeTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropOrangeAOO" count="3"/>
+        </recipe>	
+		
+<!--		<recipe name="plantedPearTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropPearAOO" count="3"/>
+        </recipe>
+-->		
+		<recipe name="plantedPineappleSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropPineappleAOO" count="3"/>
+        </recipe>
+
+        <recipe name="plantedRaspberrySeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropRaspberryAOO" count="3"/>
+        </recipe>	
+		
+		<recipe name="plantedAppleTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropApplesAOO" count="3"/>
+        </recipe>	
+		
+        <recipe name="plantedRiceSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropRiceAOO" count="3"/>
+        </recipe>
+		
+  		
+<!--		<recipe name="plantedRoseSeedTSK_AOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropRoseTSK_AOO" count="3"/>
+		</recipe>	-->
+
+		<recipe name="plantedMixedSpicesSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropMixedSpicesAOO" count="3"/>
+		</recipe>
+		
+        <recipe name="plantedSpinachSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropSpinachAOO" count="3"/>
+        </recipe>
+		
+		
+        <recipe name="plantedStrawberrySeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropStrawberryAOO" count="3"/>
+        </recipe>
+		
+		<recipe name="plantedSugarMapleTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceMapleWoodPlankAOO" count="3"/>
+        </recipe>
+		
+        <recipe name="plantedSugarcaneSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropSugarcaneStalkAOO" count="3"/>
+        </recipe>		
+		
+
+
+        <recipe name="plantedTomatoSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropTomatoAOO" count="3"/>
+        </recipe>
+		
+		<recipe name="plantedGrapeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropGrapesAOO" count="3"/>
+		</recipe>
+
+		<recipe name="plantedPeachTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropPeachTSK_AOO" count="3"/>
+		</recipe>
+		
+		<recipe name="plantedWatermelonSeedTSK_AOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="foodCropWatermelonTSK_AOO" count="3"/>
+		</recipe>
+				
+        <recipe name="plantedWheatSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="foodCropWheatAOO" count="3"/>
+        </recipe>
+		
+		
+<!--Individual plant seeds, made from mixed seed packs -->
+	
+
+		<recipe name="plantedPeachTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+		<recipe name="plantedAloe1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedBananaTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO"  >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>	
+		<recipe name="plantedBlueberry1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedBroccoliSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+        <recipe name="plantedCabbageSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_too="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+        <recipe name="plantedCarrotSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+        <recipe name="plantedCelerySeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedCherryTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedChrysanthemum1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>	
+		<recipe name="plantedCoconutTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>	
+		<recipe name="plantedCoffee1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+		<recipe name="plantedCotton1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>	
+		<recipe name="plantedCorn1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+        <recipe name="plantedCucumberSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedGoldenrod1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedMixedHerbsSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedHop1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+		<recipe name="plantedIcebergLettuceSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedJalapenoSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>	
+		<recipe name="plantedLemonTreeSeedTSK_AOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedLimeTreeSeedTSK_AOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedMangoTreeSeedTSK_AOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedMarijuanaSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedMushroom1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+        <recipe name="plantedOnionSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedOrangeTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>		
+		<recipe name="plantedPineappleSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>  
+		<recipe name="plantedPotato1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>	
+		<recipe name="plantedPumpkin1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>			
+        <recipe name="plantedRaspberrySeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>		
+		<recipe name="plantedAppleTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>		
+        <recipe name="plantedRiceSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedRoseSeedTSK_AOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+		<recipe name="plantedMixedSpicesSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>		
+        <recipe name="plantedSpinachSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+        <recipe name="plantedStrawberrySeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+        <recipe name="plantedSugarcaneSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedSugarMapleTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>		
+        <recipe name="plantedTomatoSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedGrapeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedWheatSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>			
+        <recipe name="plantedWatermelonSeedTSK_AOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+            <ingredient name="resourceSeedPackAOO" count="1"/>
+        </recipe>
+		<recipe name="plantedWhiteOakTreeSeedAOO" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>
+		<recipe name="plantedYucca1" count="2" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="resourceSeedPackAOO" count="1"/>
+		</recipe>	
+
+		
+		
+<!--Mixed Seeds packs, made from seeds -->
+		
+		
+
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedAloe1" count="10"/>
+		</recipe>	
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedBananaTreeSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedBroccoliSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedBlueberry1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCabbageSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCarrotSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCelerySeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCherryTreeSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedChrysanthemum1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCoconutTreeSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCoffee1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCorn1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCotton1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedCucumberSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedGoldenrod1" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedMixedHerbsSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedHop1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedIcebergLettuceSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedJalapenoSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedLemonTreeSeedTSK_AOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedLimeTreeSeedTSK_AOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedMangoTreeSeedTSK_AOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedMarijuanaSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedMushroom1" count="10"/>
+		</recipe>		
+
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedOnionSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedOrangeTreeSeedAOO" count="10"/>
+		</recipe>
+<!--		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedPearTreeSeedAOO" count="10"/>
+		</recipe>  -->
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedPineappleSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedPotato1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedPumpkin1" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedRaspberrySeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedAppleTreeSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedRiceSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedRoseSeedTSK_AOO" count="10"/>
+		</recipe>		
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedMixedSpicesSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedSpinachSeedAOO" count="10"/>
+		</recipe>
+
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedStrawberrySeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedSugarcaneSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedSugarMapleTreeSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedTomatoSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedGrapeSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedWatermelonSeedTSK_AOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedWheatSeedAOO" count="10"/>
+		</recipe>
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedWhiteOakTreeSeedAOO" count="10"/>
+		</recipe>				
+		<recipe name="resourceSeedPackAOO" count="1" craft_time="1" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+			<ingredient name="plantedYucca1" count="10"/>
+		</recipe>	
+	</append>
+</configs>

@@ -1,0 +1,1614 @@
+<configs>
+
+	<include filename="AdvancedPower/recipes-AdvancedPower.xml" />
+	<include filename="Crops/recipes-Crops.xml" />
+	<include filename="Food/recipes-Food.xml" />
+	<include filename="Quests/recipes-Quests.xml" />
+	<include filename="StorageDecor/recipes-Storage.xml" />
+	<include filename="WeaponsTools/recipes-WeaponsTools.xml" />
+	<include filename="Workstations/recipes-Workstations.xml" />
+	
+	<include filename="Entities/Animals/recipes-Animals.xml" />
+
+
+    <append xpath="/recipes">
+	
+		<!-- ============ Vanilla Items =========== -->
+		<recipe name="bathroomVariantHelper_AOO" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+        </recipe>	
+		<recipe name="cntDeskMetalVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+
+        </recipe>
+		<recipe name="officeChair01VariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/>  
+
+        </recipe>
+		<recipe name="oldChair1VariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/>  
+
+        </recipe>
+		<recipe name="chairFoldingMetalVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+ 
+        </recipe>
+		<recipe name="chairCampingVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+ 
+        </recipe>
+		<recipe name="barStoolVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/>  
+
+        </recipe>
+		<recipe name="chainLinkFencePOIVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+ 
+        </recipe>
+		<recipe name="pipeLargeBlockVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+
+        </recipe>
+		<recipe name="pipeSmallBlockVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/>  
+ 
+        </recipe>
+		<recipe name="cntFileCabinetBlockVariantHelper" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/>  
+
+        </recipe>
+		<recipe name="miscVanillaVariantHelper_AOO" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+        </recipe>
+		<recipe name="schoolVariantHelper_AOO" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+        </recipe>
+		<recipe name="restaurantVariantHelper_AOO" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+        </recipe>
+		<recipe name="constructionVariantHelper_AOO" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+        </recipe>
+		<recipe name="varDecorAOO" count="1" craft_time="60" craft_area="DecorationWorkBench">
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceWood" count="50"/> 
+        </recipe>
+
+
+		<recipe name="toolAgedBarrelAOO" count="1" craft_time="300" craft_area="MasterWorkBench">
+			<ingredient name="resourceWhiteOakPlankAOO" count="50"/> 
+        </recipe>		
+
+
+		<recipe name="toolPasteurizerAOO" count="1" craft_time="30"  craft_area="MasterWorkBench">
+            <ingredient name="resourceScrapPolymers" count="100"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceForgedSteel" count="10"/>
+        </recipe>		
+		
+		<recipe name="toolSeedProcessorAOO" count="1" craft_time="30"  craft_area="MasterWorkBench">
+            <ingredient name="resourceScrapPolymers" count="100"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceScrapIron" count="100"/>
+        </recipe>		
+		<recipe name="toolJuicerAOO" count="1" craft_time="30" craft_area="MasterWorkBench">
+            <ingredient name="resourceForgedIron" count="4"/>
+            <ingredient name="resourceMechanicalParts" count="4"/>
+            <ingredient name="resourceScrapPolymers" count="4"/>
+        </recipe>		
+		<recipe name="toolWineTankAOO" count="1" craft_time="30" craft_area="MasterWorkBench">
+            <ingredient name="resourceWood" count="10"/>
+            <ingredient name="resourceForgedIron" count="10"/>
+        </recipe>	
+<!-- ================ Pocket Mods ========================================== -->
+
+	
+		<recipe name="modClothingStoragePocketStrengthAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceMagicPotionStrengthAOO" count="1"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>		
+		<recipe name="modArmor6XStoragePocketStrengthAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceMagicPotionStrengthAOO" count="1"/>
+			<ingredient name="resourceSewingKit" count="3"/>
+		</recipe>	
+		<recipe name="modClothingStoragePocketPerceptionAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceMagicPotionPerceptionAOO" count="1"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>		
+		<recipe name="modArmor6XStoragePocketPerceptionAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceMagicPotionPerceptionAOO" count="1"/>
+			<ingredient name="resourceSewingKit" count="3"/>
+		</recipe>	
+		<recipe name="modClothingStoragePocketAgilityAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceMagicPotionAgilityAOO" count="1"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>		
+		<recipe name="modArmor6XStoragePocketAgilityAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceMagicPotionAgilityAOO" count="1"/>
+			<ingredient name="resourceSewingKit" count="3"/>
+		</recipe>	
+		<recipe name="modClothingStoragePocketIntelligenceAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceMagicPotionIntelligenceAOO" count="1"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>		
+		<recipe name="modArmor6XStoragePocketIntelligenceAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceMagicPotionIntelligenceAOO" count="1"/>
+			<ingredient name="resourceSewingKit" count="3"/>
+		</recipe>		
+		<recipe name="modClothingStoragePocketFortitudeAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceMagicPotionFortitudeAOO" count="1"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>		
+		<recipe name="modArmor6XStoragePocketFortitudeAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceSpiderSilkAOO" count="4"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceWoolAOO" count="1"/>
+			<ingredient name="resourceMagicPotionFortitudeAOO" count="1"/>
+			<ingredient name="resourceSewingKit" count="3"/>
+		</recipe>		
+		
+		<recipe name="modLuckyRabbitFootAOO" count="1" craft_area="workbench">
+			<ingredient name="resourceRabbitsFootAOO" count="1"/>
+			<ingredient name="resourceLeather" count="1"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+			<ingredient name="resourceMagicPotionAOO" count="4"/>
+		</recipe>	
+
+<!-- ===================== Leather Recipes ================================================ -->
+
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceBearPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceIbexPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceDeerPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+			<recipe name="resourceLeather" count="30" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceElephantPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceGoatPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceWolfPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+	
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceBuffaloPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>		
+	
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceCowPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>				
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourcePigPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>				
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceRhinoPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>	
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceTigerPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceCamelPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>	
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourcePenguinPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>	
+			</recipe>
+			<recipe name="resourceLeather" count="20" craft_time="10" craft_area="Farm Table" >
+				<ingredient name="resourceZebraPeltAOO" count="1"/>
+				<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+				<ingredient name="resourceAnimalFat" count="5"/>			
+			</recipe>
+	
+
+<!-- ===================== allow converting arrows to/from bolts =============================== -->
+
+			<recipe name="ammoArrowFlaming" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoCrossbowBoltFlaming" count="1"/>
+			</recipe>
+			<recipe name="ammoCrossbowBoltFlaming" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoArrowFlaming" count="1"/>
+			</recipe>
+			
+			<recipe name="ammoArrowExploding" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoCrossbowBoltExploding" count="1"/>
+			</recipe>
+			<recipe name="ammoCrossbowBoltExploding" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoArrowExploding" count="1"/>
+			</recipe>
+			
+			<recipe name="ammoArrowIron" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoCrossbowBoltIron" count="1"/>
+			</recipe>
+			<recipe name="ammoCrossbowBoltIron" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoArrowIron" count="1"/>
+			</recipe>
+			
+			<recipe name="ammoArrowSteelAP" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
+			</recipe>
+			<recipe name="ammoCrossbowBoltSteelAP" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoArrowSteelAP" count="1"/>
+			</recipe>
+			
+			<recipe name="ammoArrowStone" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoCrossbowBoltStone" count="1"/>
+			</recipe>
+			<recipe name="ammoCrossbowBoltStone" count="1" craft_time="1"  tags="workbenchCrafting">
+				<ingredient name="ammoArrowStone" count="1"/>
+			</recipe>
+
+			<recipe name="resourceChickenFeedAOO" count="1">
+				<ingredient name="foodCropCorn" count="3"/>
+			</recipe>
+			<recipe name="resourceChickenFeedAOO" count="1">
+				<ingredient name="foodCropWheatAOO" count="3"/> 
+			</recipe>
+			<recipe name="resourceChickenFeedAOO" count="1">
+				<ingredient name="foodCropRiceAOO" count="3"/> 
+			</recipe>			
+		<recipe name="toolBellowsx40AOO" count="1" craft_time="10" tags="learnable,bellow1">
+			<ingredient name="toolBellows" count="1"/>
+		</recipe>
+
+		<recipe name="toolBellowsx50AOO" count="1" craft_time="10" tags="learnable,bellow2">
+			<ingredient name="toolBellows" count="1"/>
+		</recipe>
+
+		<recipe name="toolBellowsx60AOO" count="1" craft_time="10" tags="learnable,bellow3">
+			<ingredient name="toolBellows" count="1"/>
+		</recipe>
+
+		<recipe name="toolBellowsx70AOO" count="1" craft_time="10" tags="learnable,bellow4">
+			<ingredient name="toolBellows" count="1"/>
+		</recipe>
+
+		<recipe name="toolBellowsx80AOO" count="1" craft_time="10" tags="learnable,bellow5">
+			<ingredient name="toolBellows" count="1"/>
+		</recipe>			
+
+		<recipe name="resourceEliteRepairKit" count="1" craft_time="1" craft_area="OblivionTrader" >
+			<ingredient name="SkullTokenAOO" count="12"/>
+		</recipe>				
+			
+   <recipe name="modDyeBasicEmperors420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+    </recipe>
+    <recipe name="modDyeBasicAmber420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicFuchsia420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicGrey420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicIndigo420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicLime420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicRose420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicSilver420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicTeal420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicTrueBlack420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicBlack420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeBasicYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--ARMED FORCES-->	
+    <recipe name="modDyeAFGreyAsh420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreyBlackCoral420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreyCadet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreyCharcoal420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreyDarkSlate420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreyGunmetal420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenArmy420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenArtichoke420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenDarkJungle420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenDarkMoss420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenHunter420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenMustard420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenOldMoss420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenBlackOlive420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenOlive420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFGreenOliveLight420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownKhaki420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownDarkKhaki420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownSand420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownDesert420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownDirt420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownEcru420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBrownFieldDrab420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBluePolice420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBluePrussian420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBlueQueen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBlueNavy420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBlueIndigo420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeAFBlueMaastricht420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--LEATHER-->
+    <recipe name="modDyeLeatherBlack420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherTanned420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherDarkRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherSeal420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherRusset420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherDeer420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherTuscan420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherSaddle420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+    <recipe name="modDyeLeatherSienna420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+   <ingredient name="resourcePaint" count="25"/>
+	  <ingredient name="drinkJarEmpty" count="1"/>
+  </recipe>
+<!--MAXIMUM-->
+    <recipe name="modDyeMaximumBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumBlueGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumBluePurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumGreenYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumRedPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMaximumYellowRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--METALLIC-->
+    <recipe name="modDyeMetallicBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicBronze420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicGold420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicSeaweed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicSilver420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicSunburst420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeMetallicYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--NEON-->
+    <recipe name="modDyeNeonBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonCyan420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonFuchsia420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonLime420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonTurquoise420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeNeonYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--PALE-->
+    <recipe name="modDyePaleAqua420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleCarmine420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleCerulean420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleChestnut420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleCopper420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleCornflower420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleCyan420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleGold420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleGoldenrod420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleLavender420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleMagenta420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleRose420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePalePink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePalePlum420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleRobinEgg420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleSilver420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleSpringBud420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleTaupe420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleTurquoise420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePaleViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--PASTEL-->
+    <recipe name="modDyePastelBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelGrey420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelMagenta420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePastelYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--PERSIAN-->
+    <recipe name="modDyePersianBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianIndigo420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianPlum420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePersianRose420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--PHILLIPINE-->
+    <recipe name="modDyePhillipineBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineBronze420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineGold420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipinePink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineIndigo420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineSilver420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineSkyBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyePhillipineYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>	
+    <recipe name="modDyePhillipineGoldenYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>	
+    <recipe name="modDyePhillipineGrey420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--ROYAL-->
+    <recipe name="modDyeRoyalBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalAzure420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalFuchsia420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalBrown420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeRoyalYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--SPANISH-->
+    <recipe name="modDyeSpanishBlue420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishBistre420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishCarmine420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishCrimson420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishGreen420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishOrange420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishRed420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishGrey420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishPurple420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishViridian420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishViolet420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+    <recipe name="modDyeSpanishYellow420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>
+<!--USER_REQUESTS-->
+    <recipe name="modDyeBubbleGumPink420" count="1" craft_area="AlchemyStation" tags="learnable,L1Alchemy">
+      <ingredient name="resourcePaint" count="25"/>
+	    <ingredient name="drinkJarEmpty" count="1"/>
+    </recipe>	
+
+
+	
+
+		<recipe name="vehicleRW01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW01">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW02Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW02">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW03Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW03">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW04Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW04">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW05Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW05">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW06Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW06">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW07Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW07">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleRW08Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW08">
+			<ingredient name="vehicleTokenAOO" count="1"/>
+		</recipe>
+		<recipe name="vehicleRW09Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RW09">
+			<ingredient name="vehicleTokenAOO" count="11"/>
+		</recipe>
+		<recipe name="vehicleSuperCar01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,SuperCar01">
+			<ingredient name="vehicleTokenAOO" count="14"/>
+		</recipe>
+		<recipe name="vehicleSuperCar02Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,SuperCar02">
+			<ingredient name="vehicleTokenAOO" count="14"/>
+		</recipe>
+		<recipe name="vehicleSuperCar03Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,SuperCar03">
+			<ingredient name="vehicleTokenAOO" count="14"/>
+		</recipe>
+
+		<recipe name="vehicleRocketToiletPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,RocketToilet">
+			<ingredient name="vehicleTokenAOO" count="13"/>
+		</recipe>
+		<recipe name="vehicleBatCar01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,BatCar">
+			<ingredient name="vehicleTokenAOO" count="20"/>
+		</recipe>
+		<recipe name="vehicleSportsCarWhitePlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,SportCar">
+			<ingredient name="vehicleTokenAOO" count="10"/>
+		</recipe>
+		<recipe name="vehicleCyberDeloreanPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,Delorean">
+			<ingredient name="vehicleTokenAOO" count="9"/>
+		</recipe>
+		<recipe name="vehicleHotRod01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,HotRod">
+			<ingredient name="vehicleTokenAOO" count="10"/>
+		</recipe>
+		<recipe name="vehicleFeature01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,Feature">
+			<ingredient name="vehicleTokenAOO" count="8"/>
+		</recipe>
+		<recipe name="vehicleBuggy01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,Buggy">
+			<ingredient name="vehicleTokenAOO" count="5"/>
+		</recipe>
+		<recipe name="vehicleMuscleCar01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,MuscleCar">
+			<ingredient name="vehicleTokenAOO" count="6"/>
+		</recipe>
+		<recipe name="vehicleApocRVPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,ApocRV">
+			<ingredient name="vehicleTokenAOO" count="8"/>
+		</recipe>
+		<recipe name="vehicleHarleyPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,Harley">
+			<ingredient name="vehicleTokenAOO" count="5"/>
+		</recipe>
+		<recipe name="vehicleChopperPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,Chopper">
+			<ingredient name="vehicleTokenAOO" count="5"/>
+		</recipe>
+		<recipe name="vehicleApocTractorPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,ApocTractor">
+			<ingredient name="vehicleTokenAOO" count="9"/>
+		</recipe>
+		<recipe name="vehiclePoliceCopterPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,PoliceCopter">
+			<ingredient name="vehicleTokenAOO" count="15"/>
+		</recipe>
+		<recipe name="vehicleMI17Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,MI17">
+			<ingredient name="vehicleTokenAOO" count="15"/>
+		</recipe>
+		<recipe name="vehicleMCycle01Placeable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,MCycle">
+			<ingredient name="vehicleTokenAOO" count="4"/>
+		</recipe>
+		<recipe name="vehicleMotoPlaceable" count="1" craft_area="TraderVic" craft_time="3" tags="Learnable,Moto">
+			<ingredient name="vehicleTokenAOO" count="12"/>
+		</recipe>
+
+		<recipe name="CloningL1AOO" count="1" craft_time="30" craft_area="MasterWorkBench" tags="learnable,L1CloningTool">
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceForgedIron" count="75"/>
+			<ingredient name="resourceMechanicalParts" count="75"/>	
+			<ingredient name="resourceMetalPipe" count="15"/>
+			<ingredient name="resourceElectricParts" count="50"/>	
+		</recipe>	
+
+		<recipe name="CloningL2AOO" count="1" craft_time="30" craft_area="MasterWorkBench" tags="learnable,L2CloningTool">
+			<ingredient name="resourceBrokenGlass" count="50"/>
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceMechanicalParts" count="25"/>	
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceElectricParts" count="25"/>	
+		</recipe>	
+
+		<recipe name="CloningL3AOO" count="1" craft_time="30" craft_area="MasterWorkBench" tags="learnable,L2CloningTool">
+			<ingredient name="resourceBrokenGlass" count="50"/>
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceMechanicalParts" count="25"/>	
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceElectricParts" count="25"/>	
+		</recipe>	
+
+
+		<recipe name="AlchemyL2UpgradeAOO" count="1" craft_time="30" craft_area="MasterWorkBench" tags="learnable,L2Alchemy">
+			<ingredient name="KyburCrystalAOO" count="3"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>	
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>	
+
+		<recipe name="AlchemyL3UpgradeAOO" count="1" craft_time="30" craft_area="MasterWorkBench" tags="learnable,L3Alchemy">
+			<ingredient name="KyburCrystalAOO" count="3"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>	
+			<ingredient name="resourceMetalPipe" count="5"/>	
+		</recipe>	
+
+
+
+
+		<recipe name="animalCanisterAOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL1AOO">
+			<ingredient name="resourceBCryoAOO" count="1"/>			
+			<ingredient name="resourceADNAAOO" count="1"/>	
+			<ingredient name="drugSteroids" count="1"/>			
+			<ingredient name="medicalBloodBag" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+		<recipe name="humanCanisterAOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL1AOO">
+			<ingredient name="resourceICryoAOO" count="1"/>			
+			<ingredient name="resourceHDNAAOO" count="1"/>	
+			<ingredient name="drugSteroids" count="1"/>			
+			<ingredient name="medicalBloodBag" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+		<recipe name="resourceADNAAOO" count="2" craft_time="120" craft_area="CloningStation"  >
+			<ingredient name="foodRawMeat" count="20"/>			
+			<ingredient name="toolBeaker" count="1"/>	
+		</recipe>
+		<recipe name="resourceHDNAAOO" count="2" craft_time="120" craft_area="CloningStation"  >
+			<ingredient name="foodRawMeat" count="30"/>			
+			<ingredient name="toolBeaker" count="1"/>	
+		</recipe>		
+
+
+
+		<recipe name="drinkJarEmpty" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+			<ingredient name="unit_glass" count="10"/>
+			<ingredient name="unit_clay" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_clay,unit_glass"/>
+				</effect_group>
+		</recipe>
+		<recipe name="drinkJarRiverWater" count="1" craft_area="campfire" tags="perkMasterChef">
+			<ingredient name="resourceSnowBall" count="1"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+
+
+		<recipe name="wksMilkingCowAOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="3"/>	
+		</recipe>	
+		<recipe name="wksEggChickenAOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="2"/>	
+		</recipe>
+
+
+
+		<recipe name="RandomAnimalSpawner_AOO" count="1" craft_time="240" craft_area="CloningStation"  craft_tool="CloningL2AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>	
+		</recipe>
+		<recipe name="RandomGuardSpawner_AOO" count="1" craft_time="240" craft_area="CloningStation"  craft_tool="CloningL2AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>	
+		</recipe>
+
+
+
+
+
+		<recipe name="WildBrownBearSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>
+		<recipe name="WildIbexSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>
+		<recipe name="WildDeerFemaleSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>		
+		<recipe name="WildDeerMaleSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>
+		<recipe name="WildElephantSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>		
+		</recipe>		
+		<recipe name="WildWolfSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>		
+		<recipe name="WildGoatSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>		
+		<recipe name="WildRabbitSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>			
+		<recipe name="WildCapeBuffaloSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>			
+		<!--<recipe name="WildCelticWolfhoundSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>			-->
+		<recipe name="WildScorpionSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>			
+		<recipe name="WildLonghornCattleSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>			
+		<recipe name="WildPigSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>			
+		<recipe name="WildRhinoSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	
+		<recipe name="WildScottlandCattleSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>	
+		<recipe name="WildTigerSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	
+		<recipe name="WildCamelSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>	
+		<recipe name="WildPenguinSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	
+		<recipe name="WildSpidersSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>	
+		<recipe name="WildChickensSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>	
+		<!--<recipe name="WildGooseSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	-->
+		<recipe name="WildTurtleSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	
+		<recipe name="WildSheepSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>	
+		<recipe name="WildComodoDragonSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>				
+		</recipe>	
+		<recipe name="WildLeopardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	
+		<recipe name="WildZebraSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="30"/>			
+		</recipe>	
+		<!--<recipe name="PetGoatSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>				
+		</recipe>	-->
+		<!--<recipe name="PetRabbitSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<recipe name="PetCaneCorsoSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation"  craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	
+		<recipe name="PetCatSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	
+		<!--<recipe name="PetCatV2Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>				
+		</recipe>	-->
+		<!--<recipe name="PetCatV3Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>				
+		</recipe>	-->
+		<recipe name="PetHellenicHoundSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	
+		<recipe name="PetWolfHoundSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	
+		<recipe name="PetHorseSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	
+		<!--<recipe name="PetHorseV2Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<!--<recipe name="PetHorseV3Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>				
+		</recipe>	-->
+		<!--<recipe name="PetHorseV4Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>				
+		</recipe>	-->
+		<!--<recipe name="PetHorseV5Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<!--<recipe name="PetHorseV6Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+				<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<!--<recipe name="PetPigSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<!--<recipe name="PetChickenV1Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>		
+		</recipe>	-->
+		<!--<recipe name="PetChickenV2Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<!--<recipe name="PetChickenV3Spawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<!--<recipe name="PetGooseSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	-->
+		<recipe name="PetPugSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>		
+		</recipe>	
+		<recipe name="PetBeagleSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="animalCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="60"/>			
+		</recipe>	
+
+		<recipe name="GuardApocGuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+		<recipe name="GuardSoldier01GuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+		<recipe name="GuardArcherGuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+		<recipe name="GuardSoldier02PGuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+		<recipe name="GuardSoldier02SHGuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+		<recipe name="GuardWarriorGuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+		<recipe name="GuardPirateGuardSpawner_AOO" count="1" craft_time="120" craft_area="CloningStation" craft_tool="CloningL3AOO">
+			<ingredient name="humanCanisterAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="300"/>			
+		</recipe>
+
+
+
+
+
+
+
+
+<!-- ================================== Potions ==================================================== -->
+
+		<recipe name="resPotionAOO" count="1" craft_time="20" craft_area="AlchemyStation" tags="learnable,L1Alchemy" >
+			<ingredient name="resourceZombieGutsAOO" count="2"/>	
+			<ingredient name="resourceZombieBrainsAOO" count="2"/>				
+			<ingredient name="drinkJarBoiledWater" count="5"/>
+		</recipe>
+
+		<recipe name="resourceMagicPotionAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L2Alchemy">
+			<ingredient name="resourceCowTongueAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="2"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L2Alchemy">
+			<ingredient name="resourceDeerAntlerAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="2"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>		
+		<recipe name="resourceMagicPotionAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L2Alchemy">
+			<ingredient name="resourcePigsFeetAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="2"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>	
+		<recipe name="resourceMagicPotionAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L2Alchemy">
+			<ingredient name="resourceTurtleShellAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="2"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L2Alchemy">
+			<ingredient name="resourceCamelToeAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="2"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>		
+		<recipe name="resourceMagicPotionStrengthAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceElephantTuskAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionPerceptionAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceSpiderEggsAOO" count="1"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionAgilityAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceTigerToothAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>	
+		<recipe name="resourceMagicPotionIntelligenceAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="8"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>	
+		<recipe name="resourceMagicPotionFortitudeAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceBuffaloHornAOO" count="1"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>	
+
+		<recipe name="resourceMagicPotionInvisibility30AOO" count="3" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceRhinoHornAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionInvisibility60AOO" count="3" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceRhinoHornAOO" count="1"/>
+			<ingredient name="resourceScorpionTailAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionInvisibility120AOO" count="3" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceRhinoHornAOO" count="1"/>
+			<ingredient name="resourceScorpionTailAOO" count="1"/>
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceAcid" count="5"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		<recipe name="resourceMagicPotionSpeedAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="5"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		
+		<recipe name="resourceMagicPotionSpeedAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceChickenFeetAOO" count="1"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>		
+		<recipe name="resourceMagicPotionFlightAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourceBuffaloHornAOO" count="1"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>	
+		<recipe name="resourceMagicPotionFlightAOO" count="1" craft_time="60" craft_area="AlchemyStation" tags="learnable,L3Alchemy">
+			<ingredient name="resourceGreenSlimeAOO" count="2"/>
+			<ingredient name="resourcePenguinGoldenAOO" count="1"/>
+			<ingredient name="resourceAcid" count="1"/>	
+			<ingredient name="foodRottingFlesh" count="50"/>
+		</recipe>
+		
+		
+	</append>
+</configs>

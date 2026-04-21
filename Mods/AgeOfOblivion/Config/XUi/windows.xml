@@ -1,0 +1,669 @@
+<configs>
+
+	<include filename="Core/windows-Core.xml" />
+	<include filename="UI/windows-UI.xml" />
+	<include filename="zHUD/windows-zHUD.xml" />
+
+	<!--<setattribute xpath="/windows/window[@name='windowTargetBar']" name="visibility">always</setattribute>-->
+
+	<append xpath="/windows">
+
+<!-- ===== Common ====== -->
+
+	<window name="recipeInfoPanel" anchor="CenterTop" pos="-160, -60" width="300" height="800" controller="RecipeInfoWindow, OblivionCore" cursor_area="true"  >
+			<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+				<sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_search"/>
+				<label style="header.name" text="Recipe Information" />
+			</panel>
+
+			<rect name="contentCraftingInfo" height="565" depth="1" pos="0,-46" >
+				<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,0" width="300" height="565" color="[black]" type="sliced" fillcenter="false" />
+				<sprite color="0,33,45,238" type="sliced" />
+				<rect pos="2,0" height="36">
+					<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="0,33,45" type="sliced" />
+					<label depth="3" pos="0,-4" justify="center" width="300" text="Tools Required" />
+					<grid name="list" pos="0,-36" rows="1" cols="5" cell_width="60" cell_height="60" repeat_content="true" >
+						<OblivionCore_recipe_tool_entry name="0" />
+					</grid>
+				</rect>
+			<!--	<rect pos="2,-96" height="36">
+					<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="0,33,45" type="sliced" />
+					<label depth="3" pos="0,-4" justify="center" width="300" text="Items" />
+					<grid name="list" pos="0,-36" rows="2" cols="5" cell_width="60" cell_height="60" repeat_content="true" >
+						<OblivionCore_recipe_item_entry name="0" />
+					</grid>
+				</rect> -->
+				<rect pos="2,-96" height="0">
+				<!--	<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="0,33,45" type="sliced" />
+					<label depth="3" pos="0,-4" justify="center" width="300" text="Items" /> -->
+					<grid name="list" pos="0,-36" rows="3" cols="5" cell_width="0" cell_height="0" repeat_content="true" >
+						<OblivionCore_recipe_item_entry name="0" />
+					</grid>
+				</rect> 				
+				<rect pos="2,-96" height="35">
+					<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="0,33,45" type="sliced" />
+					<label depth="3" pos="0,-4" justify="center" width="300" text="Blocks Required Nearby" />
+					<grid name="list" pos="0,-36" rows="2" cols="5" cell_width="60" cell_height="60" repeat_content="true" >
+						<OblivionCore_recipe_block_entry name="0" />
+					</grid>
+				</rect>				
+				<rect pos="2,-252" height="35">
+					<sprite depth="8" sprite="menu_empty3px" height="36"  color="[black]" type="sliced" fillcenter="false" />
+					<sprite depth="1" color="0,33,45" type="sliced" />
+					<label depth="3" pos="0,-4" justify="center" width="300" text="Ingredients Required" />
+					<grid name="list" pos="0,-36" rows="2" cols="5" cell_width="60" cell_height="60" repeat_content="true" >
+						<OblivionCore_recipe_ingredient_entry name="0" />
+					</grid>
+				</rect>				
+	
+
+	
+<!--				<scrollview scroll_direction="Horizontal" pos="1,-167" depth="10" width="300" height="60" over_scroll="false" scroll_speed="1"  >
+					<grid name="list" rows="1" cols="5" cell_width="60" cell_height="60" repeat_content="true" >
+						<OblivionCore_recipe_tool_entry name="0" />
+					</grid>
+				</scrollview>
+-->				
+	<!--			<scrollview scroll_direction="Horizontal" pos="1,-480" depth="10" width="300" height="75" over_scroll="false" scroll_speed="1">
+
+				</scrollview>
+	-->	
+<!--				<scrollview scroll_direction="Horizontal" pos="1,-272" depth="10" width="300" height="75" over_scroll="false" scroll_speed="1">
+					<grid name="list" rows="1" cols="10" cell_width="75" cell_height="75" repeat_content="true" >
+						<OblivionCore_recipe_item_entry name="0" />
+					</grid>
+				</scrollview> -->
+				<scrollview scroll_direction="Horizontal" pos="1,-490" depth="10" width="300" height="75" over_scroll="false" scroll_speed="1">
+
+				</scrollview>
+				
+				
+				
+				<sprite depth="4" name="Ingredient1" atlas="ItemIconAtlas" size="50,50" pos="270,-30" pivot="center" foregroundlayer="true" />
+				<sprite depth="5" name="Ingredient2" atlas="ItemIconAtlas" size="50,50" pos="315,-30" pivot="center" foregroundlayer="true" />
+				<sprite depth="6" name="Ingredient3" atlas="ItemIconAtlas" size="50,50" pos="360,-30" pivot="center" foregroundlayer="true" />
+				<sprite depth="7" name="Ingredient4" atlas="ItemIconAtlas" size="50,50" pos="405,-30" pivot="center" foregroundlayer="true" />
+				<sprite depth="8" name="Ingredient5" atlas="ItemIconAtlas" size="50,50" pos="450,-30" pivot="center" foregroundlayer="true" />
+				<sprite depth="4" name="Ingredient6" atlas="ItemIconAtlas" size="50,50" pos="270,-90" pivot="center" foregroundlayer="true" />
+				<sprite depth="5" name="Ingredient7" atlas="ItemIconAtlas" size="50,50" pos="315,-90" pivot="center" foregroundlayer="true" />
+				<sprite depth="6" name="Ingredient8" atlas="ItemIconAtlas" size="50,50" pos="360,-90" pivot="center" foregroundlayer="true" />
+				<sprite depth="7" name="Ingredient9" atlas="ItemIconAtlas" size="50,50" pos="405,-90" pivot="center" foregroundlayer="true" />
+				<sprite depth="8" name="Ingredient10" atlas="ItemIconAtlas" size="50,50" pos="450,-90" pivot="center" foregroundlayer="true" />
+			</rect>
+		</window>
+
+
+
+
+
+	<!--  Hide Recipelist -->
+
+		<window name="HiddenRecipesListWindow" controller="ProducerRecipesList, OblivionCore" panel="Left" width="250" height="300" cursor_area="true" >
+			<rect name="content" pos="-9999,9999" height="300" depth="1">
+				<panel style="header.panel" pos="0,46">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="LIST" />
+				</panel>
+				<scrollview pos="0,0" depth="10" width="500" height="300" over_scroll="false" scroll_speed="2.5">
+					<grid name="list" rows="100" cols="1" cell_width="250" cell_height="65" repeat_content="true" >
+						<OblivionCore_recipe_entry name="0"/>
+					</grid>
+				</scrollview>
+			</rect>
+		</window>
+
+	<!--  Hide Tools -->
+
+		<window name="HiddenToolsWindow" height="200" width="180" panel="Left" cursor_area="true">
+			<rect name="content" pos="-9999,9999">
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text="Drill Bits" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="tools,0,-3" anchor_bottom="tools,0,0" anchor_right="tools,1,0" anchor_top="tools,1,49" on_press="true" />
+				<grid depth="12" name="tools" pos="13,0" rows="10" cols="10" cell_width="75" cell_height="75" repeat_content="true" controller="ProducerTools, OblivionCore">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+<!-- ======= Specific ===== -->
+
+
+<!-- Butcher Table ==== Only  Input and Output ==== -->
+
+
+		<window name="butcherInputWindow" anchor="CenterTop" pos="-500,-60" height="350" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+					<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Information" />
+				</panel>
+				<panel name="info" pos="0,-46" height="120" width="310">
+					<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" />
+					<label name="Info" pos="7,-5" depth="5" text_key="ButcherInfo" />
+				</panel>
+			</rect>
+			<rect name="content" pos="0,-170">
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Carcass" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+		<window name="butcherOutputWindow" anchor="CenterTop" pos="-500,-450" height="375" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="Butchered Products" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,-46"  rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+
+<!-- Resurrection Table ==== Only  Input and Output ==== -->
+
+
+		<window name="ResurrectionInputWindow" anchor="CenterTop" pos="-500,-60" height="350" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+					<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Information" />
+				</panel>
+				<panel name="info" pos="0,-46" height="100" width="310">
+					<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" />
+					<label name="Info" pos="7,-5" depth="5" text_key="ResurrectionInfo" />
+				</panel>
+			</rect>
+			<rect name="content" pos="0,-170">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Zombie Corpse and Res Potion" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="ResurrectionOutputWindow" anchor="CenterTop" pos="-500,-450" height="375" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="Zombie Guard" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,-46"  rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+<!-- Car Crusher ==== Only  Input and Output ==== -->
+
+		<window name="CrusherInputWindow" anchor="CenterTop" pos="-500,-60" height="350" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Information" />
+				</panel>
+				<panel name="info" pos="0,-46" height="100" width="310">
+					<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" />
+					<label name="Info" pos="7,-5" depth="5" text_key="CrusherInfo" />
+				</panel>
+			</rect>
+			<rect name="content" pos="0,-170">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Vehicles" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+		<window name="CrusherOutputWindow" anchor="CenterTop" pos="-500,-450" height="375" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="Salvaged" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,-46"  rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+<!-- Milking Cow ==== Only  Input and Output ==== -->
+
+		<window name="MilkingCowInputWindow" anchor="CenterTop" pos="-500,-60" height="350" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+					<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Information" />
+				</panel>
+				<panel name="info" pos="0,-46" height="100" width="310">
+					<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" />
+					<label name="Info" pos="7,-5" depth="5" text_key="MilkingCowInfo" />
+				</panel>
+			</rect>
+			<rect name="content" pos="0,-170">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Animal Feed" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="MilkingCowOutputWindow" anchor="CenterTop" pos="-500,-450" height="375" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="Milk" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,-46"  rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+<!-- Egg Chicken ==== Only  Input and Output ==== -->
+
+		<window name="EggChickenInputWindow" anchor="CenterTop" pos="-500,-60" height="350" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+					<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Information" />
+				</panel>
+				<panel name="info" pos="0,-46" height="100" width="310">
+				<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" />
+					<label name="Info" pos="7,-5" depth="5" text_key="EggChickenInfo" />
+				</panel>
+			</rect>
+			<rect name="content" pos="0,-170">
+					<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Animal Feed" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="EggChickenOutputWindow" anchor="CenterTop" pos="-500,-450" height="375" width="316" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="Eggs" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,-46"  rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+<!-- AutoMiner -->
+
+
+		<window name="minerTitleInfoWindow" anchor="CenterTop" pos="-550,-60"  width="380" height="200" cursor_area="true">
+			<rect name="content" pos="0,0" height="200" depth="1">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Auto Miner" />
+				</panel>
+				<panel name="minerinfo" pos="0,-46" height="150" width="376" backgroundColor="0,33,45,238">
+				<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9"  />
+					<label name="Info" pos="5,-5" depth="5" text_key="The Miner needs to be placed in an area with at least 4  Stone Terrain blocks nearby. Will run on Just gasoline but if you add Drillbits you will increase the speed and mining power." />
+				</panel>
+			</rect>
+		</window>
+
+		<window name="minerRecipesListWindow" controller="ProducerRecipesList, OblivionCore" anchor="CenterTop" pos="-550,-280" width="380" height="150" cursor_area="true"  >
+			<rect name="content" pos="0,0" height="130" depth="1" >
+				<sprite depth="2" name="background" pos="0,1" color="128,128,128" type="sliced"/>
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Recipes" />
+				</panel>
+				<scrollview pos="0,-46" depth="10" width="375" height="100" over_scroll="false" scroll_speed="2.5">
+					<grid name="list" rows="100" cols="1" cell_width="375" cell_height="32" repeat_content="true" >
+						<OblivionCore_recipe_entry3 name="0"/>
+					</grid>
+				</scrollview>
+			</rect>
+		</window>
+
+		
+		<window name="minerToolsWindow" anchor="CenterTop" pos="-780,-60" height="160" width="128" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text="Tools" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="tools,0,-3" anchor_bottom="tools,0,0" anchor_right="tools,1,0" anchor_top="tools,1,49" on_press="true" />
+				<grid depth="12" name="tools" pos="0,-46" rows="2" cols="2" cell_width="65" cell_height="65" repeat_content="true" style="hover" controller="ProducerTools, OblivionCore">
+					<item_stack3 controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>		
+		
+		<window name="minerInputWindow" anchor="CenterTop" pos="-550,-450" height="200" width="375" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Fuel" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="minerOutputWindow" anchor="CenterTop" pos="-550,-670" height="275" width="375" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="xuiOutput" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output"  pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>	
+<!-- Magazine Machine -->
+
+		<window name="magazineTitleInfoWindow" anchor="CenterTop" pos="-500,-60" width="313" height="200" cursor_area="true">
+			<rect name="content" pos="0,0" height="200" depth="1">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Magazine Vending Machine" />
+				</panel>
+				<panel name="minerinfo" pos="0,-46" height="150" width="313" backgroundColor="0,33,45,228">
+				<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9"  />
+					<label name="Info" pos="5,-5" depth="5" text_key="Two Scrapped Magazines will get you one Random Magazine!" />
+				</panel>
+			</rect>
+		</window>
+
+		<window name="magazineRecipesListWindow" controller="ProducerRecipesList, OblivionCore" panel="Left" width="245" height="150" cursor_area="true"  > <!-- Obsolete -->
+			<rect name="content" pos="0,8" height="130" depth="1" >
+				<sprite depth="2" name="background" pos="0,1" color="128,128,128" type="sliced"/>
+				<panel style="header.panel" pos="0,46">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Recipes" />
+				</panel>
+				<scrollview pos="0,0" depth="10" width="245" height="130" over_scroll="false" scroll_speed="2.5">
+					<grid name="list" rows="100" cols="1" cell_width="245" cell_height="32" repeat_content="true" >
+						<OblivionCore_recipe_entry3 name="0"/>
+					</grid>
+				</scrollview>
+			</rect>
+		</window>
+
+		
+		<window name="magazineToolsWindow" height="160" width="128" panel="Left" cursor_area="true"> <!-- Obsolete -->
+			<rect name="content" pos="250,163">
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text="Tools" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="tools,0,-3" anchor_bottom="tools,0,0" anchor_right="tools,1,0" anchor_top="tools,1,49" on_press="true" />
+				<grid depth="12" name="tools" pos="0,0" rows="2" cols="2" cell_width="62" cell_height="62" repeat_content="true" style="hover" controller="ProducerTools, OblivionCore">
+					<item_stack3 controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>		
+		
+		<window name="magazineInputWindow" anchor="CenterTop" pos="-500,-280" height="100" width="313" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Scrapped Magazines" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="magazineOutputWindow" anchor="CenterTop" pos="-500,-400" height="400" width="313" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="New Magazines" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output"  pos="0,-46" rows="10" cols="10" cell_width="62" cell_height="62" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>	
+
+<!-- Drink Dispenser -->
+
+		<window name="drinkTitleInfoWindow" anchor="CenterTop" pos="-550,-60" width="380" height="200" cursor_area="true">
+			<rect name="content" pos="0,0" height="200" depth="1">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Drink Dispenser" />
+				</panel>
+				<panel name="minerinfo" pos="0,-46" height="150" width="380" backgroundColor="0,33,45,238">
+					<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9"  />
+					<label name="Info" pos="5,-5" depth="5" text_key="Just add the ingredients and wait!  Juice Requires a Juicer and Soda Requires a CO2 Canister." />
+				</panel>
+			</rect>
+		</window>
+	
+		<window name="drinkToolsWindow" anchor="CenterTop" pos="-780,-60" height="160" width="128" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text="Tools" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="tools,0,-3" anchor_bottom="tools,0,0" anchor_right="tools,1,0" anchor_top="tools,1,49" on_press="true" />
+				<grid depth="12" name="tools" pos="0,-46" rows="1" cols="2" cell_width="65" cell_height="65" repeat_content="true" style="hover" controller="ProducerTools, OblivionCore">
+					<item_stack3 controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+		<window name="drinkRecipesListWindow" controller="ProducerRecipesList, OblivionCore" anchor="CenterTop" pos="-550,-280" width="380" height="150" cursor_area="true"  >
+			<rect name="content" pos="0,0" height="150" depth="1" >
+				<sprite depth="2" name="background" pos="0,1" color="128,128,128" type="sliced"/>
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Recipes" />
+				</panel>
+				<scrollview pos="0,-46" depth="10" width="375" height="100" over_scroll="false" scroll_speed="2.5">
+					<grid name="list" rows="100" cols="1" cell_width="375" cell_height="32" repeat_content="true" >
+						<OblivionCore_recipe_entry3 name="0"/>
+					</grid>
+				</scrollview>
+			</rect>
+		</window>		
+		<window name="drinkInputWindow" anchor="CenterTop" pos="-550,-450" height="200" width="375" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Ingredients" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,-46" rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="drinkOutputWindow" anchor="CenterTop" pos="-550,-670" height="275" width="375" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="0,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="xuiOutput" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,-46"  rows="10" cols="10" cell_width="65" cell_height="65" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+<!-- Testing -->
+
+
+		<window name="plantRecipesListWindow" controller="ProducerRecipesList, OblivionCore" panel="Left" width="316" height="220" cursor_area="true" >
+			
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="-3,0">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Information" />
+				</panel>
+				<panel name="info" pos="0,-55" height="100" width="310" color="0,33,45,238" backgroundColor="0,33,45,238">
+				<sprite depth="6" name="border" sprite="menu_empty3px" pos="0,0" color="[black]" type="sliced" fillcenter="false" globalopacity="true" globalopacitymod="0.9" backgroundColor="0,33,45,238" />
+					<label name="Info" pos="7,-5" depth="5" font_size="20" text_key="PlantInfo"  />
+				</panel>
+			</rect>
+			<rect name="content" pos="0,-220" height="300" depth="1">
+				<panel style="header.panel" pos="0,46">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="Recipes" />
+				</panel>
+				<scrollview pos="0,0" depth="10" width="310" height="150" over_scroll="false" scroll_speed="2.5">
+					<grid name="list" rows="100" cols="1" cell_width="250" cell_height="45" repeat_content="true" color="0,33,45,238" backgroundColor="0,33,45,238">
+						<OblivionCore_recipe_entry2 name="0"/>
+					</grid>
+				</scrollview>
+			</rect>
+		</window>	
+		<window name="plantInputWindow" height="125" width="316" panel="Left" cursor_area="true">
+
+
+			<rect name="content" pos="0,0">
+			
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text="Water" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" pos="0,0" rows="10" cols="10" cell_width="62" cell_height="62" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+
+		
+		<window name="plantOutputWindow" height="150" width="316" panel="Left" cursor_area="true">
+			<rect name="content" pos="0,0">
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="Crops" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" pos="0,0"  rows="10" cols="10" cell_width="62" cell_height="62" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack3 name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+
+
+
+<!-- Standard -->
+
+		<window name="producerRecipesListWindow" controller="ProducerRecipesList, OblivionCore" panel="Right" width="250" height="395" cursor_area="true">
+			<rect name="content" pos="0,-46" height="395" depth="1">
+				<panel style="header.panel" pos="0,46">
+					<sprite style="header.icon" sprite="ui_game_symbol_hammer"/>
+					<label style="header.name" text="LIST" />
+				</panel>
+				<scrollview pos="0,0" depth="10" width="500" height="395" over_scroll="false" scroll_speed="2.5">
+					<grid name="list" rows="100" cols="1" cell_width="250" cell_height="120" repeat_content="true" >
+						<OblivionCore_recipe_entry name="0"/>
+					</grid>
+				</scrollview>
+			</rect>
+		</window>
+		
+		<window name="producerController" controller="XUiC_ProducerController, OblivionCore" panel="Right" height="50">
+			<rect name="content">
+				<button pos="20,-21" depth="2" name="PauseButton" style="icon32px" sprite="{pauseicon}" defaultsprite="{pauseicon}" hoversprite="{pauseicon}" selectedsprite="{pauseicon}" sound="[paging_click]"/>
+			</rect>
+		</window>
+		
+		<window name="producerToolsWindow" height="125" width="75" panel="Left" cursor_area="true">
+			<rect name="content" pos="0,-46">
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+					<label style="header.name" text_key="xuiTools" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="tools,0,-3" anchor_bottom="tools,0,0" anchor_right="tools,1,0" anchor_top="tools,1,49" on_press="true" />
+				<grid depth="12" name="tools" rows="10" cols="10" cell_width="75" cell_height="75" repeat_content="true" controller="ProducerTools, OblivionCore">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="producerInputWindow" height="200" width="375" panel="Left" cursor_area="true">
+			<rect name="content" pos="0,-46">
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="xuiSmelting" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="input,0,-3" anchor_bottom="input,0,0" anchor_right="input,1,0" anchor_top="input,1,49" on_press="true" />
+				<grid depth="12" name="input" rows="10" cols="10" cell_width="75" cell_height="75" repeat_content="true" controller="ProducerInput, OblivionCore">
+					<item_stack name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<window name="producerOutputWindow" height="275" width="375" panel="Left" cursor_area="true">
+			<rect name="content" pos="0,-46">
+				<panel style="header.panel" pos="-3,50">
+					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+					<label style="header.name" text_key="xuiOutput" />
+				</panel>
+				<sprite depth="0" name="bg" color="255,255,255,1" type="sliced" sprite="menu_empty" anchor_left="output,0,-3" anchor_bottom="output,0,0" anchor_right="output,1,0" anchor_top="output,1,49" on_press="true" />
+				<grid depth="12" name="output" rows="10" cols="10" cell_width="75" cell_height="75" repeat_content="true" controller="ProducerOutput, OblivionCore">
+					<item_stack name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+
+	
+	</append>
+
+</configs>

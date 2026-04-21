@@ -1,0 +1,871 @@
+<config>
+
+
+	<remove xpath="/lootcontainers/lootcontainer[@name='airDrop']"></remove>
+
+	<remove xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll01']"></remove>
+
+	<insertAfter xpath="//lootgroup[@name='skillMagazines']">
+
+		<lootgroup name="groupQuestRewardSkillMagazinesAll01" count="4" >
+			<item name="bowsSkillMagazine" count="2"/>
+			<item name="spearsSkillMagazine" count="2"/>
+			<item name="clubsSkillMagazine" count="2"/>
+			<item name="sledgehammersSkillMagazine" count="2"/>
+			<item name="harvestingToolsSkillMagazine" count="2"/>
+			<item name="knucklesSkillMagazine" count="2"/>
+			<item name="bladesSkillMagazine" count="2"/>
+			<item name="repairToolsSkillMagazine" count="2"/>
+			<item name="salvageToolsSkillMagazine" count="2"/>
+
+			<item name="handgunsSkillMagazine" count="2"/>
+			<item name="shotgunsSkillMagazine" count="2"/>
+			<item name="riflesSkillMagazine" count="2"/>
+			<item name="machineGunsSkillMagazine" count="2"/>
+			<item name="explosivesSkillMagazine" count="2"/>
+			<item name="armorSkillMagazine" count="2"/>
+			<item name="roboticsSkillMagazine" count="2"/>
+
+			<item name="workstationSkillMagazine" count="2"/>
+			<item name="medicalSkillMagazine" count="2"/>
+			<item name="foodSkillMagazine" count="2"/>
+			<item name="seedSkillMagazine" count="2"/>
+			<item name="vehiclesSkillMagazine" count="2"/>
+			<item name="electricianSkillMagazine" count="2"/>
+			<item name="trapsSkillMagazine" count="2"/>
+		</lootgroup>
+
+	</insertAfter>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCupboard01']">
+		<item name="foodOldSaltAOO" count="1,2" prob="0.4"/>
+		<item name="foodCanChickPeasAOO" count="1" prob="0.4"/>
+		<item name="foodChocolateBarTSK_AOO" count="1" prob="0.3"/>
+		<item name="resourceBCryoAOO" count="1,2" prob=".1"/>
+		<item name="resourceICryoAOO" count="1,2" prob=".1"/>
+		<!--<item name="resourceACryoAOO" count="1,2" prob=".1"/> -->
+		<item name="toolBeaker" count="1,2" prob=".1"/>	
+		<item name="drugSteroids" count="2,3" prob=".1"/>
+		<item name="medicalBloodBag" count="1,2" prob=".1"/>			
+	</append>
+	
+    <append xpath="/lootcontainers/lootgroup[@name='cannedfood']">
+        <item name="foodOldSaltAOO" count="2,5"/>
+        <item name="foodCanChickPeasAOO" count="1,2" />
+		<item name="foodChocolateBarTSK_AOO" count="1"/>		
+    </append>
+
+	<append xpath="/lootcontainers/lootprobtemplates" >
+		<lootprobtemplate name="ProbUltraRareAOO">
+			<loot level="0,100" prob="0.001"/>
+			<loot level="101,200" prob="0.005"/>
+			<loot level="201,220" prob="0.01"/>
+			<loot level="221,240" prob="0.02"/>
+			<loot level="241,260" prob="0.03"/>
+			<loot level="261,280" prob="0.04"/>
+			<loot level="281,300" prob="0.05"/>
+			<loot level="301,500" prob="0.06"/>
+			<loot level="500,999999" prob="0.1"/>
+		</lootprobtemplate>
+	</append>
+	
+	<append xpath="/lootcontainers" >
+
+		<lootcontainer name="storageLarge" count="7" size="11,11" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate"/>
+		<lootcontainer name="storage10X10" count="1" size="10,10" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+		<lootcontainer name="storage11X11" count="1" size="11,11" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+		<lootcontainer name="storage12X12" count="1" size="11,12" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+		<lootcontainer name="storage12X13" count="1" size="11,13" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+		<lootcontainer name="storage9X9" count="1" size="9,9" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+		<lootcontainer name="storage8X8" count="1" size="8,8" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+		<lootcontainer name="storage2X4" count="1" size="4,2" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"/>
+
+		<lootcontainer name="AOOCrateLarge" count="1" size="8,8" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate">
+			<item group="groupOblivion1"/>	
+		</lootcontainer>
+		<lootcontainer name="AOOCrateSmall" count="1" size="8,8" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate">
+			<item group="groupOblivion1"/>	
+		</lootcontainer>
+
+	</append>
+
+
+	<insertAfter xpath="//lootgroup[@name='groupSavageCountryCrate']">
+
+		<lootgroup name="groupPotionsAOO" count="1">
+			<item name="resourceMagicPotionAgilityAOO" count="1"/>
+			<item name="resourceMagicPotionIntelligenceAOO" count="1"/>		
+			<item name="resourceMagicPotionFortitudeAOO" count="1"/>
+			<item name="resourceMagicPotionStrengthAOO" count="1"/>	
+			<item name="resourceMagicPotionPerceptionAOO"  count="1"/>				
+			<item name="resourceMagicPotionFlightAOO" count="1"/>
+			<item name="resourceMagicPotionSpeedAOO" count="1"/>	
+			<item name="resourceMagicPotionInvisibility120AOO"  count="1"/>				
+			<item name="resourceMagicPotionInvisibility60AOO"  count="1"/>				
+			<item name="resourceMagicPotionInvisibility30AOO"  count="1"/>				
+			<item name="potionTeleportForwardX5AOO"  count="1"/>				
+			<item name="potionRepulserAOO"  count="1"/>	
+			<item name="potionTimeForwardAOO"  count="1" />	
+			<item name="potionTimeBackAOO"  count="1" prob="0.2"/>	
+			<item name="potionHordeAOO"  count="1" prob="0.2"/>				
+		</lootgroup>
+
+
+		<lootgroup name="groupAlcoholAOO" count="1">
+			<item name="drinkRedWineTSK_AOO" count="1"/>
+			<item name="drinkWhiteWineTSK_AOO" count="1"/>
+			<item name="drinkWhiskeyTSK_AOO" count="1"/>
+			<item name="drinkVodkaTSK_AOO" count="1"/>			
+			<item name="drinkRumTSK_AOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupMealsAOO" count="1">
+			<item name="foodBreakfastBaconSandwichAOO" count="1"/>
+			<item name="foodBreakfastSausageSandwichAOO" count="1"/>
+			<item name="foodRamenTSK_AOO" count="1"/>
+			<item name="foodRoyalGamePieTSK_AOO" count="1"/>
+			<item name="foodVenisonStewTSK_AOO" count="1"/>
+			<item name="foodBeefwithBroccoliAOO" count="1"/>
+			<item name="foodCabbageRollsandCoffeeAOO" count="1"/>
+			<item name="foodFreshBaconMeatloafAOO" count="1"/>
+			<item name="foodFreshBakedChickenBreastAOO" count="1"/>
+			<item name="foodFriedRiceAOO" count="1"/>
+			<item name="foodSpaghettiandaMeataBallsAOO" count="1"/>
+			<item name="foodChickenPotPieTSK_AOO" count="1"/>
+			<item name="foodHasenpfefferTSK_AOO" count="1"/>
+			<item name="foodHomemadeChickenNoodleTSK_AOO" count="1"/>
+			<item name="foodBBQPorkRibsAOO" count="1"/>
+			<item name="foodBeefChiliAOO" count="1"/>
+			<item name="foodFreshBBQChickenLegsAOO" count="1"/>
+			<item name="foodFreshCheeseBurgerAOO" count="1"/>
+			<item name="foodExoticGrilledSteakTSK_AOO" count="1"/>
+			<item name="foodGrilledSteakAOO" count="1"/>
+			<item name="foodSpicyHotWingsAOO" count="1"/>
+			<item name="foodBloominOnionAOO" count="1"/>
+			<item name="foodFalafelAOO" count="1"/>
+			<item name="foodFingersFriesAOO" count="1"/>
+			<item name="foodJalapenoPoppersAOO" count="1"/>
+			<item name="foodFriesAOO" count="1"/>
+			<item name="foodOnionRingsAOO" count="1"/>
+			<item name="foodChipsTSK_AOO" count="1"/>
+			<item name="foodFreshHoneyGlazedHamAOO" count="1"/>
+			<item name="foodFreshSmokedSausageAOO" count="1"/>
+			<item name="foodSmokedChickenTSK_AOO" count="1"/>
+			<item name="foodSmokedFishTSK_AOO" count="1"/>
+			<item name="foodPizzaAOO" count="1"/>
+			<item name="foodBagelandCreamCheeseAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupFoodPrepAOO" count="1">
+			<item name="foodBBQSauceAOO" count="1"/>
+			<item name="foodDoughAOO" count="1"/>
+			<item name="foodFlourAOO" count="1"/>
+			<item name="foodRawPastaAOO" count="1"/>
+			<item name="foodVegOilAOO" count="1"/>
+			<item name="foodSugarAOO" count="1"/>
+			<item name="foodMixedFruitTSK_AOO" count="1"/>
+			<item name="foodMixedVeggiesTSK_AOO" count="1"/>
+			<item name="foodBagelAOO" count="1"/>
+			<item name="foodBreadAOO" count="1"/>
+			<item name="foodGrandMasFamousSauceAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupSodaAOO" count="1">
+			<item name="drinkBananaSodaTSK_AOO" count="1"/>
+			<item name="drinkCheeryCherrySodaTSK_AOO" count="1"/>
+			<item name="drinkCitrusSplashSodaTSK_AOO" count="1"/>
+			<item name="drinkCreamSodaTSK_AOO" count="1"/>
+			<item name="drinkDrJenSodaTSK_AOO" count="1"/>
+			<item name="drinkGrapeSodaTSK_AOO" count="1"/>
+			<item name="drinkIronBruSodaTSK_AOO" count="1"/>
+			<item name="drinkOrangeSodaTSK_AOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupJuiceAOO" count="1">
+			<item name="drinkV8JuiceAOO" count="1"/>
+			<item name="drinkWatermelonJuiceTSK_AOO" count="1"/>
+			<item name="drinkPineAppleJuiceAOO" count="1"/>
+			<item name="drinkAppleJuiceAOO" count="1"/>
+			<item name="drinkLemonJuiceTSK_AOO" count="1"/>
+			<item name="drinkMangoJuiceTSK_AOO" count="1"/>
+			<item name="drinkOrangeJuiceAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupDesertAOO" count="1">
+			<item name="foodStrawberryMousseTSK_AOO" count="1"/>
+			<item name="foodRaspberryMousseTSK_AOO" count="1"/>
+			<item name="foodApplePieAOO" count="1"/>
+			<item name="foodBananaCreamPieAOO" count="1"/>
+			<item name="foodCherryPieAOO" count="1"/>
+			<item name="foodChocolateCakeTSK_AOO" count="1"/>
+			<item name="foodCoconutCreamPieAOO" count="1"/>
+			<item name="foodPeachCobblerTSK_AOO" count="1"/>
+			<item name="foodLemonCakeTSK_AOO" count="1"/>
+			<item name="foodSpecialBrowniesTSK_AOO" count="1"/>
+			<item name="foodYogurtTSK_AOO" count="1"/>
+			<item name="foodIceCreamTSK_AOO" count="1"/>			
+			<item name="drinkBerrySmoothieTSK_AOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupMiscFoodAOO" count="1">
+			<item name="foodOldSaltAOO" count="1"/>
+			<item name="foodCanChickPeasAOO" count="1"/>
+			<item name="foodChocolateBarTSK_AOO" count="1"/>
+			<item name="foodRawMilkAOO" count="1"/>
+			<item name="foodChocolateChipCookieTSK_AOO" count="1"/>
+			<item name="foodPeanutButterCookieTSK_AOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupMeatAOO" count="1">
+			<item name="foodRawWildSteakAOO" count="1"/>
+			<item name="foodRawChickenBreastAOO" count="1"/>
+			<item name="foodRawChickenLegsandWingsAOO" count="1"/>
+			<item name="foodRawGroundBeefAOO" count="1"/>
+			<item name="foodRawHamAOO" count="1"/>
+			<item name="foodRawPorkLoinAOO" count="1"/>
+			<item name="foodRawPorkRibsAOO" count="1"/>
+			<item name="foodRawSausageLinkAOO" count="1"/>
+			<item name="foodRawSteakAOO" count="1"/>
+			<item name="foodRawKobeSteakAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupCropsAOO" count="1">
+			<item name="weedBundleAOO" count="1"/>		
+			<item name="foodCropBananaAOO" count="1"/>
+			<item name="foodCropCherryAOO" count="1"/>
+			<item name="foodCropCoconutAOO" count="1"/>
+			<item name="foodCropLemonTSK_AOO" count="1"/>
+			<item name="foodCropLimeTSK_AOO" count="1"/>
+			<item name="foodCropMangoTSK_AOO" count="1"/>
+			<item name="foodCropOrangeAOO" count="1"/>
+			<item name="foodCropPeachTSK_AOO" count="1"/>
+			<item name="foodCropPineappleAOO" count="1"/>
+			<item name="foodCropRaspberryAOO" count="1"/>
+			<item name="foodCropApplesAOO" count="1"/>
+			<item name="foodCropStrawberryAOO" count="1"/>
+			<item name="foodCropGrapesAOO" count="1"/>
+			<item name="foodCropWatermelonTSK_AOO" count="1"/>
+			<item name="foodCropRiceAOO" count="1"/>
+			<item name="foodCropBroccoliAOO" count="1"/>
+			<item name="foodCropCabbageAOO" count="1"/>
+			<item name="foodCropCarrotAOO" count="1"/>
+			<item name="foodCropCeleryAOO" count="1"/>
+			<item name="foodCropCucumberAOO" count="1"/>
+			<item name="foodCropIcebergLettuceAOO" count="1"/>
+			<item name="foodCropJalapenoPepperAOO" count="1"/>
+			<item name="foodCropOnionAOO" count="1"/>
+			<item name="foodCropSpinachAOO" count="1"/>
+			<item name="foodCropTomatoAOO" count="1"/>
+			<item name="foodCropWheatAOO" count="1"/>
+			<item name="resourceWhiteOakPlankAOO" count="1"/>
+			<item name="foodCropMixedHerbsAOO" count="1"/>
+			<item name="foodCropHempAOO" count="1"/>
+			<item name="foodCropMixedSpicesAOO" count="1"/>
+			<item name="foodCropRoseTSK_AOO" count="1"/>			
+			<item name="foodCropSugarcaneStalkAOO" count="1"/>
+			<item name="foodCropValerianTSK_AOO" count="1"/>
+			<item name="foodCropCatsClawTSK_AOO" count="1"/>			
+			<item name="foodCropDevilsClawTSK_AOO" count="1"/>
+			<item name="foodCropEchinaceaTSK_AOO" count="1"/>
+			<item name="foodCropFeverfewTSK_AOO" count="1"/>	
+		</lootgroup>
+
+		<lootgroup name="groupAllFoodAOO" count="1">
+			<item group="groupMeatAOO" />	
+			<item group="groupMiscFoodAOO" />	
+			<item group="groupDesertAOO" />	
+			<item group="groupJuiceAOO" />	
+			<item group="groupSodaAOO" />	
+			<item group="groupMealsAOO" />	
+			<item group="groupFoodPrepAOO" />			
+			<item group="groupAlcoholAOO" />			
+		</lootgroup>
+
+		<lootgroup name="groupSeedsAOO" count="3">
+			<item name="resourceSeedPackAOO" count="2"/>
+			<item name="plantedBananaTreeSeedAOO" count="1"/>
+			<item name="plantedBroccoliSeedAOO" count="1"/>
+			<item name="plantedCabbageSeedAOO" count="1"/>
+			<item name="plantedCarrotSeedAOO" count="1"/>
+			<item name="plantedCelerySeedAOO" count="1"/>
+			<item name="plantedCherryTreeSeedAOO" count="1"/>
+			<item name="plantedCoconutTreeSeedAOO" count="1"/>
+			<item name="plantedCucumberSeedAOO" count="1"/>
+			<item name="plantedMixedHerbsSeedAOO" count="1"/>
+			<item name="plantedIcebergLettuceSeedAOO" count="1"/>
+			<item name="plantedJalapenoSeedAOO" count="1"/>
+			<item name="plantedLemonTreeSeedTSK_AOO" count="1"/>
+			<item name="plantedLimeTreeSeedTSK_AOO" count="1"/>
+			<item name="plantedMangoTreeSeedTSK_AOO" count="1"/>
+			<item name="plantedMarijuanaSeedAOO" count="1"/>
+			<item name="plantedOnionSeedAOO" count="1"/>
+			<item name="plantedOrangeTreeSeedAOO" count="1"/>
+			<item name="plantedPeachTreeSeedAOO" count="1"/>
+			<item name="plantedPineappleSeedAOO" count="1"/>
+			<item name="plantedRaspberrySeedAOO" count="1"/>
+			<item name="plantedAppleTreeSeedAOO" count="1"/>
+			<item name="plantedRiceSeedAOO" count="1"/>
+			<item name="plantedRoseSeedTSK_AOO" count="1"/>
+			<item name="plantedMixedSpicesSeedAOO" count="1"/>
+			<item name="plantedSpinachSeedAOO" count="1"/>
+			<item name="plantedStrawberrySeedAOO" count="1"/>
+			<item name="plantedSugarcaneSeedAOO" count="1"/>
+			<item name="plantedTomatoSeedAOO" count="1"/>
+			<item name="plantedGrapeSeedAOO" count="1"/>
+			<item name="plantedWatermelonSeedTSK_AOO" count="1"/>
+			<item name="plantedWheatSeedAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupWeaponsAOO" count="1">
+			<item name="modScuba" count="1"/>		
+			<item name="gunBerettaM9_AOO" count="1"/>
+			<item name="gunGlock40_AOO" count="1"/>
+			<item name="gunBerettaNANO_AOO" count="1"/>
+			<item name="gunBerettaM92_AOO" count="1"/>
+			<item name="gunHKUSP_AOO" count="1"/>
+			<item name="gunP226_AOO" count="1"/>
+			<item name="gunColt38_AOO" count="1"/>
+			<item name="gunColt1911_AOO" count="1"/>
+			<item name="gunVZ61Skorpion_AOO" count="1"/>
+			<item name="gunThompson_AOO" count="1"/>
+			<item name="gunMac10_AOO" count="1"/>
+			<item name="gunKRISSVector_AOO" count="1"/>
+			<item name="gunSR25_AOO" count="1"/>
+			<item name="gunJNG90_AOO" count="1"/>
+			<item name="gunM82Barrett_AOO" count="1"/>
+			<item name="gunM98_AOO" count="1"/>
+			<item name="gunM4A1_AOO" count="1"/>
+			<item name="gunM16_AOO" count="1"/>
+			<item name="gunACWR_AOO" count="1"/>
+			<item name="gunARX160_AOO" count="1"/>
+			<item name="gunSCAR_AOO" count="1"/>
+			<item name="gunFNFAL_AOO" count="1"/>
+			<item name="gunM240_AOO" count="1"/>
+			<item name="gunSPAS12_AOO" count="1"/>		
+			<item name="gunWinchester_AOO" count="1"/>	
+			<item name="gunKSG12_AOO" count="1"/>	
+			<item name="gunAA12_AOO" count="1"/>	
+			<item name="gunM1garand_AOO" count="1"/>	
+			<!-- <item name="gunFlamethrower_AOO" count="1"/>	-->
+		</lootgroup>
+
+		<lootgroup name="groupAmmoAOO" count="10,40">	
+			<item name="ammo40mmExplosive" count="1"/>
+			<item name="ammo40mmIncendiary" count="1"/>
+			<item name="ammo50BMGBulletBall" count="1"/>
+			<item name="ammo50BMGAP" count="1"/>
+			<item name="ammo50BMGIncendiary" count="1"/>
+			<item name="ammoCannonBallAOO" count="1"/>
+			<item name="ammoCannonBallFlamingAOO" count="1"/>
+			<item name="ammoLaserBoltAOO" count="1"/>
+			<item name="ammoLaserAmmo01AOO" count="1"/>
+			<item name="ammoLaserAmmo02AOO" count="1"/>
+			<item name="ammoLaserAmmo03AOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupEliteWeaponsAOO" count="1">
+			<item name="TornadoPistolAOO" count="1"/>
+			<!--<item name="PremeireSniperAOO" count="1"/>	-->	
+			<item name="Slaughterfest_AOO" count="1"/>		
+			<item name="LaserCrossBowAOO" count="1"/>					
+			<item name="HandCannonAOO" count="1"/>
+			<item name="ElectricSniperAOO" count="1"/>
+			<item name="gunBoomstickAOO" count="1"/>
+			<item name="ChaingunAOO" count="1"/>
+			<item name="PlasmaGunAOO" count="1"/>
+			<item name="HackBladeAOO" count="1"/>
+			<item name="HarvestBladeAOO" count="1"/>
+			<item name="meleeWpnHydroAxeAOO" count="1"/>
+			<item name="meleeWpnShockHammerAOO" count="1"/>
+			<item name="meleeWpnPipeHammerAOO" count="1"/>
+			<item name="meleeWpnBloodyAxeAOO" count="1"/>
+			<item name="meleeWpnClubT3GuitarAOO" count="1"/>			
+		</lootgroup>
+
+		<lootgroup name="groupEliteToolsAOO" count="1">
+			<item name="toolPlasmaAugerAOO" count="1"/>
+			<item name="toolEnhancedNailgunAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupUltraRareAOO" count="1" >
+			<item name="modClothingStoragePocketStrengthAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modArmor6XStoragePocketStrengthAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modClothingStoragePocketPerceptionAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modArmor6XStoragePocketPerceptionAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modClothingStoragePocketAgilityAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modArmor6XStoragePocketAgilityAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>		
+			<item name="modClothingStoragePocketIntelligenceAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modArmor6XStoragePocketIntelligenceAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>	
+			<item name="modClothingStoragePocketFortitudeAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modArmor6XStoragePocketFortitudeAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="modLuckyRabbitFootAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="toolPlasmaAugerAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="toolEnhancedNailgunAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="TornadoPistolAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<!--<item name="PremeireSniperAOO" count="1" loot_prob_template="ProbUltraRareAOO"/> -->		
+			<item name="Slaughterfest_AOO" count="1" loot_prob_template="ProbUltraRareAOO"/>		
+			<item name="LaserCrossBowAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>					
+			<item name="HandCannonAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="ElectricSniperAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="gunBoomstickAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="ChaingunAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="PlasmaGunAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="HackBladeAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="HarvestBladeAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="meleeWpnHydroAxeAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="meleeWpnShockHammerAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="meleeWpnPipeHammerAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="meleeWpnBloodyAxeAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<item name="meleeWpnClubT3GuitarAOO" count="1" loot_prob_template="ProbUltraRareAOO"/>
+			<!--<item name="resourceRedBananaAOO" count="1" prob=".05"/> -->
+			<item name="resourceGreenSlimeAOO" count="1,10" prob=".2"/>
+			<!--<item name="resourceBloodBarkAOO" count="1" prob=".05"/> -->
+			<item name="resourceIbexHornAOO" count="1" prob=".05"/>
+			<item name="resourceDeerAntlerAOO" count="1" prob=".05"/>
+			<item name="resourceElephantTuskAOO" count="1" prob=".05"/>
+			<item name="resourceGoatHornAOO" count="1" prob=".05"/>			
+			<item name="resourceBuffaloHornAOO" count="1" prob=".05"/>
+			<item name="resourceScorpionTailAOO" count="1" prob=".05"/>			
+			<item name="resourcePigsFeetAOO" count="1" prob=".05"/>			
+			<item name="resourceRhinoHornAOO" count="1" prob=".05"/>			
+			<item name="resourceTigerToothAOO" count="1" prob=".05"/>
+			<item name="resourcePenguinGoldenAOO" count="1" prob=".05"/>		
+			<item name="resourceSpiderSilkAOO" count="1" prob=".05"/>	
+			<item name="resourceSpiderEggsAOO" count="1" prob=".05"/>	
+			<item name="resourceChickenFeetAOO" count="1" prob=".05"/>	
+			<item name="resourceCamelToeAOO" count="1" prob=".05"/>
+			<item name="resourceRabbitsFootAOO" count="1" prob=".05"/>
+			<item name="resourceTurtleShellAOO" count="1" prob=".05"/>
+			<item name="resourceWoolAOO" count="1" prob=".05"/>
+			<item name="resourceKomodoTailAOO" count="1" prob=".05"/>
+			<item name="resourceCowTongueAOO" count="1" prob=".05"/>
+			<item name="SkullTokenAOO" count="2,10" prob=".3"/>
+		</lootgroup>
+
+		<lootgroup name="groupCloningAOO" count="3">
+			<item name="resourceBCryoAOO" count="1,2" prob=".7"/>
+			<item name="resourceICryoAOO" count="1,2" prob=".5"/>
+			<!--<item name="resourceACryoAOO" count="1,2" prob=".1"/> -->
+			<item name="toolBeaker" count="2,5" />	
+			<item name="drugSteroids" count="3,8" />
+			<item name="medicalBloodBag" count="1,2" />				
+			<item name="resourceZombieGutsAOO" count="1"/>
+			<item name="resourceZombieBrainsAOO" count="1"/>			
+		</lootgroup>
+
+		<lootgroup name="groupRareResourcesAOO" count="1">
+			<!--<item name="resourceRedBananaAOO" count="1"/> -->
+			<item name="resourceGreenSlimeAOO" count="1,10"/>
+			<!--<item name="resourceBloodBarkAOO" count="1"/> -->
+			<item name="resourceIbexHornAOO" count="1"/>
+			<item name="resourceDeerAntlerAOO" count="1"/>
+			<item name="resourceElephantTuskAOO" count="1"/>
+			<item name="resourceGoatHornAOO" count="1"/>			
+			<item name="resourceBuffaloHornAOO" count="1"/>
+			<item name="resourceScorpionTailAOO" count="1"/>			
+			<item name="resourcePigsFeetAOO" count="1"/>			
+			<item name="resourceRhinoHornAOO" count="1"/>			
+			<item name="resourceTigerToothAOO" count="1"/>
+			<item name="resourcePenguinGoldenAOO" count="1"/>		
+			<item name="resourceSpiderSilkAOO" count="1"/>	
+			<item name="resourceSpiderEggsAOO" count="1"/>	
+			<item name="resourceChickenFeetAOO" count="1"/>	
+			<item name="resourceCamelToeAOO" count="1"/>
+			<item name="resourceRabbitsFootAOO" count="1"/>
+			<item name="resourceTurtleShellAOO" count="1"/>
+			<item name="resourceWoolAOO" count="1"/>
+			<item name="resourceKomodoTailAOO" count="1"/>
+			<item name="resourceCowTongueAOO" count="1"/>
+			<item name="modScuba" count="1"/>			
+		</lootgroup>
+
+		<lootgroup name="groupPeltsAOO" count="1">
+			<item name="resourceLeopardPeltAOO" count="1"/>
+			<item name="resourceBearPeltAOO" count="1"/>	
+			<item name="resourceZebraPeltAOO" count="1"/>
+			<item name="resourceIbexPeltAOO" count="1"/>
+			<item name="resourceDeerPeltAOO" count="1"/>
+			<item name="resourceElephantPeltAOO" count="1"/>
+			<item name="resourceWolfPeltAOO" count="1"/>
+			<item name="resourceBuffaloPeltAOO" count="1"/>
+			<item name="resourceGoatPeltAOO" count="1"/>
+			<item name="resourceCowPeltAOO" count="1"/>
+			<item name="resourcePigPeltAOO" count="1"/>			
+			<item name="resourceRhinoPeltAOO" count="1"/>
+			<item name="resourceCamelPeltAOO" count="1"/>		
+			<item name="resourcePenguinPeltAOO" count="1"/>		
+			<item name="resourceTigerPeltAOO" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="groupDrillBitsAOO" count="1">
+			<item name="toolMiningDrillBit1AOO" count="1" prob="0.02"/>
+			<item name="toolMiningDrillBit2AOO" count="1" prob="0.02"/>
+			<item name="toolMiningDrillBit3AOO" count="1" prob="0.02"/>
+			<item name="toolMiningDrillBit4AOO" count="1" prob="0.02"/> 
+		</lootgroup>
+
+		<lootgroup name="AmmunitionBundlesAOO" count="1,2">
+			<item name="ammoBundle9mmBulletBall" count="5" prob="0.05"/>
+			<item name="ammoBundle9mmBulletHP" count="5" prob="0.05"/>
+			<item name="ammoBundle9mmBulletAP" count="5" prob="0.05"/>
+			<item name="ammoBundle44MagnumBulletBall" count="5" prob="0.05"/>
+			<item name="ammoBundle44MagnumBulletHP" count="5" prob="0.05"/>
+			<item name="ammoBundle44MagnumBulletAP" count="5" prob="0.05"/>
+			<item name="ammoBundle762mmBulletBall" count="5" prob="0.05"/>
+			<item name="ammoBundle762mmBulletHP" count="5" prob="0.05"/>
+			<item name="ammoBundle762mmBulletAP" count="5" prob="0.05"/>
+			<item name="ammoBundleShotgunShell" count="5" prob="0.05"/>
+			<item name="ammoBundleShotgunSlug" count="5" prob="0.05"/>
+			<item name="ammoBundleShotgunBreachingSlug" count="5" prob="0.05"/>
+			<item name="ammoBundleArrowStone" count="5" prob="0.05"/>
+			<item name="ammoBundleArrowIron" count="5" prob="0.05"/>
+			<item name="ammoBundleArrowSteelAP" count="5" prob="0.05"/>
+			<item name="ammoBundleArrowFlaming" count="5" prob="0.05"/>
+			<item name="ammoBundleArrowExploding" count="5" prob="0.05"/>
+			<item name="ammoBundleCrossbowBoltStone" count="5" prob="0.05"/>
+			<item name="ammoBundleCrossbowBoltIron" count="5" prob="0.05"/>
+			<item name="ammoBundleCrossbowBoltSteelAP" count="5" prob="0.05"/>
+			<item name="ammoBundleCrossbowBoltFlaming" count="5" prob="0.05"/>
+			<item name="ammoBundleCrossbowBoltExploding" count="5" prob="0.05"/>		
+			<item name="ammoBundleJunkTurretRegular" count="5" prob="0.05"/>
+			<item name="ammoBundleJunkTurretShell" count="5" prob="0.05"/>
+			<item name="ammoBundleJunkTurretAP" count="5" prob="0.05"/>
+			<item name="ammoBundle50BMGBulletBall" count="5" prob="0.05"/>
+			<item name="ammoBundle50BMGAP" count="5" prob="0.05"/>
+			<item name="ammoBundle50BMGIncendiary" count="5" prob="0.05"/>			
+		</lootgroup>
+
+
+		<!-- ===== Arena Loot ===== -->
+	
+		<lootgroup name="groupArenaT0AOO" count="2" loot_quality_template="QLTemplateT0">
+			<item group="AmmunitionBundlesAOO" prob=".3"/>
+			<item group="groupDrillBitsAOO" prob=".3"/>
+			<item group="groupRareResourcesAOO" prob=".5"/>
+			<item group="groupCloningAOO" prob="1"/>
+			<item group="groupUltraRareAOO" prob="1"/>			
+			<item group="groupAmmoAOO" prob="1"/>			
+			<item group="groupWeaponsAOO" prob=".4"/>			
+			<item group="groupAllFoodAOO" prob="1"/>
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>	
+			<item group="booksAllScaled" count="1"/>	
+			<item group="groupElectricalDevices" count="1"/>
+			<item group="groupQuestRewardSkillMagazinesAll01" count="1"/>				
+		</lootgroup>
+		
+		<lootgroup name="groupArenaT1AOO" count="3" loot_quality_template="QLTemplateT1">
+			<item group="AmmunitionBundlesAOO" prob=".3"/>
+			<item group="groupDrillBitsAOO" prob=".3"/>
+			<item group="groupRareResourcesAOO" prob=".5"/>
+			<item group="groupCloningAOO" prob="1"/>
+			<item group="groupUltraRareAOO" prob="1"/>			
+			<item group="groupAmmoAOO" prob="1"/>			
+			<item group="groupWeaponsAOO" prob=".4"/>			
+			<item group="groupAllFoodAOO" prob="1"/>
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+			<item group="booksAllScaled" count="1"/>	
+			<item group="groupElectricalDevices" count="1"/>
+			<item group="groupQuestRewardSkillMagazinesAll01" count="1"/>				
+		</lootgroup>
+		
+		<lootgroup name="groupArenaT2AOO" count="5" loot_quality_template="QLTemplateT2">
+			<item group="AmmunitionBundlesAOO" prob=".3"/>
+			<item group="groupDrillBitsAOO" prob=".3"/>
+			<item group="groupRareResourcesAOO" prob=".5"/>
+			<item group="groupCloningAOO" prob="1"/>
+			<item group="groupUltraRareAOO" prob="1"/>			
+			<item group="groupAmmoAOO" prob="1"/>			
+			<item group="groupWeaponsAOO" prob=".4"/>			
+			<item group="groupAllFoodAOO" prob="1"/>
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>	
+			<item group="booksAllScaled" count="1"/>	
+			<item group="groupElectricalDevices" count="1"/>
+			<item group="groupQuestRewardSkillMagazinesAll01" count="1"/>				
+		</lootgroup>
+		
+		<lootgroup name="groupArenaT3AOO" count="6" loot_quality_template="QLTemplateT3">
+			<item group="AmmunitionBundlesAOO" prob=".3"/>
+			<item group="groupDrillBitsAOO" prob=".3"/>
+			<item group="groupRareResourcesAOO" prob=".5"/>
+			<item group="groupCloningAOO" prob="1"/>
+			<item group="groupUltraRareAOO" prob="1"/>			
+			<item group="groupAmmoAOO" prob="1"/>			
+			<item group="groupWeaponsAOO" prob=".4"/>			
+			<item group="groupAllFoodAOO" prob="1"/>	
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+			<item group="booksAllScaled" count="1"/>	
+			<item group="groupElectricalDevices" count="1"/>
+			<item group="groupQuestRewardSkillMagazinesAll01" count="1"/>				
+		</lootgroup>
+		
+		<lootgroup name="groupArenaAOO" count="1">
+			<item group="groupArenaT0AOO" loot_prob_template="ProbT0"/>
+			<item group="groupArenaT1AOO" loot_prob_template="ProbT1"/>
+			<item group="groupArenaT2AOO" loot_prob_template="ProbT2"/>
+			<item group="groupArenaT3AOO" loot_prob_template="ProbT3"/>
+		</lootgroup>
+		
+		<!-- ==================================== -->
+		
+		<lootgroup name="groupOblivion1" count="2">
+			<item group="groupMoPowerShelves"/>			
+			<item group="groupWeaponsAOO" count="1" prob="1"/>
+			<item group="groupAmmoAOO" count="1,2" prob="1"/>
+			<item group="groupEliteWeaponsAOO" count="1" prob="0.001"/>
+			<item group="groupEliteToolsAOO" count="1" prob="0.001"/>
+			<item group="groupCloningAOO" count="2,3" prob="0.5"/>
+			<item group="groupRareResourcesAOO" count="1" prob="0.04"/>
+			<item group="groupPeltsAOO" count="1,4" prob=".9"/>
+			<item group="groupDrillBitsAOO" count="1" prob="0.005"/>
+			<item group="AmmunitionBundlesAOO" count="1" prob="0.02"/>	
+			<item group="groupSeedsAOO" count="1,5" prob="0.9"/>
+			<item group="groupMeatAOO" count="1,3" prob="0.9"/>	
+			<item group="groupMiscFoodAOO" count="1,2" prob="0.9"/>	
+			<item group="groupDesertAOO" count="1" prob="0.8"/>	
+			<item group="groupJuiceAOO" count="1,2" prob=".9"/>	
+			<item group="groupSodaAOO" count="1,2" prob=".9"/>	
+			<item group="groupMealsAOO" count="1" prob="1"/>	
+			<item group="groupFoodPrepAOO" count="3,4" prob="1"/>			
+			<item group="groupAlcoholAOO" count="1" prob="0.7"/>
+		</lootgroup>
+		
+		<lootgroup name="groupOblivion2" count="8" tags="oblivion">
+			<item group="groupMoPowerShelves"/>			
+			<item group="groupWeaponsAOO" count="1" prob="1"/>
+			<item group="groupAmmoAOO" count="1,2" prob="1"/>
+			<item group="groupEliteWeaponsAOO" count="1" prob="0.001"/>
+			<item group="groupEliteToolsAOO" count="1" prob="0.001"/>
+			<item group="groupCloningAOO" count="2,3" prob="0.5"/>
+			<item group="groupRareResourcesAOO" count="1" prob="0.04"/>
+			<item group="groupPeltsAOO" count="1,4" prob=".9"/>
+			<item group="groupDrillBitsAOO" count="1" prob="0.005"/>
+			<item group="AmmunitionBundlesAOO" count="1" prob="0.02"/>	
+			<item group="groupSeedsAOO" count="1,5" prob="0.9"/>
+			<item group="groupMeatAOO" count="1,3" prob="0.9"/>	
+			<item group="groupMiscFoodAOO" count="1,2" prob="0.9"/>	
+			<item group="groupDesertAOO" count="1" prob="0.8"/>	
+			<item group="groupJuiceAOO" count="1,2" prob=".9"/>	
+			<item group="groupSodaAOO" count="1,2" prob=".9"/>	
+			<item group="groupMealsAOO" count="1" prob="1"/>	
+			<item group="groupFoodPrepAOO" count="3,4" prob="1"/>			
+			<item group="groupAlcoholAOO" count="1" prob="0.7"/>
+		</lootgroup>
+
+		<lootcontainer name="eliteChest" count="6" size="10,9" destroy_on_close="false" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item name="SkullTokenAOO" prob="1" count="15,50"/>		
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>			
+			<item name="HandCannonAOO" count="1" prob=".01"/>			
+			<item name="meleeWpnBloodyAxeAOO" count="1" prob=".01"/>	
+			<item name="meleeWpnClubT3GuitarAOO" count="1" prob=".01"/>	
+			<item name="toolPlasmaAugerAOO" count="1" prob=".01"/>	
+			<item name="PlasmaGunAOO" count="1" prob=".01"/>	
+			<item name="toolEnhancedNailgunAOO" count="1" prob=".01"/>	
+			<item name="HackBladeAOO" count="1" prob=".01"/>
+			<item name="ElectricSniperAOO" count="1" prob=".01"/>
+			<item name="TornadoPistolAOO" count="1" prob=".01"/>
+			<item name="LaserCrossBowAOO" count="1" prob=".01"/>			
+			<item name="meleeWpnPipeHammerAOO" count="1" prob=".01"/>	
+			<item name="ChaingunAOO" count="1" prob=".01"/>	
+			<item name="gunBoomstickAOO" count="1" prob=".01"/>	
+			<item name="meleeWpnShockHammerAOO" count="1" prob=".01"/>	
+			<item name="meleeWpnHydroAxeAOO" count="1" prob=".01"/>	
+			<!--<item group="groupPotionsAOO" prob="1"/>-->		
+		</lootcontainer>
+
+		<lootcontainer name="CircusLoot1" count="1" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+			<!--<item group="groupPotionsAOO" prob=".2"/> -->
+		</lootcontainer>
+		
+		<lootcontainer name="CircusLoot2" count="1" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+		</lootcontainer>
+		
+		<lootcontainer name="CircusLoot3" count="1" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+		</lootcontainer>
+		
+		<lootcontainer name="CircusLoot4" count="1" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+		</lootcontainer>
+		
+		<lootcontainer name="CircusLoot5" count="1" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupToolsTiered" prob="1"/>
+			<item group="groupRareToolsTiered" prob="1"/>
+			<item group="groupArmorScaled" prob="1"/>
+			<item group="groupWeaponsAllScaled" prob="1"/>
+		</lootcontainer>
+		
+		<lootcontainer name="HotdogLoot" count="1" size="2,2" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item name="foodChiliDog" count="1,2"  />
+		</lootcontainer>
+		
+		<lootcontainer name="SodaLoot" count="1,2" size="2,2" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item name="drinkBananaSodaTSK_AOO" count="1"  />
+			<item name="drinkCheeryCherrySodaTSK_AOO" count="1"  />
+			<item name="drinkCitrusSplashSodaTSK_AOO" count="1"  />
+			<item name="drinkCreamSodaTSK_AOO" count="1"  />
+			<item name="drinkDrJenSodaTSK_AOO" count="1"  />
+			<item name="drinkGrapeSodaTSK_AOO" count="1"  />
+			<item name="drinkIronBruSodaTSK_AOO" count="1"  />
+			<item name="drinkOrangeSodaTSK_AOO" count="1"  /> 
+		</lootcontainer>
+		
+		<lootcontainer name="VendingLoot" count="1" size="2,2" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item name="drinkOrangeSodaTSK_AOO" count="1"  /> 
+		</lootcontainer>
+		
+		<lootcontainer name="KeyLoot" count="1" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		</lootcontainer>		
+		
+		<lootcontainer name="missleLoot" count="1,3" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoPowerShelves"/>
+		</lootcontainer>
+		
+		<lootcontainer name="serverLoot" count="1,3" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoPowerShelves"/>
+		</lootcontainer>
+		
+		<lootcontainer name="techDeskLoot" count="1,3" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoPowerShelves"/>		
+		</lootcontainer>
+		<lootcontainer name="podLoot" count="1,3" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoPowerShelves"/>
+		</lootcontainer>	
+		
+		<lootcontainer name="chamberLoot" count="1,3" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoPowerShelves"/>
+		</lootcontainer>
+		
+		<lootcontainer name="barrelLoot" count="1,3" size="4,4" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupMoPowerShelves"/>
+		</lootcontainer>
+
+		<lootcontainer name="oblivion" count="1" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupOblivion1" prob="1"/>
+			<item group="groupOblivion2" prob=".05"/>			
+		</lootcontainer>		
+
+		<lootcontainer name="ArenaLoot2" count="1" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupArenaAOO" count="1"/>			
+		</lootcontainer>
+		
+		<lootcontainer name="ArenaLoot3" count="2" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupArenaAOO" count="1"/>					
+		</lootcontainer>
+		
+		<lootcontainer name="ArenaLoot4" count="3" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupArenaAOO" count="1"/>					
+		</lootcontainer>
+		
+		<lootcontainer name="ArenaLoot5" count="4" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupArenaAOO" count="1"/>					
+		</lootcontainer>
+		
+		<lootcontainer name="ArenaLoot6" count="6" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupArenaAOO" count="1"/>					
+		</lootcontainer>
+		
+		<lootcontainer name="ArenaLoot7" count="8" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupArenaAOO" count="1"/>					
+		</lootcontainer>
+
+	</insertAfter>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg01']" >
+		<item group="groupArenaAOO" count="1" />		
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg02']" >
+		<item group="groupArenaAOO" count="1" />
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackReg03']" >
+		<item group="groupArenaAOO" count="1" />	
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong01']" >
+		<item group="groupArenaAOO" count="2" />
+		<item group="groupUltraRareAOO" count="1" loot_prob_template="med"/>	
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong02']" >
+		<item group="groupArenaAOO" count="2" />
+		<item group="groupUltraRareAOO" count="1" loot_prob_template="med"/>	
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackStrong03']" >
+		<item group="groupArenaAOO" count="2" />
+		<item group="groupUltraRareAOO" count="1" loot_prob_template="med"/>	
+	</append>		
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss01']" >
+		<item group="groupArenaAOO" count="3" />
+		<item group="groupUltraRareAOO" count="1" loot_prob_template="med"/>	
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss02']" >
+		<item group="groupArenaAOO" count="3" />
+		<item group="groupUltraRareAOO" count="1" loot_prob_template="med"/>	
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupZpackBoss03']" >
+		<item group="groupArenaAOO" count="3" />
+		<item group="groupUltraRareAOO" count="1" loot_prob_template="med"/>	
+	</append>		
+
+
+	<append xpath="/lootcontainers" >
+	
+		<lootcontainer name="airDrop" count="12" size="8,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="groupAirDrop" count="1"/>
+			<item group="groupWeaponsAOO" count="1" prob="1"/>
+			<item group="groupAmmoAOO" count="1,2" prob="1"/>
+			<item group="groupEliteWeaponsAOO" count="1" prob="0.001"/>
+			<item group="groupEliteToolsAOO" count="1" prob="0.001"/>
+			<item group="groupCloningAOO" count="2,3" prob="1"/>
+			<item group="groupRareResourcesAOO" count="1" prob="0.04"/>
+			<item group="groupPeltsAOO" count="1,4" prob=".9"/>
+			<item group="groupDrillBitsAOO" count="1" prob="0.05"/>
+			<item group="AmmunitionBundlesAOO" count="1" prob="0.02"/>	
+			<item group="groupSeedsAOO" count="1,5" prob="0.9"/>
+			<item group="groupMeatAOO" count="1,3" prob="0.9"/>	
+			<item group="groupMiscFoodAOO" count="1,2" prob="0.9"/>	
+			<item group="groupDesertAOO" count="1" prob="0.8"/>	
+			<item group="groupJuiceAOO" count="1,2" prob=".9"/>	
+			<item group="groupSodaAOO" count="1,2" prob=".9"/>	
+			<item group="groupMealsAOO" count="1" prob="1"/>	
+			<item group="groupFoodPrepAOO" count="3,4" prob="1"/>			
+			<item group="groupAlcoholAOO" count="1" prob="0.7"/>			
+		</lootcontainer>
+		
+	</append>
+	
+</config>

@@ -1,0 +1,376 @@
+﻿<configs>
+ <!-- <append xpath="/windows">
+
+    <window name="windowLockPicking" width="1000" height="500" panel="Center" controller="PickLocking, SCore" cursor_area="true" >
+      <panel name="header" height="80" depth="1" backgroundspritename="ui_game_panel_header">
+        <sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="ui_game_symbol_pen"/>
+        <label style="header.name" text_key="advancedlockpicking_desc" width="800" height="300" font_size="30" overflow="resizefreely"/>
+      </panel>
+    </window>
+  </append>
+-->
+
+		
+	<remove xpath="/windows/window[@name='windowForgeInput']" />	
+	<remove xpath="/windows/window[@name='windowToolsForge']" /> 
+	<remove xpath="/windows/window[@name='windowFuel']" />	
+	<remove xpath="/windows/window[@name='windowToolsCampfire']" />
+
+	
+	<!-- <window name="windowOutput" width="228" height="198" anchor="CenterTop" panel="Right" cursor_area="true" controller="WorkstationOutputWindow" > -->
+	
+	<removeattribute xpath="/windows/window[@name='windowOutput']/@panel" />
+	<setattribute xpath="/windows/window[@name='windowOutput']" name="anchor">CenterTop</setattribute>
+	<setattribute xpath="/windows/window[@name='windowOutput']" name="pos">-900,-710</setattribute>
+	
+	<removeattribute xpath="/windows/window[@name='windowDewCollector']/@panel" />
+	<setattribute xpath="/windows/window[@name='windowDewCollector']" name="anchor">CenterTop</setattribute>
+	<setattribute xpath="/windows/window[@name='windowDewCollector']" name="pos">-400,-190</setattribute>
+	
+	<removeattribute xpath="/windows/window[@name='windowDewCollectorMods']/@panel" />
+	<setattribute xpath="/windows/window[@name='windowDewCollectorMods']" name="anchor">CenterTop</setattribute>
+	<setattribute xpath="/windows/window[@name='windowDewCollectorMods']" name="pos">-400,-60</setattribute>
+	
+	<removeattribute xpath="/windows/window[@name='windowCollectorFuel']/@panel" />
+	<setattribute xpath="/windows/window[@name='windowCollectorFuel']" name="anchor">CenterTop</setattribute>
+	<setattribute xpath="/windows/window[@name='windowCollectorFuel']" name="pos">-400,-480</setattribute>
+	
+		
+		<append xpath="/windows">
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowCraftingListWorkstation"  width="397" height="682" controller="CraftingListInfo" panel="Left" cursor_area="true" > -->
+			<window name="windowCraftingListWorkstation" anchor="CenterTop" pos="-570,-60" width="400" height="650" controller="CraftingListInfo" cursor_area="true">
+				<sprite name="backgroundMain" sprite="menu_empty3px" pos="0,-46" width="397" height="555" color="[black]" type="sliced" fillcenter="false" />
+				<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
+					<sprite pos="4,-5" depth="2" name="windowIcon" style="icon32px" sprite="Craft_Icon_Basics"/>
+					<label style="header.name" text="basics" text_key="xuiBasics" />
+				</panel>
+				<panel name="content" width="100%" height="650" depth="1" pos="0,-43" on_scroll="true" disableautobackground="true">
+					<rect depth="2" name="categorySelector" width="390" height="44" pos="3,-6">
+						<sprite name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="396" height="49" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[mediumGrey]" type="sliced" />
+						<grid name="categories" pos="23,-21" rows="1" cols="9" width="390" height="43" cell_width="43" cell_height="43" repeat_content="true" controller="CategoryList">
+							<category_icon />
+						</grid>
+					</rect>
+					<rect depth="3" name="searchControls" width="390" height="44" pos="3,-52">
+						<sprite name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="396" height="49" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[darkGrey]" type="sliced" />
+						<button depth="4" name="favorites" style="icon30px, press" pos="18,-22" sprite="server_favorite" pivot="center" sound="[paging_click]" tooltip="Favorites" tooltip_key="lblFavorites" collider_scale="1.5" />
+						<panel pos="104,0" width="200" disableautobackground="true">
+							<sprite depth="4" name="searchIcon" style="icon30px" pos="0,-22" sprite="ui_game_symbol_search" pivot="center"/>
+							<textfield depth="5" name="searchInput" pos="22,-7" width="140" height="30" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true" close_group_on_tab="true" />
+						</panel>
+						<panel pos="286,0" width="104" height="43" disableautobackground="true">
+							<pager name="pager" pos="4,-6" />
+						</panel>
+					</rect>
+					<grid name="recipes" rows="10" cols="1" pos="3,-98" width="390" height="552" cell_width="390" cell_height="46" controller="RecipeList" repeat_content="true" arrangement="vertical" >
+						<recipe_entry name="0"/>
+					</grid>
+				</panel>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowCraftingListWorkstation2"  width="630" height="682" controller="CraftingListInfo" panel="Left" cursor_area="true" > -->
+			<window name="windowCraftingListWorkstation2" anchor="CenterTop" pos="-570,-60" width="400" height="650" controller="CraftingListInfo" cursor_area="true">
+				<sprite name="backgroundMain" sprite="menu_empty3px" pos="0,-46" width="397" height="555" color="[black]" type="sliced" fillcenter="false" />
+				<panel name="header" height="43" depth="1"  backgroundspritename="ui_game_panel_header">
+					<sprite pos="4,-5" depth="2" name="windowIcon" style="icon32px" sprite="Craft_Icon_Basics"/>
+					<label style="header.name" text="basics" text_key="xuiBasics" />
+				</panel>
+				<panel name="content" width="100%" height="650" depth="1" pos="0,-43" on_scroll="true" disableautobackground="true">
+					<rect depth="2" name="categorySelector" width="390" height="44" pos="3,-6">
+						<sprite name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="396" height="49" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[mediumGrey]" type="sliced" />
+						<grid name="categories" pos="23,-21" rows="1" cols="9" width="390" height="43" cell_width="43" cell_height="43" repeat_content="true" controller="CategoryList">
+							<category_icon />
+						</grid>
+					</rect>
+					<rect depth="3" name="searchControls" width="390" height="44" pos="3,-52">
+						<sprite name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="396" height="49" color="[black]" type="sliced" fillcenter="false" />
+						<sprite color="[darkGrey]" type="sliced" />
+						<button depth="4" name="favorites" style="icon30px, press" pos="18,-22" sprite="server_favorite" pivot="center" sound="[paging_click]" tooltip="Favorites" tooltip_key="lblFavorites" collider_scale="1.5" />
+						<panel pos="104,0" width="200" disableautobackground="true">
+							<sprite depth="4" name="searchIcon" style="icon30px" pos="0,-22" sprite="ui_game_symbol_search" pivot="center"/>
+							<textfield depth="5" name="searchInput" pos="22,-7" width="140" height="30" virtual_keyboard_prompt="vkPromptSearchTerm" search_field="true" close_group_on_tab="true" />
+						</panel>
+						<panel pos="286,0" width="104" height="43" disableautobackground="true">
+							<pager name="pager" pos="4,-6" />
+						</panel>
+					</rect>
+					<grid name="recipes" rows="10" cols="1" pos="3,-98" width="390" height="552" cell_width="390" cell_height="46" controller="RecipeList" repeat_content="true" arrangement="vertical" >
+						<recipe_entry name="0"/>
+					</grid>
+				</panel>
+			</window> 
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowOutputWorkstation" width="397" height="182"  anchor="CenterTop" panel="Left" cursor_area="true" > -->
+			<window name="windowOutputWorkstation" anchor="CenterTop" pos="-900,-710" width="315" height="200" cursor_area="true" >
+				<rect name="main" width="100%" height="100%" pos="0,0">
+					<panel style="header.panel" height="43">
+						<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+						<label style="header.name" text="OUTPUT" text_key="xuiOutput" />
+					</panel>
+					<rect name="content" depth="0" pos="0,-46" height="130" disablefallthrough="true" on_press="true">
+						<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="128" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+						<grid depth="10" name="inventory" rows="2" cols="5" pos="3,-3" cell_width="62" cell_height="62" controller="WorkstationOutputGrid" repeat_content="true">
+							<item_stack name="0"/>
+						</grid>
+					</rect>
+				</rect>	
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowCraftingQueueWorkstation" width="397" height="160" panel="Left" cursor_area="true" > -->
+			<window name="windowCraftingQueueWorkstation" anchor="CenterTop" pos="-570,-710" width="400" height="200" cursor_area="true" >
+				<rect depth="0" pos="0,0" width="100%" controller="CraftingQueue">
+					<panel style="header.panel" >
+						<sprite style="header.icon" sprite="ui_game_symbol_hand"/>
+						<label style="header.name" text="Queue"  />
+					</panel>				
+					<grid name="queue" rows="2" cols="6" pos="3,-46" cell_width="65" cell_height="65" repeat_content="true">
+						<recipe_stack name="0"/>
+					</grid>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowFuel" width="228" height="166" panel="Left" cursor_area="true"> -->
+			<window name="windowFuel" anchor="CenterTop" pos="-780,-240" width="195" height="166" cursor_area="true">
+				<rect name="main" width="100%" height="100%" pos="0,0">			
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_fire"/>
+						<label style="header.name" text="FUEL" text_key="xuiFuel" />
+						<label style="header.timer" anchor="RightCenter" pos="170,-22"/>
+					</panel>
+					<rect name="content" depth="0" pos="0,-46" height="79" >
+						<rect disablefallthrough="true">
+							<grid rows="1" cols="3" pos="3,-3" cell_width="65" cell_height="65" controller="WorkstationFuelGrid" repeat_content="true">
+								<item_stack name="0"/>
+							</grid>
+						</rect>
+						<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="65" cell_height="65" controller="SlotPreview">
+							<rect>
+								<sprite name="slot" depth="2" width="59" height="59" sprite="resourceWood" atlas="ItemIconAtlasGreyscale" pos="30,-30" pivot="center" foregroundlayer="true"/>
+							</rect>
+							<rect>
+								<sprite name="slot" depth="2" width="59" height="59" sprite="resourceWood" atlas="ItemIconAtlasGreyscale" pos="30,-30" pivot="center" foregroundlayer="true"/>
+							</rect>
+							<rect>
+								<sprite name="slot" depth="2" width="59" height="59" sprite="resourceWood" atlas="ItemIconAtlasGreyscale" pos="30,-30" pivot="center" foregroundlayer="true"/>
+							</rect>
+						</grid>
+					</rect>
+					<panel name="buttonContent" depth="5" pos="0, -121" height="40" backgroundcolor="[black]" bordercolor="[black]">
+						<sprite depth="5" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" />
+						<rect depth="1" pos="3,-3" width="100%" height="34">
+							<button name="button" sprite="menu_empty" defaultcolor="[mediumGrey]" disabledcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" width="190"  hoverscale="1.0" />
+							<sprite depth="2" name="flameIcon" style="icon32px" pos="5,0" sprite="ui_game_symbol_fire" />
+							<label depth="2" name="onoff" pos="0,-6" justify="center" text="TURN ON" text_key="xuiTurnOn" font_size="26" />
+						</rect>
+					</panel>
+				</rect>	
+			</window> 
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowToolsCampfire" width="228" height="121" panel="Left" cursor_area="true" > -->
+			<window name="windowToolsCampfire" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" >
+				<rect name="main" width="100%" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="0,-46" height="65" disablefallthrough="true">
+						<grid	name="inventory" depth="10" pos="0,-2" rows="1" cols="3" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="toolCookingPot,toolCookingGrill,toolBeaker" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window> 
+<!-- ========================================================================================================================================================================================== -->		
+			<window name="windowToolsGasOven" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" >
+				<rect name="main" width="195" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="65" disablefallthrough="true">
+						<grid	name="inventory" depth="10" pos="0,-2" rows="1" cols="3" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="toolCookingPot,toolCookingGrill,toolBeaker" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<window name="windowToolsAlchemy" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" >
+				<rect name="main" width="100%" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="65" disablefallthrough="true">
+						<grid	name="inventory" depth="10" pos="0,-2" rows="1" cols="2" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="AlchemyL2UpgradeAOO,AlchemyL3UpgradeAOO" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<window name="windowToolsCloning" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" >
+				<rect name="main" width="195" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="65" disablefallthrough="true">
+						<grid	name="inventory" depth="10" pos="0,-2" rows="1" cols="3" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="CloningL1AOO,CloningL2AOO,CloningL3AOO" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>			
+<!-- ========================================================================================================================================================================================== -->		
+			<window name="windowToolsFarmTable" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" >
+				<rect name="main" width="100%" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="65" disablefallthrough="true">
+						<grid	name="inventory" depth="10" pos="0,-2" rows="1" cols="3" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="toolSeedProcessorAOO" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<window name="windowToolsDrinkDispenser" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" > <!-- Obsolete -->
+				<rect name="main" width="195" height="121" pos="400,1005">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="65" disablefallthrough="true">
+						<grid name="inventory" depth="10" pos="0,-2" rows="1" cols="3" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="toolJuicerAOO,toolCO2CanisterAOO" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<window name="windowToolsCloningStation" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" > <!-- Obsolete -->
+				<rect name="main" width="228" height="121" pos="400,1005">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="75" disablefallthrough="true">
+						<grid name="inventory" depth="10" pos="0,-2" rows="2" cols="3" cell_width="75" cell_height="75" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="CSL2UpgradeAOO,CSL3UpgradeAOO,toolAnimalBreedingKitAOO,toolDNAExtractorAOO"  required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowToolsBrewStation" width="195" height="121" panel="Left" cursor_area="true" > -->
+			<window name="windowToolsBrewStation" anchor="CenterTop" pos="-780,-60" width="195" height="121" cursor_area="true" >
+				<rect name="main" width="228" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="3,-46" height="65" disablefallthrough="true">
+						<grid name="inventory" depth="10" pos="0,-2" rows="1" cols="3" cell_width="65" cell_height="65" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="toolPasteurizerAOO,toolWineTankAOO,toolAgedBarrelAOO"  required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowForgeInput" width="228" height="204" panel="Left" controller="WorkstationMaterialInputWindow" materials_accepted="iron,brass,lead,glass,stone,clay" valid_materials_color="[green]" invalid_materials_color="[red]" cursor_area="true" > -->
+			<window name="windowForgeInput" anchor="CenterTop" pos="-815,-410" width="228" height="204" controller="WorkstationMaterialInputWindow" materials_accepted="iron,brass,lead,glass,stone,clay" valid_materials_color="[green]" invalid_materials_color="[red]" cursor_area="true" >
+				<rect name="main" width="228" height="121" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_forge"/>
+						<label style="header.name" text="INPUT" text_key="xuiSmelting" />
+					</panel>
+					<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="0,-46" height="153" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+					<rect name="content" depth="1" pos="0,-46" height="153">
+						<grid depth="7" rows="2" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationMaterialInputGrid" repeat_content="true">
+							<item_stack name="0"/>
+						</grid>
+					</rect>
+					<rect name="content2" depth="0" pos="78, -49" width="147" height="148">
+						<sprite depth="1" color="[mediumGrey]" type="sliced" on_press="true"/>
+						<grid rows="6" cols="1" pos="3,-3" cell_width="147" cell_height="24"  repeat_content="true">
+							<forge_material name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window> 
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowToolsForge" width="228" height="121" panel="Left" cursor_area="true" > -->
+			<window name="windowToolsForge" anchor="CenterTop" pos="-780,-60" width="195" height="111" cursor_area="true" >
+				<rect name="main" width="100%" height="100%" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="0,-46" height="65" disablefallthrough="true">
+						<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="65" cell_height="65" controller="WorkstationToolGrid" repeat_content="true" 
+						required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window> 
+			
+			
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowToolsForgeAdvanced" width="228" height="290" panel="Left" cursor_area="true" > -->
+			<window name="windowToolsForgeAdvanced" anchor="CenterTop" pos="-850,-60" width="260" height="290" cursor_area="true" >
+				<rect name="main" width="100%" height="100%" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+						<label style="header.name" text="TOOLS" text_key="xuiTools" />
+					</panel>
+					<rect name="content" depth="0" pos="0,-46" height="65" disablefallthrough="true">
+						<grid name="inventory" rows="2" cols="4" pos="3,-3" cell_width="65" cell_height="65" controller="WorkstationToolGrid" repeat_content="true" required_tools="toolAnvil,toolForgeCrucible,toolBellows,toolBellowsx40AOO,toolBellowsx50AOO,toolBellowsx60AOO,toolBellowsx70AOO,toolBellowsx80AOO"  required_tools_only="true">
+							<item_stack controller="RequiredItemStack" name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+<!-- ========================================================================================================================================================================================== -->		
+			<!-- <window name="windowForgeInputAdvanced" width="228" height="204" panel="Left" controller="WorkstationMaterialInputWindow" materials_accepted="iron,brass,lead,glass,stone,clay" valid_materials_color="[green]" invalid_materials_color="[red]" cursor_area="true" > -->
+			<window name="windowForgeInputAdvanced" anchor="CenterTop" pos="-815,-410" width="228" height="204" controller="WorkstationMaterialInputWindow" materials_accepted="iron,brass,lead,glass,stone,clay" valid_materials_color="[green]" invalid_materials_color="[red]" cursor_area="true" >
+				<rect name="main" width="228" height="204" pos="0,0">
+					<panel style="header.panel">
+						<sprite style="header.icon" sprite="ui_game_symbol_forge"/>
+						<label style="header.name" text="INPUT" text_key="xuiSmelting" />
+					</panel>
+					<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="0,-46" height="228" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+					<rect name="content" depth="1" pos="0,-46" height="153">
+						<grid depth="7" rows="3" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationMaterialInputGrid" repeat_content="true">
+							<item_stack name="0"/>
+						</grid>
+					</rect>
+					<rect name="content2" depth="0" pos="78, -49" width="147" height="224">
+						<sprite depth="1" color="[mediumGrey]" type="sliced" on_press="true"/>
+						<grid rows="6" cols="1" pos="3,-3" cell_width="147" cell_height="24"  repeat_content="true">
+							<forge_material name="0"/>
+						</grid>
+					</rect>
+				</rect>
+			</window>
+
+
+	</append> 
+
+	
+</configs>

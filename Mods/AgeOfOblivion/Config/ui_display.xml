@@ -1,0 +1,298 @@
+<configs>
+
+
+	
+
+    <append xpath="/ui_display_info/item_display">
+	
+		<item_display_info display_type="modCarryCapacityStrength" display_group="modAttire">
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+			<display_entry name="dattStrength" title_key="Strength" display_leading_plus="true"/>
+		</item_display_info>
+		<item_display_info display_type="modCarryCapacityPerception" display_group="modAttire">
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+			<display_entry name="dattPerception" title_key="Perception" display_leading_plus="true"/>
+		</item_display_info>	
+		<item_display_info display_type="modCarryCapacityAgility" display_group="modAttire">
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+			<display_entry name="dattAgility" title_key="Agility" display_leading_plus="true"/>
+		</item_display_info>	
+		<item_display_info display_type="modCarryCapacityIntelligence" display_group="modAttire">
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+			<display_entry name="dattIntelligence" title_key="Intelligence" display_leading_plus="true"/>
+		</item_display_info>	
+		<item_display_info display_type="modCarryCapacityFortitude" display_group="modAttire">
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+			<display_entry name="dattFortitude" title_key="Fortitude" display_leading_plus="true"/>
+		</item_display_info>	
+		<item_display_info display_type="modLuckyRabbitFoot" display_group="modAttire">
+			<display_entry name="dLucky" title_key="Loot Stage Percentage" display_leading_plus="true"/>
+		</item_display_info>	
+		
+		<item_display_info display_type="animalCarcass" display_group="groupCarcasses">
+			<display_entry name="dSmell" title_key="statFoodSmellAlways" display_type="Bool"/>
+			<display_entry name="dSmellUse" title_key="statFoodSmell"/>
+		</item_display_info>
+
+	
+		<item_display_info display_type="juice" display_group="groupConsumables">
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dCureDysentery" title_key="statCureDysentery" display_type="Percent"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>	
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>			
+		</item_display_info>	
+		
+		<item_display_info display_type="soda" display_group="groupConsumables">
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent"/>
+			<display_entry name="dCureDysentery" title_key="statCureDysentery" display_type="Percent"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>	
+			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>			
+		</item_display_info>		
+		
+		
+	</append>
+	
+	<append xpath="/ui_display_info/crafting_category_display">
+
+		<crafting_category_list display_type="wksCloningAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Random" icon="AOO-Logo" display_name="Random" icon_color="0,153,0"/>			
+			<crafting_category name="Ingredients/DNA" icon="AOO-Logo" display_name="Ingredients/DNA" icon_color="0,153,0"/>
+			<crafting_category name="WildAnimals" icon="AOO-Logo" display_name="Wild Animals" icon_color="0,153,0"/>
+			<crafting_category name="PetAnimals" icon="AOO-Logo" display_name="Pet Animals" icon_color="0,153,0"/>
+
+
+
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="wksForgeAdvancedAOO">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
+
+		</crafting_category_list>
+	
+		<crafting_category_list display_type="wksMasterWorkBenchAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Workbenches" icon="ui_game_symbol_workbench" display_name="Workbenches" icon_color="0,0,255"/>
+			<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+			<crafting_category name="Mods" icon="ui_game_symbol_assemble" display_name="lblCategoryMods" />
+			<crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" />
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFoodCooking" />
+			<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="wksWeaponWorkBenchAOO">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+		</crafting_category_list>
+
+	
+		<crafting_category_list display_type="wksFarmTableAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Seeds" icon="ui_game_symbol_tree" display_name="Seeds" icon_color="0,153,0"/>
+			<crafting_category name="SeedP" icon="ui_game_symbol_add" display_name="Seed Packs" icon_color="0,153,0"/>
+			<crafting_category name="Animals" icon="ui_game_symbol_armor_leather" display_name="Animal Resources" icon_color="255,255,0" />
+			<crafting_category name="CTools" icon="ui_game_symbol_tool" display_name="Tools" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="wksTransmogrifierAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>
+
+	<!--	<crafting_category_list display_type="wksDecorationBenchAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>
+	-->			
+	<crafting_category_list display_type="wksQuestStationAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All Quests" icon_color="0,153,0"/>
+
+		</crafting_category_list>
+		<crafting_category_list display_type="wksAmmoStationAOO">
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_all_blocks" display_name="Ammo" icon_color="0,153,0"/>
+		</crafting_category_list>
+
+		<crafting_category_list display_type="wksRefrigerator01AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>	
+		<crafting_category_list display_type="wksRefrigerator02AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>	
+		<crafting_category_list display_type="wksDrinkDispenser01AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>
+		<crafting_category_list display_type="wksDrinkDispenser02AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>
+		<crafting_category_list display_type="wksIceMaker01AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>
+		<crafting_category_list display_type="wksIceCreamMaker01AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="wksMechanicBench1AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Parts" icon="ui_game_symbol_AOO" display_name="Vehicle Components" />
+		</crafting_category_list>	
+		<crafting_category_list display_type="wksMechanicBench2AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Parts" icon="ui_game_symbol_AOO" display_name="Vehicle Components" />
+			<crafting_category name="Vehicles" icon="ui_game_symbol_AOO" display_name="Vehicles" />
+		</crafting_category_list>			
+		<crafting_category_list display_type="wksAlchemyStationAOO">
+			<crafting_category name="Alchemy" icon="ui_game_symbol_chemistry" display_name="Alchemy" icon_color="153,0,0"/>
+			<crafting_category name="Mods" icon="ui_game_symbol_chemistry" display_name="Dye" icon_color="153,0,0"/>			
+			<crafting_category name="Chemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+			<crafting_category name="Medical" icon="ui_game_symbol_medical" display_name="lblCategoryMedicine" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksAlchemyStation2AOO">
+			<crafting_category name="Alchemy" icon="ui_game_symbol_chemistry" display_name="Alchemy" icon_color="153,0,0"/>		
+			<crafting_category name="Alchemy" icon="ui_game_symbol_chemistry" display_name="Alchemy" icon_color="153,0,0"/>
+			<crafting_category name="Chemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+			<crafting_category name="Medical" icon="ui_game_symbol_medical" display_name="lblCategoryMedicine" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksAlchemyStation3AOO">
+			<crafting_category name="Alchemy" icon="ui_game_symbol_chemistry" display_name="Alchemy" icon_color="153,0,0"/>		
+			<crafting_category name="Alchemy" icon="ui_game_symbol_chemistry" display_name="Alchemy" icon_color="153,0,0"/>
+			<crafting_category name="Chemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+			<crafting_category name="Medical" icon="ui_game_symbol_medical" display_name="lblCategoryMedicine" />
+		</crafting_category_list> -->
+		<crafting_category_list display_type="wksBrewStationAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_beer" display_name="Brewing" icon_color="153,0,0"/>
+		</crafting_category_list>	
+		<crafting_category_list display_type="wksCloningStationAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Cloning" icon="ui_game_symbol_beer" display_name="Cloning" icon_color="153,0,0"/>
+		</crafting_category_list>	
+		<crafting_category_list display_type="wksCloningStationL2AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Cloning" icon="ui_game_symbol_beer" display_name="Cloning" icon_color="153,0,0"/>
+		</crafting_category_list>		
+		<crafting_category_list display_type="wksCloningStationL3AOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Cloning" icon="ui_game_symbol_beer" display_name="Cloning" icon_color="153,0,0"/>
+		</crafting_category_list>				
+
+		<crafting_category_list display_type="wksButcherTableAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Food/Cooking" icon="ui_game_symbol_knife" display_name="Butchering" icon_color="153,0,0"/>
+		</crafting_category_list>
+		<crafting_category_list display_type="wksColdSmokerAOO">
+			<crafting_category name="Smoker" icon="ui_game_symbol_knife" display_name="Smoking" icon_color="153,0,0"/>
+		</crafting_category_list>
+		<crafting_category_list display_type="wksDairyChurnAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Dairy" icon="ui_game_symbol_fork" display_name="Churn" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="wksGrainProcessorAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Processor" icon="ui_game_symbol_farm_life" display_name="Processor" />
+			<crafting_category name="Grain" icon="ui_game_symbol_coffee" display_name="Grain Processor" />			
+		</crafting_category_list>
+		<crafting_category_list display_type="wksGasOvenAOO">
+			<crafting_category name="Gas Oven" icon="ui_game_symbol_spatula" display_name="Gas Oven" />			
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksGasOven2AOO">
+			<crafting_category name="Gas Oven" icon="ui_game_symbol_spatula" display_name="Gas Oven" />			
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksGasOven3AOO">
+			<crafting_category name="Gas Oven" icon="ui_game_symbol_spatula" display_name="Gas Oven" />			
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksGasOven4AOO">
+			<crafting_category name="Gas Oven" icon="ui_game_symbol_spatula" display_name="Gas Oven" />			
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksGasOven5AOO">
+			<crafting_category name="Gas Oven" icon="ui_game_symbol_spatula" display_name="Gas Oven" />			
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksDeepFryerAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Fryer" icon="ui_game_symbol_spatula" display_name="Deep Fry" />			
+		</crafting_category_list>		
+		<crafting_category_list display_type="wksPizzaOvenAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Pizza" icon="ui_game_symbol_spatula" display_name="Pizza Oven" />			
+		</crafting_category_list>		
+		
+		<crafting_category_list display_type="wksKitchNaidAOO">
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" />
+			<crafting_category name="KitchNaid" icon="ui_game_symbol_coffee" display_name="KitchNaid" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="wksRusticSmokerAOO">
+			<crafting_category name="Smoker" icon="ui_game_symbol_spatula" display_name="Smoker" icon_color="255,111,0" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="wksWebberGrillAOO">
+			<crafting_category name="Grill" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="255,111,0" />
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksWebberGrill2AOO">
+			<crafting_category name="Grill" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="255,111,0" />
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>		
+		<crafting_category_list display_type="wksWoodGrillAOO">						
+			<crafting_category name="Grill" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="174,0,255"/>
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		<crafting_category_list display_type="wksRustyGrillAOO">
+			<crafting_category name="Grill" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="255,111,0" />
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="wksWoodGrill2AOO">						
+			<crafting_category name="Grill" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="174,0,255"/>
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>		
+		<crafting_category_list display_type="wksWoodGrill3AOO">						
+			<crafting_category name="Grill" icon="ui_game_symbol_spatula" display_name="Grill" icon_color="174,0,255"/>
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+		</crafting_category_list>
+
+		
+	</append>	
+	
+</configs>

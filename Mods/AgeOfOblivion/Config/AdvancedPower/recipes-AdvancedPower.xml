@@ -1,0 +1,95 @@
+<configs>
+
+	<append xpath="/recipes">
+
+		<recipe name="powerWindMillAOO" count="1" craft_time="90" craft_area="WorkbenchPowerCell" tags="learnable,windMill" >
+			<ingredient name="resourceForgedSteel" count="500"/>
+			<ingredient name="resourceMetalPipe" count="50"/>
+            <ingredient name="resourceMechanicalParts" count="200"/>
+			<ingredient name="resourceMetalPipe" count="40"/>
+			<ingredient name="resourceWood" count="400"/>
+		</recipe>
+		
+		<recipe name="resourceWindGearsAOO" count="1" craft_time="90" craft_area="WorkbenchPowerCell" tags="learnable,windMill">
+			<ingredient name="resourceForgedSteel" count="200"/>
+			<ingredient name="resourceMetalPipe" count="40"/>
+            <ingredient name="resourceMechanicalParts" count="40"/>
+		</recipe>
+		
+		<recipe name="Oakbatterybank" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceScrapBrass" count="50"/>
+			<ingredient name="resourceScrapLead" count="50"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="6"/>
+			<ingredient name="resourceScrapPolymers" count="50"/>
+		</recipe>
+	
+		<recipe name="Oakbatterybank2" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceScrapBrass" count="50"/>
+			<ingredient name="resourceScrapLead" count="50"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="6"/>
+			<ingredient name="resourceScrapPolymers" count="50"/>
+		</recipe>
+	
+		<recipe name="ArramusSolarPower" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="80"/>
+			<ingredient name="resourceMechanicalParts" count="40"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="150"/>
+		</recipe>
+
+		<recipe name="ArramusTurretPower" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="80"/>
+			<ingredient name="resourceMechanicalParts" count="40"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="150"/>
+		</recipe>
+
+		<recipe name="OakGenerator" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="14"/>
+		</recipe>
+
+		<recipe name="OakGenerator2" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="14"/>
+		</recipe>
+
+		<recipe name="OakBlackBetty" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceElectricParts" count="14"/>
+		</recipe>	
+
+		<recipe name="PowerCell" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceDuctTape" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>		
+		</recipe>
+
+		<recipe name="solarCell" count="1" craft_area="WorkbenchPowerCell" tags="learnable">
+			<ingredient name="drinkJarEmpty" count="1"/>
+			<ingredient name="KyburCrystalAOO" count="10"/>
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceDuctTape" count="4"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+		</recipe>
+
+		<recipe name="WorkbenchPowerCell" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceForgedIron" count="50"/>
+			<ingredient name="resourceWood" count="150"/>
+			<ingredient name="resourceElectricParts" count="15"/>
+			<ingredient name="resourceGlue" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="35"/>
+		</recipe>	
+
+	</append>
+	
+</configs>

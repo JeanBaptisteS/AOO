@@ -1,0 +1,487 @@
+<config>
+
+   <!-- <set xpath="/progression/level/@skill_points_per_level">2</set> -->
+
+	<set xpath="/progression/level/@max_level">500</set>	
+	<!-- Change Pack Mule Perk to unlock all slots -->
+	<set xpath="/progression/perks/perk[@name='perkPackMule']/effect_group/passive_effect[@name='CarryCapacity'][@value='3,6,10,14,18']/@value">7,14,21,28,35</set>
+
+	<insertAfter xpath="/progression/attributes/attribute[@name='attIntellect']">
+
+			<attribute name="attAOO" name_key="Age of Oblivion" desc_key="Age of Oblivion" icon="ui_game_symbol_White_AOO" min_level="1" max_level="10" base_skill_point_cost="2" cost_multiplier_per_level="1">
+		</attribute>
+
+	</insertAfter> 
+
+	<insertAfter xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']">
+	
+		<crafting_skill name="AOOCrafting" max_level="11" parent="attAOO" name_key="AOO Crafting" desc_key="AOOCraftingDesc" long_desc_key="AOOCraftingLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="Workstation02" name_key="Oblivion Master Workbench and Oak Solar Cells" has_quality="false" unlock_level="1" >
+				<unlock_entry item="wksMasterWorkBenchAOO" unlock_tier="1" />
+				<unlock_entry item="solarCell" unlock_tier="1" />					
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -10%" has_quality="false" unlock_level="3" >
+			
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -20% and Power Workbench" has_quality="false" unlock_level="4" >
+				<unlock_entry item="WorkbenchPowerCell" unlock_tier="1" />	
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -30%" has_quality="false" unlock_level="5" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -40% and Power Generators" has_quality="false" unlock_level="6" >
+				<unlock_entry item="OakGenerator,OakGenerator2,OakBlackBetty" unlock_tier="1" />
+			</display_entry>	
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -50%" has_quality="false" unlock_level="7" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -60% Battery Banks and Windmill" has_quality="false" unlock_level="8" >
+				<unlock_entry item="Oakbatterybank,Oakbatterybank2,ArramusSolarPower,ArramusTurretPower,powerWindMillAOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -70%" has_quality="false" unlock_level="9" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -80%" has_quality="false" unlock_level="10" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Crafting Time -90%" has_quality="false" unlock_level="11" >
+			</display_entry>			
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,11" value="1" tags="wksMasterWorkBenchAOO"/>
+				<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10,11" value="6,6,6,6,6,6,6,6,6,6,6" tags="OblivionTrader"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="3" value=".1"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="4" value=".2"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="5" value=".3"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="6" value=".4"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="7" value=".5"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="8" value=".6"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="9" value=".7"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="10" value=".8"/>
+				<passive_effect name="CraftingTime" operation="perc_subtract" level="11" value=".9"/>
+				<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10,11" value="1,1,2,2,3,3,4,4,5,5,6" tags="PowerCell"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,11" value="1" tags="PowerCell"/>
+				<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10,11" value="1,1,2,2,3,3,4,4,5,5,6" tags="solarCell"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,11" value="1" tags="solarCell"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,11" value="1" tags="WorkbenchPowerCell"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,11" value="1" tags="OakGenerator,OakGenerator2,OakBlackBetty"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,11" value="1" tags="Oakbatterybank,Oakbatterybank2,ArramusSolarPower,ArramusTurretPower,windMill"/>			
+					
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOQuests" max_level="80" parent="attAOO" name_key="AOO Quests" desc_key="AOOQuestsDesc" long_desc_key="AOOQuestsLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="wksQuestStationAOO" name_key="Quest Station" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksQuestStationAOO" unlock_tier="1" />
+				<unlock_entry item="QuestLine_Farming,QuestLine_Cloning,QuestLine_Resurrection,Quest_1000Kills" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="QuestScrollBlank" name_key="T1 Quests" has_quality="false" unlock_level="5" >
+				<unlock_entry item="Quest_DeepFrying,Quest_Butcher,Quest_FoodProcessing,Quest_Dairy,Quest_Brewing,Quest_Grilling,Quest_Ovens,Quest_DrinkDispenser,Quest_Decoration" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="QuestScrollBlank" name_key="T2 Quests" has_quality="false" unlock_level="15" >
+				<unlock_entry item="Quest_HoeHoeHoes,Quest_Arena" unlock_tier="1" />			
+			</display_entry>
+			<display_entry icon="QuestScrollBlank" name_key="T3 Quests" has_quality="false" unlock_level="30" >
+				<unlock_entry item="Quest_KillerKlowns" unlock_tier="1" />			<!-- Quest_AmusementPark -->
+			</display_entry>
+			<display_entry icon="QuestScrollBlank" name_key="T4 Quests" has_quality="false" unlock_level="80" >
+					<unlock_entry item="Quest_SkelKing,Quest_Research,Quest_Elite1,Quest_Elite2,Quest_Elite3,Quest_Elite4,Quest_Elite5,Quest_MountainTrader" unlock_tier="1" />		
+				</display_entry>			
+	
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,80" value="1" tags="wksQuestStationAOO"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,80" value="1" tags="starterquest"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,80" value="1" tags="T1quest"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,80" value="1" tags="T2quest"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,80" value="1" tags="T3quest"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80" value="1" tags="T4quest"/>					
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOFarming" max_level="5" parent="attAOO" name_key="AOO Farming" desc_key="AOOFarmingDesc" long_desc_key="AOOFarmingLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="FarmTablePrefab" name_key="Farm Table" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksFarmTableAOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="7seedpack" name_key="Grain Seed" has_quality="false" unlock_level="3" >
+				<unlock_entry item="plantedSugarcaneSeedAOO,plantedWheatSeedAOO,plantedMixedHerbsSeedAOO,plantedRiceSeedAOO,plantedMixedSpicesSeedAOO,plantedMarijuanaSeedAOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="7seedpack" name_key="Vegetable Seed" has_quality="false" unlock_level="4" >
+				<unlock_entry item="plantedBroccoliSeedAOO,plantedTomatoSeedAOO,plantedOnionSeedAOO,plantedJalapenoSeedAOO,plantedIcebergLettuceSeedAOO,plantedSpinachSeedAOO,plantedCucumberSeedAOO,plantedCelerySeedAOO,plantedCarrotSeedAOO,plantedCabbageSeedAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="7seedpack" name_key="Fruit Seed" has_quality="false" unlock_level="5" >
+				<unlock_entry item="plantedOrangeTreeSeedAOO,plantedMangoTreeSeedTSK_AOO,plantedCoconutTreeSeedAOO,plantedLimeTreeSeedTSK_AOO,plantedLemonTreeSeedTSK_AOO,plantedCherryTreeSeedAOO,plantedRaspberrySeedAOO,plantedPineappleSeedAOO,plantedStrawberrySeedAOO,plantedGrapeSeedAOO,plantedAppleTreeSeedAOO,plantedBananaTreeSeedAOO,plantedWatermelonSeedTSK_AOO,plantedPeachTreeSeedAOO" unlock_tier="1" />
+			</display_entry>
+
+
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="wksFarmTableAOO"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="gseed"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="vseed"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="fseed"/>				
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOWeapons" max_level="13" parent="attAOO" name_key="AOO Weapons" desc_key="Weaponsmith!" long_desc_key="AOOWeaponsLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="wksWeaponWorkBenchAOO" name_key="Weapon Bench" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksWeaponWorkBenchAOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="7glock" name_key="Pistols" has_quality="true" unlock_level="3" >
+				<unlock_entry item="gunBerettaM9_AOO,gunBerettaM92_AOO,gunHKUSP_AOO,gunBerettaNANO_AOO,gunP226_AOO,gunColt38_AOO,gunColt1911_AOO,gunGlock40_AOO,gunKRISSVector_AOO,gunVZ61Skorpion_AOO,gunMac10_AOO,gunThompson_AOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="7m16" name_key="SMG/Assault" has_quality="false" unlock_level="4" >
+				<unlock_entry item="gunM240_AOO,gunFNFAL_AOO,gunSCAR_AOO,gunARX160_AOO,gunACWR_AOO,gunM16_AOO,gunM4A1_AOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="7ksg12" name_key="Shotgun" has_quality="false" unlock_level="5" >
+				<unlock_entry item="gunWinchester_AOO,gunSPAS12_AOO,gunAA12_AOO,gunKSG12_AOO" unlock_tier="1" />
+			</display_entry>			
+			<display_entry icon="7m82" name_key="Rifle" has_quality="false" unlock_level="6" >
+				<unlock_entry item="gunSR25_AOO,gunJNG90_AOO,gunM98_AOO,gunM1garand_AOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="7flamethrower" name_key="Special" has_quality="false" unlock_level="7" >
+				<unlock_entry item="gunFlamethrower_AOO,gunM82Barrett_AOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Craft T2" has_quality="false" unlock_level="8" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Craft T3" has_quality="false" unlock_level="9" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Craft T4" has_quality="false" unlock_level="10" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Craft T5" has_quality="false" unlock_level="11" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Craft T6" has_quality="false" unlock_level="12" >
+				</display_entry>			
+			<display_entry icon="wksAmmoStationAOO" name_key="Ammunititon" has_quality="false" unlock_level="13" >
+				<unlock_entry item="wksAmmoStationAOO" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,13" value="1" tags="wksWeaponWorkBenchAOO"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,13" value="1" tags="pistolaoo"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,13" value="1" tags="smgaoo"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,13" value="1" tags="shotgunaoo"/>	
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,13" value="1" tags="rifleaoo"/>					
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,13" value="1" tags="specialaoo"/>	
+				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,13" value="1" tags="wksAmmoStationAOO"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,13" value="1" tags="ammobundleaoo"/>
+
+				<passive_effect name="CraftingTier" operation="base_set" level="3,8,9,10,11,12,13" value="1,2,3,4,5,6,6" tags="pistolaoo,smgaoo,shotgunaoo,rifleaoo,specialaoo"/>
+
+
+				
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOCooking" max_level="8" parent="attAOO" name_key="AOO Cooking" desc_key="AOOCookingDesc" long_desc_key="AOOCookingLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="KitchNaidPrefab" name_key="Food Prep" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksKitchNaidAOO,wksDairyChurnAOO,wksButcherTableV2,foodBBQSauceAOO,foodDoughAOO,foodFlourAOO,foodRawPastaAOO,foodVegOilAOO,foodSugarAOO,foodMixedFruitTSK_AOO,foodMixedVeggiesTSK_AOO,foodButterAOO,foodCheeseAOO,foodCreamAOO,foodCreamCheeseAOO" unlock_tier="1" />
+			</display_entry>	
+			<display_entry icon="drink_dispenser-1" name_key="Beverages" has_quality="false" unlock_level="3" >
+				<unlock_entry item="wksDrinkDispenserV2" unlock_tier="1" />
+			</display_entry>			
+			<display_entry icon="range-2" name_key="Ovens" has_quality="false" unlock_level="4" >
+				<unlock_entry item="wksGasOven3AOO,wksPizzaOvenAOO,wksDeepFryerAOO,foodBagelAOO,foodBreadAOO,foodGrandMa'sFamousSauceAOO,foodBreakfastBaconSandwichAOO,foodBreakfastSausageSandwichAOO,foodRamenTSK_AOO,foodRoyalGamePieTSK_AOO,foodVenisonStewTSK_AOO,foodChickenPotPieTSK_AOO,foodHasenpfefferTSK_AOO,foodHomemadeChickenNoodleTSK_AOO,foodBeefwithBroccoliAOO,foodCabbageRollsandCoffeeAOO,foodFreshBaconMeatloafAOO,foodFreshBakedChickenBreastAOO,foodFriedRiceAOO,foodSpaghettiandaMeataBallsAOO,foodPizzaAOO,foodBloominOnionAOO,foodFalafelAOO,foodFingersFriesAOO,foodJalapenoPoppersAOO,foodFriesAOO,foodChipsTSK_AOO,foodOnionRingsAOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="bbq_grill-2" name_key="Grills" has_quality="false" unlock_level="5" >
+				<unlock_entry item="wksRustyGrillAOO,wksWoodGrill2AOO,wksWebberGrill2AOO,wksWebberGrillAOO,wksWoodGrill3AOO,foodBBQPorkRibsAOO,foodBeefChiliAOO,foodFreshBBQChickenLegsAOO,foodFreshCheeseBurgerAOO,foodExoticGrilledSteakTSK_AOO,foodGrilledSteakAOO,foodSpicyHotWingsAOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="range-2" name_key="Smokers" has_quality="false" unlock_level="6" >
+				<unlock_entry item="wksRusticSmokerAOO,foodFreshHoneyGlazedHamAOO,foodFreshSmokedSausageAOO,foodSmokedChickenTSK_AOO,foodSmokedFishTSK_AOO,foodSmokedFishTSK_AOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="foodCherryPieAOO" name_key="Dessert" has_quality="false" unlock_level="7" >
+				<unlock_entry item="wksIceCreamMaker01AOO,foodRaspberryMousseTSK_AOO,foodStrawberryMousseTSK_AOO,foodApplePieAOO,foodBananaCreamPieAOO,foodCherryPieAOO,foodChocolateCakeTSK_AOO,foodCoconutCreamPieAOO,foodPeachCobblerTSK_AOO,foodLemonCakeTSK_AOO,foodSpecialBrowniesTSK_AOO" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="BrewstationPrefab" name_key="Booze" has_quality="false" unlock_level="8" >
+				<unlock_entry item="wksBrewStationAOO,drinkRedWineTSK_AOO,drinkWhiteWineTSK_AOO,drinkVodkaTSK_AOO,drinkWhiskeyTSK_AOO,drinkRumTSK_AOO,foodMilkAOO" unlock_tier="1" />
+			</display_entry>
+
+
+
+		
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,8" value="1" tags="foodprep"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,8" value="1" tags="drinksaoo"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,8" value="1" tags="ovenaoo"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,8" value="1" tags="grillaoo"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,8" value="1" tags="smokeraoo"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,8" value="1" tags="dessertaoo"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8" value="1" tags="boozeaoo"/>
+
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOForge" max_level="10" parent="attAOO" name_key="AOO Advanced Forge" desc_key="AOOForgeDesc" long_desc_key="AOOForgeLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="Forge02" name_key="Advanced Forge" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksForgeAdvancedAOO" unlock_tier="1" />
+				<unlock_entry item="toolBellowsx40AOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="toolBellows" name_key="Advanced Bellows Lvl 2" has_quality="false" unlock_level="4" >
+				<unlock_entry item="toolBellowsx50AOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="toolBellows" name_key="Advanced Bellows Lvl 3" has_quality="false" unlock_level="6" >
+				<unlock_entry item="toolBellowsx60AOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="toolBellows" name_key="Advanced Bellows Lvl 4" has_quality="false" unlock_level="8" >
+				<unlock_entry item="toolBellowsx70AOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="toolBellows" name_key="Advanced Bellows Lvl 5" has_quality="false" unlock_level="10" >
+				<unlock_entry item="toolBellowsx80AOO" unlock_tier="1" />
+			</display_entry>
+		
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="wksForgeAdvancedAOO"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="bellow1"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="bellow2"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="bellow3"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,10" value="1" tags="bellow4"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10" value="1" tags="bellow5"/>
+
+
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOCloning" max_level="15" parent="attAOO" name_key="AOO Cloning" desc_key="AOOCloningDesc" long_desc_key="AOOCloningLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="CloneChamber" name_key="Cloning Station" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksCloningAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="PowerGenerator" name_key="Power Generator" has_quality="false" unlock_level="5" >
+				<unlock_entry item="CloningL1AOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="toolCloneChamber" name_key="Empty Clone Chamber" has_quality="false" unlock_level="10" >
+				<unlock_entry item="CloningL2AOO" unlock_tier="1" />
+			</display_entry>
+			
+			<display_entry icon="toolEnhancedCloneChamber" name_key="Empty Enhanced Clone Chamber" has_quality="false" unlock_level="15" >
+				<unlock_entry item="CloningL3AOO" unlock_tier="1" />
+			</display_entry>	
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,15" value="1" tags="wksCloningAOO"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,15" value="1" tags="L1CloningTool"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,15" value="1" tags="L2CloningTool"/>				
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15" value="1" tags="L3CloningTool"/>
+			</effect_group>
+		</crafting_skill>
+
+<!--		<crafting_skill name="AOOPower" max_level="25" parent="attAOO" name_key="AOO Power" desc_key="AOOPowerDesc" long_desc_key="AOOPowerLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="wksWeaponWorkBenchAOO" name_key="Power WorkBench" has_quality="false" unlock_level="5" >
+				<unlock_entry item="wksWeaponWorkBenchAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="wksWeaponWorkBenchAOO" name_key="Generators" has_quality="false" unlock_level="10" >
+				<unlock_entry item="wksWeaponWorkBenchAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="wksWeaponWorkBenchAOO" name_key="Battery Banks" has_quality="false" unlock_level="15" >
+				<unlock_entry item="wksWeaponWorkBenchAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="wksWeaponWorkBenchAOO" name_key="Solar" has_quality="false" unlock_level="20" >
+				<unlock_entry item="wksWeaponWorkBenchAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="wksWeaponWorkBenchAOO" name_key="Wind" has_quality="false" unlock_level="25" >
+				<unlock_entry item="wksWeaponWorkBenchAOO" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,100" value="1" tags="wksFarmTableAOO"/>
+			</effect_group>
+		</crafting_skill>
+-->
+		<crafting_skill name="AOOAlchemy" max_level="10" parent="attAOO" name_key="AOO Alchemy" desc_key="AOOAlchemyDesc" long_desc_key="AOOAlchemyLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="AlchemyBench3" name_key="Alchemy Station" has_quality="false" unlock_level="2" >
+				<unlock_entry item="wksAlchemyStationAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="flasks" name_key="Alchemy Station Level 2" has_quality="false" unlock_level="5" >
+				<unlock_entry item="AlchemyL2UpgradeAOO" unlock_tier="1" />
+			</display_entry>
+
+			<display_entry icon="Alchemypot" name_key="Alchemy Station Level 3" has_quality="false" unlock_level="10" >
+				<unlock_entry item="AlchemyL3UpgradeAOO" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="L1Alchemy"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="L2Alchemy"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,10" value="1" tags="L3Alchemy"/>
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOHealth" max_level="30" parent="attAOO" name_key="AOO Health" desc_key="AOOHealthDesc" long_desc_key="AOOHealthLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="AOO-Logo" name_key="Health +20" has_quality="false" unlock_level="2" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +40" has_quality="false" unlock_level="4" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +60" has_quality="false" unlock_level="6" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +80" has_quality="false" unlock_level="8" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +100" has_quality="false" unlock_level="10" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +120" has_quality="false" unlock_level="12" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +140" has_quality="false" unlock_level="14" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +160" has_quality="false" unlock_level="16" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +180" has_quality="false" unlock_level="18" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +200" has_quality="false" unlock_level="20" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +220" has_quality="false" unlock_level="22" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +240" has_quality="false" unlock_level="24" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +260" has_quality="false" unlock_level="26" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +280" has_quality="false" unlock_level="28" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Health +300" has_quality="false" unlock_level="30" >
+			</display_entry>
+
+
+			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" level="2,3" value="20"/>
+				<passive_effect name="HealthMax" operation="base_add" level="4,5" value="40"/>
+				<passive_effect name="HealthMax" operation="base_add" level="6,7" value="60"/>
+				<passive_effect name="HealthMax" operation="base_add" level="8,9" value="80"/>
+				<passive_effect name="HealthMax" operation="base_add" level="10,11" value="100"/>
+				<passive_effect name="HealthMax" operation="base_add" level="12.13" value="120"/>
+				<passive_effect name="HealthMax" operation="base_add" level="14,15" value="140"/>
+				<passive_effect name="HealthMax" operation="base_add" level="16,17" value="160"/>
+				<passive_effect name="HealthMax" operation="base_add" level="18,19" value="180"/>
+				<passive_effect name="HealthMax" operation="base_add" level="20,21" value="200"/>
+				<passive_effect name="HealthMax" operation="base_add" level="22,23" value="220"/>
+				<passive_effect name="HealthMax" operation="base_add" level="24,25" value="240"/>
+				<passive_effect name="HealthMax" operation="base_add" level="26,27" value="260"/>
+				<passive_effect name="HealthMax" operation="base_add" level="28,29" value="280"/>
+				<passive_effect name="HealthMax" operation="base_add" level="30" value="300"/>
+
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOStamina" max_level="30" parent="attAOO" name_key="AOO Stamina" desc_key="AOOStaminaDesc" long_desc_key="AOOStaminLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="AOO-Logo" name_key="Stamina +20" has_quality="false" unlock_level="2" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +40" has_quality="false" unlock_level="4" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +60" has_quality="false" unlock_level="6" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +80" has_quality="false" unlock_level="8" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +100" has_quality="false" unlock_level="10" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +120" has_quality="false" unlock_level="12" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +140" has_quality="false" unlock_level="14" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +160" has_quality="false" unlock_level="16" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +180" has_quality="false" unlock_level="18" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +200" has_quality="false" unlock_level="20" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +220" has_quality="false" unlock_level="22" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +240" has_quality="false" unlock_level="24" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +260" has_quality="false" unlock_level="26" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +280" has_quality="false" unlock_level="28" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Stamina +300" has_quality="false" unlock_level="30" >
+			</display_entry>
+
+
+			<effect_group>
+				<passive_effect name="StaminaMax" operation="base_add" level="2,3" value="20"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="4,5" value="40"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="6,7" value="60"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="8,9" value="80"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="10,11" value="100"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="12.13" value="120"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="14,15" value="140"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="16,17" value="160"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="18,19" value="180"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="20,21" value="200"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="22,23" value="220"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="24,25" value="240"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="26,27" value="260"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="28,29" value="280"/>
+				<passive_effect name="StaminaMax" operation="base_add" level="30" value="300"/>
+
+			</effect_group>
+		</crafting_skill>
+
+		<crafting_skill name="AOOTools" max_level="11" parent="attAOO" name_key="AOO Tool Damage and Speed" desc_key="AOOToolsDesc" long_desc_key="AOOToolsLongDesc" icon="AOO-Logo-Green">
+
+			<display_entry icon="AOO-Logo" name_key="Block Damage +20%/Attack Speed +10%" has_quality="false" unlock_level="2" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +40%/Attack Speed +20%" has_quality="false" unlock_level="3" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +60%/Attack Speed +30%" has_quality="false" unlock_level="4" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +80%/Attack Speed +40%" has_quality="false" unlock_level="5" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +100%/Attack Speed +50%" has_quality="false" unlock_level="6" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +120%/Attack Speed +60%" has_quality="false" unlock_level="7" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +140%/Attack Speed +70%" has_quality="false" unlock_level="8" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +160%/Attack Speed +80%" has_quality="false" unlock_level="9" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +180%/Attack Speed +90%" has_quality="false" unlock_level="10" >
+			</display_entry>
+			<display_entry icon="AOO-Logo" name_key="Block Damage +200%/Attack Speed +100%" has_quality="false" unlock_level="11" >
+			</display_entry>
+
+
+
+
+			<effect_group>
+				<passive_effect name="BlockDamage" operation="perc_add" level="2" value=".2" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="2" value=".1" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="3" value=".4" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="3" value=".2" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="4" value=".6" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="4" value=".3" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="5" value=".8" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="5" value=".4" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="6" value="1" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="6" value=".5" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="7" value="1.2" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="7" value=".6" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="8" value="1.4" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="8" value=".7" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="9" value="1.6" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="9" value=".8" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="10" value="1.8" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="10" value=".9" tags="perkMiner69r,salvageHarvest"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="11" value="2" tags="perkMiner69r,salvageHarvest" />
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="11" value="1" tags="perkMiner69r,salvageHarvest"/>
+	
+			</effect_group>
+		</crafting_skill>
+
+
+	</insertAfter>
+	
+</config>

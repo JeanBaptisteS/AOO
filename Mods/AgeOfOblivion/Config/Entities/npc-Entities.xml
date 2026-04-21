@@ -1,0 +1,71 @@
+<configs>
+	
+<!--	
+	<append xpath="/npc/factions/whiteriver" >	
+		<relationship name="aggressiveanimalssmall" value="hate"/>
+		<relationship name="aggressiveanimalsmedium" value="hate"/>
+		<relationship name="aggressiveanimalslarge" value="hate"/>
+		<relationship name="whisperers" value="hate"/>
+	</append>
+-->
+
+  <insertAfter xpath="/npc/npc_info[@id='traderrekt']">
+  
+		<npc_info id="TeleportNPC" name_key="npcTeleportNPC" faction="whiteriver" portrait="" greeting_type="nearby" stance="Like" voice_set="npc_traderJen" trader_id="2" dialog_id="TeleportNPC01" />
+	
+	    <npc_info id="TeleportFacilityNPC" name_key="TeleportFacilityNPC" faction="whiteriver" portrait="" greeting_type="nearby" stance="Like" voice_set="npc_traderJen" trader_id="2" dialog_id="TeleportFacilityNPC" />
+	
+	    <npc_info id="TeleportFacilityOutNPC" name_key="TeleportFacilityOutNPC" faction="whiteriver" portrait="" greeting_type="nearby" stance="Like" voice_set="npc_traderJen" trader_id="2" dialog_id="TeleportFacilityOutNPC" />
+		
+		<npc_info id="traderVic" name="Trader Vic" name_key="npc_traderVic" faction="whiteriver" portrait="npc_joel" greeting_type="nearby" stance="Like" voice_set="trader" trader_id="11" dialog_id="trader" quest_faction="1" />
+	
+		<npc_info id="NPCAnimalGeneric_AOO" name="NPCAnimal" name_key="npc_traitorJoel" faction="petanimals" portrait="npc_warwolf" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="GenericNPCAnimal_AOO" localization_id="npcTraderBob" /> 
+  
+		<npc_info id="GenericNPC_AOO" name="NPC" name_key="npc_traitorJoel" faction="whiteriver" portrait="npc_joel" greeting_type="nearby" stance="Like" voice_set="" trader_id="1" dialog_id="GenericNPC_AOO" localization_id="npcTraderBob" />
+  
+	</insertAfter>	
+	
+ 
+	<append xpath="/npc/factions" >	
+		<faction name="petanimals">
+			<relationship name="*" value="neutral"/>
+		</faction>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='aggressiveanimalssmall']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='zombieanimals']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='aggressiveanimals']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='aggressiveanimalsmedium']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='aggressiveanimalslarge']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='undead']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='bandits']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='whisperers']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+	
+	<append xpath="/npc/factions/faction[@name='vault']" >
+		<relationship name="petanimals" value="neutral"/>
+	</append>
+
+</configs>

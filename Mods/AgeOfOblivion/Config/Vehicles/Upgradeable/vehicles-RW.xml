@@ -1,0 +1,295 @@
+<config>
+
+	<append xpath="/vehicles">
+	
+		<vehicle name="vehicleRW00">
+
+			<property name="cameraDistance" value="5.5, 8"/>
+			<property name="cameraTurnRate" value=".2, .35"/>
+			<property name="upAngleMax" value="70"/>
+			<property name="upForce" value="1"/>
+			<property name="steerAngleMax" value="32"/>
+			<property name="steerRate" value="190"/>
+			<property name="steerCenteringRate" value="100"/>
+			<property name="tiltAngleMax" value="80"/>
+			<property name="tiltThreshold" value="3"/>
+			<property name="tiltDampening" value=".22"/>
+			<property name="tiltDampenThreshold" value="8"/>
+			<property name="tiltUpForce" value="0"/>
+			<property name="hopForce" value="1"/>
+			<property name="unstickForce" value="1"/>
+			<property name="motorTorque_turbo" value="3500, 1500, 4500, 2000"/>
+			<property name="velocityMax_turbo" value="17, 12, 25, 14"/>
+			<property name="brakeTorque" value="6000"/>
+			<property name="waterDrag_y_velScale_velMaxScale" value="1.8, .9, .1"/>
+			<property name="wheelPtlScale" value="1"/>
+			<property name="hornSound" value="roadwarrior"/>
+
+			<property class="vehicleWeaponManager">
+				<property name="class" value="WeaponManager,VehicleWeapon"/>
+			</property>
+				
+			<property class="WeaponTurret">
+				<property name="class" value="RaycastWeapon,VehicleWeapon"/>
+				<property name="seat" value="0"/>
+				<property name="slot" value="0"/>
+				<property name="burstCount" value="1"/>
+				<property name="burstInterval" value="0"/>
+				<property name="burstRepeat" value="1"/>
+				<property name="raycastTransform" value="Mods/Weapon/WeaponRoot/Turret/Rotate/ShootPoint"/>
+				<property name="muzzleTransform" value="Mods/Weapon/WeaponRoot/Turret/Rotate/Muzzle"/>
+				<property name="muzzleFlash" value="gunfire_m60"/>
+				<property name="muzzleSmoke" value="gunfire_smoke"/>
+				<property name="itemName" value="vehicleWeaponRW02"/>
+				<property name="ammo" value="ammo50BMGIncendiary"/>
+				<property name="fullauto" value="false"/>
+				<property name="fireSound" value="sr25fire"/>
+				<property name="endSound" value="sr25fire"/>
+				<property name="emptySound" value=""/>
+				<property name="notReadySound" value=""/>
+				<property name="notOnTargetSound" value=""/>
+				<property name="rotator" value="turretWeaponRotator"/>				
+				<property name="fireWhen" value="OnTarget"/>
+			</property>
+	
+			<property class="turretWeaponRotator">
+				<property name="class" value="DirectionalWeaponRotator,VehicleWeapon"/>
+				<property name="transform" value="Mods/Weapon/WeaponRoot"/>
+				<property name="verRotationTransform" value="Mods/Weapon/WeaponRoot/Turret/Rotate"/>
+				<property name="indicatorTransform" value="Mods/Weapon/WeaponRoot/Turret/Rotate/LineIndicator"/>
+				<property name="verticleMaxRotation" value="60"/>
+				<property name="verticleMinRotation" value="-25"/>
+				<property name="verticleRotationSpeed" value="120"/>
+				<property name="horRotationTransform" value="Mods/Weapon/WeaponRoot/Turret"/>
+				<property name="horizontalMaxRotation" value="75"/>
+				<property name="horizontalMinRotation" value="-75"/>
+				<property name="horizontalRotationSpeed" value="120"/>
+<!--				<property name="indicatorColorOnTarget" value="#00FF00"/> <!{1}** Green **{1}>-->
+				<property name="indicatorColorOnTarget" value="#F70D1AB0"/>				
+				<property name="indicatorColorAiming" value="#F70D1AB0"/>
+				<property name="indicatorColorProperty" value="_TintColor"/>
+			</property>	
+
+			<property class="chassis">
+				<property name="class" value="Chassis"/>
+			</property>
+
+			<property class="engine">
+				<property name="class" value="Engine"/>
+				<property name="slot_type" value="engine"/>
+				<property name="particleOn" value="p_on"/>
+				<property name="particleDamaged" value="p_damaged"/>
+				<property name="particleBroken" value="p_broken"/>
+				<property name="fuelKmPerL" value=".1"/>
+				<property name="foodDrain" value=".002,.00811"/><!-- driving/turbo, truck -->
+				<property name="gear1" value="
+									500,2500, -1400,800,0, 700,2200,900,
+									Vehicles/Suv/suv_accel1,
+									Vehicles/Suv/suv_decel1,
+									0, .7, 1, .1, -9, .12, .1, Vehicles/Suv/suv_idle_lp,
+									-.4, -.02, .7, .7, -.2, 9, .2, Vehicles/Suv/suv_max_speed_lp
+									"/>
+				<property name="gear2" value="
+									500,2500, -2000,1000,2000, 600,2200,800,
+									Vehicles/Suv/suv_accel2,
+									Vehicles/Suv/suv_decel1,
+									-.25, -.05, .2, .4, -1, 1, .1, Vehicles/Suv/suv_max_speed_lp
+									"/>
+				<property name="gear3" value="
+									500,2500, -2000,1000,2000, 500,2200,1000,
+									Vehicles/Suv/suv_accel3,
+									Vehicles/Suv/suv_decel2,
+									-.28, -.07, .3, .6, -1, 1, .1, Vehicles/Suv/suv_max_speed_lp
+									"/>
+				<property name="gear4" value="
+									500,2500, -2000,1000,2000, 500,9999,9999,
+									,
+									Vehicles/Suv/suv_decel2,
+									-.31, -.08, .6, .9, -1, 1, .1, Vehicles/Suv/suv_max_speed_lp
+									"/>
+				<property name="sound_start" value="Vehicles/Suv/suv_startup"/>
+				<property name="sound_shut_off" value="Vehicles/Suv/suv_shutoff"/>
+				<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+				<property name="mod" value="speed"/>
+				<property name="modT" value="Mods/Engine"/>
+			</property>
+		
+			<property class="fuelTank">
+				<property name="class" value="FuelTank"/>
+				<property name="capacity" value="500"/>
+				<property name="mod" value="fueltank"/>
+				<property name="modT" value="Mods/Fuel"/>				
+			</property>
+
+			<property class="handlebars">
+				<property name="class" value="Steering"/>
+				<property name="transform" value="Origin/steering_joint"/>
+				<property name="steerAngle" value="0, 70, 10"/>
+				<property name="IKHandLPosition" value="-0.21, 0.1 , 0"/>
+				<property name="IKHandLRotation" value="-25,14, 90"/>
+				<property name="IKHandRPosition" value=".16, .07 ,-.06"/>
+				<property name="IKHandRRotation" value="144.6357, 14.0615, 102.1651"/>
+
+			</property>
+				
+			<property class="seat0">
+				<property name="class" value="Seat"/>
+				<property name="pose" value="40"/>			
+				<property name="position" value="-.268, -.220, -.33"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+			</property>
+			
+			<property class="seat1">
+				<property name="class" value="Seat"/>
+				<property name="pose" value="41"/>			
+				<property name="position" value=".45, -.45, -.1"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+			</property>
+				
+			<property class="wheel0">
+				<property name="steerTransform" value="Origin/frontLeftWheelStear_joint"/>
+				<property name="tireTransform" value="Origin/frontLeftWheelStear_joint/frontLeftWheel_joint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, 1"/>
+			</property>
+
+			<property class="wheel1">
+				<property name="steerTransform" value="Origin/frontRightWheelStear_joint"/>
+				<property name="tireTransform" value="Origin/frontRightWheelStear_joint/frontRightWheel_joint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, 1"/>
+			</property>
+
+			<property class="wheel2">
+				<property name="tireTransform" value="Origin/backLeftWheelJoint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, 1"/>
+			</property>
+
+			<property class="wheel3">
+				<property name="tireTransform" value="Origin/backRightWheelJoint"/>
+				<property name="tireSuspensionPercent" value="1"/>
+				<property name="torqueScale_motor_brake" value="1, 1"/>
+			</property>
+			
+			<property class="headlight">
+				<property name="class" value="Headlight"/>
+				<property name="transform" value="Origin/headlight"/>
+				<property name="bright" value="1.5"/>
+				<property name="mod" value="light"/>
+				<property name="mod" value="light"/>
+			</property>
+			
+			<property class="storage">
+				<property name="class" value="Storage"/>
+			</property>
+
+			<property class="plow1">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow1"/>
+				<property name="modT" value="Mods/Plow/Plow1"/>
+				<property name="modRBT" value="Plow"/>
+			</property>
+
+			<property class="plow2">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow2"/>
+				<property name="modT" value="Mods/Plow/Plow2"/>
+				<property name="modRBT" value="Plow"/>
+			</property>
+
+			<property class="plow3">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow3"/>
+				<property name="modT" value="Mods/Plow/Plow3"/>
+				<property name="modRBT" value="Plow"/>
+			</property>
+
+			<property class="plow4">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow4"/>
+				<property name="modT" value="Mods/Plow/Plow4"/>
+				<property name="modRBT" value="Plow"/>
+			</property>			
+			<property class="plow5">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow5"/>
+				<property name="modT" value="Mods/Plow/Plow5"/>
+				<property name="modRBT" value="Plow"/>
+			</property>
+
+			<property class="plow6">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow6"/>
+				<property name="modT" value="Mods/Plow/Plow6"/>
+				<property name="modRBT" value="Plow"/>
+			</property>
+
+			<property class="plow7">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWplow7"/>
+				<property name="modT" value="Mods/Plow/Plow7"/>
+				<property name="modRBT" value="Plow"/>
+			</property>			
+
+			<property class="Exhaust1">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWExhaust1"/>
+				<property name="modT" value="Mods/Exhaust/Exhaust1"/>
+			</property>
+
+			<property class="Exhaust2">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWExhaust2"/>
+				<property name="modT" value="Mods/Exhaust/Exhaust2"/>
+			</property>
+
+			<property class="Exhaust3">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWExhaust3"/>
+				<property name="modT" value="Mods/Exhaust/Exhaust3"/>
+			</property>
+
+			<property class="Exhaust4">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWExhaust4"/>
+				<property name="modT" value="Mods/Exhaust/Exhaust4"/>
+			</property>
+
+			<property class="Exhaust5">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWExhaust5"/>
+				<property name="modT" value="Mods/Exhaust/Exhaust5"/>
+			</property>
+
+			<property class="Exhaust6">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWExhaust6"/>
+				<property name="modT" value="Mods/Exhaust/Exhaust6"/>
+			</property>	
+
+			<property class="Armor">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWArmor"/>
+				<property name="modT" value="Mods/Armor"/>
+			</property>
+
+			<property class="Decor">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWDecor"/>
+				<property name="modT" value="Mods/Decor"/>
+			</property>
+
+			<property class="Weapon1">
+				<property name="class" value="VehiclePart"/>
+				<property name="mod" value="RWWeapon1"/>
+				<property name="modT" value="Mods/Weapon"/>
+			</property>
+			
+		</vehicle>
+	
+	</append>
+
+</config>

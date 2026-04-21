@@ -1,0 +1,6 @@
+<config>
+
+	<!--<include filename="Advanced/progression-AdvancedPower.xml" />-->
+	<include filename="Core/progression-Core.xml" />
+
+</config>

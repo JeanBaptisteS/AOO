@@ -1,0 +1,242 @@
+<configs>
+
+	<append xpath="/paints">
+
+		
+		<opaque id="AOO_Texture_006" name="AOO_Texture_006">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_06_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_06_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_008" name="AOO_Texture_008">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_08_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_08_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_009" name="AOO_Texture_009">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_09_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_09_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_032" name="AOO_Texture_032">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_32_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_32_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_033" name="AOO_Texture_033">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_33_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_33_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_034" name="AOO_Texture_034">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_34_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_34_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_035" name="AOO_Texture_035">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_35_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_35_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_036" name="AOO_Texture_036">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_36_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_36_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_037" name="AOO_Texture_037">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_37_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_37_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_038" name="AOO_Texture_038">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_38_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_38_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_039" name="AOO_Texture_039">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_39_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_39_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_052" name="AOO_Texture_052">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse2.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal2.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_063" name="AOO_Texture_063">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse13.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal13.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_073" name="AOO_Texture_073">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack03.unity3d?Tiles_floor(03)_Albedo.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack03.unity3d?Tiles_floor(03)_Normals.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+
+		<opaque id="AOO_Texture_086" name="AOO_Texture_086">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack03.unity3d?Tiles_floor(16)_Albedo.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack03.unity3d?Tiles_floor(16)_Normals.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+		<opaque id="AOO_Texture_100" name="AOO_Texture_100">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse20.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal20.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+		<opaque id="AOO_Texture_101" name="AOO_Texture_102">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack04.unity3d?metal05_diffuse.png"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack04.unity3d?metal05_normal.png"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+		<opaque id="AOO_Texture_102" name="AOO_Texture_102">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack04.unity3d?metal11_diffuse.png"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack04.unity3d?metal11_normal.png"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+		<opaque id="AOO_Texture_103" name="AOO_Texture_103">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_Texture_crate2.unity3d?crate2_D.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_Texture_crate2.unity3d?crate2_N.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+	
+		<opaque id="AOO_Texture_104" name="AOO_Texture_104">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse4.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal4.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>		
+		<opaque id="AOO_Texture_105" name="AOO_Texture_105">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse14.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal14.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>		
+		<opaque id="AOO_Texture_106" name="AOO_Texture_106">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_11_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_11_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>		
+		<opaque id="AOO_Texture_107" name="AOO_Texture_107">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_25_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_25_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>		
+		<opaque id="AOO_Texture_108" name="AOO_Texture_108">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_37_Diffuse.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack01.unity3d?T_37_Normal.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>		
+
+		<opaque id="AOO_Texture_109" name="AOO_Texture_109">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack03.unity3d?Tiles_floor(18)_Albedo.png"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack03.unity3d?Tiles_floor(18)_Normals.png"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>	
+
+		<opaque id="AOO_Texture_110" name="AOO_Texture_110">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse16.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal16.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>			
+
+		<opaque id="AOO_Texture_111" name="AOO_Texture_111">
+			<property name="Diffuse" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?diffuse7.tga"/>
+			<property name="Normal" value="#@modfolder:Resources/AOO_TexturePack02.unity3d?normal7.tga"/>
+			<property name="Group" value="txGroupDecoration"/>
+			<property name="Color" value="0.4823529,0.3490196,0.2901961"/>
+			<property name="Material" value="wood" />
+			<property name="PaintCost" value="1" />
+		</opaque>
+		
+	</append>
+</configs>

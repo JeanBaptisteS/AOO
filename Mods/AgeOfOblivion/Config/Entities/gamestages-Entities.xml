@@ -1,0 +1,450 @@
+<config>
+	<append xpath="/gamestages">
+
+		<!--<spawner name="pine_forest">
+			<gamestage stage="1">
+				<spawn group="pine_forest_GS1" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="pine_forest_GS50" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="pine_forest_GS100" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="150">
+				<spawn group="pine_forest_GS150" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="pine_forest_GS200" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+		</spawner>
+
+		<spawner name="desert">
+			<gamestage stage="1">
+				<spawn group="desert_GS1" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="desert_GS50" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="desert_GS100" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="150">
+				<spawn group="desert_GS150" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="desert_GS200" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+		</spawner>
+
+		<spawner name="snow">
+			<gamestage stage="1">
+				<spawn group="snow_GS1" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="snow_GS50" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="snow_GS100" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="150">
+				<spawn group="snow_GS150" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="snow_GS200" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+		</spawner>
+
+		<spawner name="wasteland">
+			<gamestage stage="1">
+				<spawn group="wasteland_GS1" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="wasteland_GS50" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="wasteland_GS100" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="150">
+				<spawn group="wasteland_GS150" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="wasteland_GS200" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+		</spawner>
+
+		<spawner name="burnt_forest">
+			<gamestage stage="1">
+				<spawn group="burnt_forest_GS1" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="50">
+				<spawn group="burnt_forest_GS50" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="100">
+				<spawn group="burnt_forest_GS100" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="150">
+				<spawn group="burnt_forest_GS150" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+			<gamestage stage="200">
+				<spawn group="burnt_forest_GS200" num="1" maxAlive="1" duration="1"/>
+			</gamestage>
+		</spawner>-->
+
+	
+		<group name="S_-Group_SpiderSwarm_Zombie" spawner="SpiderSwarmList"/>
+		<spawner name="SpiderSwarmList">
+			<gamestage stage="1"><spawn group="SpiderSwarm" num="4" maxAlive="4" duration="1"/></gamestage>
+			<gamestage stage="400"><spawn group="SpiderSwarm" num="10" maxAlive="10" duration="1"/></gamestage>
+			<gamestage stage="600"><spawn group="SpiderSwarm" num="30" maxAlive="10" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_SkitterQueen" spawner="SkitterQueen"/>	
+		<spawner name="SkitterQueen">
+			<gamestage stage="1"><spawn group="SkitterQueen" num="4" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_AmusementWaterSpawns" spawner="AmusementWaterSpawns"/>
+		<spawner name="AmusementWaterSpawns">
+			<gamestage stage="1"><spawn group="AmusementWaterSpawns" num="4" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonBoss_01" spawner="zombieSkeletonBoss_01"/>
+		<spawner name="zombieSkeletonBoss_01">
+			<gamestage stage="1"><spawn group="zombieSkeletonBoss_01" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonBoss_02" spawner="zombieSkeletonBoss_02"/>
+		<spawner name="zombieSkeletonBoss_02">
+			<gamestage stage="1"><spawn group="zombieSkeletonBoss_02" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		
+		<group name="S_-Group_zombieSkeletonBoss_03" spawner="zombieSkeletonBoss_03"/>
+		<spawner name="zombieSkeletonBoss_03">
+			<gamestage stage="1"><spawn group="zombieSkeletonBoss_03" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>			
+
+		<group name="S_-Group_zombieSkeletonBoss_04" spawner="zombieSkeletonBoss_04"/>
+		<spawner name="zombieSkeletonBoss_04">
+			<gamestage stage="1"><spawn group="zombieSkeletonBoss_04" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonBoss_05" spawner="zombieSkeletonBoss_05"/>
+		<spawner name="zombieSkeletonBoss_05">
+			<gamestage stage="1"><spawn group="zombieSkeletonBoss_05" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_SkeletonBosses" spawner="zombieSkeletonBosses"/>
+		<spawner name="zombieSkeletonBosses">
+			<gamestage stage="1"><spawn group="SkeletonBosses" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonKing" spawner="zombieSkeletonKing"/>
+		<spawner name="zombieSkeletonKing">
+			<gamestage stage="1"><spawn group="zombieSkeletonKing" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonsT1" spawner="zombieSkeletonsT1"/>
+		<spawner name="zombieSkeletonsT1">
+			<gamestage stage="1"><spawn group="SkeletonsT1" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonsT2" spawner="zombieSkeletonsT2"/>
+		<spawner name="zombieSkeletonsT2">
+			<gamestage stage="1"><spawn group="SkeletonsT2" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonsT3" spawner="zombieSkeletonsT3"/>
+		<spawner name="zombieSkeletonsT3">
+			<gamestage stage="1"><spawn group="SkeletonsT3" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		
+		<group name="S_-Group_zombieSkeletonsT4" spawner="zombieSkeletonsT4"/>
+		<spawner name="zombieSkeletonsT4">
+			<gamestage stage="1">
+				<spawn group="SkeletonsT4" num="1" maxAlive="4" duration="1"/>
+			</gamestage>
+		</spawner>	
+
+		<group name="S_-Group_zombieSkeletonsALL" spawner="zombieSkeletonsALL"/>
+		<spawner name="zombieSkeletonsALL">
+			<gamestage stage="1"><spawn group="SkeletonsALL" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_MonstersT1" spawner="MonstersT1"/>
+		<spawner name="MonstersT1">
+			<gamestage stage="1"><spawn group="MonstersT1AOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_MonstersT2" spawner="MonstersT2"/>
+		<spawner name="MonstersT2">
+			<gamestage stage="1"><spawn group="MonstersT2AOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_MonstersT3" spawner="MonstersT3"/>
+		<spawner name="MonstersT3">
+			<gamestage stage="1"><spawn group="MonstersT3AOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_MonstersT4" spawner="MonstersT4"/>
+		<spawner name="MonstersT4">
+			<gamestage stage="1"><spawn group="MonstersT4AOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_FlyingT1" spawner="FlyingT1"/>
+		<spawner name="FlyingT1">
+			<gamestage stage="1"><spawn group="FlyingT1" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_FlyingT2" spawner="FlyingT2"/>
+		<spawner name="FlyingT2">
+			<gamestage stage="1"><spawn group="FlyingT2" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_FlyingT3" spawner="FlyingT3"/>
+		<spawner name="FlyingT3">
+			<gamestage stage="1"><spawn group="FlyingT3" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_FlyingT4" spawner="FlyingT4"/>
+		<spawner name="FlyingT4">
+			<gamestage stage="1"><spawn group="FlyingT4" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_ArachnidT3" spawner="ArachnidT3"/>
+		<spawner name="ArachnidT3">
+			<gamestage stage="1"><spawn group="ArachnidT3" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_Fish1" spawner="Fish1"/>
+		<spawner name="Fish1">
+			<gamestage stage="1"><spawn group="Fish1" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		<group name="S_-Group_AOO_T1" spawner="AOO_T1"/>
+		<spawner name="AOO_T1">
+			<gamestage stage="1"><spawn group="T1AOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		<group name="S_-Group_AOO_T2" spawner="AOO_T2"/>
+		<spawner name="AOO_T2">
+			<gamestage stage="1"><spawn group="T2AOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_AOO_Boss" spawner="AOO_Boss"/>
+		<spawner name="AOO_Boss">
+			<gamestage stage="1"><spawn group="BossSpawn" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+	
+		<group name="S_-Group_Weepers" spawner="Weepers"/>
+		<spawner name="Weepers">
+			<gamestage stage="1"><spawn group="Weepers" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_cellRandom" spawner="cellRandom"/>
+		<spawner name="cellRandom">
+			<gamestage stage="1"><spawn group="cellRandom" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>		
+
+		<group name="S_-Group_ResearchMisc" spawner="ResearchMisc"/>
+		<spawner name="ResearchMisc">
+			<gamestage stage="1"><spawn group="ResearchMiscAOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_MonsterBoss" spawner="MonsterBoss"/>
+		<spawner name="MonsterBoss">
+			<gamestage stage="1"><spawn group="MonsterBossAOO" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+
+		<group name="S_-Group_CaveEscape" spawner="CaveGSList"/>
+
+		<group name="S_-Group_testVehicle" spawner="testVehicle"/>
+		<spawner name="testVehicle">
+			<gamestage stage="1"><spawn group="testVehicle" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideCondor" spawner="rideCondor"/>
+		<spawner name="rideCondor">
+			<gamestage stage="1"><spawn group="rideCondor" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideOctopus" spawner="rideOctopus"/>
+		<spawner name="rideOctopus">
+			<gamestage stage="1"><spawn group="rideOctopus" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideFreeFall" spawner="rideFreeFall"/>
+		<spawner name="rideFreeFall">
+			<gamestage stage="1"><spawn group="rideFreeFall" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideCoaster" spawner="rideCoaster"/>
+		<spawner name="rideCoaster">
+			<gamestage stage="1"><spawn group="rideCoaster" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+		<group name="S_-Group_rideBooster" spawner="rideBooster"/>
+		<spawner name="rideBooster">
+			<gamestage stage="1"><spawn group="rideBooster" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+		<group name="S_-Group_rideFlyAway" spawner="rideFlyAway"/>
+		<spawner name="rideFlyAway">
+			<gamestage stage="1"><spawn group="rideFlyAway" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>
+		
+		<group name="S_-Group_rideBreakDance" spawner="rideBreakDance"/>
+		<spawner name="rideBreakDance">
+			<gamestage stage="1"><spawn group="rideBreakDance" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>		
+
+		<group name="S_-Group_rideFlyingCircus" spawner="rideFlyingCircus"/>
+		<spawner name="rideFlyingCircus">
+			<gamestage stage="1"><spawn group="rideFlyingCircus" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideFrisbee" spawner="rideFrisbee"/>
+		<spawner name="rideFrisbee">
+			<gamestage stage="1"><spawn group="rideFrisbee" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_ridePirateBoat" spawner="ridePirateBoat"/>
+		<spawner name="ridePirateBoat">
+			<gamestage stage="1"><spawn group="ridePirateBoat" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		<group name="S_-Group_rideTakeoff" spawner="rideTakeoff"/>
+		<spawner name="rideTakeoff">
+			<gamestage stage="1"><spawn group="rideTakeoff" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		<group name="S_-Group_rideTopscan" spawner="rideTopscan"/>
+		<spawner name="rideTopscan">
+			<gamestage stage="1"><spawn group="rideTopscan" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+		<group name="S_-Group_rideTopspin" spawner="rideTopspin"/>
+		<spawner name="rideTopspin">
+			<gamestage stage="1"><spawn group="rideTopspin" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideWildeMouse" spawner="rideWildeMouse"/>
+		<spawner name="rideWildeMouse">
+			<gamestage stage="1"><spawn group="rideWildeMouse" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_rideBigwheel" spawner="rideBigwheel"/>
+		<spawner name="rideBigwheel">
+			<gamestage stage="1"><spawn group="rideBigwheel" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		<group name="S_-Group_AmusementSpawner" spawner="AmusementSpawner"/>
+		<spawner name="AmusementSpawner">
+			<gamestage stage="1"><spawn group="AmusementSpawner" num="1" maxAlive="4" duration="1"/></gamestage>
+		</spawner>	
+
+		
+<!-- Amusement Groups -->
+
+		<group name="S_-Group_AmusementGSList" spawner="AmusementGSList"/>
+
+	<spawner name="AmusementGSList">
+		<gamestage stage="1">
+			<spawn group="AmusementGS1" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="50">
+			<spawn group="AmusementGS50" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="100">
+			<spawn group="AmusementGS100" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="150">
+			<spawn group="AmusementGS150" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="200">
+			<spawn group="AmusementGS200" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="250">
+			<spawn group="AmusementGS250" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="300">
+			<spawn group="AmusementGS300" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+	</spawner>
+
+
+
+<!-- Arena Groups -->
+
+	<spawner name="ArenaGSList">
+		<gamestage stage="1">
+			<spawn group="ArenaGS1" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="50">
+			<spawn group="ArenaGS50" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="100">
+			<spawn group="ArenaGS100" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="150">
+			<spawn group="ArenaGS150" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="200">
+			<spawn group="ArenaGS200" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="250">
+			<spawn group="ArenaGS250" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="300">
+			<spawn group="ArenaGS300" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+	</spawner>
+
+	<spawner name="ArenaBossGSList">
+		<gamestage stage="1">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="50">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="100">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="150">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="200">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="250">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="300">
+			<spawn group="BossSpawn" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+	</spawner>
+
+
+
+	<spawner name="CaveGSList">
+		<gamestage stage="1">
+			<spawn group="CaveGS1" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="50">
+			<spawn group="CaveGS50" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="100">
+			<spawn group="CaveGS100" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="150">
+			<spawn group="CaveGS150" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="200">
+			<spawn group="CaveGS200" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="250">
+			<spawn group="CaveGS250" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+		<gamestage stage="300">
+			<spawn group="CaveGS300" num="1" maxAlive="1" duration="1"/>
+		</gamestage>
+	</spawner>
+
+
+
+	
+	</append>
+</config>

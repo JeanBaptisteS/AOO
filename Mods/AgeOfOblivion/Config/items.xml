@@ -1,0 +1,1678 @@
+
+
+<configs>
+
+	<include filename="AdvancedPower/items-AdvancedPower.xml" />
+	<include filename="Core/items-Core.xml" />
+	<include filename="Crops/items-Crops.xml" />
+	<!--<include filename="EntitiesOld/items-Entities.xml" />-->
+    <include filename="Entities/items-HandItems.xml" />	
+	<include filename="Food/items-Food.xml" />
+	<include filename="Quests/items-Quests.xml" />
+	<include filename="Vehicles/items-Vehicles.xml" />
+	<include filename="WeaponsTools/items-WeaponsTools.xml" />
+	<include filename="Workstations/items-Workstations.xml" />
+	
+    <include filename="Entities/Animals/items-Animals.xml" />
+	
+	
+
+
+	<!-- Increase Ammo Stack Size to 1000 --> 
+	<set xpath="/items/item[starts-with(@name, 'ammo')]/property[@name='Stacknumber']/@value">2500</set>
+	<!-- Increase Gas Can Stack Size to 30000 -->
+	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">30000</set>
+	<!-- Increase Throwables Stack Size to 100 -->
+	<set xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']/@value">2000</set>
+	<set xpath="/items/item[@name='thrownGrenadeContact']/property[@name='Stacknumber']/@value">2000</set>
+	<set xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']/@value">2000</set>
+	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']/@value">2000</set>
+	<set xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']/@value">2000</set>
+	<!--<set xpath="/items/item[@name='thrownAmmoFlare']/property[@name='Stacknumber']/@value">2000</set> -->
+	<!-- Increase Parts Stack Size to 200 -->
+	<set xpath="/items/item[@name='partsMaster']/property[@name='Stacknumber']/@value">2000</set>
+	<set xpath="/items/item[@name='gunMGT1AK47Parts']/property[@name='Stacknumber']/@value">2000</set>
+	<!-- Increase Medical/Candy Items Stack Size to 50 -->
+	<set xpath="/items/item[starts-with(@name, 'medical')]/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']/@value">500</set>
+	<!-- Increase Food/Drink Items Stack Size to 50 -->
+	<set xpath="/items/item[starts-with(@name, 'food')]/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[starts-with(@name, 'drink')]/property[@name='Stacknumber']/@value">500</set>
+	<!-- Increase Schematic Items Stack Size to 20 -->
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">200</set>
+	<!-- Increase Resource Stack Size -->
+	<set xpath="/items/item[@name='resourceRockSmall']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceCrushedSand']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceScrapIron']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceForgedIron']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceForgedSteel']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceOilShale']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceScrapBrass']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceScrapLead']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceClayLump']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceCement']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceConcreteMix']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceCoal']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='resourceGunPowder']/property[@name='Stacknumber']/@value">10000</set>
+	<set xpath="/items/item[@name='resourceRepairKit']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='resourceOil']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']/@value">500</set>
+	<set xpath="/items/item[@name='smallEngine']/property[@name='Stacknumber']/@value">250</set>
+	<set xpath="/items/item[@name='carBattery']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='toolBeaker']/property[@name='Stacknumber']/@value">500</set>
+
+		
+	<!-- Make Canned Food Worse -->
+	<set xpath="/items/item[@name='foodCanBeef']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">5</set>
+	<set xpath="/items/item[@name='foodCanChicken']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">5</set>
+	<set xpath="/items/item[@name='foodCanLamb']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">5</set>
+	<set xpath="/items/item[@name='foodCanCatfood']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">2</set>
+	<set xpath="/items/item[@name='foodCanDogfood']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">4</set>
+	<set xpath="/items/item[@name='foodCanChili']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">5</set>
+	<set xpath="/items/item[@name='foodCanTuna']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">3</set>
+	<set xpath="/items/item[@name='foodCanSham']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">7</set>
+	<set xpath="/items/item[@name='foodCanPasta']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">5</set>
+	<set xpath="/items/item[@name='foodCanSalmon']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">5</set>
+	<set xpath="/items/item[@name='foodCanMiso']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">3</set>
+	<set xpath="/items/item[@name='foodCanPeas']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">4</set>
+	<set xpath="/items/item[@name='foodCanPears']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">4</set>
+	<set xpath="/items/item[@name='foodCanSoup']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">2</set>
+	<set xpath="/items/item[@name='foodCanStock']/effect_group[@name='Food Tier 0']/triggered_effect[@cvar='$foodAmountAdd']/@value">2</set>		
+
+	<set xpath="/items/item[@name='foodMeatStew']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$foodAmountAdd']/@value">30</set>
+	<set xpath="/items/item[@name='foodMeatStew']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='foodHealthAmount']/@value">15</set>	
+	<set xpath="/items/item[@name='foodMeatStew']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$waterAmountAdd']/@value">10</set>		
+	
+	<set xpath="/items/item[@name='foodSteakAndPotato']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$foodAmountAdd']/@value">30</set>
+	<set xpath="/items/item[@name='foodSteakAndPotato']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='foodHealthAmount']/@value">15</set>	
+	
+	<set xpath="/items/item[@name='foodShamChowder']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='$foodAmountAdd']/@value">30</set>
+	<set xpath="/items/item[@name='foodShamChowder']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='foodHealthAmount']/@value">40</set>	
+	<set xpath="/items/item[@name='foodShamChowder']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='$waterAmountAdd']/@value">5</set>
+
+	<set xpath="/items/item[@name='foodHoboStew']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='$foodAmountAdd']/@value">38</set>
+	<set xpath="/items/item[@name='foodHoboStew']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='foodHealthAmount']/@value">20</set>	
+	<set xpath="/items/item[@name='foodHoboStew']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='$waterAmountAdd']/@value">10</set>
+
+	<set xpath="/items/item[@name='foodFishTacos']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='$foodAmountAdd']/@value">25</set>
+	<set xpath="/items/item[@name='foodFishTacos']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='foodHealthAmount']/@value">23</set>	
+
+	<set xpath="/items/item[@name='foodChiliDog']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='$foodAmountAdd']/@value">30</set>
+	<set xpath="/items/item[@name='foodChiliDog']/effect_group[@name='Food Tier 3']/triggered_effect[@cvar='foodHealthAmount']/@value">15</set>	
+
+	<set xpath="/items/item[@name='foodBlueberryPie']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$foodAmountAdd']/@value">30</set>
+	<set xpath="/items/item[@name='foodBlueberryPie']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='foodHealthAmount']/@value">13</set>	
+
+	<set xpath="/items/item[@name='foodPumpkinPie']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$foodAmountAdd']/@value">32</set>
+	<set xpath="/items/item[@name='foodPumpkinPie']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='foodHealthAmount']/@value">13</set>	
+
+	<set xpath="/items/item[@name='foodPumpkinCheesecake']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$foodAmountAdd']/@value">22</set>
+	<set xpath="/items/item[@name='foodPumpkinCheesecake']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='foodHealthAmount']/@value">13</set>	
+
+	<set xpath="/items/item[@name='foodGumboStew']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='$foodAmountAdd']/@value">65</set>
+	<set xpath="/items/item[@name='foodGumboStew']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='foodHealthAmount']/@value">40</set>	
+	<set xpath="/items/item[@name='foodGumboStew']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='$waterAmountAdd']/@value">15</set>
+
+	<set xpath="/items/item[@name='foodShepardsPie']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='$foodAmountAdd']/@value">55</set>
+	<set xpath="/items/item[@name='foodShepardsPie']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='foodHealthAmount']/@value">26</set>	
+
+	<set xpath="/items/item[@name='foodSpaghetti']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='$foodAmountAdd']/@value">65</set>
+	<set xpath="/items/item[@name='foodSpaghetti']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='foodHealthAmount']/@value">35</set>	
+
+	<set xpath="/items/item[@name='foodTunaFishGravyToast']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='$foodAmountAdd']/@value">55</set>
+	<set xpath="/items/item[@name='foodTunaFishGravyToast']/effect_group[@name='Food Tier 4']/triggered_effect[@cvar='foodHealthAmount']/@value">30</set>	
+	
+	<set xpath="/items/item[@name='foodBaconAndEggs']/effect_group[@name='Food Tier 1']/triggered_effect[@cvar='$foodAmountAdd']/@value">22</set>
+	<set xpath="/items/item[@name='foodBaconAndEggs']/effect_group[@name='Food Tier 1']/triggered_effect[@cvar='foodHealthAmount']/@value">10</set>	
+
+	<set xpath="/items/item[@name='foodVegetableStew']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$foodAmountAdd']/@value">20</set>
+	<set xpath="/items/item[@name='foodVegetableStew']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='foodHealthAmount']/@value">10</set>	
+	<set xpath="/items/item[@name='foodVegetableStew']/effect_group[@name='Food Tier 2']/triggered_effect[@cvar='$waterAmountAdd']/@value">15</set>
+	  
+	<!-- Make Boiled Water Worse to encourage other drinks -->
+
+
+
+	
+	<append xpath="/items">
+
+
+
+
+
+
+
+
+		<item name="drinkJarEmpty">
+			<property name="CustomIcon" value="drinkJarEmpty"/>
+			<property name="HoldType" value="3"/>
+			<property name="Meshfile" value="@:Other/Items/Food/emptyJarPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="Stacknumber" value="125"/>
+			<!-- <property name="Weight" value="10"/> -->
+			<property name="EconomicValue" value="6"/>
+			<property name="WaterCapacity" value="0.1"/>
+			<property name="CraftingIngredientTime" value="9"/>
+			<property class="Action1">
+			<property name="Class" value="CollectWater"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Change_item_to" value="drinkJarRiverWater"/>
+				<property name="Sound_start" value="bucketfill_water"/>
+			</property>
+			<property name="Group" value="Resources"/>
+		</item>	
+
+		<item name="BegginerModeAOO">
+			<property name="DescriptionKey" value="BegginerModeAOODesc"/>
+			<property name="Extends" value="schematicMaster" />
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="AOO-Logo"/>
+			<property name="CustomIconTint" value="c5c5c5"/>	
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffEarlygame"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffAirDrop"/>
+            </effect_group>
+		</item>		
+
+		<item name="emote01AOO">
+			<property name="CustomIcon" value="AOO-Emote"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?MPhone"/> 
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?MPhone"/>				
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+				<property name="Sound_start" value="randomEmotes"/>
+                <property name="Class" value="DynamicMelee"/>
+                <property name="Delay" value="2"/>
+            </property>
+			<property class="Action1">
+                <property name="Class" value="DynamicMelee"/>
+                <property name="Delay" value="2"/>
+                <property name="Sound_start" value="randomEmotes"/>
+            </property>
+		</item>
+
+		<item name="BossSpawnKeyAOO">
+			<property name="CustomIconTint" value="0A22FF"/>
+			<property name="CustomIcon" value="TotemKey"/>
+			<property name="DescriptionKey" value="Key2"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?BossKey"/> 
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?BossKey"/>		
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="1"/>
+				<property name="Upgrade_hit_offset" value="-1"/>
+				<property name="Allowed_upgrade_items" value="BossSpawnKeyAOO"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+
+
+
+
+		</item>			
+		
+
+
+	
+		<item name="SkullTokenAOO">
+
+			<property name="CustomIconTint" value="FF3B14"/>	
+			<property name="CustomIcon" value="SkullToken"/>
+			<property name="DescriptionKey" value="SkullTokenAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="45"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="10000"/>
+	
+		</item>	
+
+
+<!-- ===============================  KEYS =================================== -->
+
+		<item name="blackKeyAOO">
+			<property name="CustomIcon" value="Icons_Key_cards_Black"/>
+			<property name="DescriptionKey" value="blackKeyAOODesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullKeyBlack"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullKeyBlack"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="31"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="0"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value=""/>
+                <property name="Create_item" value=""/>
+				
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffUnlockBlack"/>
+            </effect_group>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+			</effect_group>
+			<property name="DegradationBreaksAfter" value="true"/>			
+		</item>	
+	
+		<item name="blueKeyAOO">
+			<property name="CustomIcon" value="Icons_Key_cards_Blue"/>
+			<property name="DescriptionKey" value="blackKeyAOODesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullKeyBlue"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullKeyBlue"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="31"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="0"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value=""/>
+                <property name="Create_item" value=""/>
+				
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffUnlockBlue"/>
+            </effect_group>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+		</item>	
+
+		<item name="redKeyAOO">
+			<property name="CustomIcon" value="Icons_Key_cards_Red"/>
+			<property name="DescriptionKey" value="blackKeyAOODesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullKeyRed"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullKeyRed"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="31"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="0"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value=""/>
+                <property name="Create_item" value=""/>
+				
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffUnlockRed"/>
+            </effect_group>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+		</item>	 
+
+<!-- ============================= Rare Resources ==================================== -->
+
+		<item name="resourceRedBananaAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="foodCropBananaAOO"/>	
+			<property name="CustomIconTint" value="ff0000"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="200"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceRedBananaAOODesc"/>	
+		</item>	
+		
+		<item name="resourceGreenSlimeAOO">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="slime"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceGreenSlimeAOODesc"/>	
+		</item>	
+
+		<item name="resourceBloodBarkAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="700"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceBloodBarkAOODesc"/>	
+		</item>	
+		
+		<item name="resourceZombieGutsAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceZombieGutsAOODesc"/>	
+		</item>
+		<item name="resourceZombieBrainsAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceZombieBrainsAOODesc"/>				
+		</item>
+		<item name="resourceCamelToeAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="CamelToe"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceCamelToeAOODesc"/>	
+		</item>
+	
+		<item name="resourceRabbitsFootAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="RabbitsFoot"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceRabbitsFootAOODesc"/>			
+		</item>
+		<item name="resourceTurtleShellAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="TurtleShell"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceTurtleShellAOODesc"/>			
+		</item>
+		<item name="resourceWoolAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="Wool"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceWoolAOODesc"/>			
+		</item>
+		<item name="resourceKomodoTailAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="ComodoTail"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceComodoTailAOODesc"/>
+		</item>
+		<item name="resourceLeopardPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="LeopardPelt"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceLeopardPeltAOODesc"/>
+		</item>
+		<item name="resourceCowTongueAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="CowTongue"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceCowTongueAOODesc"/>
+		</item>
+		<item name="resourceBearPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceBearPeltAOODesc"/>			
+		</item>
+		<item name="resourceIbexHornAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+			<property name="DescriptionKey" value="resourceIbexHornAOODesc"/>	
+		</item>
+		<item name="resourceIbexPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceIbexPeltAOODesc"/>	
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceDeerPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceDeerPeltAOODesc"/>	
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceDeerAntlerAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceIbexAntlerAOODesc"/>	
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceElephantTuskAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceElephantTuskAOODesc"/>	
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceElephantPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceElephantPeltAOODesc"/>	
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+
+		<item name="resourceGoatPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceGoatPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceGoatHornAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceGoatHornAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>		
+		<item name="resourceWolfPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceWolfPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceBuffaloPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceBuffaloPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceBuffaloHornAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceBuffaloHornAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceScorpionTailAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceScorpianTailAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourceCowPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceCowPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourcePigsFeetAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourcePigsFeetAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>
+		<item name="resourcePigPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourcePigPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>		
+		<item name="resourceRhinoPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceRhinoPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>		
+		<item name="resourceRhinoHornAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceRhinoHornAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>		
+		<item name="resourceTigerPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceTigerPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>		
+		<item name="resourceTigerToothAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceTigerToothAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>		
+		<item name="resourceCamelPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceCamelPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>						
+		<item name="resourcePenguinPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourcePenguinPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>				
+		<item name="resourcePenguinGoldenAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceGoldenPenguinAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="20000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>				
+		<item name="resourceSpiderSilkAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceSpiderSilkAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>				
+		<item name="resourceSpiderEggsAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceSpiderEggsAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>				
+		<item name="resourceChickenFeetAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceChickenFeetAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="10000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>				
+		<item name="resourceZebraPeltAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="DescriptionKey" value="resourceZebraPeltAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> <!-- STK resource -->
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Resources,Chemicals,CFChemicals"/>
+		</item>	
+
+		<!-- =========================== Potions ========================================= -->
+
+
+
+		<item name="potionAirDropAOO">
+			<property name="DescriptionKey" value="potionAirDropAOODesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="c5a5a5"/>	
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffAirDrop"/>
+            </effect_group>
+		</item>	
+
+		<item name="potionHordeAOO">
+			<property name="DescriptionKey" value="potionHordeAOODesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="c3a4a6"/>	
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffTriggerHorde"/>
+            </effect_group>
+		</item>	
+
+		<item name="potionTimeForwardAOO">
+			<property name="DescriptionKey" value="potionTimeForwardAOODesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="c1a1a1"/>	
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffTimeforward60"/>
+            </effect_group>
+		</item>	
+		
+		<item name="potionTimeBackAOO">
+			<property name="DescriptionKey" value="potionTimeBackAOODesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="c2a2a2"/>	
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffTimeback60"/>
+            </effect_group>
+		</item>			
+		
+		<item name="resourceMagicPotionAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionAOODesc"/>			
+		</item>
+		<item name="potionRepulserAOO">
+			<property name="DescriptionKey" value="potionRepulserAOODesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="c5c5c5"/>	
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffRepulser"/>
+            </effect_group>
+		</item>		
+		
+		<item name="potionTeleportForwardX5AOO">
+			<property name="DescriptionKey" value="potionTeleportForwardX5AOODesc"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="3"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="c5c5c5"/>	
+            <property name="DisplayType" value="water"/>
+            <property name="Group" value="Food/Cooking,All"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffTeleportForwardX5"/>
+            </effect_group>
+		</item>				
+	
+		<item name="resourceMagicPotionInvisibility30AOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="FFFB3D"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionInvisibility30AOODesc"/>	
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="Invisible30"/>
+            </effect_group>
+		</item>
+		<item name="resourceMagicPotionInvisibility60AOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="FFFB3D"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionInvisibility60AOODesc"/>	
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="Invisible60"/>
+            </effect_group>
+
+			
+		</item>
+		<item name="resourceMagicPotionInvisibility120AOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="FFFB3D"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionInvisibility120AOODesc"/>	
+			<property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2"/>
+                <property name="Use_time" value="..."/>
+                <property name="Sound_start" value="player_drinking"/>
+                <property name="Create_item" value="drinkJarEmpty"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="Invisible120"/>
+            </effect_group>
+
+			
+		</item>
+		<item name="resourceMagicPotionSpeedAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="2DFF31"/>			
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionSpeedAOODesc"/>				
+		</item>
+		<item name="resourceMagicPotionFlightAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="FF170F"/>			
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionFlightAOODesc"/>				
+		</item>
+		<item name="resourceMagicPotionPerceptionAOO">
+			<property name="HoldType" value="45"/>
+			<property name="DescriptionKey" value="resourceMagicPotionPerceptionAOODesc"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="170FFF"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionPerceptionAOODesc"/>	
+		</item>		
+		<item name="resourceMagicPotionStrengthAOO">
+			<property name="HoldType" value="45"/>
+			<property name="DescriptionKey" value="resourceMagicPotionStrengthAOODesc"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="19FFEF"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionStrengthAOODesc"/>				
+		</item>		
+		<item name="resourceMagicPotionFortitudeAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="32FF9C"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionFortitudeAOODesc"/>				
+		</item>			
+		<item name="resourceMagicPotionIntelligenceAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="FF6A00"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionIntelligenceAOODesc"/>				
+		</item>			
+		<item name="resourceMagicPotionAgilityAOO">
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="CustomIcon" value="MagicPotion"/>
+			<property name="CustomIconTint" value="FF776D"/>
+			<property name="Meshfile" value="@:Other/Items/Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceOil"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resourceMagicPotionAgilityAOODesc"/>				
+		</item>				
+	
+		<item name="drugFortBitesPotionAOO">
+			<property name="Extends" value="drugRecog"/>
+			<property name="DisplayType" value="drugFortBites"/>
+			<property name="CustomIcon" value="drugFortBites"/>
+			<property name="CustomIconTint" value="FF7722"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<effect_group tiered="false" name="Drug Tier 4">
+				<display_value name="dHealthLoss" value=".75"/>
+				<display_value name="$waterAmountAdd" value="-30"/>
+				<display_value name="dDuration" value="180"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="add" value="183"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="set" value="423">
+					<requirement name="CVarCompare" cvar="$buffDrugFortBitesDuration" operation="GT" value="423"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugFortBites"/>
+			</effect_group>
+		</item>
+		
+		<item name="drugEyeKandyPotionAOO">
+			<property name="Extends" value="drugAtomJunkies"/>
+			<property name="DisplayType" value="drugEyeKandy"/>
+			<property name="CustomIcon" value="drugEyeKandy"/>
+			<property name="CustomIconTint" value="FF7722"/>
+			<effect_group tiered="false" name="Candy Tier 1">
+				<display_value name="dLootGamestageFlat" value="10"/>
+				<display_value name="dLootGamestagePerc" value=".2"/>
+				<display_value name="dDuration" value="600"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugEyeKandyDuration" operation="add" value="603"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugEyeKandyDuration" operation="set" value="1203">
+					<requirement name="CVarCompare" cvar="$buffDrugEyeKandyDuration" operation="GT" value="1203"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugEyeKandyPotionAOO"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			</effect_group>
+		</item>	
+		
+	<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									Animal Station Products
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	
+		<item name="resourceFertileEggAOO">
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="FertileEgg"/>
+			<property name="DescriptionKey" value="resourceFertileEggAOODesc"/>
+			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="50"/>
+			<property name="Group" value="CTools,All,Cloning"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value=".5"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Allowed_upgrade_items" value="resourceFertileEggAOO"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="resourceChickenFeedAOO">
+			<property name="CustomIcon" value="ChickenFeed"/>
+			<property name="DescriptionKey" value="resourceChickenFeedAOODesc"/>
+			<property name="Meshfile" value="Items/Misc/parcelPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="1"/>
+				<property name="Upgrade_hit_offset" value="-1"/>
+				<property name="Allowed_upgrade_items" value="resourceChickenFeedAOO"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="zombieCorpseAOO">
+			<property name="CustomIcon" value="BodyBag"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="Entities/Misc/body_bagPrefab"/>
+			<property name="DescriptionKey" value="zombieCorpseAOODesc"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="800"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="1"/>
+				<property name="Upgrade_hit_offset" value="-1"/>
+				<property name="Allowed_upgrade_items" value="zombieCorpseAOO"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+		</item>		
+		
+		<item name="resPotionAOO">
+			<property name="Tags" value="L2Alchemy"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="resPotion"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?RedPotion"/>
+			<property name="DropScale" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="FuelValue" value="75"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="50"/>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Delay" value="1"/>
+				<property name="Allowed_upgrade_items" value="resPotionAOO"/>
+			</property>
+			<effect_group name="Base Effects" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+			</effect_group>
+			<property name="Group" value="Alchemy"/>
+			<property name="DescriptionKey" value="resPotionAOODesc"/>
+		</item>		
+
+
+		<item name="KyburCrystalAOO">
+			<property name="CustomIcon" value="KyburCrystal"/>
+			<property name="DescriptionKey" value="KyburCrystalAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+		</item>
+
+		<item name="CloningL1AOO">
+			<property name="CustomIcon" value="PowerGenerator"/>
+			<property name="DescriptionKey" value="CloningL1AOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+	
+		</item>
+		<item name="CloningL2AOO">
+			<property name="CustomIcon" value="toolCloneChamber"/>
+			<property name="DescriptionKey" value="CloningL2AOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+	
+		</item>
+		<item name="CloningL3AOO">
+			<property name="CustomIcon" value="toolEnhancedCloneChamber"/>
+			<property name="DescriptionKey" value="CloningL3AOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+				
+		</item>
+
+
+
+		<item name="AlchemyL2UpgradeAOO">
+			<property name="CustomIcon" value="flasks"/>
+			<property name="DescriptionKey" value="AlchemyL2UpgradeAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+		</item>
+
+
+
+
+		<item name="AlchemyL3UpgradeAOO">
+			<property name="CustomIcon" value="Alchemypot"/>
+			<property name="DescriptionKey" value="AlchemyL3UpgradeAOODesc"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mplastics"/>
+			<property name="Weight" value="6"/>
+			<property name="HoldType" value="36"/>
+			<property name="Group" value="Resources"/>
+			<property name="Stacknumber" value="50"/>
+
+		</item>	
+		
+		<item name="humanCanisterAOO">
+			<property name="Tags" value="melee,medium,tool,shovel,perkDeepCuts,perkMotherLode"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="cloneingredients"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?cloneingredients"/>
+			<property name="DropScale" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+
+			<property name="EconomicValue" value="1000"/>
+			<property name="EconomicBundleSize" value="500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Delay" value=".5"/>
+				<property name="Allowed_upgrade_items" value="humanCanisterAOO"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+				<passive_effect name="BlockRange" operation="base_set" value="10"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="6.2" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="20000,50000" tier="1,6"/>	
+			</effect_group>
+			<property name="Group" value="Ingredients/DNA,All"/>
+			<property name="DescriptionKey" value="humanCanisterAOODesc"/>
+		</item> 
+
+		<item name="animalCanisterAOO">
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="cloneingredients"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Decor.unity3d?cloneingredients"/>
+			<property name="DropScale" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Delay" value=".5"/>
+				<property name="Allowed_upgrade_items" value="animalCanisterAOO"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+				<passive_effect name="BlockRange" operation="base_set" value="10"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="6.2" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="20000,50000" tier="1,6"/>	
+			</effect_group>
+			<property name="Group" value="Ingredients/DNA,All"/>
+			<property name="DescriptionKey" value="animalCanisterAOODesc"/>
+		</item>
+	
+		<item name="AdvCCUpgradeAOO">
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="UpgradeCoin"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Upgrade_hit_offset" value="-4"/>
+				<property name="Delay" value=".5"/>
+				<property name="Allowed_upgrade_items" value="AdvCCUpgradeAOO"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.9"/>
+				<passive_effect name="BlockRange" operation="base_set" value="10"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="6.2" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="20000,50000" tier="1,6"/>	
+			</effect_group>
+			<property name="Group" value="CTools,All"/>
+
+		</item>
+	
+
+
+		<item name="CSL2UpgradeAOO">
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="UpgradeCoin"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="CTools,All"/>
+		</item>
+		
+		<item name="CSL3UpgradeAOO">
+			<property name="DisplayType" value="melee"/>
+			<property name="CustomIcon" value="UpgradeCoin"/>
+			<property name="HoldType" value="50"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="CTools,All"/>
+		</item>
+	
+		<item name="resourceIncompleteCloneAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="incompleteClone"/>
+			<property name="Group" value="All,Cloning"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="DescriptionKey" value="resourceIncompleteCloneAOODesc"/>
+		</item>
+		<item name="resourceHDNAAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="DNA"/>
+			<property name="Group" value="All,Ingredients/DNA"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="DescriptionKey" value="resourceHDNAAOODesc"/>
+		</item>
+		<item name="resourceADNAAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="DNA"/>
+			<property name="Group" value="All,Ingredients/DNA"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="DescriptionKey" value="resourceADNAAOODesc"/>
+		</item>
+
+		<item name="resourceBearDNAAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="DNA"/>
+			<property name="Group" value="All,Ingredients/DNA"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="DescriptionKey" value="resourceBearDNAAOODesc"/>
+		</item>
+
+		
+		<item name="resourceBCryoAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="BasicCryogenicMaterial"/>
+			<property name="Group" value="All,Ingredients/DNA"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="DescriptionKey" value="resourceBCryoAOODesc"/>
+		</item>
+		<item name="resourceICryoAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="IntermediateCryogenicMaterial"/>
+			<property name="Group" value="All,Ingredients/DNA"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="DescriptionKey" value="resourceICryoAOODesc"/>
+		</item>
+		<item name="resourceACryoAOO">
+			<property name="HoldType" value="31"/>
+			<property name="CustomIcon" value="AdvancedCryogenicMaterial"/>
+			<property name="Group" value="All,Cloning"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="2500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="DescriptionKey" value="resourceACryoAOODesc"/>
+		</item>		
+
+		<item name="resourceWindGearsAOO">
+			<property name="CustomIconTint" value="210,0,210"/>
+			<property name="CustomIcon" value="WindGears"/>
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapLeadLarge"/>
+			<property name="Stacknumber" value="250"/>
+			<property name="Weight" value="160"/>
+			<property name="EconomicValue" value="5000"/>
+			<property name="Group" value="Resources,Chemicals"/>
+			<property class="Attributes">
+				<property name="BatteryMaxLoadInVolts" value="72,72"/>
+				<property name="DegradationMax" value="10000000,10000000" /> 
+				<property name="BatteryDischargeTimeInMinutes" value="90,90"/>
+			</property>
+			<effect_group>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="10000000,10000000" tier="1,6"/>
+			</effect_group> 
+			<property name="DegradationBreaksAfter" value="true"/>
+			<property name="ShowQuality" value="false"/> 
+		</item>		
+		
+	</append>		
+	
+
+
+	
+</configs>

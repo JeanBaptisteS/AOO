@@ -1,0 +1,6 @@
+<config>
+
+	<include filename="Core/item_modifiers-Core.xml" />
+	<include filename="Vehicles/item_modifiers-Vehicles.xml" />
+	
+</config>

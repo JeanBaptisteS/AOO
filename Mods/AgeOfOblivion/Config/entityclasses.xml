@@ -1,0 +1,33 @@
+<config>
+
+	<include filename="Templates/entityclasses-Templates.xml" />
+    <include filename="Entities/entityclasses-Bombs.xml" />
+    <include filename="Entities/entityclasses-Standard.xml" />
+    <include filename="Entities/entityclasses-Flyers.xml" />
+    <include filename="Entities/entityclasses-NightWatchers.xml" />
+    <include filename="Entities/entityclasses-Skeletons.xml" />
+    <include filename="Entities/entityclasses-Special.xml" />
+    <include filename="Entities/entityclasses-Monsters.xml" />
+    <include filename="Entities/entityclasses-Weepers.xml" />
+	
+	<include filename="AdvancedPower/entityclasses-AdvancedPower.xml" />
+	<include filename="Core/entityclasses-Core.xml" />
+	<include filename="Crops/entityclasses-Crops.xml" />
+    <include filename="Entities/Animals/entityclasses-Animals.xml" />
+	<!--<include filename="EntitiesOld/entityclasses-Entities.xml" />-->
+	<include filename="Vehicles/entityclasses-Vehicles.xml" />
+	
+    <include filename="Entities/entityclasses-Entities-OLD.xml" />
+    <!--<include filename="NewEntities/entityclasses-AppendAll.xml" />-->
+
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='BagSize']/@value">96</set>
+
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/effect_group/passive_effect[@name='CarryCapacity']/@value">61</set>
+
+	<append xpath="/entity_classes/entity_class[contains(@name, 'zombie')]">
+		<effect_group>
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffZombie"/> 
+		</effect_group>			
+	</append>
+
+</config>

@@ -1,0 +1,1072 @@
+
+
+<configs>
+
+
+	<append xpath="/items">
+
+		<item name="weedBundleAOO">
+			<property name="Extends" value="ammoBundleMaster"/>
+			<property name="CustomIcon" value="foodCropHempAOO"/>
+			<property name="Stacknumber" value="1"/> <!-- STK ammobundle high -->
+			<property name="EconomicValue" value="1500"/>
+			<property class="Action0">
+				<property name="Create_item" value="foodCropHempAOO"/>
+				<property name="Create_item_count" value="50"/>
+                <property name="Sound_start" value="BagOWeedAOO"/>				
+			</property>
+			<property name="DescriptionKey" value="weedBundleAOODesc"/>
+
+		</item>
+
+<!-- 
+====================================================================================================
+=====================             FOOD and CROPS             =======================================
+====================================================================================================
+-->
+
+
+
+
+
+		<item name="resourceSeedPackAOO">
+			<property name="CreativeMode" value="Player"/>												 
+			<property name="CustomIcon" value="7seedpack"/>												  
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="Group" value="SeedP,All"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="resourceSeedPackAOODesc"/>
+		</item>
+
+
+
+<!-- ============= Crops - Fruits,Veggies, etc ================== -->
+
+
+	<!-- ===== Fruit ===== -->
+
+		<item name="foodCropBananaAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropBananaAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropBananaAOODesc"/>
+        </item>	
+
+		<item name="foodCropCherryAOO">
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value=".5"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropCherryAOODesc"/>
+        </item>
+
+		<item name="foodCropCoconutAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropCoconutAOO"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="2.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+          <property name="DescriptionKey" value="foodCropCoconutAOODesc"/>
+        </item>
+
+		
+		
+		<item name="foodCropLemonTSK_AOO">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="foodCropLemonTSK_AOO"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="foodCropLemonTSK_AOODesc"/>			
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+		</item>
+
+		
+		<item name="foodCropLimeTSK_AOO">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="foodCropLimeTSK_AOO"/>
+			<property name="DescriptionKey" value="foodCropLimeTSK_AOODesc"/>			
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/>				
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>			
+		</item>
+
+
+		<item name="foodCropMangoTSK_AOO">
+			<property name="HoldType" value="45"/>
+			<property name="DescriptionKey" value="foodCropMangoTSK_AOODesc"/>			
+			<property name="CustomIcon" value="foodCropMangoTSK_AOO"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="7"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>				
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>			
+		</item>		
+		
+        <item name="foodCropOrangeAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropOrangeAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>			
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropOrangeAOODesc"/>
+        </item>
+
+		<item name="foodCropPeachTSK_AOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropPeachTSK_AOO"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>	
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropPeachTSK_AOODesc"/>
+        </item>
+<!--
+       <item name="foodCropPearAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropPearAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>	
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropPearAOODesc"/>
+        </item>
+-->
+         <item name="foodCropPineappleAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropPineappleAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="10"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>	
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropPineappleAOODesc"/>
+        </item>
+
+        <item name="foodCropRaspberryAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropRaspberryAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropRaspberryAOODesc"/>
+        </item>		
+		
+        <item name="foodCropApplesAOO">
+			<property name="CreativeMode" value="Player"/>	
+			<property name="HoldType" value="23"/>
+			<property name="DisplayType" value="food"/>
+			<property name="CustomIcon" value="foodCropAppleTSK_AOO"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="applecrunch"/></property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="foodCropApplesAOODesc"/>			
+		</item>		
+
+       <item name="foodCropStrawberryAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropStrawberryAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/>	
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropStrawberryAOODesc"/>
+        </item>		
+
+		<item name="foodCropGrapesAOO">
+			<property name="CreativeMode" value="Player"/>	
+			<property name="CustomIcon" value="foodCropGrapesAOO"/>		
+			<property name="HoldType" value="23"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+			<property name="DescriptionKey" value="foodCropGrapesAOODesc"/>			
+		</item>		
+
+
+		<item name="foodCropWatermelonTSK_AOO">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="foodCropWatermelonTSK_AOO"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="15"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+ 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+			</effect_group>
+			<property name="DescriptionKey" value="foodCropWatermelonTSK_AOODesc"/>			
+		</item>
+
+
+	<!-- ===== Vegetables ===== -->
+
+       <item name="foodCropRiceAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropRiceAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <property name="DescriptionKey" value="foodCropRiceAOODesc"/>
+        </item>
+
+
+		<item name="foodCropBroccoliAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropBroccoliAOO"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropBroccoliAOODesc"/>
+        </item>
+
+
+		<item name="foodCropCabbageAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropCabbageAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropCabbageAOODesc"/>
+        </item>
+
+		<item name="foodCropCarrotAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropCarrotAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropCarrotAOODesc"/>
+        </item>
+
+        <item name="foodCropCeleryAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropCeleryAOO"/> 
+			<property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropCeleryAOODesc"/>
+        </item>
+
+		<item name="foodCropCucumberAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropCucumberAOO"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropCucumberAOODesc"/>
+        </item>
+
+		<item name="foodCropIcebergLettuceAOO">
+			<property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="CustomIcon" value="foodCropIcebergLettuceAOO"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="3"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+			<property name="DescriptionKey" value="foodCropIcebergLettuceAOODesc"/>			
+		</item>		
+
+		
+		<item name="foodCropJalapenoPepperAOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropJalapenoPepperAOO"/>
+			<property name="HoldType" value="14"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="DropScale" value="6"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DisplayType" value="food"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_eating"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="10"/>
+				<property name="Throw_strength_max" value="35"/>
+				<property name="Max_strain_time" value="1"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffFresh"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="subtract" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="subtract" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+			</effect_group>
+			<property name="DescriptionKey" value="foodCropJalapenoPepperAOODesc"/>
+		</item>	
+
+        <item name="foodCropOnionAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropOnionAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropOnionAOODesc"/>
+        </item>
+
+        <item name="foodCropSpinachAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropSpinachAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropSpinachAOODesc"/>
+        </item>
+
+
+
+         <item name="foodCropTomatoAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropTomatoAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/>	
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+            </effect_group>
+            <property name="DescriptionKey" value="foodCropTomatoAOODesc"/>
+        </item>	
+
+
+
+
+	<!-- ===== Misc ===== -->
+
+        <item name="foodCropWheatAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropWheatAOO"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="food"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="5"/>
+            <property name="Weight" value="5"/>
+            <property name="DescriptionKey" value="foodCropWheatAOODesc"/>
+        </item>   
+
+
+		<item name="resourceWhiteOakPlankAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="resourceWhiteOakPlankAOO"/>			
+            <property name="HoldType" value="31"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="10"/>
+            <property name="Weight" value="5"/>
+            <property name="DescriptionKey" value="resourceWhiteOakPlankAOODesc"/>
+        </item>
+
+		<item name="foodCropMixedHerbsAOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropMixedHerbsAOO"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="foodCropMixedHerbsAOODesc"/>
+		</item>
+
+		<item name="foodCropHempAOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropHempAOO"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="75"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="foodCropHempAOODesc"/>
+		</item>
+
+
+
+		<item name="foodCropRoseTSK_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="resourceCropRoseTSK_AOO"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="foodCropRoseTSK_AOODesc"/>
+		</item>
+
+		<item name="foodCropMixedSpicesAOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropMixedSpicesAOO"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="foodCropMixedSpicesAOODesc"/>
+		</item>
+
+		<item name="resourceMapleWoodPlankAOO">
+            <property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="resourceMapleWoodPlankAOO"/>																  
+            <property name="HoldType" value="31"/>
+            <property name="Group" value="Food/Cooking"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="Stacknumber" value="500"/>
+            <property name="EconomicValue" value="18"/>
+            <property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+            <property name="CraftingIngredientTime" value="10"/>
+            <property name="Weight" value="5"/>
+            <property name="DescriptionKey" value="resourceMapleWoodPlankAOODesc"/>
+        </item>		
+
+
+		<item name="foodCropSugarcaneStalkAOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropSugarcaneStalkAOO"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="500"/>
+			<property name="EconomicValue" value="18"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CraftingIngredientExp" value="3"/>
+			<property name="CraftingIngredientTime" value="1"/>
+			<property name="DescriptionKey" value="foodCropSugarcaneStalkAOODesc"/>
+		</item>
+
+			
+		<item name="foodCropValerianTSK_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropValerianTSK_AOO"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="40"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="foodCropValerianTSK_AOODesc"/>
+		</item>	
+		
+		<item name="foodCropCatsClawTSK_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropCatsClawTSK_AOO"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="40"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="foodCropCatsClawTSK_AOODesc"/>
+		</item>		
+		
+		<item name="foodCropDevilsClawTSK_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropDevilsClawTSK_AOO"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="40"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="foodCropDevilsClawTSK_AOODesc"/>
+		</item>
+
+		<item name="foodCropEchinaceaTSK_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropEchinaceaTSK_AOO"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="40"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="foodCropEchinaceaTSK_AOODesc"/>
+		</item>
+		
+		<item name="foodCropFeverfewTSK_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="foodCropFeverfewTSK_AOO"/>
+			<property name="Tags" value="food"/>
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="foodRaw"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/parcelPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="40"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="true"/>			
+			<property name="CraftingIngredientTime" value="8"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="foodCropFeverfewTSK_AOODesc"/>
+		</item>		
+		
+		
+</append>		
+	
+
+
+	
+</configs>

@@ -1,0 +1,139 @@
+<config>
+	<append xpath="/entity_classes" >
+
+		<entity_class name="zombieButcherAOO" extends="WildAgressiveTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="HandItem" value="meleeHandButcherAOO"/>
+			<property name="RootMotion" value="false"/>			
+			<property name="WalkType" value="2"/>
+			<property name="Faction" value="undead"/>
+			<property name="EntityFlags" value="zombie"/>
+			<property name="HasRagdoll" value="false"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect_15"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Butcher.prefab"/> 
+			<property name="SoundRandomTime" value="30"/> 
+			<property name="SoundRandom" value="zombieRandom3AOO"/>
+			<property name="SoundAlertTime" value="25"/> 
+			<property name="SoundAlert" value="chainsaw_fire_start"/>
+			<property name="SoundSense" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_lp"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+			<property name="SoundAttack" value="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_lp"/>
+			<drop event="Harvest" name="meleeToolAxeT3Chainsaw" prob=".05" tag="allToolsHarvest" count="1"/>			
+		</entity_class>	
+
+		<entity_class name="zombieMutantFighterAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="TimeStayAfterDeath" value="2"/>				
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Mutant_fighter"/> 
+		</entity_class>	
+
+		<entity_class name="zombieCrazyAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?CrazyZombie"/> 
+		</entity_class>	
+
+		<entity_class name="zombiePrisonerAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Prisoner"/> 
+		</entity_class>	
+
+		<entity_class name="zombieMechanicAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Mechanic"/> 
+		</entity_class>	
+
+
+		<entity_class name="zombiePHulkAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?pumpkinhulk"/> 
+		</entity_class>	
+
+		<entity_class name="zombieGirlScoutAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="SizeScale" value=".7"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?girlscout"/> 
+			<drop event="Harvest" name="foodPeanutButterCookieTSK_AOO" tag="allToolsHarvest" prob=".1" count="1,2"/>
+			<drop event="Harvest" name="foodChocolateChipCookieTSK_AOO" tag="allToolsHarvest" prob=".2" count="1,2"/>				
+		</entity_class>	
+
+		<entity_class name="zombieMutantAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Mutant"/> 
+		</entity_class>
+
+		<entity_class name="zombieMutant3AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Mutant3"/> 
+		</entity_class>	
+
+		<entity_class name="zombieNightShadeAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?NightShade"/> 
+		</entity_class>
+
+		<entity_class name="zombieParasiteAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Parasite"/> 
+		</entity_class>	
+
+		<entity_class name="zombieWarZAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?warzombie"/> 
+		</entity_class>	
+
+		<entity_class name="zombieYakuAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Yaku"/> 
+		</entity_class>	
+
+		<entity_class name="zombieMutant4AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Mutant4"/> 
+		</entity_class>
+
+		<entity_class name="zombieMortimerAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?mortimerZ"/> 
+		</entity_class>	
+
+		<entity_class name="zombieDerrickAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?derrickZ"/> 
+		</entity_class>
+
+		<entity_class name="zombieCop01AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?copzombie"/> 
+		</entity_class>	
+
+		<entity_class name="zombieFatManAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ,effect_15,effect_18r,effect_18b,effect_18g"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Fat"/> 
+			<property name="SoundRandomTime" value="30"/> 
+			<property name="SoundRandom" value="fatmanAOO"/>
+			<property name="SoundAlertTime" value="25"/> 
+			<property name="SoundAlert" value="zombieSenseAOO"/>
+			<property name="SoundSense" value="fatmanAOO"/>
+		</entity_class>
+
+	
+	</append>
+</config>

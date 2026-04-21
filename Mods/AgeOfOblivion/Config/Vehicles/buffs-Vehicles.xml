@@ -1,0 +1,151 @@
+<configs>
+	
+	<append xpath="/buffs">
+
+<!-- ===================    Vehicle Buffs     ============================================= -->
+
+		<!-- Delorean Buffs -->
+		
+		<buff name="buffDelorean" hidden="true"> 
+			<stack_type value="ignore"/>
+			<effect_group> 
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" transform_path="Mesh"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="Mesh2"/>	
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="true" transform_path="Mesh"/>	
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Mesh2"/>		
+			</effect_group>
+		</buff>
+		
+		<buff name="buffDelorean2" hidden="true"> 
+			<stack_type value="ignore"/>
+			<update_rate value=".1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range=".1" buff="buffDeloreanPlayer" duration="1"/>
+			</effect_group>	
+		</buff>					
+
+		<buff name="buffDeloreanPlayer" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="2" buff="buffDelorean" duration="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" target="selfAOE" range="2" buff="buffDelorean"/>	
+			</effect_group>	
+		</buff>
+	
+		<!-- Bat Car Buffs -->
+		
+		<buff name="buffRV" hidden="true"> 
+			<stack_type value="ignore"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" transform_path="RV Door Open"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true" transform_path="RV Door Closed"/>	
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="true" transform_path="RV Door Open"/>	
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="RV Door Closed"/>		
+			</effect_group>
+		</buff>
+		
+		<buff name="buffRV2" hidden="true"> 
+			<stack_type value="ignore"/>
+			<update_rate value=".1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range=".1" buff="buffRVPlayer" duration="1"/>
+			</effect_group>	
+		</buff>					
+	
+		<buff name="buffRVPlayer" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range=".5" buff="buffRV" duration="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" target="selfAOE" range="2" buff="buffRV"/>	
+			</effect_group>	
+		</buff>	
+
+
+		<buff name="buffUnlockVehicle" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="UnlockVehicle"/>		
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_01" />	
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_02" >
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>		
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_03" >	
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_04" >	
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_05" >	
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect>					
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_06" >	
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffUnlockVehicle_07" >	
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="5"/>
+				</triggered_effect>	
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_01" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_01"/>
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_02" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_02"/>
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_03" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_03"/>
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_04" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_04"/>
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_05" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_05"/>
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_06" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_06"/>
+			</effect_group>	
+		</buff>	
+		
+		<buff name="buffUnlockVehicle_07" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockVehicle_07"/>
+			</effect_group>	
+		</buff>	
+		
+	</append>
+	
+</configs>		

@@ -1,0 +1,5 @@
+<config>
+
+	<include filename="Vehicles/nav_objects-Vehicles.xml" />
+
+</config>

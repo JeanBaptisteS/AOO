@@ -1,0 +1,1917 @@
+<config>
+
+<!-- ============================================================== -->	
+<!-- ===================    Plants    ===================== -->
+<!-- ============================================================== -->	
+
+	<append xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedMushroom1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedYucca1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedCotton1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedCoffee1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedAloe1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedBlueberry1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedPotato1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedCorn1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedGraceCorn1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedHop3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedHop1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+	<append xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']">
+		<property name="DowngradeBlock" value="plantedPumpkin1"/>
+	</append>
+	<setattribute xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="prob">0</setattribute>
+	<setattribute xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="count">0</setattribute>
+
+
+
+	<append xpath="/blocks">	
+
+<!-- Banana Tree -->	
+		<block name="plantedBananaTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedBananaTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedBananaTreeSeedAOODesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedBananaTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedBananaTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedBananaTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedbananatree"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Banana2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedBananaTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<drop event="Destroy" name="plantedBananaTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedBananaTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CustomIcon" value="plantedbananatree"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Banana3.prefab"/>
+			<drop event="Harvest" name="foodCropBananaAOO" count="3,5" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropBananaAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedBananaTreePlantHarvestAOO">
+			<property name="Extends" value="plantedBananaTreePlantWildAOO"/>
+			<property name="CustomIcon" value="plantedbananatree"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropBananaAOO" count="3,5" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceRedBananaAOO" count="1" prob=".1" tool_category="specialHarvest"/>
+			<property name="DowngradeBlock" value="plantedBananaTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedBananaTreePlantHarvestAOO"/>
+		</block>
+		
+		<block name="plantedBananaTreeSeedProducerAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedBananaTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedBananaTreeSeedAOODesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Banana3.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedBananaTreePlantProducerAOO"/>
+			<property name="PlantGrowing.GrowthRate" value=".1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+		</block>
+		<block name="plantedBananaTreePlantProducerAOO">
+			<property name="Class" value="Productor, OblivionCore"/>
+			<property name="WindowGroup" value="plantProducer"/>
+			<property name="Material" value="MwoodReinforced"/>
+			<property name="StabilitySupport" value="false"/> 
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Banana3.prefab"/>
+			<property name="CustomIcon" value="plantedbananatree"/>	
+            <property name="MultiBlockDim" value="1,3,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="ImposterExchange" value="imposterQuarter" param1="154"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="InputLootList" value="inputSlotsPlant"/>
+			<property name="OutputLootList" value="outputSlotsPlant"/>
+			<property name="ToolsLootList" value="toolsSlots2X2"/>
+			<property name="RandomRecipe" value="false"/>	
+			<property name="Place" value="TowardsPlacerInverted"/>	
+			
+			<property class="ProducerRecipes">
+				<property class="Recipe1">
+					<property name="Ingredients" value="" />
+					<property name="IngredientsCount" value="1" />
+					<property name="Items" value="foodCropBananaAOO" />
+					<property name="ItemsCount" value="1" />
+					<property name="CraftTime" value="30" />
+					<property name="ItemsProbabilities" value="1" />
+					<property name="RandomTextKey" value="1 Banana every hour" />
+					<property name="TextOnly" value="true"/> 						
+					<property name="BlockNameNeeded" value="waterMoving" />
+					<property name="BlockCountNeeded" value="1" />
+					<property name="BlocksSearchRange" value="2" />				
+				</property>	
+				<property class="Recipe2">
+					<property name="Ingredients" value="drinkJarRiverWater" />
+					<property name="IngredientsCount" value="1" />
+					<property name="Items" value="foodCropBananaAOO" />
+					<property name="ItemsCount" value="3" />
+					<property name="CraftTime" value="1800" />
+					<property name="ItemsProbabilities" value="1" />
+					<property name="RandomTextKey" value="3 Bananas every 30 minutes" />
+					<property name="TextOnly" value="true"/> 							
+					<property name="BlockNameNeeded" value="water" />
+				</property>	
+
+				<property class="Recipe3">
+					<property name="Ingredients" value="drinkJarBoiledWater" />
+					<property name="IngredientsCount" value="1" />
+					<property name="Items" value="foodCropBananaAOO" />
+					<property name="ItemsCount" value="5" />
+					<property name="CraftTime" value="1800" />
+					<property name="ItemsProbabilities" value="1" />
+					<property name="TextOnly" value="true"/> 	
+					<property name="RandomTextKey" value="5 Bananas every 30 minutes" />						
+				</property>	
+
+				<property class="Recipe4">
+					<property name="Ingredients" value="bucketRiverWater" />
+					<property name="IngredientsCount" value="1" />
+					<property name="Items" value="foodCropBananaAOO" />
+					<property name="ItemsCount" value="10" />
+					<property name="CraftTime" value="1800" />
+					<property name="ItemsProbabilities" value="1" />
+					<property name="RandomTextKey" value="10 Bananas every 30 minutes" />					
+					<property name="TextOnly" value="true"/> 					
+				</property>	
+		
+			</property>		
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,3"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property name="FilterTags" value="MC_building,SC_loot"/>
+		</block>
+
+
+
+<!-- Broccoli -->	
+		<block name="plantedBroccoliSeedAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>			
+			<property name="CustomIcon" value="plantedBroccoliSeedAOO"/>
+			<property name="DescriptionKey" value="plantedBroccoliSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Broccoli1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedBroccoliGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedBroccoliSeedAOO" count="1"/>
+		</block>
+		<block name="plantedBroccoliGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedBroccoliAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Broccoli2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedBroccoliPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedBroccoliSeedAOO" count="1"/>
+		</block>
+		<block name="plantedBroccoliPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Broccoli3.prefab"/>
+			<drop event="Harvest" name="foodCropBroccoliAOO" count="2,4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropBroccoliAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedBroccoliPlantHarvestAOO">
+			<property name="Extends" value="plantedBroccoliPlantWildAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropBroccoliAOO" count="2,4" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedBroccoliSeedAOO"/>
+			<property name="DescriptionKey" value="plantedBroccoliPlantHarvestAOO"/>
+		</block>
+
+<!-- Cabbage -->	
+		<block name="plantedCabbageSeedAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedCabbageSeedAOO"/>
+			<property name="DescriptionKey" value="plantedCabbageSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Cabbage1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCabbageGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedCabbageSeedAOO" count="1"/>
+			<property name="DescriptionKey" value="plantedCabbageSeedAOO"/>
+		</block>
+		<block name="plantedCabbageGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCabbageAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Cabbage2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCabbagePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedCabbageSeedAOO" count="1"/>
+			<property name="DescriptionKey" value="plantedCabbageGrowingAOO"/>
+		</block>
+		<block name="plantedCabbagePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Cabbage3.prefab"/>
+			<drop event="Harvest" name="foodCropCabbageAOO" count="1,2" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCabbageAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCabbagePlantHarvestAOO">
+			<property name="Extends" value="plantedCabbagePlantWildAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropCabbageAOO" count="1,2" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCabbageSeedAOO"/>
+			<property name="DescriptionKey" value="plantedCabbagePlantHarvestAOO"/>
+		</block>	
+
+<!-- Carrot -->	
+		<block name="plantedCarrotSeedAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>			
+			<property name="CustomIcon" value="plantedCarrotSeedAOO"/>
+			<property name="DescriptionKey" value="plantedCarrotSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Carrot1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCarrotGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedCarrotSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCarrotGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCarrotAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Carrot2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCarrotPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedCarrotSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCarrotPlantWildAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Carrot3.prefab"/>
+			<drop event="Harvest" name="foodCropCarrotAOO" count="2,4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCarrotAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCarrotPlantHarvestAOO">
+			<property name="Extends" value="plantedCarrotPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedCarrotPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCarrotCropAOO" count="2,4" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCarrotSeedAOO"/>
+		</block>
+		
+<!-- Cat's Claw -->
+
+		<block name="plantedCatsClawPlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/CatsClaw3.prefab"/>
+			<drop event="Harvest" name="foodCropCatsClawTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCatsClawTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCatsClawPlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedCatsClawPlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedCatsClawPlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedCatsClawSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropCatsClawTSK_AOO" count="1" tag="cropHarvest"/>
+
+		</block>
+
+<!-- Celery -->
+		<block name="plantedCelerySeedAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedCelerySeedAOO"/>
+			<property name="DescriptionKey" value="plantedCelerySeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Celery1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCeleryGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedCelerySeedAOO" count="1"/>
+		</block>
+		<block name="plantedCeleryGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCeleryAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Celery2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCeleryPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedCelerySeedAOO" count="1"/>
+		</block>
+		<block name="plantedCeleryPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Celery3.prefab"/>
+			<drop event="Harvest" name="foodCropCeleryAOO" count="2,3" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCeleryAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCeleryPlantHarvestAOO">
+			<property name="Extends" value="plantedCeleryPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedCeleryPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropCeleryAOO" count="2,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCelerySeedAOO"/>
+		</block>		
+
+<!-- Cherry Tree -->		
+		<block name="plantedCherryTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCherryTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedCherryTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCherryTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedCherryTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCherryTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCherryAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCherryTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedCherryTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCherryTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/CherryTreeBlock.prefab"/>
+			<drop event="Harvest" name="foodCropCherryAOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCherryAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCherryTreePlantHarvestAOO">
+			<property name="Extends" value="plantedCherryTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedCherryTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropCherryAOO" count="3,6" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedCherryTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+
+
+<!-- Coconut Tree -->	
+		<block name="plantedCoconutTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCoconutTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedCoconutTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCoconutTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedCoconutTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCoconutTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCoconutAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCoconutTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedCoconutTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCoconutTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/CoconutTreePrefab.prefab"/>
+			<drop event="Harvest" name="foodCropCoconutAOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCoconutAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCoconutTreePlantHarvestAOO">
+			<property name="Extends" value="plantedCoconutTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedCoconutTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropCoconutAOO" count="3,4" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedCoconutTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+		
+<!-- Cucumber -->	
+		<block name="plantedCucumberSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedCucumberSeedAOO"/>
+			<property name="DescriptionKey" value="plantedCucumberSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Cucumber1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCucumberGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedCucumberSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCucumberGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedCucumberAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Cucumber2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedCucumberPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedCucumberSeedAOO" count="1"/>
+		</block>
+		<block name="plantedCucumberPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Cucumber3.prefab"/>
+			<drop event="Harvest" name="foodCropCucumberAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropCucumberAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedCucumberPlantHarvestAOO">
+			<property name="Extends" value="plantedCucumberPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedCucumberPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropCucumberAOO" count="2,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedCucumberSeedAOO"/>
+		</block>
+
+<!-- Devil's Claw -->
+
+		<block name="plantedDevilsClawPlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/DevilClaw3.prefab"/>
+			<drop event="Harvest" name="foodCropDevilsClawTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropDevilsClawTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedDevilsClawPlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedDevilsClawPlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedDevilsClawPlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedDevilsClawSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropDevilsClawTSK_AOO" count="1" tag="cropHarvest"/>
+		</block>
+
+<!-- Echinacea -->
+
+		<block name="plantedEchinaceaPlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Enchinea3.prefab"/>
+			<drop event="Harvest" name="foodCropEchinaceaTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropEchinaceaTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedEchinaceaPlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedEchinaceaPlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedEchinaceaPlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedEchinaceaSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropEchinaceaTSK_AOO" count="1" tag="cropHarvest"/>
+		</block>
+		
+<!-- Feverfew -->
+
+		<block name="plantedFeverfewPlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Feverfew3.prefab"/>
+			<drop event="Harvest" name="foodCropFeverfewTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropFeverfewTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedFeverfewPlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedFeverfewPlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedFeverfewPlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedFeverfewSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropFeverfewTSK_AOO" count="1" tag="cropHarvest"/>
+		</block>
+		
+
+<!-- Herbs -->
+		<block name="plantedMixedHerbsSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>	
+			<property name="CustomIcon" value="plantedMixedHerbsSeedAOO"/>
+			<property name="DescriptionKey" value="plantedMixedHerbsSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Herb1Prefab1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMixedHerbsGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedMixedHerbsSeedAOO" count="1"/>
+		</block>
+		<block name="plantedMixedHerbsGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedMixedHerbsSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Herb1Prefab2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMixedHerbsPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedMixedHerbsSeedAOO" count="1"/>
+		</block>
+		<block name="plantedMixedHerbsPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Herb1Prefab3.prefab"/>
+			<drop event="Harvest" name="foodCropMixedHerbsAOO" count="2" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropMixedHerbsAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedMixedHerbsPlantHarvestAOO">
+			<property name="Extends" value="plantedMixedHerbsPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedMixedHerbsPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropMixedHerbsAOO" count="2,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedMixedHerbsSeedAOO"/>
+		</block>
+
+<!-- Iceberg Lettuce -->
+		<block name="plantedIcebergLettuceSeedAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="CustomIcon" value="plantedIcebergLettuceSeedAOO"/>
+			<property name="DescriptionKey" value="plantedIcebergLettuceSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Iceberg1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedIcebergLettuceGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedIcebergLettuceSeedAOO" count="1"/>
+		</block>
+		<block name="plantedIcebergLettuceGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedIcebergLettuceAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Iceberg2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedIcebergLettucePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedIcebergLettuceSeedAOO" count="1"/>
+		</block>
+		<block name="plantedIcebergLettucePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Iceberg3.prefab"/>
+			<drop event="Harvest" name="foodCropIcebergLettuceAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropIcebergLettuceAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedIcebergLettucePlantHarvestAOO">
+			<property name="Extends" value="plantedIcebergLettucePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedIcebergLettucePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropIcebergLettuceAOO" count="1,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedIcebergLettuceSeedAOO"/>
+		</block>
+
+<!-- Jalapeno Pepper -->
+		<block name="plantedJalapenoSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedJalapenoSeedAOO"/>
+			<property name="DescriptionKey" value="plantedJalapenoSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/JalapenoPrefab1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedJalapenoGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedJalapenoSeedAOO" count="1"/>
+		</block>
+		<block name="plantedJalapenoGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedJalapenoSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/JalapenoPrefab2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedJalapenoPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedJalapenoSeedAOO" count="1"/>
+		</block>
+		<block name="plantedJalapenoPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/JalapenoPrefab3.prefab"/>
+			<drop event="Harvest" name="foodCropJalapenoPepperAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropJalapenoPepperAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedJalapenoPlantHarvestAOO">
+			<property name="Extends" value="plantedJalapenoPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedJalapenoPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropJalapenoPepperAOO" count="1,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedJalapenoSeedAOO"/>
+		</block>
+
+<!-- Lemon Tree -->
+		<block name="plantedLemonTreeSeedTSK_AOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedLemonTreeSeedTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedLemonTreeSeedTSK_AOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedLemonTreeGrowingTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedLemonTreeSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedLemonTreeGrowingTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedLemonTreeSeedTSK_AOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedLemonTreePlantHarvestTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedLemonTreeSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedLemonTreePlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/MeyerLemonPrefab.prefab"/>
+			<drop event="Harvest" name="foodCropLemonTSK_AOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropLemonTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedLemonTreePlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedLemonTreePlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedLemonTreePlantHarvestTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropLemonTSK_AOO" count="2,5" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedLemonTreeSeedTSK_AOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+<!-- Lime Tree -->
+		<block name="plantedLimeTreeSeedTSK_AOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedLimeTreeSeedTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedLimeTreeSeedTSK_AOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedLimeTreeGrowingTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedLimeTreeSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedLimeTreeGrowingTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedLimeTreeSeedTSK_AOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedLimeTreePlantHarvestTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedLimeTreeSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedLimeTreePlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/LimeTree3.prefab"/>
+			<drop event="Harvest" name="foodCropLimeTSK_AOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropLimeTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedLimeTreePlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedLimeTreePlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedLimeTreePlantHarvestTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropLimeTSK_AOO" count="2,5" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedLimeTreeSeedTSK_AOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+<!-- Mango Tree -->
+		<block name="plantedMangoTreeSeedTSK_AOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedMangoTreeSeedTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedMangoTreeSeedTSK_AOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMangoTreeGrowingTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedMangoTreeSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedMangoTreeGrowingTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedMangoTreeSeedTSK_AOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/MangoTree2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMangoTreePlantHarvestTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedMangoTreeSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedMangoTreePlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/MangoTree3.prefab"/>
+			<drop event="Harvest" name="foodCropMangoTSK_AOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropMangoTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedMangoTreePlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedMangoTreePlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedMangoTreePlantHarvestTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropMangoTSK_AOO" count="2,5" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedMangoTreeSeedTSK_AOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+<!-- Marijuana -->
+		<block name="plantedMarijuanaSeedAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>	
+			<property name="CustomIcon" value="plantedMarijuanaSeedAOO"/>
+			<property name="DescriptionKey" value="plantedMarijuanaSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/PotPrefab1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMarijuanaGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="93"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedMarijuanaSeedAOO" count="1"/>
+		</block>
+		<block name="plantedMarijuanaGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedMarijuanaAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/PotPrefab2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMarijuanaPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="93"/>
+			<drop event="Destroy" name="plantedMarijuanaSeedAOO" count="1"/>
+		</block>
+		<block name="plantedMarijuanaPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/PotPrefab3.prefab"/>
+			<drop event="Harvest" name="foodCropHempAOO" count="3" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropHempAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedMarijuanaPlantHarvestAOO">
+			<property name="Extends" value="plantedMarijuanaPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedMarijuanaPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropHempAOO" count="2,5" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedMarijuanaSeedAOO"/>
+		</block>
+
+
+<!-- Onion -->
+		<block name="plantedOnionSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedOnionSeedAOO"/>
+			<property name="DescriptionKey" value="plantedOnionSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Onion1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedOnionGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedOnionSeedAOO" count="1"/>
+		</block>
+		<block name="plantedOnionGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedOnionAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Onion2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedOnionPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedOnionSeedAOO" count="1"/>
+		</block>
+		<block name="plantedOnionPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Onion3.prefab"/>
+			<drop event="Harvest" name="foodCropOnionAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropOnionAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedOnionPlantHarvestAOO">
+			<property name="Extends" value="plantedOnionPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedOnionPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropOnionAOO" count="2,4" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedOnionSeedAOO"/>
+		</block>
+
+<!-- Orange Tree -->
+		<block name="plantedOrangeTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedOrangeTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedOrangeTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedOrangeTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedOrangeTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedOrangeTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedOrangeAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedOrangeTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedOrangeTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedOrangeTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/OrangeTreeBlock.prefab"/>
+			<drop event="Harvest" name="foodCropOrangeAOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropOrangeAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedOrangeTreePlantHarvestAOO">
+			<property name="Extends" value="plantedOrangeTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedOrangeTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropOrangeAOO" count="2,5" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedOrangeTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+
+<!-- Peach Tree -->	
+		<block name="plantedPeachTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedPeachTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedPeachTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedPeachTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedPeachTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedPeachTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedPeachTreeSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedPeachTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedPeachTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedPeachTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/CoconutTreePrefab.prefab"/>
+			<drop event="Harvest" name="foodCropPeachTSK_AOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="plantedPeachTreeSeedAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedPeachTreePlantHarvestAOO">
+			<property name="Extends" value="plantedPeachTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedPeachTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropPeachAOO" count="2,5" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedPeachTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+
+<!-- Pear Tree -->
+	<!--	<block name="plantedPearTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedPearTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedPearTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?TreeSeedPrefab"/>
+			<property name="PlantGrowing.Next" value="plantedPearTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedPearTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedPearTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?TreeGrowingPrefab"/>
+			<property name="PlantGrowing.Next" value="plantedPearTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedPearTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedPearTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?PearTreePrefab"/>
+			<drop event="Harvest" name="foodCropPearAOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropPearAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedPearTreePlantHarvestAOO">
+			<property name="Extends" value="plantedPearTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedPearTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropPearAOO" count="4" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedPearTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+	-->	
+<!-- Pineapple -->
+		<block name="plantedPineappleSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>	
+			<property name="CustomIcon" value="plantedPineappleSeedAOO"/>
+			<property name="DescriptionKey" value="plantedPineappleSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedPineappleGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedPineappleSeedAOO" count="1"/>
+		</block>
+		<block name="plantedPineappleGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedPineappleAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedPineapplePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedPineappleSeedAOO" count="1"/>
+		</block>
+		<block name="plantedPineapplePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/PineapplePlantPrefab.prefab"/>
+			<drop event="Harvest" name="foodCropPineappleAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropPineappleAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedPineapplePlantHarvestAOO">
+			<property name="Extends" value="plantedPineapplePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedPineapplePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropPineappleAOO" count="1,2" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedPineappleSeedAOO"/>
+		</block>
+
+<!-- Raspberry -->		
+		<block name="plantedRaspberrySeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedRaspberrySeedAOO"/>
+			<property name="DescriptionKey" value="plantedRaspberrySeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/LatticeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRaspberryGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedRaspberrySeedAOO" count="1"/>
+		</block>
+		<block name="plantedRaspberryGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedRaspberryAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/LatticeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRaspberryPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedRaspberrySeedAOO" count="1"/>
+		</block>
+		<block name="plantedRaspberryPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/RaspberryPlantPrefab.prefab"/>
+			<drop event="Harvest" name="foodCropRaspberryAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropRaspberryAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedRaspberryPlantHarvestAOO">
+			<property name="Extends" value="plantedRaspberryPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedRaspberryPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropRaspberryAOO" count="3,6" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedRaspberrySeedAOO"/>
+		</block>
+		
+<!--  Apple Tree -->
+		<block name="plantedAppleTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedAppleTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedAppleTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/AppleTreePrefab1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedAppleTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedAppleTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedAppleTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedAppleTreeSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/AppleTreePrefab2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedAppleTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedAppleTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedAppleTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/AppleTreePrefab3.prefab"/>
+			<drop event="Harvest" name="foodCropApplesAOO" count="4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropApplesAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedAppleTreePlantHarvestAOO">
+			<property name="Extends" value="plantedAppleTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedAppleTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropApplesAOO" count="2,6" tag="cropHarvest"/>
+		    <drop event="Harvest" name="resourceWood" count="4,14" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedAppleTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+		
+<!-- Rice -->
+		<block name="plantedRiceSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedRiceSeedAOO"/>
+			<property name="DescriptionKey" value="plantedRiceSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Rice1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRiceGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedRiceSeedAOO" count="1"/>
+		</block>
+		<block name="plantedRiceGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedRiceAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Rice2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRicePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedRiceSeedAOO" count="1"/>
+		</block>
+		<block name="plantedRicePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Rice3.prefab"/>
+			<drop event="Harvest" name="foodCropRiceAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropRiceAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedRicePlantHarvestAOO">
+			<property name="Extends" value="plantedRicePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedRicePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropRiceAOO" count="2,5" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedRiceSeedAOO"/>
+		</block>
+
+<!-- Romaine Lettuce -->
+		<block name="plantedRomaineLettuceSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedRomaineLettuceSeedAOO"/>
+			<property name="DescriptionKey" value="plantedRomaineLettuceSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRomaineGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedRomaineLettuceSeedAOO" count="1"/>
+		</block>
+		<block name="plantedRomaineGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedRomaineLettuceSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_growthPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRomaineLettucePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedRomaineLettuceSeedAOO" count="1"/>
+		</block>
+		<block name="plantedRomaineLettucePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/RomaineLettucePrefab.prefab"/>
+			<drop event="Harvest" name="foodCropRomaineAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropRomaineAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedRomaineLettucePlantHarvestAOO">
+			<property name="Extends" value="plantedRomaineLettucePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedRomaineLettucePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropRomaineAOO" count="1" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedRomaineLettuceSeedAOO"/>
+		</block>
+		
+<!-- Rose -->
+		<block name="plantedRoseSeedTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+			<property name="CustomIcon" value="plantedRoseSeedTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedRoseSeedTSK_AOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRoseGrowingTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedRoseSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedRoseGrowingTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedRoseSeedTSK_AOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="plantedRoseSeedTSK_AOO"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Rose2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedRosePlantHarvestTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedRoseSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedRosePlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Rose3.prefab"/>
+			<drop event="Harvest" name="foodCropRoseTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropRoseTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedRosePlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedRosePlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedRosePlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedRoseSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropRoseTSK_AOO" count="1,2" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedRoseSeedTSK_AOO"/>
+		</block>
+
+<!-- Spices -->
+		<block name="plantedMixedSpicesSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedMixedSpicesSeedAOO"/>
+			<property name="DescriptionKey" value="plantedMixedSpicesSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SpicePrefab1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMixedSpicesGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedMixedSpicesSeedAOO" count="1"/>
+		</block>
+		<block name="plantedMixedSpicesGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedMixedSpicesSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SpicePrefab2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedMixedSpicesPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedMixedSpicesSeedAOO" count="1"/>
+		</block>
+		<block name="plantedMixedSpicesPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SpicePrefab3.prefab"/>
+			<drop event="Harvest" name="foodCropMixedSpicesAOO" count="2" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropMixedSpicesAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedMixedSpicesPlantHarvestAOO">
+			<property name="Extends" value="plantedMixedSpicesPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedMixedSpicesPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropMixedSpicesAOO" count="2,5" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedMixedSpicesSeedAOO"/>
+		</block>
+
+<!-- Spinach -->
+		<block name="plantedSpinachSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>	
+			<property name="CustomIcon" value="plantedSpinachSeedAOO"/>
+			<property name="DescriptionKey" value="plantedSpinachSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSpinachGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedSpinachSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSpinachGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedSpinachAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Plants/potato_plant_growthPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSpinachPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedSpinachSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSpinachPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SpinachPlantPrefab.prefab"/>
+			<drop event="Harvest" name="foodCropSpinachAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropSpinachAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedSpinachPlantHarvestAOO">
+			<property name="Extends" value="plantedSpinachPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedSpinachPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropSpinachAOO" count="2,4" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedSpinachSeedAOO"/>
+		</block>
+
+<!-- Squash -->
+		<block name="plantedSquashSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>	
+			<property name="CustomIcon" value="plantedSquashSeedAOO"/>
+			<property name="DescriptionKey" value="plantedSquashSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/LatticeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSquashGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedSquashSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSquashGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedSquashAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/LatticeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSquashPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedSquashSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSquashPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SquashPlantPrefab.prefab"/>
+			<drop event="Harvest" name="foodCropSquashAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropSquashAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedSquashPlantHarvestAOO">
+			<property name="Extends" value="plantedSquashPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedSquashPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropSquashAOO" count="2,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedSquashSeedAOO"/>
+		</block>
+
+<!-- Strawberry -->
+		<block name="plantedStrawberrySeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedStrawberrySeedAOO"/>
+			<property name="DescriptionKey" value="plantedStrawberrySeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Strawberry1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedStrawberryGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedStrawberrySeedAOO" count="1"/>
+		</block>
+		<block name="plantedStrawberryGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedStrawberryAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Strawberry2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedStrawberryPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedStrawberrySeedAOO" count="1"/>
+		</block>
+		<block name="plantedStrawberryPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Strawberry3.prefab"/>
+			<drop event="Harvest" name="foodCropStrawberryAOO" count="1,3" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropStrawberryAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedStrawberryPlantHarvestAOO">
+			<property name="Extends" value="plantedStrawberryPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedStrawberryPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropStrawberryAOO" count="1,3" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedStrawberrySeedAOO"/>
+		</block>
+		
+<!-- Sugar Maple Tree -->
+		<block name="plantedSugarMapleTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedSugarMapleTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedSugarMapleTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSugarMapleTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="ActivationDistance" value="4"/>
+			<dropextendsoff/>
+			<property name="BigDecorationRadius" value="4"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedSugarMapleTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSugarMapleTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedSugarMapleTreeSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSugarMapleTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedSugarMapleTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSugarMapleTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/MapleTreeBlock.prefab"/>
+			<drop event="Harvest" name="resourceMapleWoodPlankAOO" count="10,20" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="resourceMapleWoodPlankAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedSugarMapleTreePlantHarvestAOO">
+			<property name="Extends" value="plantedSugarMapleTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedSugarMapleTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="resourceMapleWoodPlankAOO" count="10,20" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedSugarMapleTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+		
+<!-- Sugarcane -->
+		<block name="plantedSugarcaneSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>	
+			<property name="CustomIcon" value="plantedSugarcaneSeedAOO"/>
+			<property name="DescriptionKey" value="plantedSugarcaneSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SugarPrefab1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSugarcaneGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedSugarcaneSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSugarcaneGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedSugarcaneSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SugarPrefab2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedSugarcanePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedSugarcaneSeedAOO" count="1"/>
+		</block>
+		<block name="plantedSugarcanePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/SugarPrefab3.prefab"/>
+			<drop event="Harvest" name="foodCropSugarcaneStalkAOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropSugarcaneStalkAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedSugarcanePlantHarvestAOO">
+			<property name="Extends" value="plantedSugarcanePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedSugarcanePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropSugarcaneStalkAOO" count="2,5" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedSugarcaneSeedAOO"/>
+		</block>
+
+<!-- Sunflower -->
+
+
+<!-- Tomato -->
+		<block name="plantedTomatoSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedTomatoSeedAOO"/>
+			<property name="DescriptionKey" value="plantedTomatoSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/CagePlantSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedTomatoGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedTomatoSeedAOO" count="1"/>
+		</block>
+		<block name="plantedTomatoGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedTomatoAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Tomato2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedTomatoPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedTomatoSeedAOO" count="1"/>
+		</block>
+		<block name="plantedTomatoPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Tomato3.prefab"/>
+			<drop event="Harvest" name="foodCropTomatoAOO" count="3,4" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropTomatoAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedTomatoPlantHarvestAOO">
+			<property name="Extends" value="plantedTomatoPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedTomatoPlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropTomatoAOO" count="3,4" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedTomatoSeedAOO"/>
+		</block>
+		
+<!-- Valerian -->
+
+		<block name="plantedValerianPlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Valerian3.prefab"/>
+			<drop event="Harvest" name="foodCropValerianTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropValerianTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedValerianPlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedValerianPlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedValerianPlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedValerianSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropValerianTSK_AOO" count="1" tag="cropHarvest"/>
+		</block>		
+	
+
+	
+<!-- Grape -->
+		<block name="plantedGrapeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="plantedVineyardGrapesAOO"/>
+			<property name="DescriptionKey" value="plantedGrapeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Grapes1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedGrapeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="93"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedGrapeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedGrapeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedGrapeSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Grapes2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedGrapePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="93"/>
+			<drop event="Destroy" name="plantedGrapeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedGrapePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Grapes3.prefab"/>
+			<drop event="Harvest" name="foodCropGrapesAOO" count="8,12" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropGrapesAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedGrapePlantHarvestAOO">
+			<property name="Extends" value="plantedGrapePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedGrapePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropGrapesAOO" count="8,12" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedGrapeSeedAOO"/>
+		</block>
+
+<!-- Watermelon -->
+		<block name="plantedWatermelonSeedTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="ModelOffset" value="0,0,-.3"/>
+			<property name="CustomIcon" value="plantedWatermelonSeedTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedWatermelonSeedTSK_AOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/WaterMelon1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedWatermelonGrowingTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedWatermelonSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedWatermelonGrowingTSK_AOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedWatermelonSeedTSK_AOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="ModelOffset" value="0,0,-.3"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="plantedWatermelonSeedTSK_AOO"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/WaterMelon2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedWatermelonPlantHarvestTSK_AOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedWatermelonSeedTSK_AOO" count="1"/>
+		</block>
+		<block name="plantedWatermelonPlantWildTSK_AOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="ModelOffset" value="0,0,-.3"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/WaterMelon3.prefab"/>
+			<drop event="Harvest" name="foodCropWatermelonTSK_AOO" count="1" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropWatermelonTSK_AOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedWatermelonPlantHarvestTSK_AOO">
+			<property name="Extends" value="plantedWatermelonPlantWildTSK_AOO"/>
+			<property name="DescriptionKey" value="plantedWatermelonPlantHarvestTSK_AOO"/>
+			<property name="CustomIcon" value="plantedWatermelonSeedTSK_AOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropWatermelonTSK_AOO" count="1,2" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedWatermelonSeedTSK_AOO"/>
+		</block>		
+
+<!-- Wheat -->
+		<block name="plantedWheatSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="ModelOffset" value="0,-0.5,0"/>
+			<property name="CustomIcon" value="plantedWheatSeedAOO"/>
+			<property name="DescriptionKey" value="plantedWheatSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Wheat1.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedWheatGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="Group" value="Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedWheatSeedAOO" count="1"/>
+		</block>
+		<block name="plantedWheatGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedWheatAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="ModelOffset" value="0,-0.5,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Wheat2.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedWheatPlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<drop event="Destroy" name="plantedWheatSeedAOO" count="1"/>
+		</block>
+		<block name="plantedWheatPlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="ModelOffset" value="0,-0.5,0"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/Wheat3.prefab"/>
+			<drop event="Harvest" name="foodCropWheatAOO" count="2" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="foodCropWheatAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedWheatPlantHarvestAOO">
+			<property name="Extends" value="plantedWheatPlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedWheatPlantHarvestAOO"/> 
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="foodCropWheatAOO" count="2,5" tag="cropHarvest"/>
+			<property name="DowngradeBlock" value="plantedWheatSeedAOO"/>
+		</block>
+
+<!-- White Oak Tree -->
+		<block name="plantedWhiteOakTreeSeedAOO"> 
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedWhiteOakTreeSeedAOO"/>
+			<property name="DescriptionKey" value="plantedWhiteOakTreeSeedAOODesc"/>			
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeSeedPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedWhiteOakTreeGrowingAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<property name="ActivationDistance" value="4"/>
+			<dropextendsoff/>
+			<property name="BigDecorationRadius" value="4"/>
+			<property name="Group" value="Resources,Food/Cooking,Seeds"/>
+			<drop event="Destroy" name="plantedWhiteOakTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedWhiteOakTreeGrowingAOO">
+			<property name="Extends" value="cropsGrowingMaster"/>
+			<property name="CustomIcon" value="plantedWhiteOakTreeSeedAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_crops"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/TreeGrowingPrefab.prefab"/>
+			<property name="PlantGrowing.Next" value="plantedWhiteOakTreePlantHarvestAOO"/>
+			<property name="PlantGrowing.GrowthRate" value="126"/>
+			<property name="PlantGrowing.FertileLevel" value="1"/>
+			<drop event="Destroy" name="plantedWhiteOakTreeSeedAOO" count="1"/>
+		</block>
+		<block name="plantedWhiteOakTreePlantWildAOO">
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/WhiteOakPrefab.prefab"/>
+			<property name="MaxDamage" value="800"/>
+			<drop event="Harvest" name="plantedWhiteOakTreeSeedAOO" count="1" tag="wildCropsHarvest"/>
+			<drop event="Harvest" name="resourceWhiteOakPlankAOO" count="10,20" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="resourceWhiteOakPlankAOO"/>
+			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
+		</block>
+		<block name="plantedWhiteOakTreePlantHarvestAOO">
+			<property name="Extends" value="plantedWhiteOakTreePlantWildAOO"/>
+			<property name="DescriptionKey" value="plantedWhiteOakTreePlantHarvestAOO"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="resourceWhiteOakPlankAOO" count="10,20" tag="cropHarvest"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="DowngradeBlock" value="plantedWhiteOakTreeSeedAOO"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+		</block>
+
+
+	</append>
+
+
+
+
+
+</config>

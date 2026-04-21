@@ -1,0 +1,6 @@
+<config>
+
+	<include filename="Vehicles/vehicles-Vehicles.xml" />
+	<include filename="Vehicles/Upgradeable/vehicles-RW.xml" />
+
+</config>

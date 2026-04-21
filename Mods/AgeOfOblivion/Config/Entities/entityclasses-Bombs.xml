@@ -1,0 +1,34 @@
+<config>
+
+	<append xpath="/entity_classes" >
+	
+		<entity_class name="LightningBombAOO" extends="BlockEntityTemplateAOO">		
+			<property name="Buffs" value=""/>			
+			<effect_group name="Base Effects">	
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffLightningBomb"/> 
+			</effect_group>				
+		</entity_class>
+
+		<entity_class name="RadiationBombAOO" extends="BlockEntityTemplateAOO">		
+			<property name="Buffs" value=""/>			
+			<effect_group name="Base Effects">	
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRadiationBomb"/> 
+			</effect_group>				
+		</entity_class>
+		
+		<entity_class name="FreezeBombAOO" extends="BlockEntityTemplateAOO">		
+			<property name="Buffs" value=""/>			
+			<effect_group name="Base Effects">	
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffFreezeBomb"/> 
+			</effect_group>				
+		</entity_class>
+		
+		<entity_class name="FireBombAOO" extends="BlockEntityTemplateAOO">		
+			<property name="Buffs" value=""/>			
+			<effect_group name="Base Effects">	
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffFireBomb"/> 
+			</effect_group>				
+		</entity_class>	
+	
+	</append>
+</config>	

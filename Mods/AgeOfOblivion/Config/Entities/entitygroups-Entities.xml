@@ -1,0 +1,2171 @@
+<configs>
+
+<!--  ALL AOO Entities 
+
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombieCrazedAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieVampireAOO
+		zombieVampire2AOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieMutantFighterAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFreakyLadyAOO
+		zombieBrutalButcherAOO
+		zombieFatManAOO
+		zombieButcherAOO
+		zombieManiacClown1AOO
+		zombieManiacClown2AOO
+		zombieManiacClown3AOO
+		zombieManiacClown4AOO
+		zombieManiacClown5AOO
+		zombieWhiteClownAOO
+		zombieKillerClownAOO
+		
+	Monsters
+		
+		zombieStrongAOO
+		zombieSlime01T1AOO
+		monsterArachnidAOO
+		monsterCeratoferoxAOO
+		monsterOnyscidusAOO
+		monsterSavageWerewolfAOO
+		monsterTitanockarceAOO
+		monsterGiantRatAOO
+		zombieDarkSpiderAOO
+		monsterTyranopodeAOO
+		monsterClypeosaurusAOO
+		monsterEntomoraneAOO
+		monsterGryllunguisAOO
+		monsterMuscomorphAOO
+		monsterPardathroxAOO
+		monsterPerderosAOO
+		monsterTetrachnideAOO
+		monsterCaveCrawlerAOO
+		monsterArthromahreAOO
+		monsterDeinodonteAOO
+		monsterCarcidonteAOO
+		monsterGiantSlugAOO
+		monsterGorosaurusAOO
+		monsterHellcreeperAOO
+		monsterHideoplastAOO
+		monsterKarcinomorphAOO
+		monsterKarckmahreAOO
+		monsterLaminoferoxAOO
+		monsterLetalobrachAOO
+		monsterMorphorridAOO
+		monsterScolomorphAOO
+		monsterSkorpmareAOO
+		monsterTelluropodAOO
+		monsterBuformorphAOO
+		
+	Flying	
+		
+		zombieInsectAOO
+		monsterDensoptereAOO
+		monsterDrackmahreAOO
+		monsterMarhomorphAOO
+		monsterScyverAOO
+		monsterVespomorphAOO
+
+	Bosses
+	
+		zombieT2_01AOO
+		zombieT2_02AOO
+		zombieT2_03AOO
+		zombieT2_04AOO
+		zombieT2_SlugAOO
+		zombieT2_MutantAOO
+		zombieT3_JuggernautAOO
+		zombieT3_CockroachAOO
+		zombieT3_ReptileAOO
+
+
+
+-->
+
+	<insertAfter xpath="/entitygroups/entitygroup[last()]">
+
+		<entitygroup name="AOOStandard">
+			zombieButcherAOO
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFatManAOO
+		</entitygroup>	
+
+		<entitygroup name="AOOStandardNight">
+			zombieButcherAOO, .25
+			zombieMutantFighterAOO, .25
+			zombieCrazyAOO, .25
+			zombiePrisonerAOO, .25
+			zombieMechanicAOO, .25
+			zombiePHulkAOO, .25
+			zombieGirlScoutAOO, .25
+			zombieMutantAOO, .25
+			zombieMutant3AOO, .25
+			zombieNightShadeAOO, .25
+			zombieParasiteAOO, .25
+			zombieWarZAOO, .25
+			zombieYakuAOO, .25
+			zombieMutant4AOO, .25
+			zombieMortimerAOO, .25
+			zombieDerrickAOO, .25
+			zombieCop01AOO, .25
+			zombieFatManAOO, .25
+			monsterSavageWerewolfAOO, 1
+			zombieNightWatcher01AOO, 1
+			zombieNightWatcher02AOO, 1
+			zombieNightWatcher03AOO, 1
+			zombieNightWatcher04AOO, 1
+			zombieNightWatcher05AOO, 1	
+			zombieVampireAOO, 1
+			zombieVampire2AOO, 1
+			
+		</entitygroup>
+		
+		<entitygroup name="Weepers">
+			zombieWeeperBlackAOO
+			zombieWeeperRedAOO	
+			zombieWeeperGreenAOO
+			zombieWeeperBlueAOO
+			zombieWeeperMarbleAOO
+			zombieWeeperStoneAOO
+			zombieWeeperMetalAOO		
+		</entitygroup>
+
+		<entitygroup name="Skeletons">
+			zombieSkeletonAOO		
+		</entitygroup>
+
+		<entitygroup name="SkeletonBosses">
+			zombieSkeletonBoss_01_AOO
+			zombieSkeletonBoss_02_AOO	
+			zombieSkeletonBoss_03_AOO	
+			zombieSkeletonBoss_04_AOO	
+			zombieSkeletonBoss_05_AOO	
+			zombieSkeletonBoss_06_AOO	
+			zombieSkeletonBoss_07_AOO				
+		</entitygroup>
+
+		<entitygroup name="EliteQuest">
+			zombieSkeletonAOO
+			zombieButcherAOO
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFatManAOO			
+		</entitygroup>
+
+		<entitygroup name="EliteQuestStrong">
+			zombieBoss_01AOO
+			zombieBoss_02AOO
+			zombieBoss_03AOO
+			zombieBoss_04AOO
+			zombieBoss_05AOO
+			zombieBoss_06AOO
+			zombieBoss_07AOO
+			zombieBoss_08AOO
+			zombieBoss_09AOO			
+		</entitygroup>
+
+		<entitygroup name="Skitters">
+			monsterSkitterAOO			
+		</entitygroup>
+
+		<entitygroup name="SkeletonKing">
+			zombieSkeletonKing_AOO			
+		</entitygroup>
+
+		<entitygroup name="Flyers">
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO	
+			monsterVespomorphAOO		
+		</entitygroup>
+
+		<entitygroup name="testVehicle">
+			vehicleTruck4x4
+		</entitygroup>
+		<entitygroup name="rideCondor">
+			vehicleCondor
+		</entitygroup>
+		<entitygroup name="rideOctopus">
+			vehicleOctopus
+		</entitygroup>
+		<entitygroup name="rideWildeMouse">
+			vehicleWildeMouse
+		</entitygroup>
+		<entitygroup name="rideFreeFall">
+			vehicleFreeFall
+		</entitygroup>
+
+		<entitygroup name="rideCoaster">
+			vehicleCoaster
+		</entitygroup>
+
+		<entitygroup name="rideBooster">
+			vehicleBooster
+		</entitygroup>
+
+		<entitygroup name="rideFlyAway">
+			vehicleFlyAway
+		</entitygroup>
+
+		<entitygroup name="rideBreakDance">
+			vehicleBreakDance
+		</entitygroup>
+		
+		<entitygroup name="rideFlyingCircus">
+			vehicleFlyingCircus
+		</entitygroup>
+
+		<entitygroup name="rideFrisbee">
+			vehicleFrisbee
+		</entitygroup>
+
+		<entitygroup name="ridePirateBoat">
+			vehiclePirateBoat
+		</entitygroup>
+
+		<entitygroup name="rideTakeoff">
+			vehicleTakeoff
+		</entitygroup>
+
+		<entitygroup name="rideTopscan">
+			vehicleTopscan
+		</entitygroup>
+
+		<entitygroup name="rideTopspin">
+			vehicleTopspin
+		</entitygroup>
+
+		<entitygroup name="rideWildeMouse">
+			vehicleWildeMouse
+		</entitygroup>
+
+		<entitygroup name="rideBigwheel">
+			vehicleBigwheel
+		</entitygroup>
+		
+		<entitygroup name="DeathSpawnsAOO">
+			entityDeathSpawnsAOO
+		</entitygroup>
+		<entitygroup name="KillerClownSpawnsAOO">
+			entityKillerClownSpawnsAOO
+		</entitygroup>		
+		<entitygroup name="SkitterSpawnsAOO">
+			entitySkitterSpawnsAOO
+		</entitygroup>			
+		<entitygroup name="OblivionCrateAOO">
+			entityOblivionCrateAOO, .15
+			entityNothingAOO, .83
+		</entitygroup>	
+
+		<entitygroup name="OblivionLootAOO">
+			entityOblivionCrateAOO
+
+		</entitygroup>	
+		
+		<entitygroup name="AmusementSpawner">
+			entityAmusementSpawnsAOO
+		</entitygroup>				
+		
+		
+		<entitygroup name="RandomGuardAOO">
+			npcPirateGuardAOO
+			npcWarriorGuardAOO
+			npcSoldier02SHGuardAOO
+			npcSoldier02PGuardAOO
+			npcArcherGuardAOO
+			npcSoldier01GuardAOO
+			npcApocGuardAOO
+		</entitygroup>		
+
+		<entitygroup name="RandomZombieGuardAOO">
+			GuardMutantFighter
+			GuardCrazy
+			GuardPrisoner
+			GuardMechanic
+			GuardPHulk
+			GuardGirlScout
+			GuardMutant
+			GuardNightShade
+			GuardParasite
+			GuardWhiteClown
+			GuardWarZ
+			GuardYaku
+			GuardMortimer
+			GuardDerrick
+			GuardCop01
+			
+		</entitygroup>		
+		
+		<entitygroup name="BossSpawn">
+			zombieT2_01AOO
+			zombieT2_02AOO
+			zombieT2_03AOO
+			zombieT2_04AOO
+			zombieT2_SlugAOO
+			zombieT2_MutantAOO
+			zombieT3_JuggernautAOO
+			zombieT3_CockroachAOO
+			zombieT3_ReptileAOO
+		</entitygroup>	
+
+		<entitygroup name="SpiderSwarm">
+			monsterSkitterAOO
+		</entitygroup>
+
+		<entitygroup name="SkitterQueen">
+			monsterSkitterQueenAOO
+		</entitygroup>
+
+		<entitygroup name="WaterSpawns">
+			WildCrocAOO
+			fishGiantShark
+			fishBabyShark
+			fishStingRay
+			fishTurtle
+			fishBarracuda
+			fishSalmon
+			fishOctopus
+			entityKyburCrystalAOO, .4
+			fishPike
+			fishClownfish
+			fishPerch
+			fishSardine
+		</entitygroup>
+
+		<entitygroup name="AmusementWaterSpawns">
+			fishGiantShark, 0.1		
+			fishBabyShark, 0.05
+			fishStingRay, .5
+			fishTurtle, .3
+			fishBarracuda, .3
+			fishSalmon, .3
+			fishOctopus, .3
+			fishPike, .2
+			fishClownfish, .2
+			fishPerch, .2
+			fishSardine, .2
+		</entitygroup>
+
+
+
+		<entitygroup name="SkeletonsT1">
+			DeathKnightT1AOO
+			SkeletonT1AOO
+			SkeletonMonkT1AOO
+			SkeletonAxeT1AOO
+		</entitygroup>	
+		<entitygroup name="SkeletonsT2">
+			DeathKnightT2AOO
+			SkeletonT2AOO
+			SkeletonMonkT2AOO
+			SkeletonAxeT2AOO
+		</entitygroup>	
+		<entitygroup name="SkeletonsT3">
+			DeathKnightT3AOO
+			SkeletonT3AOO
+			SkeletonMonkT3AOO
+			SkeletonAxeT3AOO
+		</entitygroup>			
+		<entitygroup name="SkeletonsT4">
+			DeathKnightT4AOO
+			SkeletonT4AOO
+			SkeletonMonkT4AOO
+			SkeletonAxeT4AOO
+		</entitygroup>	
+
+		<entitygroup name="SkeletonsALL">
+			DeathKnightT1AOO
+			SkeletonT1AOO
+			SkeletonMonkT1AOO
+			SkeletonAxeT1AOO
+			DeathKnightT2AOO
+			SkeletonT2AOO
+			SkeletonMonkT2AOO
+			SkeletonAxeT2AOO
+			DeathKnightT3AOO
+			SkeletonT3AOO
+			SkeletonMonkT3AOO
+			SkeletonAxeT3AOO
+			DeathKnightT4AOO
+			SkeletonT4AOO
+			SkeletonMonkT4AOO
+			SkeletonAxeT4AOO
+		</entitygroup>			
+		
+		<entitygroup name="zombieSkeletonBoss_01">
+			zombieSkeletonBoss_01_AOO
+		</entitygroup>
+		<entitygroup name="zombieSkeletonBoss_02">
+			zombieSkeletonBoss_02_AOO
+		</entitygroup>
+		<entitygroup name="zombieSkeletonBoss_03">
+			zombieSkeletonBoss_03_AOO
+		</entitygroup>		
+		<entitygroup name="zombieSkeletonBoss_04">
+			zombieSkeletonBoss_04_AOO
+		</entitygroup>		
+		<entitygroup name="zombieSkeletonBoss_05">
+			zombieSkeletonBoss_05_AOO
+		</entitygroup>		
+		<entitygroup name="zombieSkeletonKing">
+			zombieSkeletonKing_AOO
+		</entitygroup>		
+
+
+		<entitygroup name="ArachnidT3">
+			monsterArachnidAOO			
+		</entitygroup>
+
+		<entitygroup name="Fish1">
+			WildCrocAOO			
+		</entitygroup>
+
+		<entitygroup name="cellRandom">
+			DeathKnightT1AOO
+			SkeletonT1AOO
+			SkeletonMonkT1AOO
+			SkeletonAxeT1AOO
+			DeathKnightT2AOO
+			SkeletonT2AOO
+			SkeletonMonkT2AOO
+			SkeletonAxeT2AOO
+			DeathKnightT3AOO
+			SkeletonT3AOO
+			SkeletonMonkT3AOO
+			SkeletonAxeT3AOO
+			DeathKnightT4AOO
+			SkeletonT4AOO
+			SkeletonMonkT4AOO
+			SkeletonAxeT4AOO
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T2AOO
+			zombieManiacClown2T2AOO
+			zombieManiacClown3T2AOO
+			zombieManiacClown4T2AOO
+			zombieManiacClown5T2AOO
+			zombieWhiteClownT2AOO
+			zombieKillerClownT2AOO	
+			zombieT2_01AOO
+			zombieT2_02AOO
+			zombieT2_03AOO
+			zombieT2_04AOO
+			zombieT2_SlugAOO
+			zombieT2_MutantAOO			
+		</entitygroup>
+
+		
+		<entitygroup name="FlyingInsect">
+			zombieInsectAOO
+		</entitygroup>
+		
+		<entitygroup name="FlyingDensoptere">
+			monsterDensoptereAOO
+		</entitygroup>
+		
+		<entitygroup name="FlyingDrackmarhe">
+			monsterDrackmahreAOO
+		</entitygroup>
+		<entitygroup name="FlyingMarhomorph">
+			monsterMarhomorphAOO
+		</entitygroup>
+		<entitygroup name="FlyingScyver">
+			monsterScyverAOO
+		</entitygroup>
+		<entitygroup name="FlyingVespomorph">
+			monsterVespomorphAOO
+		</entitygroup>
+		
+		<entitygroup name="FlyingT1">
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO
+		</entitygroup>	
+		<entitygroup name="FlyingT2">
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO
+		</entitygroup>	
+		<entitygroup name="FlyingT3">
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO
+		</entitygroup>			
+		<entitygroup name="FlyingT4">
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO
+		</entitygroup>	
+
+	<!--	<entitygroup name="ZombiesCave">
+			zombieSlime01T1AOO, 3
+			monsterCaveCrawlerAOO	
+			monsterArachnidAOO	
+			monsterCeratoferoxAOO
+			monsterOnyscidusAOO
+			monsterTitanockarceAOO
+			monsterGiantRatAOO
+			monsterDarkSpiderAOO
+			monsterTyranopodeAOO
+			monsterEntomoraneAOO
+			monsterGryllunguisAOO
+			monsterMuscomorphAOO
+			monsterPardathroxAOO
+			monsterArthromahreAOO
+			monsterCarcidonteAOO
+			monsterGorosaurusAOO
+			monsterHellcreeperAOO
+			monsterHideoplastAOO
+			monsterKarcinomorphAOO
+			monsterKarckmahreAOO
+			monsterLaminoferoxAOO
+			monsterLetalobrachAOO
+			monsterScolomorphAOO
+			monsterSkorpmareAOO
+			monsterTelluropodAOO
+			monsterBuformorphAOO	
+			entityOblivionCrateAOO, 1	
+		</entitygroup>	
+		<entitygroup name="ZombiesCaveDeep">
+			entityOblivionCrateAOO, 1	
+			entityEliteChestAOO, .1		
+			zombieSlime01T3AOO,3
+			monsterCaveCrawlerAOO	
+			zombieWeeperBlackAOO, .2
+			zombieWeeperRedAOO, .2	
+			zombieWeeperGreenAOO, .2
+			zombieWeeperBlueAOO, .2
+			zombieWeeperMarbleAOO, .2
+			zombieWeeperStoneAOO, .2
+			zombieWeeperMetalAOO, .2	
+			zombieGiantRatT4AOO
+			monsterDarkSpiderAOO
+			monsterArachnidAOO	
+			monsterCeratoferoxAOO
+			monsterOnyscidusAOO
+			zombieSavageWerewolfT3AOO
+			monsterTitanockarceAOO
+			zombieGiantRatT3AOO
+			monsterDarkSpiderAOO
+			monsterTyranopodeAOO
+			monsterEntomoraneAOO
+			monsterGryllunguisAOO
+			monsterMuscomorphAOO
+			monsterPardathroxAOO
+			monsterCaveCrawlerAOO
+			monsterArthromahreAOO
+			monsterCarcidonteAOO
+			monsterGorosaurusAOO
+			monsterHellcreeperAOO
+			monsterHideoplastAOO
+			monsterKarcinomorphAOO
+			monsterKarckmahreAOO
+			monsterLaminoferoxAOO
+			monsterLetalobrachAOO
+			monsterScolomorphAOO
+			monsterSkorpmareAOO
+			monsterTelluropodAOO
+			monsterBuformorphAOO			
+		</entitygroup>	-->
+
+
+		<entitygroup name="T1AOO">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+		</entitygroup>	
+
+		<entitygroup name="T2AOO">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T2AOO
+			zombieManiacClown2T2AOO
+			zombieManiacClown3T2AOO
+			zombieManiacClown4T2AOO
+			zombieManiacClown5T2AOO
+			zombieWhiteClownT2AOO
+			zombieKillerClownT2AOO
+		</entitygroup>	
+
+
+		<entitygroup name="ResearchMiscAOO">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			monsterGiantRatAOO
+			monsterDarkSpiderAOO	
+			zombieNightWatcher01AOO
+			zombieNightWatcher02AOO
+			zombieNightWatcher03AOO
+			zombieNightWatcher04AOO
+			zombieNightWatcher05AOO		
+			zombieT2_01AOO
+			zombieT2_02AOO
+			zombieT2_03AOO
+			zombieT2_04AOO
+			zombieT2_SlugAOO
+			zombieT2_MutantAOO			
+		</entitygroup>
+
+		<entitygroup name="MonsterBossAOO">
+			monsterPardathroxBossAOO
+			monsterCeratoferoxBossAOO
+			monsterDeinodonteBossAOO	
+			monsterGorosaurusBossAOO	
+			monsterHideoplastBossAOO
+			monsterLetalobrachBossAOO	
+			monsterPerderosBossAOO			
+		</entitygroup>	
+
+		<entitygroup name="MonstersT1AOO">
+			zombieStrongAOO
+			monsterArachnidAOO
+			monsterCeratoferoxAOO
+			monsterOnyscidusAOO
+			monsterTitanockarceAOO
+			monsterGiantRatAOO
+			monsterDarkSpiderAOO
+			monsterTyranopodeAOO
+			monsterClypeosaurusAOO
+			monsterEntomoraneAOO
+			monsterGryllunguisAOO
+			monsterMuscomorphAOO
+			monsterPardathroxAOO
+			monsterPerderosAOO
+			monsterTetrachnideAOO
+			monsterCaveCrawlerAOO
+			monsterArthromahreAOO
+			monsterDeinodonteAOO
+			monsterCarcidonteAOO
+			monsterGiantSlugAOO
+			monsterGorosaurusAOO
+			monsterHellcreeperAOO
+			monsterHideoplastAOO
+			monsterKarcinomorphAOO
+			monsterKarckmahreAOO
+			monsterLaminoferoxAOO
+			monsterLetalobrachAOO
+			monsterMorphorridAOO
+			monsterScolomorphAOO
+			monsterSkorpmareAOO
+			monsterTelluropodAOO
+			monsterBuformorphAOO
+			monsterSavageWerewolfAOO
+		</entitygroup>
+
+		<entitygroup name="MonstersT2AOO">
+			zombieStrongAOO
+			monsterArachnidAOO
+			monsterCeratoferoxAOO
+			monsterOnyscidusAOO
+			monsterTitanockarceAOO
+			monsterGiantRatAOO
+			monsterDarkSpiderAOO
+			monsterTyranopodeAOO
+			monsterClypeosaurusAOO
+			monsterEntomoraneAOO
+			monsterGryllunguisAOO
+			monsterMuscomorphAOO
+			monsterPardathroxAOO
+			monsterPerderosAOO
+			monsterTetrachnideAOO
+			monsterCaveCrawlerAOO
+			monsterArthromahreAOO
+			monsterDeinodonteAOO
+			monsterCarcidonteAOO
+			monsterGiantSlugAOO
+			monsterGorosaurusAOO
+			monsterHellcreeperAOO
+			monsterHideoplastAOO
+			monsterKarcinomorphAOO
+			monsterKarckmahreAOO
+			monsterLaminoferoxAOO
+			monsterLetalobrachAOO
+			monsterMorphorridAOO
+			monsterScolomorphAOO
+			monsterSkorpmareAOO
+			monsterTelluropodAOO
+			monsterBuformorphAOO
+			monsterSavageWerewolfAOO
+		</entitygroup>
+		
+		<entitygroup name="MonstersT3AOO">
+			zombieStrongAOO
+			monsterArachnidAOO
+			monsterCeratoferoxAOO
+			monsterOnyscidusAOO
+			monsterTitanockarceAOO
+			monsterGiantRatAOO
+			monsterDarkSpiderAOO
+			monsterTyranopodeAOO
+			monsterClypeosaurusAOO
+			monsterEntomoraneAOO
+			monsterGryllunguisAOO
+			monsterMuscomorphAOO
+			monsterPardathroxAOO
+			monsterPerderosAOO
+			monsterTetrachnideAOO
+			monsterCaveCrawlerAOO
+			monsterArthromahreAOO
+			monsterDeinodonteAOO
+			monsterCarcidonteAOO
+			monsterGiantSlugAOO
+			monsterGorosaurusAOO
+			monsterHellcreeperAOO
+			monsterHideoplastAOO
+			monsterKarcinomorphAOO
+			monsterKarckmahreAOO
+			monsterLaminoferoxAOO
+			monsterLetalobrachAOO
+			monsterMorphorridAOO
+			monsterScolomorphAOO
+			monsterSkorpmareAOO
+			monsterTelluropodAOO
+			monsterBuformorphAOO
+			monsterSavageWerewolfAOO
+		</entitygroup>
+
+		<entitygroup name="MonstersT4AOO">
+			zombieStrongAOO
+			monsterArachnidAOO
+			monsterCeratoferoxAOO
+			monsterOnyscidusAOO
+			monsterTitanockarceAOO
+			monsterGiantRatAOO
+			monsterDarkSpiderAOO
+			monsterTyranopodeAOO
+			monsterClypeosaurusAOO
+			monsterEntomoraneAOO
+			monsterGryllunguisAOO
+			monsterMuscomorphAOO
+			monsterPardathroxAOO
+			monsterPerderosAOO
+			monsterTetrachnideAOO
+			monsterCaveCrawlerAOO
+			monsterArthromahreAOO
+			monsterDeinodonteAOO
+			monsterCarcidonteAOO
+			monsterGiantSlugAOO
+			monsterGorosaurusAOO
+			monsterHellcreeperAOO
+			monsterHideoplastAOO
+			monsterKarcinomorphAOO
+			monsterKarckmahreAOO
+			monsterLaminoferoxAOO
+			monsterLetalobrachAOO
+			monsterMorphorridAOO
+			monsterScolomorphAOO
+			monsterSkorpmareAOO
+			monsterTelluropodAOO
+			monsterBuformorphAOO
+			monsterSavageWerewolfAOO
+		</entitygroup>
+
+
+		<entitygroup name="ArenaGS1">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+
+		</entitygroup>
+		<entitygroup name="ArenaGS50">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+			zombieNightWatcher01AOO, 0.1
+			zombieNightWatcher02AOO, 0.1
+			zombieNightWatcher03AOO, 0.1
+			zombieNightWatcher04AOO, 0.1
+			zombieNightWatcher05AOO	, 0.1	
+			zombieT2_01AOO, 0.05
+			zombieT2_02AOO, 0.05
+			zombieT2_03AOO, 0.05
+			zombieT2_04AOO, 0.05
+			zombieT2_SlugAOO, 0.05
+			zombieT2_MutantAOO, 0.05				
+		</entitygroup>
+		<entitygroup name="ArenaGS100">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T2AOO
+			zombieManiacClown2T2AOO
+			zombieManiacClown3T2AOO
+			zombieManiacClown4T2AOO
+			zombieManiacClown5T2AOO
+			zombieWhiteClownT2AOO
+			zombieKillerClownT2AOO
+			zombieNightWatcher01AOO, 0.2
+			zombieNightWatcher02AOO, 0.2
+			zombieNightWatcher03AOO, 0.2
+			zombieNightWatcher04AOO, 0.2
+			zombieNightWatcher05AOO	, 0.2	
+			zombieT2_01AOO, 0.1
+			zombieT2_02AOO, 0.1
+			zombieT2_03AOO, 0.1
+			zombieT2_04AOO, 0.1
+			zombieT2_SlugAOO, 0.1
+			zombieT2_MutantAOO, 0.1			
+		</entitygroup>		
+		<entitygroup name="ArenaGS150">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T2AOO
+			zombieManiacClown2T2AOO
+			zombieManiacClown3T2AOO
+			zombieManiacClown4T2AOO
+			zombieManiacClown5T2AOO
+			zombieWhiteClownT2AOO
+			zombieKillerClownT2AOO
+			zombieWeeperBlackAOO, 0.1
+			zombieWeeperRedAOO, 0.1	
+			zombieWeeperGreenAOO, 0.1
+			zombieWeeperBlueAOO, 0.1
+			zombieWeeperMarbleAOO, 0.1
+			zombieWeeperStoneAOO, 0.1
+			zombieWeeperMetalAOO, 0.1			
+			zombieNightWatcher01AOO, 0.2
+			zombieNightWatcher02AOO, 0.2
+			zombieNightWatcher03AOO, 0.2
+			zombieNightWatcher04AOO, 0.2
+			zombieNightWatcher05AOO	, 0.2	
+			zombieT2_01AOO, 0.1
+			zombieT2_02AOO, 0.1
+			zombieT2_03AOO, 0.1
+			zombieT2_04AOO, 0.1
+			zombieT2_SlugAOO, 0.1
+			zombieT2_MutantAOO, 0.1				
+		</entitygroup>
+		<entitygroup name="ArenaGS200">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T3AOO
+			zombieManiacClown2T3AOO
+			zombieManiacClown3T3AOO
+			zombieManiacClown4T3AOO
+			zombieManiacClown5T3AOO
+			zombieWhiteClownT3AOO
+			zombieKillerClownT3AOO
+			zombieWeeperBlackAOO, 0.15
+			zombieWeeperRedAOO, 0.15	
+			zombieWeeperGreenAOO, 0.15
+			zombieWeeperBlueAOO, 0.15
+			zombieWeeperMarbleAOO, 0.15
+			zombieWeeperStoneAOO, 0.15
+			zombieWeeperMetalAOO, 0.15		
+			zombieNightWatcher01AOO, 0.25
+			zombieNightWatcher02AOO, 0.25
+			zombieNightWatcher03AOO, 0.25
+			zombieNightWatcher04AOO, 0.25
+			zombieNightWatcher05AOO	, 0.25	
+			zombieT2_01AOO, 0.15
+			zombieT2_02AOO, 0.15
+			zombieT2_03AOO, 0.15
+			zombieT2_04AOO, 0.15
+			zombieT2_SlugAOO, 0.15
+			zombieT2_MutantAOO, 0.15				
+		</entitygroup>
+		<entitygroup name="ArenaGS250">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T3AOO
+			zombieManiacClown2T3AOO
+			zombieManiacClown3T3AOO
+			zombieManiacClown4T3AOO
+			zombieManiacClown5T3AOO
+			zombieWhiteClownT3AOO
+			zombieKillerClownT3AOO
+			zombieWeeperBlackAOO, 0.2
+			zombieWeeperRedAOO, 0.2	
+			zombieWeeperGreenAOO, 0.2
+			zombieWeeperBlueAOO, 0.2
+			zombieWeeperMarbleAOO, 0.2
+			zombieWeeperStoneAOO, 0.2
+			zombieWeeperMetalAOO, 0.2		
+			zombieNightWatcher01AOO, 0.3
+			zombieNightWatcher02AOO, 0.3
+			zombieNightWatcher03AOO, 0.3
+			zombieNightWatcher04AOO, 0.3
+			zombieNightWatcher05AOO	, 0.3	
+			zombieT2_01AOO, 0.2
+			zombieT2_02AOO, 0.2
+			zombieT2_03AOO, 0.2
+			zombieT2_04AOO, 0.2
+			zombieT2_SlugAOO, 0.2
+			zombieT2_MutantAOO, 0.2			
+		</entitygroup>
+		<entitygroup name="ArenaGS300">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T4AOO
+			zombieManiacClown2T4AOO
+			zombieManiacClown3T4AOO
+			zombieManiacClown4T4AOO
+			zombieManiacClown5T4AOO
+			zombieWhiteClownT4AOO
+			zombieKillerClownT4AOO
+			zombieWeeperBlackAOO, 0.3
+			zombieWeeperRedAOO, 0.3	
+			zombieWeeperGreenAOO, 0.3
+			zombieWeeperBlueAOO, 0.3
+			zombieWeeperMarbleAOO, 0.3
+			zombieWeeperStoneAOO, 0.3
+			zombieWeeperMetalAOO, 0.3		
+			zombieNightWatcher01AOO, 0.4
+			zombieNightWatcher02AOO, 0.4
+			zombieNightWatcher03AOO, 0.4
+			zombieNightWatcher04AOO, 0.4
+			zombieNightWatcher05AOO	, 0.4	
+			zombieT2_01AOO, 0.3
+			zombieT2_02AOO, 0.3
+			zombieT2_03AOO, 0.3
+			zombieT2_04AOO, 0.3
+			zombieT2_SlugAOO, 0.3
+			zombieT2_MutantAOO, 0.3				
+		</entitygroup>
+		<entitygroup name="ArenaGS400">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T4AOO
+			zombieManiacClown2T4AOO
+			zombieManiacClown3T4AOO
+			zombieManiacClown4T4AOO
+			zombieManiacClown5T4AOO
+			zombieWhiteClownT4AOO
+			zombieKillerClownT4AOO
+			zombieWeeperBlackAOO, 0.5
+			zombieWeeperRedAOO, 0.5	
+			zombieWeeperGreenAOO, 0.5
+			zombieWeeperBlueAOO, 0.5
+			zombieWeeperMarbleAOO, 0.5
+			zombieWeeperStoneAOO, 0.5
+			zombieWeeperMetalAOO, 0.5		
+			zombieNightWatcher01AOO, 0.6
+			zombieNightWatcher02AOO, 0.6
+			zombieNightWatcher03AOO, 0.6
+			zombieNightWatcher04AOO, 0.6
+			zombieNightWatcher05AOO	, 0.6	
+			zombieT2_01AOO, 0.5
+			zombieT2_02AOO, 0.5
+			zombieT2_03AOO, 0.5
+			zombieT2_04AOO, 0.5
+			zombieT2_SlugAOO, 0.5
+			zombieT2_MutantAOO, 0.5				
+		</entitygroup>
+
+<!-- ============= Amusement Groups =================== -->
+
+		<entitygroup name="AmusementGS1">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+
+		</entitygroup>
+		<entitygroup name="AmusementGS50">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+			zombieNightWatcher01AOO, 0.1
+			zombieNightWatcher02AOO, 0.1
+			zombieNightWatcher03AOO, 0.1
+			zombieNightWatcher04AOO, 0.1
+			zombieNightWatcher05AOO	, 0.1	
+			zombieT2_01AOO, 0.05
+			zombieT2_02AOO, 0.05
+			zombieT2_03AOO, 0.05
+			zombieT2_04AOO, 0.05
+			zombieT2_SlugAOO, 0.05
+			zombieT2_MutantAOO, 0.05				
+		</entitygroup>
+		<entitygroup name="AmusementGS100">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T2AOO
+			zombieManiacClown2T2AOO
+			zombieManiacClown3T2AOO
+			zombieManiacClown4T2AOO
+			zombieManiacClown5T2AOO
+			zombieWhiteClownT2AOO
+			zombieKillerClownT2AOO
+			zombieNightWatcher01AOO, 0.2
+			zombieNightWatcher02AOO, 0.2
+			zombieNightWatcher03AOO, 0.2
+			zombieNightWatcher04AOO, 0.2
+			zombieNightWatcher05AOO	, 0.2	
+			zombieT2_01AOO, 0.1
+			zombieT2_02AOO, 0.1
+			zombieT2_03AOO, 0.1
+			zombieT2_04AOO, 0.1
+			zombieT2_SlugAOO, 0.1
+			zombieT2_MutantAOO, 0.1			
+		</entitygroup>		
+		<entitygroup name="AmusementGS150">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T2AOO
+			zombieManiacClown2T2AOO
+			zombieManiacClown3T2AOO
+			zombieManiacClown4T2AOO
+			zombieManiacClown5T2AOO
+			zombieWhiteClownT2AOO
+			zombieKillerClownT2AOO
+			zombieWeeperBlackAOO, 0.1
+			zombieWeeperRedAOO, 0.1	
+			zombieWeeperGreenAOO, 0.1
+			zombieWeeperBlueAOO, 0.1
+			zombieWeeperMarbleAOO, 0.1
+			zombieWeeperStoneAOO, 0.1
+			zombieWeeperMetalAOO, 0.1			
+			zombieNightWatcher01AOO, 0.2
+			zombieNightWatcher02AOO, 0.2
+			zombieNightWatcher03AOO, 0.2
+			zombieNightWatcher04AOO, 0.2
+			zombieNightWatcher05AOO	, 0.2	
+			zombieT2_01AOO, 0.1
+			zombieT2_02AOO, 0.1
+			zombieT2_03AOO, 0.1
+			zombieT2_04AOO, 0.1
+			zombieT2_SlugAOO, 0.1
+			zombieT2_MutantAOO, 0.1				
+		</entitygroup>
+		<entitygroup name="AmusementGS200">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T3AOO
+			zombieManiacClown2T3AOO
+			zombieManiacClown3T3AOO
+			zombieManiacClown4T3AOO
+			zombieManiacClown5T3AOO
+			zombieWhiteClownT3AOO
+			zombieKillerClownT3AOO
+			zombieWeeperBlackAOO, 0.15
+			zombieWeeperRedAOO, 0.15	
+			zombieWeeperGreenAOO, 0.15
+			zombieWeeperBlueAOO, 0.15
+			zombieWeeperMarbleAOO, 0.15
+			zombieWeeperStoneAOO, 0.15
+			zombieWeeperMetalAOO, 0.15		
+			zombieNightWatcher01AOO, 0.25
+			zombieNightWatcher02AOO, 0.25
+			zombieNightWatcher03AOO, 0.25
+			zombieNightWatcher04AOO, 0.25
+			zombieNightWatcher05AOO	, 0.25	
+			zombieT2_01AOO, 0.15
+			zombieT2_02AOO, 0.15
+			zombieT2_03AOO, 0.15
+			zombieT2_04AOO, 0.15
+			zombieT2_SlugAOO, 0.15
+			zombieT2_MutantAOO, 0.15				
+		</entitygroup>
+		<entitygroup name="AmusementGS250">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T3AOO
+			zombieManiacClown2T3AOO
+			zombieManiacClown3T3AOO
+			zombieManiacClown4T3AOO
+			zombieManiacClown5T3AOO
+			zombieWhiteClownT3AOO
+			zombieKillerClownT3AOO
+			zombieWeeperBlackAOO, 0.2
+			zombieWeeperRedAOO, 0.2	
+			zombieWeeperGreenAOO, 0.2
+			zombieWeeperBlueAOO, 0.2
+			zombieWeeperMarbleAOO, 0.2
+			zombieWeeperStoneAOO, 0.2
+			zombieWeeperMetalAOO, 0.2		
+			zombieNightWatcher01AOO, 0.3
+			zombieNightWatcher02AOO, 0.3
+			zombieNightWatcher03AOO, 0.3
+			zombieNightWatcher04AOO, 0.3
+			zombieNightWatcher05AOO	, 0.3	
+			zombieT2_01AOO, 0.2
+			zombieT2_02AOO, 0.2
+			zombieT2_03AOO, 0.2
+			zombieT2_04AOO, 0.2
+			zombieT2_SlugAOO, 0.2
+			zombieT2_MutantAOO, 0.2			
+		</entitygroup>
+		<entitygroup name="AmusementGS300">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T4AOO
+			zombieManiacClown2T4AOO
+			zombieManiacClown3T4AOO
+			zombieManiacClown4T4AOO
+			zombieManiacClown5T4AOO
+			zombieWhiteClownT4AOO
+			zombieKillerClownT4AOO
+			zombieWeeperBlackAOO, 0.3
+			zombieWeeperRedAOO, 0.3	
+			zombieWeeperGreenAOO, 0.3
+			zombieWeeperBlueAOO, 0.3
+			zombieWeeperMarbleAOO, 0.3
+			zombieWeeperStoneAOO, 0.3
+			zombieWeeperMetalAOO, 0.3		
+			zombieNightWatcher01AOO, 0.4
+			zombieNightWatcher02AOO, 0.4
+			zombieNightWatcher03AOO, 0.4
+			zombieNightWatcher04AOO, 0.4
+			zombieNightWatcher05AOO	, 0.4	
+			zombieT2_01AOO, 0.3
+			zombieT2_02AOO, 0.3
+			zombieT2_03AOO, 0.3
+			zombieT2_04AOO, 0.3
+			zombieT2_SlugAOO, 0.3
+			zombieT2_MutantAOO, 0.3				
+		</entitygroup>
+		<entitygroup name="AmusementGS400">
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T4AOO
+			zombieManiacClown2T4AOO
+			zombieManiacClown3T4AOO
+			zombieManiacClown4T4AOO
+			zombieManiacClown5T4AOO
+			zombieWhiteClownT4AOO
+			zombieKillerClownT4AOO
+			zombieWeeperBlackAOO, 0.5
+			zombieWeeperRedAOO, 0.5	
+			zombieWeeperGreenAOO, 0.5
+			zombieWeeperBlueAOO, 0.5
+			zombieWeeperMarbleAOO, 0.5
+			zombieWeeperStoneAOO, 0.5
+			zombieWeeperMetalAOO, 0.5		
+			zombieNightWatcher01AOO, 0.6
+			zombieNightWatcher02AOO, 0.6
+			zombieNightWatcher03AOO, 0.6
+			zombieNightWatcher04AOO, 0.6
+			zombieNightWatcher05AOO	, 0.6	
+			zombieT2_01AOO, 0.5
+			zombieT2_02AOO, 0.5
+			zombieT2_03AOO, 0.5
+			zombieT2_04AOO, 0.5
+			zombieT2_SlugAOO, 0.5
+			zombieT2_MutantAOO, 0.5				
+		</entitygroup>
+
+
+		<entitygroup name="CaveGS1">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+
+		</entitygroup>
+		<entitygroup name="CaveGS50">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+		
+		</entitygroup>
+		<entitygroup name="CaveGS100">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+			
+		</entitygroup>		
+		<entitygroup name="CaveGS150">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+		
+		</entitygroup>
+		<entitygroup name="CaveGS200">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+			entityOblivionCrateAOO, .2				
+		</entitygroup>
+		<entitygroup name="CaveGS250">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+			
+		</entitygroup>
+		<entitygroup name="CaveGS300">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+			
+		</entitygroup>
+		<entitygroup name="CaveGS400">
+			monsterCaveCrawlerAOO	
+			monsterGiantRatAOO
+			monsterArachnidAOO
+			monsterDarkSpiderAOO
+			monsterSlimeAOO, 2
+			WildSpiderAOO, 0.4
+			WildSpiderVariantsAOO, 0.4
+		
+		</entitygroup>
+
+
+		
+		<!-- ==== WanderHordes ==== -->		
+
+		<entitygroup name="wanderClowns">
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+		</entitygroup>	
+
+
+
+		
+		
+	</insertAfter>
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombieCrazyAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieVampireAOO
+		zombieVampire2AOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieMutantFighterAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFreakyLadyAOO
+		zombieBrutalButcherAOO
+		zombieFatManAOO
+		zombieButcherAOO
+		zombieManiacClown1T1AOO
+		zombieManiacClown2T1AOO
+		zombieManiacClown3T1AOO
+		zombieManiacClown4T1AOO
+		zombieManiacClown5T1AOO
+		zombieWhiteClownT1AOO
+		zombieKillerClownT1AOO
+			npcPirateGuardAOO,.1
+			npcWarriorGuardAOO, .1
+			npcSoldier02SHGuardAOO, .1
+			npcSoldier02PGuardAOO, .1
+			npcArcherGuardAOO, .1
+			npcSoldier01GuardAOO, .1
+			npcApocGuardAOO, .1		
+	</csv>
+
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'wanderingHordeStage')]/text()" delim="\n" op="add" >
+		zombieButcherAOO
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFatManAOO
+	</csv>
+
+
+	<csv xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]/text()" delim="\n" op="add" >
+		zombieButcherAOO
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFatManAOO
+	</csv>
+
+    <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]/text()" delim="\n" op="add">
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombieCrazyAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieVampireAOO
+		zombieVampire2AOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieMutantFighterAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFreakyLadyAOO
+		zombieBrutalButcherAOO
+		zombieFatManAOO
+		zombieButcherAOO
+		zombieManiacClown1T1AOO
+		zombieManiacClown2T1AOO
+		zombieManiacClown3T1AOO
+		zombieManiacClown4T1AOO
+		zombieManiacClown5T1AOO
+		zombieWhiteClownT1AOO
+		zombieKillerClownT1AOO
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO		
+    </csv>	
+
+    <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'scoutHordeStageGS')]/text()" delim="\n" op="add">
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombieCrazyAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieVampireAOO
+		zombieVampire2AOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieMutantFighterAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFreakyLadyAOO
+		zombieBrutalButcherAOO
+		zombieFatManAOO
+		zombieButcherAOO
+		zombieManiacClown1T1AOO
+		zombieManiacClown2T1AOO
+		zombieManiacClown3T1AOO
+		zombieManiacClown4T1AOO
+		zombieManiacClown5T1AOO
+		zombieWhiteClownT1AOO
+		zombieKillerClownT1AOO
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO		
+    </csv>	
+
+    <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'feralHordeStageGS')]/text()" delim="\n" op="add">
+		zombieMutantFighterAOO
+		zombieCrazyAOO
+		zombiePrisonerAOO
+		zombieMechanicAOO
+		zombieCrazyAOO
+		zombiePHulkAOO
+		zombieGirlScoutAOO
+		zombieVampireAOO
+		zombieVampire2AOO
+		zombieMutantAOO
+		zombieMutant3AOO
+		zombieNightShadeAOO
+		zombieParasiteAOO
+		zombieMutantFighterAOO
+		zombieWarZAOO
+		zombieYakuAOO
+		zombieMutant4AOO
+		zombieMortimerAOO
+		zombieDerrickAOO
+		zombieCop01AOO
+		zombieFreakyLadyAOO
+		zombieBrutalButcherAOO
+		zombieFatManAOO
+		zombieButcherAOO
+		zombieManiacClown1T1AOO
+		zombieManiacClown2T1AOO
+		zombieManiacClown3T1AOO
+		zombieManiacClown4T1AOO
+		zombieManiacClown5T1AOO
+		zombieWhiteClownT1AOO
+		zombieKillerClownT1AOO
+			zombieStrongAOO
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO	
+    </csv>	
+
+    <csv xpath="/entitygroups/entitygroup[starts-with(@name, 'defenseHordeStageGS')]/text()" delim="\n" op="add">
+		zombieMutantFighterAOO, .5	
+		zombieCrazyAOO, .5	
+		zombiePrisonerAOO, .5	
+		zombieMechanicAOO, .5	
+		zombieCrazyAOO, .5	
+		zombiePHulkAOO, .5	
+		zombieGirlScoutAOO, .5	
+		zombieVampireAOO, .5	
+		zombieVampire2AOO, .5	
+		zombieMutantAOO, .5	
+		zombieMutant3AOO, .5	
+		zombieNightShadeAOO, .5	
+		zombieParasiteAOO, .5	
+		zombieMutantFighterAOO, .5	
+		zombieWarZAOO, .5	
+		zombieYakuAOO, .5	
+		zombieMutant4AOO, .5	
+		zombieMortimerAOO, .5	
+		zombieDerrickAOO, .5	
+		zombieCop01AOO, .5	
+		zombieFreakyLadyAOO, .5	
+		zombieBrutalButcherAOO, .5	
+		zombieFatManAOO, .5	
+		zombieButcherAOO, .5	
+		zombieManiacClown1T1AOO, .5	
+		zombieManiacClown2T1AOO, .5	
+		zombieManiacClown3T1AOO, .5	
+		zombieManiacClown4T1AOO, .5	
+		zombieManiacClown5T1AOO, .5	
+		zombieWhiteClownT1AOO, .5	
+		zombieKillerClownT1AOO, .5	
+			zombieStrongAOO, .5	
+		zombieWeeperBlackAOO, .05
+		zombieWeeperRedAOO, .05	
+		zombieWeeperGreenAOO, .05	
+		zombieWeeperBlueAOO, .05	
+		zombieWeeperMarbleAOO, .05
+		zombieWeeperStoneAOO, .05	
+		zombieWeeperMetalAOO, .05				
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO			
+    </csv>		
+	
+
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
+			zombieMutantFighterAOO
+			zombieCrazyAOO
+			zombiePrisonerAOO
+			zombieMechanicAOO
+			zombieCrazyAOO
+			zombiePHulkAOO
+			zombieGirlScoutAOO
+			zombieVampireAOO
+			zombieVampire2AOO
+			zombieMutantAOO
+			zombieMutant3AOO
+			zombieNightShadeAOO
+			zombieParasiteAOO
+			zombieMutantFighterAOO
+			zombieWarZAOO
+			zombieYakuAOO
+			zombieMutant4AOO
+			zombieMortimerAOO
+			zombieDerrickAOO
+			zombieCop01AOO
+			zombieFreakyLadyAOO
+			zombieBrutalButcherAOO
+			zombieFatManAOO
+			zombieButcherAOO
+			zombieManiacClown1T1AOO
+			zombieManiacClown2T1AOO
+			zombieManiacClown3T1AOO
+			zombieManiacClown4T1AOO
+			zombieManiacClown5T1AOO
+			zombieWhiteClownT1AOO
+			zombieKillerClownT1AOO
+			zombieNightWatcher01AOO
+			zombieNightWatcher02AOO
+			zombieNightWatcher03AOO
+			zombieNightWatcher04AOO
+			zombieNightWatcher05AOO
+			zombieInsectAOO
+			monsterDensoptereAOO
+			monsterDrackmahreAOO
+			monsterMarhomorphAOO
+			monsterScyverAOO
+			monsterVespomorphAOO
+	</csv>
+<!--
+	<csv xpath="/entitygroups/entitygroup[@name='SnowZombies']/text()" delim="\n" op="add" >
+
+	</csv> -->
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
+		zombieStrongAOO
+		monsterArachnidAOO
+		monsterCeratoferoxAOO
+		monsterOnyscidusAOO
+		monsterTitanockarceAOO
+		monsterGiantRatAOO
+		monsterDarkSpiderAOO
+		monsterTyranopodeAOO
+		monsterClypeosaurusAOO
+		monsterEntomoraneAOO
+		monsterGryllunguisAOO
+		monsterMuscomorphAOO
+		monsterPardathroxAOO
+		monsterPerderosAOO
+		monsterTetrachnideAOO
+		monsterCaveCrawlerAOO
+		monsterArthromahreAOO
+		monsterDeinodonteAOO
+		monsterCarcidonteAOO
+		monsterGiantSlugAOO
+		monsterGorosaurusAOO
+		monsterHellcreeperAOO
+		monsterHideoplastAOO
+		monsterKarcinomorphAOO
+		monsterKarckmahreAOO
+		monsterLaminoferoxAOO
+		monsterLetalobrachAOO
+		monsterMorphorridAOO
+		monsterScolomorphAOO
+		monsterSkorpmareAOO
+		monsterTelluropodAOO
+		monsterBuformorphAOO
+		zombieInsectAOO
+		monsterDensoptereAOO
+		monsterDrackmahreAOO
+		monsterMarhomorphAOO
+		monsterScyverAOO
+		monsterVespomorphAOO
+		monsterSavageWerewolfAOO
+	</csv>
+
+	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
+		zombieStrongAOO
+		monsterArachnidAOO
+		monsterCeratoferoxAOO
+		monsterOnyscidusAOO
+		monsterTitanockarceAOO
+		monsterGiantRatAOO
+		monsterDarkSpiderAOO
+		monsterTyranopodeAOO
+		monsterClypeosaurusAOO
+		monsterEntomoraneAOO
+		monsterGryllunguisAOO
+		monsterMuscomorphAOO
+		monsterPardathroxAOO
+		monsterPerderosAOO
+		monsterTetrachnideAOO
+		monsterCaveCrawlerAOO
+		monsterArthromahreAOO
+		monsterDeinodonteAOO
+		monsterCarcidonteAOO
+		monsterGiantSlugAOO
+		monsterGorosaurusAOO
+		monsterHellcreeperAOO
+		monsterHideoplastAOO
+		monsterKarcinomorphAOO
+		monsterKarckmahreAOO
+		monsterLaminoferoxAOO
+		monsterLetalobrachAOO
+		monsterMorphorridAOO
+		monsterScolomorphAOO
+		monsterSkorpmareAOO
+		monsterTelluropodAOO
+		monsterBuformorphAOO
+		zombieInsectAOO
+		monsterDensoptereAOO
+		monsterDrackmahreAOO
+		monsterMarhomorphAOO
+		monsterScyverAOO
+		monsterVespomorphAOO
+		monsterSavageWerewolfAOO
+		zombieWeeperBlackAOO
+		zombieWeeperRedAOO
+		zombieWeeperGreenAOO
+		zombieWeeperBlueAOO
+		zombieWeeperMarbleAOO
+		zombieWeeperStoneAOO
+		zombieWeeperMetalAOO		
+	</csv>
+
+
+
+
+
+</configs>

@@ -1,0 +1,27 @@
+<config>
+
+	<append xpath="/lootcontainers" >
+	
+		<lootcontainer name="vehicleXS" count="0" size="10,1" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate"/>
+		<lootcontainer name="vehicleS" count="0" size="10,4" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate"/>
+		<lootcontainer name="vehicleM" count="0" size="10,7" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate"/>
+		<lootcontainer name="vehicleL" count="0" size="10,10" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate"/>
+		<lootcontainer name="vehicleXL" count="0" size="11,12" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate"/>
+		<lootcontainer name="vehicleXXL" count="0" size="11,13" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate"/>
+
+		<lootcontainer name="T1CarLoot" count="3" size="7,4" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate" destroy_on_close="empty">
+			<item group="groupPoliceCar"/>
+		</lootcontainer>
+		
+		<lootcontainer name="T2CarLoot" count="1" size="7,4" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate" >
+			<item group="groupPoliceCarBonus"/>
+		</lootcontainer>
+		
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCars01']">
+		<item name="CarKeyAOO" count="1" prob=".5"/>
+		<item name="vehicleTokenAOO" count="1" prob=".25"/>
+	</append> 
+	
+</config>	

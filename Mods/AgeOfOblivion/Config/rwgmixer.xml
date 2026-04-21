@@ -1,0 +1,35 @@
+<config>
+
+	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_rekt']"/>
+	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_jen']"/>
+	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_bob']"/>
+	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_hugh']"/>
+	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_joel']"/>
+
+	<append xpath="/rwgmixer" >
+		<prefab_spawn_adjust partial_name="trader_rekt_AOO" biomeTags="forest" bias="20" min_count="2" max_count="4"/>
+		<prefab_spawn_adjust partial_name="trader_jen_AOO" biomeTags="burntforest" bias="20" min_count="2" max_count="4"/>
+		<prefab_spawn_adjust partial_name="trader_bob_AOO" biomeTags="desert" bias="20" min_count="2" max_count="4"/>
+		<prefab_spawn_adjust partial_name="trader_hugh_AOO" biomeTags="snow" bias="20" min_count="2" max_count="4"/>
+		<prefab_spawn_adjust partial_name="trader_joel_AOO" biomeTags="wasteland" bias="20" min_count="2" max_count="4"/>
+		<prefab_spawn_adjust partial_name="trader_bob_Old" biomeTags="desert" bias="5" min_count="2" max_count="3"/>
+		<prefab_spawn_adjust partial_name="AOO_DarkCastle2" bias="20" min_count="2" max_count="2"/>		
+		<prefab_spawn_adjust partial_name="trader_jen_Old" biomeTags="burntforest" bias="5" min_count="2" max_count="3"/>	
+		<prefab_spawn_adjust partial_name="trader_rekt_Old" biomeTags="forest" bias="5" min_count="2" max_count="3"/>
+		<prefab_spawn_adjust partial_name="trader_joel_Old" biomeTags="wasteland" bias="5" min_count="2" max_count="3"/>
+		<prefab_spawn_adjust partial_name="trader_hugh_Old" biomeTags="snow" bias="5" min_count="2" max_count="3"/>	
+		<prefab_spawn_adjust partial_name="trader_Temple_byMPLogue" bias="5" min_count="3" max_count="4"/>
+		<prefab_spawn_adjust partial_name="trader_Vic" bias="5" min_count="4" max_count="5"/>	
+		<prefab_spawn_adjust partial_name="AOO_Research" bias="5" min_count="2" max_count="2"/>	
+		<prefab_spawn_adjust partial_name="AOO_Arena" bias="5" min_count="3" max_count="6"/>	
+		<prefab_spawn_adjust partial_name="CnP_Arena_01" bias="10" min_count="3" max_count="6"/>		
+		<prefab_spawn_adjust partial_name="CnP_Arena_02" bias="10" min_count="3" max_count="6"/>
+		<prefab_spawn_adjust partial_name="CnP_Arena_03" bias="10" min_count="3" max_count="6"/>	
+		<prefab_spawn_adjust partial_name="IronBarsArena" bias="10" min_count="3" max_count="6"/>	
+		<prefab_spawn_adjust partial_name="RedwoodArena" bias="10" min_count="3" max_count="6"/>
+		<prefab_spawn_adjust partial_name="CnP_Arena_04" bias="10" min_count="3" max_count="6"/>
+		<prefab_spawn_adjust partial_name="AOO_Cave_02" bias="15" min_count="10" max_count="25"/>
+		<prefab_spawn_adjust partial_name="AOO_Cave_03" bias="15" min_count="10" max_count="25"/>
+		<!--<prefab_spawn_adjust partial_name="AOO_Circus" bias="15" min_count="3" max_count="5"/>		-->
+	</append>
+</config>	

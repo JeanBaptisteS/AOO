@@ -1,0 +1,28 @@
+<config>
+	<append xpath="/items">
+
+		<item name="vehicleRW00Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>		
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vRWArmor,vRWDecor,vRWeapon1,vRWplow,vRWExhaust,canHaveCosmetic"/>
+		
+			<property name="TraderStageTemplate" value="vehicleTier4"/>
+			<property name="CustomIcon" value="RWCar01"/>
+			<property name="DescriptionKey" value="vehicleRW01PlaceableDesc"/>			
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RW_Buggy_1.prefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="EconomicValue" value="10"/>
+			<property class="Action1">
+				<property name="Class" value="SpawnVehicle"/>			
+				<property name="Vehicle" value="vehicleRW00"/>
+			</property>
+			<effect_group name="vehicleBattle01Placeable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="8"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+			</effect_group>
+		</item>	
+
+
+	</append>
+</config>

@@ -1,0 +1,22 @@
+<config>
+
+
+	<append xpath="/spawning/biome[@name='pine_forest']">
+		<spawn id="aooa01" maxcount="2" respawndelay="1" time="Any" entitygroup="AOOAnimalForest" />	
+	</append>
+
+	<append xpath="/spawning/biome[@name='snow']">
+		<spawn id="aooa01" maxcount="2" respawndelay="1" time="Any" entitygroup="AOOAnimalSnow" />	
+	</append>
+
+	<append xpath="/spawning/biome[@name='desert']">
+		<spawn id="aooa01" maxcount="2" respawndelay="1" time="Any" entitygroup="AOOAnimalDesert" />	
+	</append>
+	
+	<insertAfter xpath="/spawning/biome[last()]">
+		<biome name="underwater">
+			<spawn id="f01" maxcount="2" respawndelay="1" time="Any" entitygroup="AOOAnimalFish" />
+		</biome>
+	</insertAfter>
+	
+</config>

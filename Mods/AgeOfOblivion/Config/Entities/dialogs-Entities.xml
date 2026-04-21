@@ -1,0 +1,3074 @@
+
+
+
+<configs>
+
+
+
+  <append xpath="/dialogs">
+
+
+
+ 
+  
+   <dialog id="TurdlingerNPC" startstatementid="start">
+      <statement id="start" text="OMG...you actaully found me! Thank you my friend, I owe you my life, I do not know how I can ever repay you. But right now I am starving!  If you could get me some babyback ribs I will come with you. There are amny ways I can help to defeat our enemies and reclaim our world." >
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Babyback Ribs coming right up!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+ <!--     <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+-->
+
+	  <response id="StayHere" text="Stay right here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+<!--	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+-->	  
+<!--	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+       <action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> 
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddItemSDX, SCore"  id="PetRabbitSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+ -->     
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	  
+
+
+
+   <dialog id="GenericNPC_AOO" startstatementid="start">
+	
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="Hire" />
+        <response_entry id="Command Menu" />
+        <response_entry id="Weapon Menu" />
+        <response_entry id="Pickup" />
+		<response_entry id="ShowMe" />
+		<response_entry id="Loot"/>
+		<response_entry id="Dismiss" />
+		<response_entry id="Dump2Log" />
+        <response_entry id="done" />
+        <response_entry id="Pickup" />		
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+
+	  <response id="Dump2Log" text="Dump Values to Log" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="DisplayInfo, SCore"  />
+      </response> 
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	
+	  <response id="Pickup" text="Pickup" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+		<action type="PickUpNPC, SCore" />
+      </response>
+	
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+
+	<response id="Patrol" text="Patrol your coded route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> 
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <response id="GuardReturnHere" text="Guard and return to where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Guard" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuard" />
+      </response>
+
+	<response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> 
+ 
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+	  
+	<response id="Pickup" text="Pick Me up!" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="PickUpNPC, SCore" />
+	</response>
+	
+	<response id="Weapon Menu" text="Weapon Menu" nextstatementid="Weapon Classes">
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+    </response>
+	
+	<response id="Command Menu" text="Command Menu" nextstatementid="Command Menu">
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+    </response>
+	
+	<statement id="Command Menu" text="Command Menu">  
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="Wander"/>
+		<response_entry id="FollowMe"/>
+		<response_entry id="GuardHere"/>
+		<response_entry id="GuardReturnHere"/>
+		<response_entry id="StayHere"/>
+		<response_entry id="SetCode"/>
+		<response_entry id="Patrol"/>
+        <response_entry id="Pickup" />	
+		<response_entry id="done" />
+	</statement>
+	 
+	<statement id="Weapon Classes" text="Weapon Classes" nextstatementid="WeaponClasses">   
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="Melee" text="Melee Menu" nextstatementid="Melee Menu"  />
+		<response_entry id="Pistols" text="Pistol Menu" nextstatementid="Pistol Menu"  />
+		<response_entry id="Rifles"  text="Rifle Menu" nextstatementid="Rifle Menu" />
+		<response_entry id="ShotGuns" text="Shotgun Menu" nextstatementid="Shotgun Menu"   />
+		<response_entry id="Others"  text="Other Menu" nextstatementid="Other Menu"  />
+		<response_entry id="done" />
+	</statement> 
+	
+	<response id="Melee" text="Melee Menu" nextstatementid="Melee Menu" ref_text="Melee Menu" />
+	<response id="Pistols" text="Pistol Menu" nextstatementid="Pistol Menu" ref_text="Pistol Menu" />
+	<response id="Rifles" text="Rifle Menu" nextstatementid="Rifle Menu" ref_text="Rifle Menu" />
+	<response id="ShotGuns" text="ShotGun Menu" nextstatementid="ShotGun Menu" ref_text="ShotGun Menu" />
+	<response id="Others" text="Other Menu" nextstatementid="Other Menu" ref_text="Other Menu" />
+	
+	<statement id="Melee Menu" text="Melee Weapons">  
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="BareHands"/>
+		<response_entry id="Club"/>
+		<response_entry id="Knife"/>
+		<response_entry id="Bat"/>
+		<response_entry id="Spear"/>
+		<response_entry id="Machete"/>
+		<response_entry id="Axe"/>
+		<response_entry id="Weapon Menu" />
+	</statement>
+	
+	<statement id="Pistol Menu" text="Pistols">  
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="SMG"/>
+		<response_entry id="PipePistol"/>
+		<response_entry id="Pistol"/>
+		<response_entry id="DPistol"/>
+		<response_entry id="Weapon Menu" />
+	</statement>	
+	
+	<statement id="Rifle Menu" text="Rifles"> 
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="PipeRifle"/>
+		<response_entry id="PipeMG"/>		
+		<response_entry id="M60"/>
+		<response_entry id="AK47"/>
+		<response_entry id="TRifle"/>
+		<response_entry id="HRifle"/>
+		<response_entry id="SRifle"/>
+		<response_entry id="Weapon Menu" />
+	</statement>
+	 
+	<statement id="ShotGun Menu" text="Shotguns">  
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="PipeShotgun"/>
+		<response_entry id="PShotgun"/>
+		<response_entry id="AShotgun"/>
+		<response_entry id="Weapon Menu" />
+	</statement>	 
+	 
+	<statement id="Other Menu" text="Other Weapons">   
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<response_entry id="LBow"/>
+		<response_entry id="XBow"/>
+		<response_entry id="RLauncher"/>
+		<response_entry id="Weapon Menu" />
+	</statement>
+	
+	<response id="BareHands" text="Use BareHands" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="meleeNPCEmptyHand"  />
+	</response>
+	
+	<response id="Club" text="Use Club" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="meleeWpnClubT0WoodenClub" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="meleeNPCClubWood"  />
+	</response> 
+	
+	<response id="Knife" text="Use Knife" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="meleeWpnBladeT1HuntingKnife" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="meleeNPCKnife"  />
+	</response>
+	
+	<response id="Bat" text="Use Bat" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="meleeWpnClubT1BaseballBat" requirementtype="Hide" /> <!--$starterWeapon  HasCVarSDX -->
+        <action type="SwapWeapon, SCore" id="meleeNPCBatWood"  />
+	</response> 
+	<response id="Spear" text="Use Spear" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="meleeWpnSpearT1IronSpear" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="meleeNPCSpear"  />
+	</response>
+	
+	<response id="Machete" text="Use Machete" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="meleeWpnBladeT3Machete" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="meleeNPCMachete"  />
+	</response> 
+	
+	<response id="Axe" text="Use Axe" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="meleeToolAxeT1IronFireaxe" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="meleeNPCAxe"  />
+	</response>
+	
+	<response id="SMG" text="Use SMG" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="NPCHasItemSDX, SCore" id="gunHandgunT3SMG5" requirementtype="Hide" />
+		<action type="SwapWeapon, SCore" id="gunNPCSMG5"  />
+	</response> 
+
+	<response id="PipePistol" text="Use PipePistol" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunHandgunT0PipePistol" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCPipePistol" />
+	</response>
+	  
+	<response id="PipeShotgun" text="Use PipeShotgun" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunShotgunT0PipeShotgun" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCPipeShotgun"  />
+	</response> 
+
+	<response id="PipeRifle" text="Use PipeRifle" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunRifleT0PipeRifle" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCPipeRifle" />
+	</response>
+	  
+	<response id="PipeMG" text="Use PipeMachinegun" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunMGT0PipeMachineGun" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCPipeMG"  />
+	</response>
+		
+	<response id="M60" text="Use M60" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunMGT3M60" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCM60" />
+	</response>
+	  
+	<response id="Pistol" text="Use Pistol" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunHandgunT1Pistol" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCPistol"  />
+	</response>
+
+	<response id="DPistol" text="Use DesertEagle" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunHandgunT3DesertVulture" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCDPistol" />
+	</response>
+	  
+	<response id="AK47" text="Use AK47" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunMGT1AK47" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCAk47"  />
+	</response>
+	
+	<response id="TRifle" text="Use AssaultRifle" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunMGT2TacticalAR" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCTRifle" />
+	</response>
+	  
+	<response id="HRifle" text="Use HuntingR" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunRifleT1HuntingRifle" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCHRifle"  />
+	</response>
+
+	<response id="SRifle" text="Use SniperRifle" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunRifleT3SniperRifle" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCSRifle" />
+	</response>
+	  
+	<response id="LBow" text="Use Longbow" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunBowT1WoodenBow" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCLBow"  />
+	</response>
+
+	<response id="XBow" text="Use Crossbow" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunBowT1IronCrossbow" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCXBow" />
+	</response>
+	  
+	<response id="PShotgun" text="Use Shotgun" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunShotgunT2PumpShotgun" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCPShotgun"  />
+	</response>
+
+	<response id="AShotgun" text="Use AutoShotgun" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunShotgunT3AutoShotgun" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCAShotgun" />
+	</response>
+	  
+	<response id="RLauncher" text="Use RLauncher" >
+		<requirement type="Leader, SCore" requirementtype="Hide" />
+		<requirement type="NPCHasItemSDX, SCore" id="gunExplosivesT3RocketLauncher" requirementtype="Hide" />
+        <action type="SwapWeapon, SCore" id="gunNPCRocketLauncher"  />
+	</response>
+
+	<response id="done" text="dialog_trader_response_nevermind" />
+
+	</dialog>
+	
+
+
+
+  <dialog id="GenericNPCAnimal_AOO" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="Pickup" />
+        <response_entry id="done" />		
+      </statement>
+
+      <!-- Quest Lines Entries -->
+      <statement id="currentjobs" text="Do any of these tasks sound like something you can do?">
+        <requirement type="HasQuestSDX, SCore" requirementtype="Hide" />
+        <quest_entry id="npcquest" type="add" listindex="0" />
+        <response_entry id="nevermind" />
+      </statement>
+
+      <response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs" >
+        <requirement type="HasQuestSDX, SCore" requirementtype="Hide" />
+        <requirement type="QuestStatus" value="InProgress" requirementtype="Hide" />
+      </response>
+      
+      <response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs" >
+        <requirement type="HasQuestSDX, SCore" requirementtype="Hide" />
+        <requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" />
+        <!--<action type="AddJournalEntry" id="questTip" />-->
+      </response>
+      <!-- End Quest Lines Entries -->
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Hey little one, You look lost.  Want to come with me?  I have snacks!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+<!--      <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+
+	  <response id="Pickup" text="Pickup" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+		<action type="PickUpNPC, SCore" />
+      </response>
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="GuardHere" text="Stay over here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" /> 
+      </response>
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+
+
+
+
+
+
+  
+    <dialog id="PirateGuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcPirateGuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog> 
+
+    <dialog id="ApocGuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcApocGuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+
+    <dialog id="Soldier01GuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcSoldier01GuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog> 
+
+
+   <dialog id="ArcherGuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcArcherGuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog> 
+
+
+	<dialog id="Soldier02PGuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcSoldier02PGuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog> 
+
+	<dialog id="Soldier02SHGuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcSoldier02SHGuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog> 
+
+	<dialog id="WarriorGuardNPC" startstatementid="start">
+      <statement id="start" text="dialog_trader_statement_start">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="SetPatrol" />
+        <response_entry id="SetCode" />
+        <response_entry id="Patrol" />
+        <response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+		<response_entry id="pickup" />	
+      </statement>
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="I am interested in hiring you." >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+      <response id="FollowMe" text="Follow me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderFollow" />
+      </response>
+			<response id="pickup" text="Pick Up" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="npcWarriorGuardSpawnerAOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+			</response> 
+     <!-- <response id="TellMe" text="Tell me about yourself" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="TellMe" />
+      </response> -->
+	  
+      <response id="ShowMe" text="Show Me your inventory" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay where you are standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Patrol around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	<!--  <response id="Patrol" text="Patrol your route" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderPatrol" />
+      </response> -->
+
+	  <response id="GuardHere" text="Stay where I am standing" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="Stay" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderGuardHere" />
+      </response>
+
+    <!-- <response id="SetCode" text="Here is your Patrol Code" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" />
+        <action type="OpenWindowSDX, SCore" id="SetCode" />
+      </response> -->
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <requirement type="HasTask, SCore" requirementtype="Hide" value="LootBasic" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>  
+
+	  <response id="Dismiss" text="Dismiss" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+ 
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog> 
+
+
+ 
+  
+  
+   <dialog id="GenericNPCRabbit" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here are some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetRabbitSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+ <dialog id="GenericNPCGoat" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here are some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetGoatSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+
+ <dialog id="GenericNPCCaneCorso" startstatementid="start">
+      <statement id="start" text="If you give me some Dog Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Dog Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetCaneCorsoSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+<dialog id="GenericNPCCatV1" startstatementid="start">
+      <statement id="start" text="If you give me some Cat Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Cat Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetCatV1Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+<dialog id="GenericNPCCatV2" startstatementid="start">
+      <statement id="start" text="If you give me some Cat Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Cat Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetCatV2Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCCatV3" startstatementid="start">
+      <statement id="start" text="If you give me some Cat Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Cat Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetCatV3Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCWolfHound" startstatementid="start">
+      <statement id="start" text="If you give me some Dog Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Dog Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetWolfhoundSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHellenicHound" startstatementid="start">
+      <statement id="start" text="If you give me some Dog Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Dog Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHellenicHoundSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHorseV1" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHorsV1Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHorseV2" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHorsV2Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHorseV3" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHorsV3Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHorseV4" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHorsV4Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHorseV5" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+						<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHorsV5Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCHorseV6" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetHorsV6Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCPig" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+		<action type="AddItemSDX, SCore"  id="PetPigSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCPenguin" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetPenguinSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+<dialog id="GenericNPCChickenV1" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />			
+				<action type="AddItemSDX, SCore"  id="PetChickenV1Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+
+
+
+ 
+<dialog id="GenericNPCChickenV2" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />			
+				<action type="AddItemSDX, SCore"  id="PetChickenV2Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+<dialog id="GenericNPCChickenV3" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />			
+				<action type="AddItemSDX, SCore"  id="PetChickenV3Spawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+ 
+<dialog id="GenericNPCGoose" startstatementid="start">
+      <statement id="start" text="If you give me some Carrots I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Carrots!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />			
+				<action type="AddItemSDX, SCore"  id="PetGooseSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>
+
+	<dialog id="GenericNPCPug" startstatementid="start">
+      <statement id="start" text="If you give me some Dog Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Dog Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />			
+				<action type="AddItemSDX, SCore"  id="PetPugSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+
+	<dialog id="GenericNPCBeagle" startstatementid="start">
+      <statement id="start" text="If you give me some Dog Food I will be your best friend!">
+        <response_entry id="TellMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here is some Dog Food!" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetBeagleSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>	
+	
+	
+	
+	<dialog id="NPCAnimalChimp" startstatementid="start">
+      <statement id="start" text="Hi there! Got any Red Bananas? I would happy to be your friend if you have Red Bananas!">
+        <response_entry id="TalktoMe" />
+        <response_entry id="FollowMe" />
+        <response_entry id="ShowMe" />
+        <response_entry id="StayHere" />
+        <response_entry id="GuardHere" />
+        <response_entry id="Wander" />
+        <response_entry id="Pickup" />
+        <response_entry id="Patrol" />
+		<response_entry id="Loot" />
+        <response_entry id="Hire" />
+        <response_entry id="Dismiss" />
+        <response_entry id="done" />
+      </statement>
+
+
+
+      <!-- If the NPC is not hired ( not the value="not" ), then display this option, allowing a hire dialog box o be opened. --> 
+      <response id="Hire" text="Ok here are your Bananas" >
+        <requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+        <action type="OpenDialogSDX, SCore" id="Hire" />
+      </response>
+
+	 <response id="TalktoMe" text="How do I get Red Bananas?" nextstatementid="redbananas" >
+      </response> 
+	 <statement id="redbananas" text="OH I love Red Bananas!  You can get them from Banana trees!  But you have to use a special Harvest Blade and even then you will not always get one. Rumor has it that the elite trader will sell them, but they arent cheap!"  >
+        <response_entry id="done" />
+	</statement>
+
+
+
+      <!-- If the entity is hired, you can order the NPCs to do the following: -->
+     <response id="FollowMe" text="Follow Me" >
+        <requirement type="Leader, SCore" requirementtype="Hide"/>
+        <action type="ExecuteCommandSDX, SCore" id="FollowMe" />
+      </response> 
+
+	  
+      <response id="ShowMe" text="Whats in your pack?" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="OpenInventory" />
+      </response>
+
+	  <response id="StayHere" text="Stay right there" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderStay" />
+      </response>
+	  
+	  <response id="Wander" text="Go play around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderWander" />
+      </response>
+	  
+	  
+	  <response id="Loot" text="Loot around here" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <!--<action type="AddBuffSDX, SCore" value="Self" id="buffGatherResources" /> -->
+		<action type="AddBuffSDX, SCore" value="Self" id="buffOrderLoot" />
+      </response>	 
+	
+	  <response id="Pickup" text="Pick Up" >
+
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+				<action type="AddCVar, SCore" id="pickedup" value="1" operator="set" />	
+				<action type="AddItemSDX, SCore"  id="PetChimpSpawner_AOO" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffSuicide" />
+	</response> 
+      
+  
+	  <response id="Dismiss" text="Abandon" >
+        <requirement type="Leader, SCore" requirementtype="Hide" />
+        <action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+        <action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+      </response>
+    
+      <response id="done" text="dialog_trader_response_nevermind" />
+
+    </dialog>		
+
+		<dialog id="TeleportNPC01" startstatementid="start">
+			<statement id="start" text="Teleportation Station">
+
+
+				<response_entry id="TelBed" />
+				<response_entry id="TelLC" />
+				<response_entry id="TelBP" />
+				<response_entry id="Tel01" />
+				<response_entry id="Tel02" />
+				<response_entry id="Tel03" />
+				<response_entry id="Tel04" />
+				<response_entry id="Tel05" />
+				<response_entry id="Tel06" />
+				<response_entry id="Tel07" />
+				<response_entry id="Tel08" />			
+				<response_entry id="Tel09" />
+				<response_entry id="Tel10" />
+			</statement>
+		<!--	  <response id="Hire" text="Activate Teleportation Station (300 Dukes)" >
+				<requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+				<action type="OpenDialogSDX, SCore" id="Hire" />
+			  </response>
+-->
+
+
+			<response id="TelBed" text="Teleport to BedRoll" >
+				<action type="AddBuffSDX, SCore" value="Other" id="buffTelBedroll" />
+			</response>	
+
+			<response id="TelLC" text="Teleport to Land Claim" >
+				<action type="AddBuffSDX, SCore" value="Other" id="buffTelLandclaim" />
+			</response>
+
+			<response id="TelBP" text="Teleport to Backback" >
+				<action type="AddBuffSDX, SCore" value="Other" id="buffTelBackpack" />
+			</response>
+
+			<response id="Tel01" text="Teleport to Station #1" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel01Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC01" />
+			</response>	
+
+			<response id="Tel02" text="Teleport to Station #2" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel02Enable" operator="eq" value="1"/>	
+				<action type="Teleport, SCore" id="tpNPC02" />
+			</response>
+
+			<response id="Tel03" text="Teleport to Station #3" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel03Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC03" />
+			</response>
+
+			<response id="Tel04" text="Teleport to Station #4" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel04Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC04" />
+			</response>
+
+			<response id="Tel05" text="Teleport to Station #5" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel05Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC05" />
+			</response>	
+
+			<response id="Tel06" text="Teleport to Station #6" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel06Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC06" />
+			</response>
+
+			<response id="Tel07" text="Teleport to Station #7" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel07Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC07" />
+			</response>
+
+			<response id="Tel08" text="Teleport to Station #8" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel08Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC08" />
+			</response>
+			<response id="Tel09" text="Teleport to Station #9" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel09Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC09" />
+			</response>
+
+			<response id="Tel10" text="Teleport to Station #10" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="Tel110Enable" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpNPC10" />
+			</response>
+
+
+
+
+
+
+
+
+
+
+
+
+		</dialog>
+
+
+		<dialog id="TeleportFacilityNPC" startstatementid="start">
+			<statement id="start" text="Research Facility Teleportation System">
+
+
+				<response_entry id="TelBed" />
+				<response_entry id="TelLC" />
+				<response_entry id="TelBP" />
+				<response_entry id="TelFacility1" />
+				<response_entry id="TelRM01" />
+				<response_entry id="TelRM02" />
+				<response_entry id="TelRM03" />
+				<response_entry id="TelRM04" />
+				<response_entry id="TelRM05" />
+				<response_entry id="TelRM06" />
+				<response_entry id="TelRM07" />
+				<response_entry id="TelRM08" />			
+				<response_entry id="TelRM09" />
+				<response_entry id="TelRM10" />
+			</statement>
+		<!--	  <response id="Hire" text="Activate Teleportation Station (300 Dukes)" >
+				<requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+				<action type="OpenDialogSDX, SCore" id="Hire" />
+			  </response>
+-->
+
+
+			<response id="TelBed" text="Teleport to BedRoll" >
+				<action type="AddBuffSDX, SCore" value="Other" id="buffTelBedroll" />
+			</response>	
+
+			<response id="TelLC" text="Teleport to Land Claim" >
+				<action type="AddBuffSDX, SCore" value="Other" id="buffTelLandclaim" />
+			</response>
+
+			<response id="TelBP" text="Teleport to Backback" >
+				<action type="AddBuffSDX, SCore" value="Other" id="buffTelBackpack" />
+			</response>
+
+			<response id="TelFacility1" text="Teleport to Reasearch Facility Entrance" >
+				<action type="Teleport, SCore" id="tpFacility1" />
+			</response>
+
+			<response id="TelRM01" text="Teleport to Cell Block 1" >
+				<action type="Teleport, SCore" id="tpFacilityRM01" />
+			</response>	
+
+			<response id="TelRM02" text="Teleport to Cell Block 2" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM01" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM02" />
+			</response>
+
+			<response id="TelRM03" text="Teleport to Sub Station Security Level 1" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM02" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM03" />
+			</response>
+
+			<response id="TelRM04" text="Teleport to Sub Station Security Level Top Secret" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM03" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM04" />
+			</response>
+
+			<response id="TelRM05" text="Teleport to Room #5" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM04" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM05" />
+			</response>	
+
+			<response id="TelRM06" text="Teleport to Room #6" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM05" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM06" />
+			</response>
+
+			<response id="TelRM07" text="Teleport to Room #7" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM06" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM07" />
+			</response>
+
+			<response id="TelRM08" text="Teleport to Room #8" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM07" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM08" />
+			</response>
+			<response id="TelRM09" text="Teleport to Room #9" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM08" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM09" />
+			</response>
+
+			<response id="TelRM10" text="Teleport to Room #10" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="FacilityRM09" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacilityRM10" />
+			</response>
+
+
+		</dialog>
+
+
+
+
+
+
+		<dialog id="TeleportFacilityOutNPC" startstatementid="start">
+			<statement id="start" text="Research Facility Teleportation System Entrance - Make sure you have 8 Teleporter parts in your inventory.">
+
+
+				<response_entry id="RepairTeleporter" />
+				<response_entry id="TelFacilityOut" />
+
+			</statement>
+
+
+			<response id="RepairTeleporter" text="Repair Teleporter" >
+			
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart1AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart2AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart3AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart4AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart5AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart6AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart7AOO" value="1" />
+				<requirement type="HasItemSDX, SCore" requirementtype="Hide" id="resourceTeleportPart8AOO" value="1" />			
+			
+			
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart1AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart2AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart3AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart4AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart5AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart6AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart7AOO" value="1" />
+				<action type="GiveToNPC, SCore" id="resourceTeleportPart8AOO" value="1" />
+				<action type="AddCVar, SCore" id="TelFixed" value="1" operator="set" />				
+			</response>	
+
+			<response id="TelFacilityOut" text="Enter Research Facility - Enter at Own Risk!" >
+				<requirement type="HasCVarSDX, SCore" requirementtype="Hide" id="TelFixed" operator="eq" value="1"/>
+				<action type="Teleport, SCore" id="tpFacility0" />
+			</response>
+	
+
+
+		</dialog>
+
+
+
+
+
+
+		<dialog id="MagicTotemNPC" startstatementid="start">
+			<statement id="start" text="Take your chance!   You may get something really good or really bad!">
+				<response_entry id="Hire" />
+				<response_entry id="RandomReward" />
+		
+			</statement>
+			  <response id="Hire" text="Enable the Magic Totem (300 Dukes)" >
+				<requirement type="HiredSDX, SCore" requirementtype="Hide" value="not"/>
+				<action type="OpenDialogSDX, SCore" id="Hire" />
+			  </response>
+
+
+			<response id="RandomReward" text="Random Reward" >
+				<requirement type="Leader, SCore" requirementtype="Hide"/>
+				<action type="AddBuffSDX, SCore" value="Other" id="buffRandomReward" />
+				<action type="ExecuteCommandSDX, SCore" id="Dismiss" />
+				<action type="AddBuffSDX, SCore" value="Self" id="buffOrderDismiss" />
+			</response>
+</dialog>
+	
+</append>
+</configs>

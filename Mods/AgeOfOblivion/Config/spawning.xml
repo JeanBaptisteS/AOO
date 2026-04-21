@@ -1,0 +1,7 @@
+<config>
+
+
+    <include filename="Entities/spawning-Core.xml" />
+    <include filename="Entities/Animals/spawning-Animals.xml" />
+	
+</config>

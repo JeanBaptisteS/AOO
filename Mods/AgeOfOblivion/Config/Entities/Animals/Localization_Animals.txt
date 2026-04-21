@@ -1,0 +1,148 @@
+Key,English
+
+WildChickenAOO,Chicken
+WildCowAOO,Cow
+WildLonghornCattleAOO,Longhorn Cattle
+WildScottlandCattleAOO,Scotland Cattle
+WildFoxAOO,Fox
+WildGoatAOO,Goat
+WildPenguinAOO,Penguin
+WildPigAOO,Pig
+WildSheepAOO,Sheep
+WildElephantAOO,Elephant
+WildElephantIndianAOO,Indian Elephant
+WildZebraAOO,Zebra
+WildCamelAOO,Camel
+WildKomodoDragonAOO,Komodo Dragon
+WildIbexAOO,Ibex
+WildTortoiseAOO,Tortoise
+WildCapeBuffaloAOO,Cape Buffalo
+WildBearAOO,Bear
+WildCrocAOO,Crocodile
+WildHippoAOO,Hippopotamus
+WildLionAOO,Lion
+WildLionessAOO,Lioness
+WildTigerAOO,Tiger
+WildRhinoAOO,Rhino
+WildLeopardAOO,Leopard
+WildScorpionAOO,Scorpion
+WildSpiderAOO,Spider
+WildSpiderVariantsAOO,Spidere
+WildWolfAOO,Wolf
+WildWolfArcticAOO,Arctic Wolf
+WildWolfDarkAOO,Dark Wolf
+
+fishBarracuda,Barracuda
+fishClownfish,Clownfish
+fishOctopus,Octopus
+fishPerch,Perch
+fishPike,Pike
+fishSalmon,Salmon
+fishSardine,Sardine
+fishBabyShark,Baby Shark
+fishGiantShark,Giant Shark
+fishStingRay,Stingray
+fishTurtle,Turtle
+
+PetBeagleAOO,Beagle
+PetCaneCorsoAOO,Cane Corso
+PetCelticWolfhoundAOO,Celtic Wolfhound
+PetHellenicHoundAOO,Hellenic Hound
+PetPugAOO,Pug
+PetRabbitAOO,Rabbit
+PetCatAOO,Cat
+PetHorseAOO,Horse
+PetChimpAOO,Chimpanzee
+
+itemCarcassDesc,"A Butcher should know what to do with it...\nCan be wrapped to stop the smell."
+itemCarcassWrappedDesc,Tightly wrapped carcass to prevent unwanted attention.
+
+itemCarcassBear,Bear Carcass
+itemCarcassBear_Wrapped,Wrapped Bear Carcass
+
+itemCarcassZombieBear,Zombie Bear Carcass
+itemCarcassZombieBear_Wrapped,Wrapped Zombie Bear Carcass
+
+itemCarcassStag,Stag Carcass
+itemCarcassStag_Wrapped,Wrapped Stag Carcass
+
+itemCarcassDoe,Doe Carcass
+itemCarcassDoe_Wrapped,Wrapped Doe Carcass
+
+itemCarcassWolf,Wolf Carcass
+itemCarcassWolf_Wrapped,Wrapped Wolf Carcass
+
+itemCarcassDireWolf,Dire Wolf Carcass
+itemCarcassDireWolf_Wrapped,Wrapped Dire Wolf Carcass
+
+itemCarcassCoyote,Coyote Carcass
+itemCarcassCoyote_Wrapped,Wrapped Coyote Carcass
+
+itemCarcassVulture,Vulture Carcass
+itemCarcassVulture_Wrapped,Wrapped Vulture Carcass
+
+itemCarcassZombieDog,Zombie Dog Carcass
+itemCarcassZombieDog_Wrapped,Wrapped Zombie Dog Carcass
+
+itemCarcassCow,Cow Carcass
+itemCarcassCow_Wrapped,Wrapped Cow Carcass
+
+itemCarcassFox,Fox Carcass
+itemCarcassFox_Wrapped,Wrapped Fox Carcass
+
+itemCarcassGoat,Goat Carcass
+itemCarcassGoat_Wrapped,Wrapped Goat Carcass
+
+itemCarcassPenguin,Penguin Carcass
+itemCarcassPenguin_Wrapped,Wrapped Penguin Carcass
+
+itemCarcassPig,Pig Carcass
+itemCarcassPig_Wrapped,Wrapped Pig Carcass
+
+itemCarcassZombieBoar,Zombie Boar Carcass
+itemCarcassZombieBoar_Wrapped,Wrapped Zombie Boar Carcass
+
+itemCarcassGrace,Grace's Carcass
+itemCarcassGrace_Wrapped,Wrapped Grace's Carcass
+
+itemCarcassSheep,Sheep Carcass
+itemCarcassSheep_Wrapped,Wrapped Sheep Carcass
+
+itemCarcassElephant,Elephant Carcass
+itemCarcassElephant_Wrapped,Wrapped Elephant Carcass
+
+itemCarcassZebra,Zebra Carcass
+itemCarcassZebra_Wrapped,Wrapped Zebra Carcass
+
+itemCarcassCamel,Camel Carcass
+itemCarcassCamel_Wrapped,Wrapped Camel Carcass
+
+itemCarcassBuffalo,Buffalo Carcass
+itemCarcassBuffalo_Wrapped,Wrapped Buffalo Carcass
+
+itemCarcassKomodo,Komodo Carcass
+itemCarcassKomodo_Wrapped,Wrapped Komodo Carcass
+
+itemCarcassIbex,Ibex Carcass
+itemCarcassIbex_Wrapped,Wrapped Ibex Carcass
+
+itemCarcassTurtle,Turtle Carcass
+itemCarcassTurtle_Wrapped,Wrapped Turtle Carcass
+
+itemCarcassCroc,Croc Carcass
+itemCarcassCroc_Wrapped,Wrapped Croc Carcass
+
+itemCarcassHippo,Hippo Carcass
+itemCarcassHippo_Wrapped,Wrapped Hippo Carcass
+
+itemCarcassLion,Lion Carcass
+itemCarcassLion_Wrapped,Wrapped Lion Carcass
+
+itemCarcassTiger,Tiger Carcass
+itemCarcassTiger_Wrapped,Wrapped Tiger Carcass
+
+itemCarcassRhino,Rhino Carcass
+itemCarcassRhino_Wrapped,Wrapped Rhino Carcass
+
+itemCarcassLeopard,Leopard Carcass
+itemCarcassLeopard_Wrapped,Wrapped Leopard Carcass

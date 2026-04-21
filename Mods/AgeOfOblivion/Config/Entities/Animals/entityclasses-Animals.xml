@@ -1,0 +1,951 @@
+<config>
+
+	<!-- ===== Vanilla Animals ===== -->
+
+	<!-- Stag -->
+	<remove xpath="/entity_classes/entity_class[@name='animalStag']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalStag']">
+		<property name="CorpseBlock" value="blockCarcassStag"/>
+	</append>
+	
+	<!-- Doe -->
+	<remove xpath="/entity_classes/entity_class[@name='animalDoe']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalDoe']">
+		<property name="CorpseBlock" value="blockCarcassDoe"/>
+	</append>
+	
+	<!-- Rabbit -->
+	<setattribute xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='resourceBone' and @tag='butcherHarvest']" name="count">2</setattribute>
+	<remove xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='resourceBone' and @tag='allToolsHarvest']" />
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[last()]">
+		<drop event="Harvest" name="resourceRabbitsFootAOO" tag="butcherHarvest" count="2" prob=".05"/>
+	</insertAfter>
+	
+	<!-- Chicken -->
+	<setattribute xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceBone' and @tag='butcherHarvest']" name="count">2</setattribute>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceBone' and @tag='allToolsHarvest']" />
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalChicken']/drop[last()]">
+		<drop event="Harvest" name="foodRawChickenBreastAOO" tag="butcherHarvest" count="2" prob=".25"/>
+		<drop event="Harvest" name="foodRawChickenLegsandWingsAOO" tag="butcherHarvest" count="2" prob=".25"/>
+		<drop event="Harvest" name="resourceChickenFeetAOO" tag="butcherHarvest" count="1" prob=".25"/>
+	</insertAfter>
+	
+	<!-- Bear -->
+	<remove xpath="/entity_classes/entity_class[@name='animalBear']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalBear']">
+		<property name="CorpseBlock" value="blockCarcassBear"/>
+	</append>
+	<!-- Small Bear-->
+	<remove xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[not(@tool_category)]"/>
+	
+	<!-- Zombie Bear -->
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalZombieBear']">
+		<property name="CorpseBlock" value="blockCarcassZombieBear"/>
+	</append>
+	
+	<!-- Wolf -->
+	<remove xpath="/entity_classes/entity_class[@name='animalWolf']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalWolf']">
+		<property name="CorpseBlock" value="blockCarcassWolf"/>
+	</append>
+	
+	<!-- Zombie Dog -->
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalZombieDog']">
+		<property name="CorpseBlock" value="blockCarcassZombieDog"/>
+	</append>
+	
+	<!-- Dire Wolf -->
+	<remove xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalDireWolf']">
+		<property name="CorpseBlock" value="blockCarcassDireWolf"/>
+	</append>
+	
+	<!-- Coyote -->
+	<remove xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalCoyote']">
+		<property name="CorpseBlock" value="blockCarcassCoyote"/>
+	</append>
+	
+	<!-- Mountain Lion -->
+	<remove xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalMountainLion']">
+		<property name="CorpseBlock" value="blockCarcassLion"/>
+	</append>
+	
+	<!-- Vulture -->
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalZombieVulture']">
+		<property name="CorpseBlock" value="blockCarcassVulture"/>
+	</append>
+	
+	<!-- Radiated Vulture -->
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']">
+		<property name="CorpseBlock" value="blockCarcassVulture"/>
+	</append>
+	
+	<!-- Boar -->
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalBoar']">
+		<property name="CorpseBlock" value="blockCarcassPig"/>
+	</append>
+	
+	<!-- Zombie Boar -->
+	<remove xpath="/entity_classes/entity_class[@name='animalZombieBoar']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalZombieBoar']">
+		<property name="CorpseBlock" value="blockCarcassZombieBoar"/>
+	</append>
+	
+	<!-- Grace -->
+	<remove xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[not(@tool_category)]"/>
+	<append xpath="/entity_classes/entity_class[@name='animalBossGrace']">
+		<property name="CorpseBlock" value="blockCarcassGrace"/>
+	</append>
+	
+	<!-- ===== AOO Animals ===== -->
+	
+	<append xpath="/entity_classes" >
+
+	<!-- ========== Templates ========== -->
+
+	<!-- ===== Friendly ===== -->
+
+		<entity_class name="WildChickenAOO" extends="animalChicken">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Chicken.prefab"/>
+			<property name="AltMats" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Chicken.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Chicken2.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Chicken3.mat" />
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandChickenAOO"/>	
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawChickenBreastAOO" tag="butcherHarvest" count="2" prob=".25"/>
+			<drop event="Harvest" name="foodRawChickenLegsandWingsAOO" tag="butcherHarvest" count="2" prob=".25"/>
+		</entity_class>
+		
+		<entity_class name="WildCowAOO" extends="animalBoar">
+			<property name="Tags" value="entity,animal,cow,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Cow.prefab"/>
+			<property name="AltMats" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Cow.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Cow2.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Cow3.mat" />
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundRandom" value="randomCow"/>
+			<property name="SoundHurt" value="CowHurt"/>
+			<property name="SoundDeath" value="CowDeath"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassCow"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+			</effect_group>
+			
+		</entity_class>
+
+		<entity_class name="WildLonghornCattleAOO" extends="WildCowAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?LonghornCattle.prefab"/>
+			<property name="AltMats" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Longhorn_cattle_v1_mat.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Longhorn_cattle_v2_mat_01.mat" />
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		</entity_class>
+
+		<entity_class name="WildScottlandCattleAOO" extends="WildCowAOO">				
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?ScottlandCattle.prefab"/>
+			<property name="AltMats" value=""/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		</entity_class>
+
+		<entity_class name="WildFoxAOO" extends="animalDoe">
+			<property name="Tags" value="entity,animal,fox,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Fox.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundRandom" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundStepType" value="animallightstep"/>
+		
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassFox"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildGoatAOO" extends="animalDoe">
+			<property name="Tags" value="entity,animal,goat,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Goat.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundRandom" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+		
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> 
+			<property name="CorpseBlock" value="blockCarcassGoat"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="250"/>
+			</effect_group>
+		</entity_class>		
+
+		<entity_class name="WildPenguinAOO" extends="animalChicken">
+			<property name="Tags" value="entity,animal,penguin,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Penguin.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+	
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassPenguin"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildPigAOO" extends="animalBoar">
+			<property name="Tags" value="entity,animal,pig,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Pig.prefab"/>
+			<property name="AltMats" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_Pig.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?M_PigDirty.mat" />
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassPig"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildSheepAOO" extends="animalBoar">
+			<property name="Tags" value="entity,animal,sheep,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Sheep.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundHurt" value="randomSheep"/>
+			<property name="SoundDeath" value="randomSheep"/>
+			<property name="SoundAlert" value="randomSheep"/>
+			<property name="SoundAttack" value="randomSheep"/>
+			<property name="SoundSense" value="randomSheep"/>
+			<property name="SoundGiveUp" value="randomSheep"/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassSheep"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="125"/>
+			</effect_group>
+		</entity_class>	
+		
+		<entity_class name="WildElephantAOO" extends="animalBoar">
+			<property name="Tags" value="entity,animal,elephant,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Elephant.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			
+			<property name="SoundRandom" value="randomElephant"/>
+			<property name="SoundAlert" value="randomElephant"/>
+			<property name="SoundHurt" value="randomElephant"/>
+			<property name="SoundDeath" value="randomElephant"/>
+			<property name="SoundAttack" value="randomElephant"/>
+			<property name="SoundSense" value="randomElephant"/>
+			<property name="SoundGiveUp" value="randomElephant"/>
+			<property name="SoundStepType" value="animalhvystep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassElephant"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildElephantIndianAOO" extends="WildElephantAOO">				
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?IndianElephant.prefab"/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		</entity_class>	
+
+		<entity_class name="WildZebraAOO" extends="animalStag">
+			<property name="Tags" value="entity,animal,zebra,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Zebra.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundRandom" value="randomZebra"/>
+			<property name="SoundHurt" value="randomZebra"/>
+			<property name="SoundDeath" value="deathZebra"/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+		
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassZebra"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildCamelAOO" extends="animalStag">
+			<property name="Tags" value="entity,animal,camel,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Camel.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundRandom" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+		
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassCamel"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="350"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildKomodoDragonAOO" extends="animalBoar">
+			<property name="Tags" value="entity,animal,komodo,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Komodo.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			
+			<property name="SoundRandom" value="randomKomodo"/>
+			<property name="SoundAlert" value="randomKomodo"/>
+			<property name="SoundHurt" value="randomKomodo"/>
+			<property name="SoundDeath" value="randomKomodo"/>
+			<property name="SoundAttack" value="randomKomodo"/>
+			<property name="SoundSense" value="randomKomodo"/>
+			<property name="SoundGiveUp" value="randomKomodo"/>
+			<property name="SoundStepType" value="animallightstep"/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassKomodo"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildIbexAOO" extends="WildGoatAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Ibex.prefab"/>
+						
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassIbex"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildTortoiseAOO" extends="animalRabbit" >
+			<property name="Tags" value="entity,animal,turtle,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Tortoise.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+	
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> 
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceTurtleShellAOO" tag="butcherHarvest" count="1" prob=".7"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="350"/>
+			</effect_group>
+		</entity_class>
+		
+	<!-- =====  Hostile ===== -->
+
+		<entity_class name="WildCapeBuffaloAOO" extends="animalBear">
+			<property name="Tags" value="entity,animal,buffalo,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?CapeBuffalo.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassBuffalo"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildBearAOO" extends="animalBear">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Bear.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassBear"/>
+		</entity_class>
+		
+		<entity_class name="WildCrocAOO" extends="animalBear">
+			<property name="Tags" value="entity,animal,crocodile,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Crocodile.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>	
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animalhvystep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassCroc"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="350"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildHippoAOO" extends="animalBear">
+			<property name="Tags" value="entity,animal,hippo,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Hippopotamus.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>	
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animalhvystep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassHippo"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildLionAOO" extends="animalMountainLion">
+			<property name="Tags" value="entity,animal,lion,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Lion.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>	
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassLion"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildLionessAOO" extends="animalMountainLion">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Lioness.prefab"/> 
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassLion"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="275"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildTigerAOO" extends="animalMountainLion">
+			<property name="Tags" value="entity,animal,tiger,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Tiger.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>	
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassTiger"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="350"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildRhinoAOO" extends="animalBear">
+			<property name="Tags" value="entity,animal,rhino,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Rhinoceros.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>	
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animalhvystep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassRhino"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="WildLeopardAOO" extends="animalMountainLion">
+			<property name="Tags" value="entity,animal,leopard,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Leopard.prefab"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandAnimalBear"/>	
+			
+			<property name="SoundRandom" value="randomLeopard"/>
+			<property name="SoundAlert" value="randomLeopard"/>
+			<property name="SoundHurt" value="randomLeopard"/>
+			<property name="SoundDeath" value="randomLeopard"/>
+			<property name="SoundAttack" value="randomLeopard"/>
+			<property name="SoundSense" value="randomLeopard"/>
+			<property name="SoundGiveUp" value="randomLeopard"/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassLeopard"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildScorpionAOO" extends="animalSnake">
+			<property name="Tags" value="entity,animal,scorpion,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Scorpion.prefab"/> 
+			<property name="AltMats" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?scorpion_mat.mat,#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?yellow_fattail_scorpion_mat.mat" />
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandScorpionAOO"/>
+			
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animallightstep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> 
+			<drop event="Harvest" name="resourceScorpionTailAOO" tag="butcherHarvest" count="1" prob=".33"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1" prob="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1" prob="1"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildSpiderAOO" extends="animalSnake">
+			<property name="Tags" value="entity,animal,spider,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Spider02.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="HandItem" value="meleeHandScorpionAOO"/>
+			
+			<property name="SoundHurt" value="Spider_HurtAOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundGiveUp" value="Spider_RandomAOO"/>
+			<property name="SoundStepType" value="animallightstep"/>
+
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> 
+			<drop event="Harvest" name="resourceSpiderSilkAOO" tag="butcherHarvest" count="1" prob=".33"/>
+			<drop event="Harvest" name="resourceSpiderEggsAOO" tag="butcherHarvest" count="1" prob=".33"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1" prob="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1" prob="1"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="WildSpiderVariantsAOO" extends="WildSpiderAOO">				
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Spider01.prefab"/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> 
+			<drop event="Harvest" name="resourceSpiderSilkAOO" tag="butcherHarvest" count="1" prob=".33"/>
+			<drop event="Harvest" name="resourceSpiderEggsAOO" tag="butcherHarvest" count="1" prob=".33"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1" prob="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1" prob="1"/>
+			
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRandomMesh2"/> 
+			</effect_group>
+			
+		</entity_class>
+
+		<entity_class name="WildWolfAOO" extends="animalWolf">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Wolf.prefab"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value=""/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<property name="CorpseBlock" value="blockCarcassWolf"/>
+		</entity_class>
+		
+		<entity_class name="WildWolfArcticAOO" extends="WildWolfAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?WolfArctic.prefab"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		</entity_class>
+		
+		<entity_class name="WildWolfDarkAOO" extends="WildWolfAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?WolfDark.prefab"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		</entity_class>
+
+	<!-- ========== Fish ========== -->
+	
+		<entity_class name="fishBarracuda" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Barracuda.prefab"/>
+		</entity_class>
+		
+		<entity_class name="fishClownfish" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Clownfish.prefab"/>
+		</entity_class>
+		
+		<entity_class name="fishOctopus" extends="AgressiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Octopus.prefab"/>
+		</entity_class>
+		
+		<entity_class name="fishPerch" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Perch.prefab"/>
+		</entity_class>
+
+		<entity_class name="fishPike" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Pike.prefab"/>
+		</entity_class>	
+
+		<entity_class name="fishSalmon" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Salmon.prefab"/>
+		</entity_class>
+		
+		<entity_class name="fishSardine" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Sardine.prefab"/>
+		</entity_class>
+
+		<entity_class name="fishBabyShark" extends="AgressiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Shark.prefab"/>
+			<property name="SizeScale" value="1" />
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="fishGiantShark" extends="AgressiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Shark.prefab"/>
+			<property name="SizeScale" value="2.5" />
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="fishStingRay" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Stingray.prefab"/>
+		</entity_class>
+	
+		<entity_class name="fishTurtle" extends="PassiveFish" >
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Turtle.prefab"/>
+		</entity_class>
+	
+	<!-- ========== Pets ========== -->
+
+		<entity_class name="PetBeagleAOO" extends="PetTemplateAOO">	
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Beagle.prefab"/>	
+			<property name="Tags" value="entity,cp,npc,animal,Dog,Beagle"/>
+			<property name="Names" value="Bark Twain,Dumbledog,JK Growling,Ozzy Pawsborne,Salvador Dogi,Sherlock Bones,Virginia Woof,Notorious D.O.G,Little Bow Wow,Muttley Cru,Phideaux,Sir Barks-a-Lot,Sir Licks-a-Lot,Subwoofer,Al Poo-Chino,Droolius Caesar,Groucho Barks,Indiana Bones,Orville Redenbarker,Woofgang Amadeus,Woofgang Puck" />			
+			<property name="LookAtAngle" value="0"/> 			
+			<property name="SoundRandom" value="randomDog"/>
+			<property name="SoundAlert" value="randomDog"/>
+			<property name="SoundHurt" value="randomDog"/>
+			<property name="SoundDeath" value="deathDog"/>
+			<property name="SoundAttack" value="randomDog"/>
+			<property name="SoundSense" value="randomDog"/>
+			<property name="SoundGiveUp" value="randomDog"/> 
+			<property name="MoveSpeed" value=".25"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>				
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="2" />
+			<property name="HireCurrency" value="foodCanDogfood" />	
+		</entity_class>	
+		
+		<entity_class name="PetCaneCorsoAOO" extends="PetTemplateAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Canecorso.prefab"/> 
+			<property name="Tags" value="entity,cp,npc,animal,Dog,Corso"/>
+			<property name="Names" value="Bark Twain,Dumbledog,JK Growling,Ozzy Pawsborne,Salvador Dogi,Sherlock Bones,Virginia Woof,Notorious D.O.G,Little Bow Wow,Muttley Cru,Phideaux,Sir Barks-a-Lot,Sir Licks-a-Lot,Subwoofer,Al Poo-Chino,Droolius Caesar,Groucho Barks,Indiana Bones,Orville Redenbarker,Woofgang Amadeus,Woofgang Puck" />					
+			<property name="SoundRandom" value="randomDog"/>
+			<property name="SoundAlert" value="randomDog"/>
+			<property name="SoundHurt" value="randomDog"/>
+			<property name="SoundDeath" value="deathDog"/>
+			<property name="SoundAttack" value="randomDog"/>
+			<property name="SoundSense" value="randomDog"/>
+			<property name="SoundGiveUp" value="randomDog"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="2" />
+			<property name="HireCurrency" value="foodCanDogfood" /> 			
+		</entity_class>			
+
+		<entity_class name="PetCelticWolfhoundAOO" extends="PetTemplateAOO">	
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?CelticWolfhound.prefab"/> 	
+			<property name="Tags" value="entity,cp,npc,animal,Dog,Celtic"/>
+			<property name="Names" value="Bark Twain,Dumbledog,JK Growling,Ozzy Pawsborne,Salvador Dogi,Sherlock Bones,Virginia Woof,Notorious D.O.G,Little Bow Wow,Muttley Cru,Phideaux,Sir Barks-a-Lot,Sir Licks-a-Lot,Subwoofer,Al Poo-Chino,Droolius Caesar,Groucho Barks,Indiana Bones,Orville Redenbarker,Woofgang Amadeus,Woofgang Puck" />					
+			<property name="SoundRandom" value="randomDog"/>
+			<property name="SoundAlert" value="randomDog"/>
+			<property name="SoundHurt" value="randomDog"/>
+			<property name="SoundDeath" value="deathDog"/>
+			<property name="SoundAttack" value="randomDog"/>
+			<property name="SoundSense" value="randomDog"/>
+			<property name="SoundGiveUp" value="randomDog"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="2" />
+			<property name="HireCurrency" value="foodCanDogfood" />
+		</entity_class>	
+
+		<entity_class name="PetHellenicHoundAOO" extends="PetTemplateAOO">	
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?HellenicHound.prefab"/>	
+			<property name="Tags" value="entity,cp,npc,animal,Dog,Hellenic"/>
+			<property name="Names" value="Bark Twain,Dumbledog,JK Growling,Ozzy Pawsborne,Salvador Dogi,Sherlock Bones,Virginia Woof,Notorious D.O.G,Little Bow Wow,Muttley Cru,Phideaux,Sir Barks-a-Lot,Sir Licks-a-Lot,Subwoofer,Al Poo-Chino,Droolius Caesar,Groucho Barks,Indiana Bones,Orville Redenbarker,Woofgang Amadeus,Woofgang Puck" />					
+			<property name="SoundRandom" value="randomDog"/>
+			<property name="SoundAlert" value="randomDog"/>
+			<property name="SoundHurt" value="randomDog"/>
+			<property name="SoundDeath" value="deathDog"/>
+			<property name="SoundAttack" value="randomDog"/>
+			<property name="SoundSense" value="randomDog"/>
+			<property name="SoundGiveUp" value="randomDog"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="2" />
+			<property name="HireCurrency" value="foodCanDogfood" />	
+		</entity_class>
+
+		<entity_class name="PetPugAOO" extends="PetTemplateAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Pug.prefab"/>
+			<property name="Tags" value="entity,cp,npc,animal,Dog,Pug"/>
+			<property name="Names" value="Bark Twain,Dumbledog,JK Growling,Ozzy Pawsborne,Salvador Dogi,Sherlock Bones,Virginia Woof,Notorious D.O.G,Little Bow Wow,Muttley Cru,Phideaux,Sir Barks-a-Lot,Sir Licks-a-Lot,Subwoofer,Al Poo-Chino,Droolius Caesar,Groucho Barks,Indiana Bones,Orville Redenbarker,Woofgang Amadeus,Woofgang Puck" />					
+			<property name="SoundRandom" value="randomDog"/>
+			<property name="SoundAlert" value="randomDog"/>
+			<property name="SoundHurt" value="randomDog"/>
+			<property name="SoundDeath" value="deathDog"/>
+			<property name="SoundAttack" value="randomDog"/>
+			<property name="SoundSense" value="randomDog"/>
+			<property name="SoundGiveUp" value="randomDog"/> 
+			<property name="MoveSpeed" value=".25"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>				
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="2" />
+			<property name="HireCurrency" value="foodCanDogfood" />	
+		</entity_class>	
+		
+		<entity_class name="PetRabbitAOO" extends="PetTemplateAOO">	
+			<property name="Tags" value="entity,cp,npc,animal,Rabbit"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Rabbit.prefab"/> 		
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="12" />
+		<!--	<property name="HireCurrency" value="foodCropCarrotAOO" /> 	-->			
+		</entity_class>			
+		
+		<entity_class name="PetCatAOO" extends="PetTemplateAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Cat.prefab"/> 
+			<property name="Tags" value="entity,cp,npc,animal,Cat"/>
+			<property name="Names" value="Fishbait,Katy Purry, Puddy Tat,Cat Benatar,Cindy Clawford,Mr. Mistoffelees,Meowly Cyrus,Puma Thurman,Oprah Whisker,Fleas Witherspoon,Catrick Swayze,Jean Luc Picat,Clawdius,Mr. Meowgi "/>			
+			<property name="SoundRandom" value="randomCat"/>
+			<property name="SoundAlert" value="randomCat"/>
+			<property name="SoundHurt" value="randomCat"/>
+			<property name="SoundDeath" value="catDie"/>
+			<property name="SoundAttack" value="randomCat"/>
+			<property name="SoundSense" value="randomCat"/>
+			<property name="SoundGiveUp" value="randomCat"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="450"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="2" />
+			<property name="HireCurrency" value="foodCanCatfood" /> 			
+		</entity_class>		
+		
+		<entity_class name="PetHorseAOO" extends="PetTemplateAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Horse.prefab"/> 	
+			<property name="Tags" value="entity,cp,npc,animal,Horse"/>
+			<property name="Names" value="No Name,I.P. Nightly, MoonShine, Midnight Sun,Dazzling Duke,Panty Raid,Hoof Hearted, Deez Nuts, Fifty Shades of Hay,Riding Miss Daisy, Odor in the Court "/>			
+			<property name="SoundRandom" value="randomZebra"/>
+			<property name="SoundAlert" value="randomZebra"/>
+			<property name="SoundHurt" value="randomZebra"/>
+			<property name="SoundDeath" value="deathZebra"/>
+			<property name="SoundAttack" value="randomZebra"/>
+			<property name="SoundSense" value="randomZebra"/>
+			<property name="SoundGiveUp" value="randomZebra"/> 			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="950"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+			</effect_group>
+			<property name="HireCost" value="12" />
+		<!--	<property name="HireCurrency" value="foodCropCarrotAOO" />	-->
+		</entity_class>	
+
+		<entity_class name="PetChimpAOO" extends="PetTemplateAOO">
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?chimpanzee.prefab"/>	
+			<property name="Names" value="Xyth" />
+			<property name="HireCost" value="12" />
+		<!--	<property name="HireCurrency" value="resourceRedBananaAOO" />	-->
+			<property name="MoveSpeed" value=".45"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="3000"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="CrouchSpeed" operation="base_set" value=".6"/> 
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.65" tags="swimming"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.65" tags="swimming"/>
+				<passive_effect name="Mobility" operation="base_set" value="3"/> 
+				<passive_effect name="JumpStrength" operation="base_set" value="0.66"/> 
+			</effect_group>
+		</entity_class>	
+
+
+	</append>
+
+
+</config>

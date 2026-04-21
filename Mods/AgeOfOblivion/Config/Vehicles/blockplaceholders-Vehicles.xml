@@ -1,0 +1,342 @@
+<config>
+
+	<append xpath="/blockplaceholders">
+
+		<placeholder name="cntVehicleBlocks">
+			<block name="vehicleBlockBattle01" />
+			<block name="vehicleBlockBattle02" />
+			<block name="vehicleBlockBattle03" />
+			<block name="vehicleBlockBattle04" />
+			<block name="vehicleBlockBattle05" />
+			<block name="vehicleBlockBattle06" />
+			<block name="vehicleBlockSuperCar01" prob=".2"/>
+			<block name="vehicleBlockSuperCar02" prob=".2"/>
+			<block name="vehicleBlockSuperCar03" prob=".2" />	
+			<block name="vehicleBlockRickShawBlue"/>
+			<block name="vehicleBlockCyberDelorean" prob=".1"/>
+			<block name="vehicleBlockBatCar01" prob=".1"/>
+			<block name="vehicleBlockScooter"/>
+			<block name="vehicleBlockSportsCarWhite" prob=".2"/>
+			<block name="vehicleBlockHotRod01" prob=".2"/>
+			<block name="vehicleBlockFeature01" prob=".2"/>
+			<block name="vehicleBlockBuggy01" prob=".4"/>
+			<block name="vehicleBlockMuscleCar01" prob=".4"/>
+			<block name="vehicleBlockApocRV" prob=".4"/>
+			<block name="vehicleBlockApocTractor" prob=".4"/>
+			<block name="vehicleBlockHarley"/>
+			<block name="vehicleBlockChopper"/>
+			<block name="vehicleBlockMCycle01"/>
+			<block name="vehicleBlockRW01" prob=".2"/>
+			<block name="vehicleBlockRW02" prob=".2"/>
+			<block name="vehicleBlockRW03" prob=".2"/>
+			<block name="vehicleBlockRW04" prob=".2"/>
+			<block name="vehicleBlockRW05" prob=".2"/>
+			<block name="vehicleBlockRW06" prob=".2"/>
+			<block name="vehicleBlockRW07" prob=".2"/>
+			<block name="vehicleBlockRW08" prob=".2"/>
+			<block name="vehicleBlockRW09" prob=".2"/>		
+		</placeholder>
+		
+		<placeholder name="cntBlockPoliceCopter">
+			<block name="vehicleBlockPoliceCopterPickup" prob=".1" />	
+			<block name="vehicleBlockPoliceCopterEmpty" />			
+		</placeholder>
+		
+		<placeholder name="cntBlockBattle01">
+			<block name="vehicleBlockBattle01Pickup"  />	
+			<block name="vehicleBlockBattle01Empty" />			
+		</placeholder>
+		
+		<placeholder name="cntBlockBattle02">
+			<block name="vehicleBlockBattle02Pickup" />	
+			<block name="vehicleBlockBattle02Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockBattle03">
+			<block name="vehicleBlockBattle03Pickup"  />	
+			<block name="vehicleBlockBattle03Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockBattle04">
+			<block name="vehicleBlockBattle04Pickup"  />	
+			<block name="vehicleBlockBattle04Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockBattle05">
+			<block name="vehicleBlockBattle05Pickup" />	
+			<block name="vehicleBlockBattle05Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockBattle06">
+			<block name="vehicleBlockBattle06Pickup" />	
+			<block name="vehicleBlockBattle06Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockSuperCar01">
+			<block name="vehicleBlockSuperCar01Pickup" prob=".1" />	
+			<block name="vehicleBlockSuperCar01Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockSuperCar02">
+			<block name="vehicleBlockSuperCar02Pickup" prob=".1" />	
+			<block name="vehicleBlockSuperCar02Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockSuperCar03">
+			<block name="vehicleBlockSuperCar03Pickup" prob=".1" />	
+			<block name="vehicleBlockSuperCar03Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRickShawBlue">
+			<block name="vehicleBlockRickShawBluePickup" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockCyberDelorean">
+			<block name="vehicleBlockCyberDeloreanPickup" prob=".1"/>
+			<block name="vehicleBlockCyberDeloreanEmpty" />		
+		</placeholder>
+		
+		<placeholder name="cntBlockBatCar01">
+			<block name="vehicleBlockBatCar01Pickup" prob=".1"/>	
+			<block name="vehicleBlockBatCar01Empty" />				
+		</placeholder>
+		
+		<placeholder name="cntBlockScooter">
+			<block name="vehicleBlockScooterPickup" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockSportsCarWhite">
+			<block name="vehicleBlockSportsCarWhitePickup" prob=".1"/>
+			<block name="vehicleBlockSportsCarWhiteEmpty" />			
+		</placeholder>
+		
+		<placeholder name="cntBlockHotRod01">
+			<block name="vehicleBlockHotRod01Pickup" prob=".1"/>	
+			<block name="vehicleBlockHotRod01Empty" />				
+		</placeholder>
+		
+		<placeholder name="cntBlockFeature01">
+			<block name="vehicleBlockFeature01Pickup" prob=".1"/>	
+			<block name="vehicleBlockFeature01Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockBuggy01">
+			<block name="vehicleBlockBuggy01Pickup" prob=".3" />	
+			<block name="vehicleBlockBuggy01Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockMuscleCar01">
+			<block name="vehicleBlockMuscleCar01Pickup" prob=".3" />	
+			<block name="vehicleBlockMuscleCar01Empty" />				
+		</placeholder>
+		
+		<placeholder name="cntBlockApocRV">
+			<block name="vehicleBlockApocRVPickup"  prob=".2" />	
+			<block name="vehicleBlockApocRVEmpty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockApocTractor">
+			<block name="vehicleBlockApocTractorPickup"  prob=".2"/>	
+			<block name="vehicleBlockApocTractorEmpty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockHarley">
+			<block name="vehicleBlockHarleyPickup"  prob=".2"/>	
+			<block name="vehicleBlockHarleyEmpty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockChopper">
+			<block name="vehicleBlockChopperPickup" prob=".2"/>	
+			<block name="vehicleBlockChopperEmpty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockMCycle01">
+			<block name="vehicleBlockMCycle01Pickup" prob=".2"/>	
+			<block name="vehicleBlockMCycle01Empty" />	
+		</placeholder>
+		
+		<placeholder name="cntBlockRW01">
+			<block name="vehicleBlockRW01Pickup" prob=".1"/>	
+			<block name="vehicleBlockRW01Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW02">
+			<block name="vehicleBlockRW02Pickup" prob=".1" />	
+			<block name="vehicleBlockRW02Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW03">
+			<block name="vehicleBlockRW03Pickup" prob=".1" />	
+			<block name="vehicleBlockRW03Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW04">
+			<block name="vehicleBlockRW04Pickup" prob=".1" />	
+			<block name="vehicleBlockRW04Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW05">
+			<block name="vehicleBlockRW05Pickup" prob=".1" />	
+			<block name="vehicleBlockRW05Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW06">
+			<block name="vehicleBlockRW06Pickup" prob=".1" />	
+			<block name="vehicleBlockRW06Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW07">
+			<block name="vehicleBlockRW07Pickup" prob=".1" />	
+			<block name="vehicleBlockRW07Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW08">
+			<block name="vehicleBlockRW08Pickup" prob=".1" />	
+			<block name="vehicleBlockRW08Empty" />
+		</placeholder>
+		
+		<placeholder name="cntBlockRW09">
+			<block name="vehicleBlockRW09Pickup" prob=".1" />	
+			<block name="vehicleBlockRW09Empty" />
+		</placeholder>
+		
+	</append>
+	
+	<append xpath="//placeholder[@name='carsRandomHelper']">
+			<block name="vehicleBlockBattle01" />
+			<block name="vehicleBlockBattle02" />
+			<block name="vehicleBlockBattle03" />
+			<block name="vehicleBlockBattle04" />
+			<block name="vehicleBlockBattle05" />
+			<block name="vehicleBlockBattle06" />
+			<block name="vehicleBlockSuperCar01" prob=".15"/>
+			<block name="vehicleBlockSuperCar02" prob=".15"/>
+			<block name="vehicleBlockSuperCar03" prob=".15"/>	
+			<block name="vehicleBlockRickShawBlue"/>
+			<block name="vehicleBlockCyberDelorean" prob=".15"/>
+			<block name="vehicleBlockBatCar01" prob=".15"/>
+			<block name="vehicleBlockScooter"/>
+			<block name="vehicleBlockSportsCarWhite" prob=".15"/>
+			<block name="vehicleBlockHotRod01" prob=".15"/>
+			<block name="vehicleBlockFeature01" prob=".15"/>
+			<block name="vehicleBlockBuggy01" prob=".15"/>
+			<block name="vehicleBlockMuscleCar01" prob=".15"/>
+			<block name="vehicleBlockApocRV"/>
+			<block name="vehicleBlockApocTractor"/>
+			<block name="vehicleBlockHarley" prob=".15"/>
+			<block name="vehicleBlockChopper" prob=".15"/>
+			<block name="vehicleBlockMCycle01" prob=".15"/>
+			<block name="vehicleBlockRW01" prob=".15"/>
+			<block name="vehicleBlockRW02" prob=".15"/>
+			<block name="vehicleBlockRW03" prob=".15"/>
+			<block name="vehicleBlockRW04" prob=".15"/>
+			<block name="vehicleBlockRW05" prob=".15"/>
+			<block name="vehicleBlockRW06" prob=".15"/>
+			<block name="vehicleBlockRW07" prob=".15"/>
+			<block name="vehicleBlockRW08" prob=".15"/>
+			<block name="vehicleBlockRW09" prob=".15"/>		
+	</append>	
+<!--	<append xpath="//placeholder[@name='cntPickupTruck01RandomHelper']">
+			<block name="vehicleBlockBattle01" />
+			<block name="vehicleBlockBattle02" />
+			<block name="vehicleBlockBattle03" />
+			<block name="vehicleBlockBattle04" />
+			<block name="vehicleBlockBattle05" />
+			<block name="vehicleBlockBattle06" />
+			<block name="vehicleBlockSuperCar01" />
+			<block name="vehicleBlockSuperCar02" />
+			<block name="vehicleBlockSuperCar03" />	
+			<block name="vehicleBlockRickShawBlue"/>
+			<block name="vehicleBlockCyberDelorean" prob=".1"/>
+			<block name="vehicleBlockBatCar01" prob=".1"/>
+			<block name="vehicleBlockScooter"/>
+			<block name="vehicleBlockSportsCarWhite" prob=".2"/>
+			<block name="vehicleBlockHotRod01" prob=".2"/>
+			<block name="vehicleBlockFeature01" prob=".2"/>
+			<block name="vehicleBlockBuggy01"/>
+			<block name="vehicleBlockMuscleCar01"/>
+			<block name="vehicleBlockApocRV"/>
+			<block name="vehicleBlockApocTractor"/>
+			<block name="vehicleBlockHarley"/>
+			<block name="vehicleBlockChopper"/>
+			<block name="vehicleBlockMCycle01"/>
+			<block name="vehicleBlockRW01" prob=".2"/>
+			<block name="vehicleBlockRW02" prob=".2"/>
+			<block name="vehicleBlockRW03" prob=".2"/>
+			<block name="vehicleBlockRW04" prob=".2"/>
+			<block name="vehicleBlockRW05" prob=".2"/>
+			<block name="vehicleBlockRW06" prob=".2"/>
+			<block name="vehicleBlockRW07" prob=".2"/>
+			<block name="vehicleBlockRW08" prob=".2"/>
+			<block name="vehicleBlockRW09" prob=".2"/>			
+	</append>	
+	<append xpath="//placeholder[@name='cntSedan01RandomHelper']">
+			<block name="vehicleBlockBattle01" />
+			<block name="vehicleBlockBattle02" />
+			<block name="vehicleBlockBattle03" />
+			<block name="vehicleBlockBattle04" />
+			<block name="vehicleBlockBattle05" />
+			<block name="vehicleBlockBattle06" />
+			<block name="vehicleBlockSuperCar01" />
+			<block name="vehicleBlockSuperCar02" />
+			<block name="vehicleBlockSuperCar03" />	
+			<block name="vehicleBlockRickShawBlue"/>
+			<block name="vehicleBlockCyberDelorean" prob=".1"/>
+			<block name="vehicleBlockBatCar01" prob=".1"/>
+			<block name="vehicleBlockScooter"/>
+			<block name="vehicleBlockSportsCarWhite" prob=".2"/>
+			<block name="vehicleBlockHotRod01" prob=".2"/>
+			<block name="vehicleBlockFeature01" prob=".2"/>
+			<block name="vehicleBlockBuggy01"/>
+			<block name="vehicleBlockMuscleCar01"/>
+			<block name="vehicleBlockApocRV"/>
+			<block name="vehicleBlockApocTractor"/>
+			<block name="vehicleBlockHarley"/>
+			<block name="vehicleBlockChopper"/>
+			<block name="vehicleBlockMCycle01"/>
+			<block name="vehicleBlockRW01" prob=".2"/>
+			<block name="vehicleBlockRW02" prob=".2"/>
+			<block name="vehicleBlockRW03" prob=".2"/>
+			<block name="vehicleBlockRW04" prob=".2"/>
+			<block name="vehicleBlockRW05" prob=".2"/>
+			<block name="vehicleBlockRW06" prob=".2"/>
+			<block name="vehicleBlockRW07" prob=".2"/>
+			<block name="vehicleBlockRW08" prob=".2"/>
+			<block name="vehicleBlockRW09" prob=".2"/>		
+	</append>	
+	<append xpath="//placeholder[@name='cntFrontCrumpledSedan01RandomHelper']">
+			<block name="vehicleBlockBattle01" />
+			<block name="vehicleBlockBattle02" />
+			<block name="vehicleBlockBattle03" />
+			<block name="vehicleBlockBattle04" />
+			<block name="vehicleBlockBattle05" />
+			<block name="vehicleBlockBattle06" />
+			<block name="vehicleBlockSuperCar01" />
+			<block name="vehicleBlockSuperCar02" />
+			<block name="vehicleBlockSuperCar03" />	
+			<block name="vehicleBlockRickShawBlue"/>
+			<block name="vehicleBlockCyberDelorean" prob=".1"/>
+			<block name="vehicleBlockBatCar01" prob=".1"/>
+			<block name="vehicleBlockScooter"/>
+			<block name="vehicleBlockSportsCarWhite" prob=".2"/>
+			<block name="vehicleBlockHotRod01" prob=".2"/>
+			<block name="vehicleBlockFeature01" prob=".2"/>
+			<block name="vehicleBlockBuggy01"/>
+			<block name="vehicleBlockMuscleCar01"/>
+			<block name="vehicleBlockApocRV"/>
+			<block name="vehicleBlockApocTractor"/>
+			<block name="vehicleBlockHarley"/>
+			<block name="vehicleBlockChopper"/>
+			<block name="vehicleBlockMCycle01"/>
+			<block name="vehicleBlockRW01" prob=".2"/>
+			<block name="vehicleBlockRW02" prob=".2"/>
+			<block name="vehicleBlockRW03" prob=".2"/>
+			<block name="vehicleBlockRW04" prob=".2"/>
+			<block name="vehicleBlockRW05" prob=".2"/>
+			<block name="vehicleBlockRW06" prob=".2"/>
+			<block name="vehicleBlockRW07" prob=".2"/>
+			<block name="vehicleBlockRW08" prob=".2"/>
+			<block name="vehicleBlockRW09" prob=".2"/>	
+	</append>	-->
+	
+</config>

@@ -1,0 +1,389 @@
+<configs>
+	<append xpath="/nav_object_classes">
+
+		<nav_object_class name="vehicleMoto" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="vehicleMoto"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="vehicleMoto"/>
+			</onscreen_settings>
+		</nav_object_class>
+		
+		<nav_object_class name="SuperCar01" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="SuperCar01"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="SuperCar01"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="SuperCar02" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="SuperCar02"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="SuperCar02"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="SuperCar03" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="SuperCar03"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="SuperCar03"/>
+			</onscreen_settings>
+		</nav_object_class>			
+
+		<nav_object_class name="BattleCar01" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BattleCar01"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BattleCar01"/>
+			</onscreen_settings>
+		</nav_object_class>			
+
+		<nav_object_class name="BattleCar02" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BattleCar02"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BattleCar02"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="BattleCar03" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BattleCar03"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BattleCar03"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="BattleCar04" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BattleCar04"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BattleCar04"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="BattleCar05" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BattleCar05"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BattleCar05"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="BattleCar06" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BattleCar06"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BattleCar06"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW01" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW01"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW01"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW02" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW02"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW02"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW03" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW03"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW03"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW04" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW04"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW04"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW05" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW05"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW05"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW06" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW06"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW06"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW07" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW07"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW07"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW08" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW08"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW08"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="RW09" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="RW09"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="RW09"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="MD500" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="MD500UIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="MD500UIicon"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="Motorcycle" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="Cruisericon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="Cruisericon"/>
+			</onscreen_settings>
+		</nav_object_class>
+
+		<nav_object_class name="Tractor" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="TractorUIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="TractorUIicon"/>
+			</onscreen_settings>
+		</nav_object_class>
+
+		<nav_object_class name="RV" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="rvUIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="rvUIicon"/>
+			</onscreen_settings>
+		</nav_object_class>		
+
+		<nav_object_class name="MuscleMulti" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="MuscleMulti"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="MuscleMulti"/>
+			</onscreen_settings>
+		</nav_object_class>	
+
+		<nav_object_class name="BuggyMulti" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BuggyMulti"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BuggyMulti"/>
+			</onscreen_settings>
+		</nav_object_class>		
+
+		<nav_object_class name="Buggy01" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="Buggy01"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="Buggy01"/>
+			</onscreen_settings>
+		</nav_object_class>		
+
+		<nav_object_class name="HotRod" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="HotRod"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="HotRod"/>
+			</onscreen_settings>
+		</nav_object_class>	
+		
+		<nav_object_class name="SportsCar" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="SCUIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="SCUIicon"/>
+			</onscreen_settings>
+		</nav_object_class>		
+
+		<nav_object_class name="Scooter" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="ScooterUIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="ScooterUIicon"/>
+			</onscreen_settings>
+		</nav_object_class>			
+
+		<nav_object_class name="BatCar" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="BatCarUIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="BatCarUIicon"/>
+			</onscreen_settings>
+		</nav_object_class>
+
+		<nav_object_class name="Delorean" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="DeloreanUIicon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="DeloreanUIicon"/>
+			</onscreen_settings>
+		</nav_object_class>
+
+		<nav_object_class name="DaToilet" extends="bicycle">
+			<property name="requirement_type" value="IsVehicleOwner" />
+
+			<compass_settings>
+				<property name="sprite_name" value="DaToileticon"/>
+			</compass_settings>
+
+			<onscreen_settings>
+				<property name="sprite_name" value="DaToileticon"/>
+			</onscreen_settings>
+		</nav_object_class>
+
+	</append>
+</configs>

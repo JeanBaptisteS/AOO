@@ -1,0 +1,17 @@
+<config>
+
+	<remove xpath="/controls/mainmenubutton" />
+	
+	<append xpath="/controls">
+		<mainmenubutton depth="3" pos="0,0" width="200" height="32"
+				enabled_font_color="[labelColor]" disabled_font_color="[disabledLabelColor]" visible="true" enabled="true" pivot="left" tooltip_key="" sound="[default_click]" caption="" caption_key="" >
+			<rect name="${name}" depth="${depth}" pos="${pos}" width="${width}" height="${height}" enabled_font_color="${enabled_font_color}" disabled_font_color="${disabled_font_color}" controller="SimpleButton" visible="${visible}" button_enabled="${enabled}" font_size_default="${height-16}" font_size_hover="${height-12}">
+				<button name="clickable" sprite="ui_game_panel_header2" flip="horizontally" pos="0,${Round(-height/2,0)}" defaultcolor="255,255,255,180" hovercolor="[white]" type="sliced" hoverscale="1.0" pivot="${pivot}" tooltip_key="${tooltip_key}" sound_play_on_hover="[default_hover]" sound="${sound}"/>
+				<label depth="2" name="btnLabel" width="${width-20}" pos="10,${Round(-height/2,0)}" justify="left" text="${caption}" text_key="${caption_key}" effect="outline" pivot="${pivot}" font_size="${height-16}" upper_case="true" />
+			</rect>
+		</mainmenubutton>
+	</append>
+		
+	
+	
+</config>

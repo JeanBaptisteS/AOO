@@ -1,0 +1,243 @@
+Key,English
+
+foodRawWildSteakAOO,Raw Wild Steak
+foodRawWildSteakAOODesc,"Raw Wild Steak, ready for fry-up."
+foodRawWildSteakAOOBundle,Raw Wild Steak Bundle
+foodRawWildSteakAOOBundleDesc,A bundle of Raw Wild Steak wrapped tightly to prevent unwanted attention.
+foodRawBaconAOO,Raw Bacon
+foodRawBaconAOODesc,"Raw bacon, ready for fry-up."
+foodRawBaconAOOBundle,Raw Bacon Bundle
+foodRawBaconAOOBundleDesc,A bundle of Raw Bacon wrapped tightly to prevent unwanted attention.
+foodRawChickenBreastAOO,Raw Chicken Breast
+foodRawChickenBreastAOODesc,"Raw chicken breast ready for cooking."
+foodRawChickenBreastAOOBundle,Raw Chicken Breast Bundle
+foodRawChickenBreastAOOBundleDesc,A bundle of Raw Chicken Breast wrapped tightly to prevent unwanted attention.
+foodRawChickenLegsandWingsAOO,Raw Chicken Legs and Wings
+foodRawChickenLegsandWingsAOODesc,"Raw chicken legs and wings, ready for cooking."
+foodRawChickenLegsandWingsAOOBundle,Raw Chicken Legs and Wings Bundle
+foodRawChickenLegsandWingsAOOBundleDesc,A bundle of Raw Chicken Legs and Wings wrapped tightly to prevent unwanted attention.
+foodRawGroundBeefAOO,Raw Ground Beef
+foodRawGroundBeefAOODesc,"Raw ground beef, ready for cooking."
+foodRawGroundBeefAOOBundle,Raw Ground Beef Bundle
+foodRawGroundBeefAOOBundleDesc,A bundle of Raw Ground Beef wrapped tightly to prevent unwanted attention.
+foodRawHamAOO,Raw Ham
+foodRawHamAOODesc,"Raw ham, ready for cooking."
+foodRawHamAOOBundle,Raw Ham Bundle
+foodRawHamAOOBundleDesc,A bundle of Raw Ham wrapped tightly to prevent unwanted attention.
+foodRawPorkLoinAOO,Raw Pork Loin
+foodRawPorkLoinAOODesc,"Raw pork loin, ready for cooking."
+foodRawPorkLoinAOOBundle,Raw Pork Loin Bundle
+foodRawPorkLoinAOOBundleDesc,A bundle of Raw Pork Loin wrapped tightly to prevent unwanted attention.
+foodRawPorkRibsAOO,Raw Pork Ribs
+foodRawPorkRibsAOODesc,"Raw pork ribs, ready for cooking."
+foodRawPorkRibsAOOBundle,Raw Pork Ribs Bundle
+foodRawPorkRibsAOOBundleDesc,A bundle of Raw Pork Ribs wrapped tightly to prevent unwanted attention.
+foodRawSausageLinkAOO,Raw Sausage Link
+foodRawSausageLinkAOODesc,"Raw sausage links, ready for cooking."
+foodRawSausageLinkAOOBundle,Raw Sausage Link Bundle
+foodRawSausageLinkAOOBundleDesc,A bundle of Raw Sausage Link wrapped tightly to prevent unwanted attention.
+foodRawSteakAOO,Raw Steak
+foodRawSteakAOODesc,"Raw steak, ready for cooking."
+foodRawSteakAOOBundle,Raw Steak Bundle
+foodRawSteakAOOBundleDesc,A bundle of Raw Steak wrapped tightly to prevent unwanted attention.
+foodRawKobeSteakAOO,Raw Kobe Steak
+foodRawKobeSteakAOODesc,"Raw Kobe Steak, ready for fry-up."
+foodRawKobeSteakAOOBundle,Raw Kobe Steak Bundle
+foodRawKobeSteakAOOBundleDesc,A bundle of Raw Kobe Steak wrapped tightly to prevent unwanted attention.
+
+foodOldSaltAOO,Salt
+foodOldSaltAOODesc,It's salty
+foodCanChickPeasAOO,Chickpeas
+foodCanChickPeasAOODesc,"Used as an ingredient in tasty recipies."
+foodRawMilkAOO,Raw Milk
+foodRawMilkAOODesc,Milk straight from the cow. Pasteurize this before drinking!
+foodChocolateBarTSK_AOO,Chocolate Bar
+foodChocolateBarTSK_AOODesc,"Chocolate makes everything better - even the end of the world as you know it."
+foodChocolateChipCookieTSK_AOO,Chocolate Chip Cookies
+foodChocolateChipCookieTSK_AOODesc,"Chocolate chip cookies. Yes, they are chocolate chips, not raisins. Go on, take a bite! Made from Real GirlScouts!\n\nFood +26\nHealth +9\nCarry Capacity: +5"
+foodPeanutButterCookieTSK_AOO,Peanut Butter Cookies
+foodPeanutButterCookieTSK_AOODesc,"Cookies full of peanut buttery goodness. Made from Real GirlScouts!\n\nFood +26\nHealth +9\nCarry Capacity +10"
+
+drinkBananaSodaTSK_AOO,Banana Blast Soda
+drinkBananaSodaTSK_AOODesc,"Soda - it's a banana BLAST!\n\nWater +55\nHealth +5\nStamina +20%\nStamina Regen +40%\nRun Speed +20%"
+drinkCheeryCherrySodaTSK_AOO,Cheery Cherry Soda
+drinkCheeryCherrySodaTSK_AOODesc,"Cherry soda that puts a smile on your face!\n\nWater +40\nStamina +20%\nStamina Regen +40%\nRun Speed +20%"
+drinkCitrusSplashSodaTSK_AOO,Citrus Splash Soda
+drinkCitrusSplashSodaTSK_AOODesc,"Lemon-lime? Lime-lemon? How about both in this citrus splash!\n\nWater +45\nStamina +20%\nStamina Regen +40%\nRun Speed +20%"
+drinkCreamSodaTSK_AOO,Cream Soda
+drinkCreamSodaTSK_AOODesc,"Smooth vanilla cream soda. So good!\n\nWater +50\nStamina +20%\nStamina Regen +40%\nRun Speed +20%"
+drinkDrJenSodaTSK_AOO,Dr. Jen's Soda
+drinkDrJenSodaTSK_AOODesc,"No pepper needed. Get Dr. Jen's Soda today!\n\nWater +75\nHealth +5\nStamina +20%\nStamina Regen +40%\nRun Speed +20%"
+drinkGrapeSodaTSK_AOO,Grape Explosion Soda
+drinkGrapeSodaTSK_AOODesc,"It's soda. It's purple. It's Grape Explosion! (Explosion not guaranteed.)\n\nWater +45\nHealth +5\nStamina +20%\Stamina Regen +40%\nRun Speed +20%"
+drinkIronBruSodaTSK_AOO,Iron Brew Soda
+drinkIronBruSodaTSK_AOODesc,"The slightly less popular brand of soda for miners everywhere.\n\nWater +60\nHealth +10\nStamina +20%\Stamina Regen +40%\nRun Speed +20%"
+drinkOrangeSodaTSK_AOO,Obvious Orange Soda
+drinkOrangeSodaTSK_AOODesc,"Soda that is orange in taste and color. Obviously.\n\nWater +40\nStamina +20%\nStamina Regen +40%\nRun Speed +20%"
+drinkV8JuiceAOO,V8 Veggie Juice
+drinkV8JuiceAOODesc,"I coulda had a V8!\n\nWater +95\nFood +20\nHealth +30\nStamina +10%\nStamina Regen: +35%\nCarry Capacity: +5\nIntellect: +2\nParkour: +2\nRun Speed +10%\nVitamin C\nVitamin B\nStrong Bones"
+drinkWatermelonJuiceTSK_AOO,Watermelon Juice
+drinkWatermelonJuiceTSK_AOODesc,"100% watermelon juice - not from concentrate.\n\nWater +45\nHealth +5\nStamina +5%\nStamina Regen +40%\nVitamin C"
+drinkPineAppleJuiceAOO,Pineapple Juice
+drinkPineAppleJuiceAOODesc,"100% pineapple juice - not from concentrate.\n\nWater +60\nFood +15\nHealth +5\nStamina +5%\nStamina Regen +40%\nVitamin C"
+drinkAppleJuiceAOO,Apple Juice
+drinkAppleJuiceAOODesc,"100% apple juice - not from concentrate.\n\nWater +50\nFood +5\n Health +5\nStamina +5%\nStamina Regen +40%\nVitamin C"
+drinkLemonJuiceTSK_AOO,Lemon Juice
+drinkLemonJuiceTSK_AOODesc,"This is pure lemon juice, used as an ingredient for tasty recipes.\n\nWater +5\nVitamin C"
+drinkMangoJuiceTSK_AOO,Mango Juice
+drinkMangoJuiceTSK_AOODesc,"100% mango juice - not from concentrate.\n\nWater +65\nFood +8\nHealth +8\nStamina +5%\nStamina Regen +40%\nVitamin C"
+drinkOrangeJuiceAOO,Orange Juice
+drinkOrangeJuiceAOODesc,"100% Orange juice - not from concentrate.\n\nWater +50\nFood +3\nHealth +6\nStamina +5%\nStamina Regen +40%"
+
+foodStrawberryMousseTSK_AOO,Strawberry Mousse
+foodStrawberryMousseTSK_AOODesc,"Light and fluffy strawberry mousse.\n\nFood +32\nHealth +11"
+foodRaspberryMousseTSK_AOO,Raspberry Mousse
+foodRaspberryMousseTSK_AOODesc,"Light and fluffy raspberry mousse.\n\nFood +32\nHealth +11"
+foodBBQSauceAOO,BBQ Sauce
+foodBBQSauceAOODesc,It's time to get saucy!
+foodDoughAOO,Freshly Kneaded Dough
+foodDoughAOODesc,Face it... you knead it.
+foodFlourAOO,Flour
+foodFlourAOODesc,All bakers believe in flour power.
+foodRawPastaAOO,Raw Pasta
+foodRawPastaAOODesc,"Spaghetti, lasagna, angelhair, rigatoni, tortelini... you name it, you make it!"
+foodVegOilAOO,Vegetable Oil
+foodVegOilAOODesc,Used as an ingredient in tasty recipies.
+foodSugarAOO,Sugar
+foodSugarAOODesc,"Aw, it's so sweet!"
+foodMixedFruitTSK_AOO,Mixed Fruit
+foodMixedFruitTSK_AOODesc,"Beautifully fresh fruit, ready to be used as an ingredient in tasty recipes.\n\nFood +36\nHealth +18\nStamina +10\nVitamin C"
+foodMixedVeggiesTSK_AOO,Mixed Veggies
+foodMixedVeggiesTSK_AOODesc,"Crunchy mixed veggies, ready to be used as an ingredient in tasty recipies.\n\nFood +36\nHealth +18\nStamina +10\nVitamin B"
+
+foodBagelAOO,Bagel
+foodBagelAOODesc,"Little-known fact: a bagel is the favorite food of most golfers. Why? There's a hole in one.\n\nFood +15\nHealth +5\nWater -5"
+foodBreadAOO,Bread
+foodBreadAOODesc,"Many say it's the best thing ever.\n\nFood +10\nHealth +10\nWater -5"
+foodGrandMasFamousSauceAOO,Grandma's Famous Sauce
+foodGrandMasFamousSauceAOODesc,"Only the best tomato sauce, just like Grandma used to make!"
+foodBreakfastBaconSandwichAOO,Breakfast Bacon Sandwich
+foodBreakfastBaconSandwichAOODesc,"Bacon! Also a breakfast sandwich.\n\nFood +43\nHealth +25\nWater -10\nAmerican Pie"
+foodBreakfastSausageSandwichAOO,Breakfast Sausage Sandwich
+foodBreakfastSausageSandwichAOODesc,"What makes bagels even better? Why, meat, of course!\n\nFood +45\nHealth +25\nWater -10\nAmerican Pie"
+foodRamenTSK_AOO,Ramen
+foodRamenTSK_AOODesc,"Amazing ramen. Itadakimasu!\n\nFood +56\nHealth +35\nWater +20\nStamina +25\nRamen"
+foodRoyalGamePieTSK_AOO,Royal Game Pie
+foodRoyalGamePieTSK_AOODesc,"Tuck in!\n\nFood +72\nHealth +45\nWater +20\nStamina +35\nEndurance"
+foodVenisonStewTSK_AOO,Venison Stew
+foodVenisonStewTSK_AOODesc,"Juicy and delicious venison stew.\n\nFood +65\nHealth +33\nWater +20\nStamina +29\nEndurance"
+foodBeefwithBroccoliAOO,Beef with Broccoli
+foodBeefwithBroccoliAOODesc,"Served at Asian restaurants everywhere.\n\nFood +60\nHealth +20\nWater -1\nMariachi"
+foodCabbageRollsandCoffeeAOO,Cabbage Rolls and Coffee
+foodCabbageRollsandCoffeeAOODesc,"Schmenge Bros Cabbage Rolls and Coffee ... Mmm Mmm Good!\n\nFood +160\nHealth +50\nWater +30\nCabbage Rolls"
+foodFreshBaconMeatloafAOO,Fresh Bacon Meatloaf
+foodFreshBaconMeatloafAOODesc,"It's meatloaf, with BACON! What could be better?\n\nFood +80\nHealth +40\nWater +5\nThe Beef"
+foodFreshBakedChickenBreastAOO,Fresh-Baked Chicken Breast
+foodFreshBakedChickenBreastAOODesc,"Baked chicken breast - so juicy.\n\nFood +30\nHealth +10\nWater -5"
+foodApplePieAOO,Apple Pie
+foodApplePieAOODesc,"A perfectly-baked apple pie. Delicious!\n\nFood +40\nHealth +6\nAmerican Pie"
+foodBananaCreamPieAOO,Banana Cream Pie
+foodBananaCreamPieAOODesc,"A light and delightful pie.\n\nFood +40\nHealth +6\nAmerican Pie"
+foodFriedRiceAOO,Fried Rice
+foodFriedRiceAOODesc,"A quick and easy, yet tasty, meal.\n\nFood +65\nHealth +20\nCarbs"
+foodSpaghettiandaMeataBallsAOO,Spaghetti and Meatballs
+foodSpaghettiandaMeataBallsAOODesc,"Spaghetti and-a Meat-a Balls! Fills you up and-a warms your soul!\n\nFood +100\nHealth +30"
+foodCherryPieAOO,She's My Cherry Pie
+foodCherryPieAOODesc,"Baked to perfection and ready to eat.\n\nFood +40\nHealth +6\nAmerican Pie"
+foodChocolateCakeTSK_AOO,Chocolate Cake
+foodChocolateCakeTSK_AOODesc,"A decadent chocolate cake.\n\nFood +85\nHealth +33\nAmerican Pie"
+foodCoconutCreamPieAOO,Coconut Cream Pie
+foodCoconutCreamPieAOODesc,"Tastes like the tropics!\n\nFood +40\nHealth +6\nAmerican Pie"
+foodPeachCobblerTSK_AOO,Peach Cobbler
+foodPeachCobblerTSK_AOODesc,"So sweet and fresh, a pure delight!\n\nFood +45\nHealth +9\nDessert"
+foodLemonCakeTSK_AOO,Lemon Cake
+foodLemonCakeTSK_AOODesc,"A decadent lemon bundt cake.\n\nFood +65\nHealth +33\nDessert"
+foodSpecialBrowniesTSK_AOO,Special Chocolate Brownies
+foodSpecialBrowniesTSK_AOODesc,"Thick, rich chocolate brownies with a special surprise.\n\nFood +200\nHealth +200\nWater +200\nStamina +200\nStoned"
+foodChickenPotPieTSK_AOO,Homemade Chicken Pot Pie
+foodChickenPotPieTSK_AOODesc,"Steamy, juicy pot pie.\n\nFood +68\nHealth +42\nWater +20\nStamina +32\nChicka Boom"
+foodHasenpfefferTSK_AOO,Hasenpfeffer
+foodHasenpfefferTSK_AOODesc,"Traditional German rabbit stew.\n\nFood +65\nHealth +40\nWater +20\nStamina +39\nEndurance"
+foodHomemadeChickenNoodleTSK_AOO,Homemade Chicken Noodle Soup
+foodHomemadeChickenNoodleTSK_AOODesc,"Well what do you know? It really is good for the soul.\n\nFood + 39\nWater +20\nHealth +30\nStamina +10\nChicka Boom"
+
+foodBBQPorkRibsAOO,BBQ Pork Ribs
+foodBBQPorkRibsAOODesc,"Tangy BBQ pork ribs\n\nFood +60\nHealth +10\nThe Beef"
+foodBeefChiliAOO,Beef Chili
+foodBeefChiliAOODesc,"Hearty beef chili.\n\nFood +55\nHealth +10"
+foodFreshBBQChickenLegsAOO,Fresh BBQ Chicken Legs
+foodFreshBBQChickenLegsAOODesc,"Look at those saucy legs!\n\nFood +50\nWater -5\nHealth +30\nStuffed"
+foodFreshCheeseBurgerAOO,Fresh Cheeseburger
+foodFreshCheeseBurgerAOODesc,"An American favorite!\n\nFood +65\nWater -15\nHealth +65"
+foodExoticGrilledSteakTSK_AOO,Exotic Grilled Steak
+foodExoticGrilledSteakTSK_AOODesc,"Exotic wild game steak, grilled to perfection.\n\nFood +65\nWater -10\nHealth +65\nThe Beef"
+foodGrilledSteakAOO,Griled Steak
+foodGrilledSteakAOODesc,"Juicy steak grilled just the way you love it.\n\nFood +35\nWater -15\n Health +35\nThe Beef"
+foodSpicyHotWingsAOO,Spicy Hot Wings
+foodSpicyHotWingsAOODesc,"Buffalo wings - trivia not included.\n\nFood +80\nWater -25\nHealth +80\nHot Wings"
+
+foodButterAOO,Butter
+foodButterAOODesc,Used as an ingredient in tasty recipies.
+foodCheeseAOO,Cheese
+foodCheeseAOODesc,"Used as an ingredient in tasty recipies.\n\nFood +10\nHealth +4"
+foodCreamAOO,Cream
+foodCreamAOODesc,"Freshly whipped cream, used as an igredient in tasty recipies."
+foodCreamCheeseAOO,Cream Cheese
+foodCreamCheeseAOODesc,"Exactly as simple to make as you suspected all along.\n\nFood +15\nHealth +6"
+
+foodBloominOnionAOO,Bloomin' Onion
+foodBloominOnionAOODesc,"Delectable - just don't expect a kiss until you've brushed your teeth.\n\nFood +40\nHealth +20\nFried"
+foodFalafelAOO,Falafel Plate
+foodFalafelAOODesc,"Who wants some falafel?\n\nFood +45\nHealth +20\nFried"
+foodFingersFriesAOO,Chicken Fingers and Fries
+foodFingersFriesAOODesc,"Don't mess with the classics.\n\nFood +75\nHealth +20\nFried"
+foodJalapenoPoppersAOO,Jalapeno Poppers
+foodJalapenoPoppersAOODesc,"Live coals are cooler than these guys. Be sure to have those drinks nearby!\n\nFood +80\nWater -25\nHealth +80\nHot Wings"
+foodFriesAOO,Basket of Fries
+foodFriesAOODesc,"Whether chips or fries, these are sure to satisfy your salty cravings.\n\nFood +25\nHealth +5\nFried"
+foodOnionRingsAOO,Onion Rings
+foodOnionRingsAOODesc,"Perfectly golden-brown deep-fried onion rings.\n\nFood +25\nHealth +5\nFried"
+foodChipsTSK_AOO,Chips
+foodChipsTSK_AOODesc,"A simple salty snack. Even better with sauces!\n\nFood +20\nStamina +12\nFried"
+
+foodFreshHoneyGlazedHamAOO,Fresh Honey-Glazed Ham
+foodFreshHoneyGlazedHamAOODesc,"The main course of a delicious feast.\n\nFood +150\nHealth +50\nSmoked"
+foodFreshSmokedSausageAOO,Fresh Smoked Sausage
+foodFreshSmokedSausageAOODesc,"Smoked to perfection!\n\nFood +50\nWater -10\nHealth +30\nSmoked"
+foodSmokedChickenTSK_AOO,Smoked Chicken
+foodSmokedChickenTSK_AOODesc,"Succulent smoked chicken\n\nFood +67\nHealth +23\nStamina +16\nSmoked"
+foodSmokedFishTSK_AOO,Smoked Fish
+foodSmokedFishTSK_AOODesc,"Smoked fish - my personal favorite is teriyaki smoked salmon.\n\nFood +48\nHealth +20\nStamina +13\nSmoked"
+
+foodPizzaAOO,Pizza
+foodPizzaAOODesc,"A different kind of pie. Save me a slice!\n\nFood +175\nHealth +50\nLuigi"
+
+foodBagelandCreamCheeseAOO,Bagel and Cream Cheese
+foodBagelandCreamCheeseAOODesc,"A classic breakfast treat.\n\nFood +45\nHealth +25"
+
+foodMilkAOO,Milk
+foodMilkAOODesc,"Milk! It does the body good. Not much use on its own but can be used in recipies to make other ingredients and tasty food.\n\nWater +35\nStrong Bones"
+drinkRedWineTSK_AOO,Red Wine
+drinkRedWineTSK_AOODesc,"Red wine, featuring hints of cherry, plum, and spice, aged in an oak barrel for many years.\n\nWater +50\nStamina +30\nDrunk"
+drinkWhiteWineTSK_AOO,White Wine
+drinkWhiteWineTSK_AOODesc,"White wine, featuring floral hints and a light fruit finish.\n\nWater +65\nStamina +30\nDrunk"
+drinkWhiskeyTSK_AOO,Whiskey
+drinkWhiskeyTSK_AOODesc,"Whiskey, scotch, and bourbon\n\nWater +30\nStamina +30\nDrunk"
+drinkVodkaTSK_AOO,Vodka
+drinkVodkaTSK_AOODesc,"Always be true to the Motherland.\nWater +30\nStamina +30\nDrunk"
+drinkRumTSK_AOO,Rum
+drinkRumTSK_AOODesc,"If gone, just make, find, or steal more!\n\nWater +30\nStamina +30\nDrunk"
+
+foodYogurtTSK_AOO,Yogurt
+foodYogurtTSK_AOODesc,"Yogurt: good for your innards. Tastes best mixed with something else.\n\nFood +20\nHealth +10"
+foodIceCreamTSK_AOO,Plain Ice Cream
+foodIceCreamTSK_AOODesc,"Used as a base for many flavors of ice cream.\n\nFood +20\nStrong Bones"
+drinkBerrySmoothieTSK_AOO,Berry Smoothie
+drinkBerrySmoothieTSK_AOODesc,"Freshly-blended mixed berry smoothie. Cooling and quenching!\n\nFood +60\nWater +60\nStamina +30\nStamina Regen +15%"
+
+drugClawedPainkillersTSK_AOO,Clawed Painkillers
+drugClawedPainkillersTSK_AOODesc,"More powerful than regular painkillers and gives you better knuckle brawling for a short time.\n\nHealth +70\nWater -30\nStun Resist\nPain Killers"
+medicalLionBalmTSK_AOO,Lion Balm
+medicalLionBalmTSK_AOODesc,"Apply to aches and pains to regain the strength of the lion!\n\nTreats Abrasion\nHealth Regen"
+drugRestorativeTabletTSK_AOO,Restorative Capsule
+drugRestorativeTabletTSK_AOODesc,"Hefty anti-ouch meds for the survivor on the move.\n\nPain Killers"

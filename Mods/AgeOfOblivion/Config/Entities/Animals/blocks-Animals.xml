@@ -1,0 +1,202 @@
+<config>
+
+	<append xpath="/blocks">
+		
+		<block name="blockCarcassTemplate">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="MCarcass"/>
+			<property name="IndexName" value="challenge_gore"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="CustomIcon" value="goreBlockAnimal"/>
+			<property name="Model" value="@:Entities/Gore/animalRemainsGorePrefab.prefab"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Density" value="0.9"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="FallDamage" value=".9"/>
+			<property name="MaxDamage" value="100"/>
+			<property name="SortOrder1" value="B265"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Tags" value="challenge_gore"/>
+			<property name="FilterTags" value="MC_building,SC_decor"/>
+		</block>
+		
+		<block name="blockCarcassStag">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassStag" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassDoe">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassDoe" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassBear">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassBear" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassZombieBear">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassZombieBear" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassWolf">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassWolf" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassDireWolf">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassDireWolf" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassZombieDog">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassZombieDog" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassCoyote">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassCoyote" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassLion">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassLion" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassVulture">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassVulture" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassPig">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassPig" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassZombieBoar">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassZombieBoar" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassGrace">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassGrace" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassCow">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassCow" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassFox">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassFox" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassGoat">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassGoat" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassPenguin">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassPenguin" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassSheep">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassSheep" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassElephant">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassElephant" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassZebra">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassZebra" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassCamel">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassCamel" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassKomodo">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassKomodo" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassIbex">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassIbex" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassBuffalo">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassBuffalo" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassCroc">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassCroc" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassHippo">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassHippo" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassTiger">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassTiger" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassRhino">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassRhino" count="1" tag="butcherHarvest"/>
+		</block>
+		
+		<block name="blockCarcassLeopard">
+			<property name="Extends" value="blockCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<drop event="Destroy" name="itemCarcassLeopard" count="1" tag="butcherHarvest"/>
+		</block>
+		
+	</append>
+
+</config>

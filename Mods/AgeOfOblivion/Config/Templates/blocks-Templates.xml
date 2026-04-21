@@ -1,0 +1,325 @@
+
+
+<config>
+	<append xpath="/blocks">
+	
+		<block name="TemplateDecoration">
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIcon" value="AOO-Logo"/>
+			<property name="Stabilitysupport" value="true"/>			
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Path" value="solid"/>
+			<property name="Tag" value="Replace" />			
+			<property name="IsTerrainDecoration" value="true"/>	
+			<property name="ActivationDistance" value="12"/>				
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Material" value="Miron_scrap"/>
+			<property name="MaxDamage" value="375"/>
+			<property name="Stacknumber" value="500"/>		
+			<property name="AllowAllRotations" value="true"/>			
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>			
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+		</block>
+
+		<block name="TemplateLoot">
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="serverLoot"/>
+			<property name="ActivationDistance" value="5"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CustomIcon" value="AOO-Logo"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Material" value="Miron_scrap"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property name="Stacknumber" value="500"/>				
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+		</block>
+
+		<block name="TemplateFloorBlock">
+			<property name="Material" value="Mwood"/>
+			<property name="Path" value="solid"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+			<property name="MultiBlockDim" value="1,1,1"/>			
+			<property name="ModelOffset" value="0,.21,0"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="false"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>	
+			<property name="CustomIcon" value="FloorBlock01" />
+			<property name="Stabilitysupport" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Stacknumber" value="500"/>
+			<property class="RepairItems"> 
+			<property name="resourceClayLump" value="25"/> </property>
+			<property name="Group" value="Building"/>
+		</block>
+
+		<block name="TemplateFence">
+			<property name="ActivationDistance" value="12"/>
+			<property name="AllowAllRotations" value="true"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Group" value="All"/>
+			<property name="Path" value="solid"/>			
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Material" value="Mmetal_medium"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="Stacknumber" value="500"/>			
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="Stabilitysupport" value="true"/>	
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+		</block>
+
+		<block name="TemplateDoor">
+			<property name="Class" value="DoorSecure" />
+			<property name="Material" value="MwoodMetal" />
+			<property name="MaxDamage" value="1200"/>
+			<property name="Shape" value="ModelEntity" />
+			<property name="Collide" value="movement,melee,rocket,arrow,bullet" />
+			<property name="Tag" value="Door" />
+			<property name="Place" value="Door" />
+			<property name="Stabilitysupport" value="true"/>			
+			<property name="PlaceEverywhere" value="true" />
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Misc/block_missingPrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,2,1" />
+			<property name="OpenSound" value="open_door_vault"/>
+			<property name="CloseSound" value="open_door_vault"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="10" />
+			</property>
+			<drop event="Destroy" name="resourceWood" count="1,10" />
+			<drop event="Destroy" name="resourceNail" count="5,6" tag="allHarvest" tool_category="Disassemble"/>
+			<drop event="Destroy" name="resourceMechanicalParts" count="1,2" tag="allHarvest" tool_category="Disassemble"/>
+			<drop event="Fall" name="resourceWood" count="5" prob="0.75" stick_chance="1" />
+			<property name="Pickable" value="true" />
+		</block>
+
+		<block name="templateWorkstationAOO">
+			<property name="Class" value="Workstation"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Crafting/woodWorkBenchPrefab"/>
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="3,3,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="MasterWorkBench,player,workbench"/>
+			</property>
+			<property name="WorkstationIcon" value="wksMasterWorkBenchAOO" />
+			<property name="OpenSound" value="open_workbench" />
+			<property name="CloseSound" value="close_workbench" />
+			<property name="WorkstationJournalTip" value="workbenchTip" />
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="5"/>			
+				<property name="resourceWood" value="5"/>
+				</property>
+			<property name="TakeDelay" value="10"/>			
+			<property name="EconomicValue" value="1000"/>
+			<property name="Group" value="Workbenches,All"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+			<property name="DescriptionKey" value="wksMasterWorkBenchAOODesc"/>
+		</block>
+
+		<block name="emptyBlockAOO"> <!-- Template to make invisible "Air" blocks that can be upgraded/Downgraded into something else -->
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="AOO-Logo"/>
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="Stabilitysupport" value="true"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder(0-SCore):Resources/PathingCube.unity3d?PathingCube"/>
+		</block>
+
+		<block name="corpseTemplate_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,2"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mplants"/>
+			<property name="StabilitySupport" value="true"/>	
+			<property name="MaxDamage" value="200"/>				
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceClayLump" value="1"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true" parameter="resourceCarcassBear_AOO"/> 
+		</block>
+
+	<block name="vehicleBlockTemplate">
+			<property name="Class" value="SecureLoot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="LockPickItem" value="CarKeyAOO"/>
+			<property name="LockPickTime" value="20"/>
+			<property name="LockPickBreakChance" value="0.75"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="ItemTypeIcon" value="lock"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/Policecar/policeCarPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="2,1,4"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="PlacementDistance" value="6"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="PassThroughDamage" value="true"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="35,90" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="SortOrder1" value="B867"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_building,SC_automotive,A21_NEW"/>
+			<property name="DowngradeBlock" value="respawnCar"/>
+		
+		</block>
+
+		<block name="vehicleBlockTemplateV1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="DisplayInfo" value="Name"/>			
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,1,4"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="FilterTags" value="floot"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="Model" value="@:Entities/Vehicles/Policecar/policeCarPrefab.prefab"/>
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="3"/>
+			</property>
+		
+			<drop event="Destroy" count="0"/>			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0,3" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1,3" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="carBattery" count="1" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="ammoGasCan" count="50,100" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceAcid" prob=".15" count="1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceAcid" prob=".1" count="1" tag="WasteTreasuresAcidHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceOil" count="0,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="1,3" tag="salvageHarvest"/>				
+ 		</block>
+
+		<block name="vehicleBlockTemplateV2">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="vehicleXS"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,1,4"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="FilterTags" value="floot"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="MaxDamage" value="500"/>
+	
+			<property name="Model" value="@:Entities/Vehicles/Policecar/policeCarPrefab.prefab"/>
+			<drop event="Destroy" count="0"/>			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0,4" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1,3" prob="0.2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tag="salvageHarvest"/>
+			<drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="ammoGasCan" count="50,200" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceAcid" prob=".15" count="1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceAcid" prob=".1" count="1" tag="WasteTreasuresAcidHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceOil" count="0,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="1,3" tag="salvageHarvest"/>			
+ 		</block>
+
+
+
+	</append>
+	
+	
+</config>

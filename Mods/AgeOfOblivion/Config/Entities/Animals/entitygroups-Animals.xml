@@ -1,0 +1,121 @@
+<configs>
+
+	<append xpath="/entitygroups">
+	
+		<entitygroup name="AOOAnimalForest">
+			WildChickenAOO
+			WildCowAOO
+			WildLonghornCattleAOO
+			WildFoxAOO
+			WildGoatAOO
+			WildPigAOO
+			WildSheepAOO
+			WildBearAOO
+			WildWolfAOO	
+			WildTigerAOO
+			WildSpiderVariantsAOO
+			WildHippoAOO
+		</entitygroup>
+
+		<entitygroup name="AOOAnimalSnow">
+			WildFoxAOO
+			WildScottlandCattleAOO
+			WildLonghornCattleAOO
+			WildPenguinAOO
+			WildBearAOO
+			WildIbexAOO
+			WildWolfArcticAOO
+			WildSpiderAOO
+		</entitygroup>
+
+		<entitygroup name="AOOAnimalDesert">
+			WildFoxAOO
+			WildScorpionAOO
+			WildChickenAOO
+			WildElephantAOO
+			WildElephantIndianAOO
+			WildZebraAOO
+			WildCamelAOO
+			WildCapeBuffaloAOO
+			WildKomodoDragonAOO
+			WildLionAOO
+			WildLionessAOO
+			WildLeopardAOO
+			WildRhinoAOO
+			WildWolfDarkAOO
+			WildSpiderAOO
+			WildTortoiseAOO
+		</entitygroup>
+
+		<entitygroup name="AOOAnimalFish">
+			WildCrocAOO
+			fishBarracuda
+			fishClownfish
+			fishOctopus
+			fishPerch
+			fishPike
+			fishSalmon
+			fishSardine
+			fishBabyShark
+			fishGiantShark
+			fishStingRay
+			fishTurtle
+		</entitygroup>
+		
+		<entitygroup name="RandomAnimalAOO">
+			animalStag
+			animalDoe
+			animalRabbit
+			animalChicken
+			animalBear
+			animalBearSmall
+			animalWolf
+			animalCoyote
+			animalMountainLion
+			animalBoar
+			WildChickenAOO
+			WildCowAOO
+			WildLonghornCattleAOO
+			WildScottlandCattleAOO
+			WildFoxAOO
+			WildGoatAOO
+			WildPenguinAOO
+			WildPigAOO
+			WildSheepAOO
+			WildElephantAOO
+			WildElephantIndianAOO
+			WildZebraAOO
+			WildCamelAOO
+			WildKomodoDragonAOO
+			WildIbexAOO
+			WildTortoiseAOO
+			WildCapeBuffaloAOO
+			WildBearAOO
+			WildCrocAOO
+			WildHippoAOO
+			WildLionAOO
+			WildLionessAOO
+			WildTigerAOO
+			WildRhinoAOO
+			WildLeopardAOO
+			WildScorpionAOO
+			WildSpiderAOO
+			WildSpiderVariantsAOO
+			WildWolfAOO
+			WildWolfArcticAOO
+			WildWolfDarkAOO
+		</entitygroup>
+		
+		<entitygroup name="WildSpiders">
+			WildSpiderAOO
+			WildSpiderVariantsAOO
+		</entitygroup>
+		
+		<entitygroup name="WildChickens">
+			animalChicken
+			WildChickenAOO
+		</entitygroup>
+
+	</append>
+
+</configs>

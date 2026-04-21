@@ -1,0 +1,8 @@
+<config>
+
+	<include filename="Core/gameevents-Core.xml" />
+	<include filename="Entities/gameevents-Entities.xml"/>
+	<!-- <include filename="EntitiesOld/gameevents-Entities.xml" /> -->
+	<include filename="Vehicles/gameevents-Vehicles.xml" />
+	
+</config>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefab>
+  <property name="CopyAirBlocks" value="True" />
+  <property name="ExcludeDistantPOIMesh" value="False" />
+  <property name="ExcludePOICulling" value="False" />
+  <property name="DistantPOIYOffset" value="0" />
+  <property name="AllowTopSoilDecorations" value="True" />
+  <property name="DifficultyTier" value="0" />
+  <property name="ShowQuestClearCount" value="1" />
+  <property name="TraderArea" value="True" />
+  <property name="TraderAreaProtect" value="5,0,5" />
+  <property name="PrefabSize" value="43, 35, 41" />
+  <property name="RotationToFaceNorth" value="2" />
+  <property name="Zoning" value="any" />
+  <property name="YOffset" value="-15" />
+  <property name="Tags" value="wilderness, blockdamage, chamberjen" />
+  <property name="TraderAreaTeleportSize" value="1, 1, 1" />
+  <property name="TraderAreaTeleportCenter" value="0, 0, 0" />
+  <property name="ThemeTags" value="traderJen" />
+  <property name="POIMarkerSize" value="3, 1, 1" />
+  <property name="POIMarkerStart" value="20, 14, 0" />
+  <property name="POIMarkerGroup" value="new" />
+  <property name="POIMarkerTags" value="" />
+  <property name="POIMarkerType" value="RoadExit" />
+  <property name="POIMarkerPartToSpawn" value="" />
+  <property name="POIMarkerPartRotations" value="2" />
+  <property name="POIMarkerPartSpawnChance" value="1" />
+  <property name="SleeperVolumeSize" value="11, 3, 11#9, 3, 6#9, 7, 8#25, 2, 9#8, 2, 1#7, 3, 17#1, 2, 6#9, 3, 10#1, 2, 1#1, 2, 4#10, 3, 11" />
+  <property name="SleeperVolumeStart" value="28, 10, 10#27, 6, 22#17, 5, 1#2, 5, 10#21, 7, 20#1, 5, 23#9, 5, 24#9, 7, 30#34, 5, 35#32, 5, 34#27, 6, 10" />
+  <property name="SleeperVolumeGroupId" value="0,0,0,0,0,0,0,0,0,0,0" />
+  <property name="SleeperVolumeGroup" value="GroupAOOT1,5,6,GroupzombieSkeletonsT1,5,6,GroupFish1,2,3,GroupFish1,6,7,GroupzombieSkeletonsT2,5,6,GroupAOOBoss,3,4,GroupzombieSkeletonsALL,5,6,GroupAOOBoss,2,3,GroupSkeletonBosses,1,2,GroupWeepers,2,3,GroupAOOT1,6,7" />
+  <property name="SleeperIsLootVolume" value="False,False,False,False,False,False,False,False,False,False,False" />
+  <property name="SleeperIsQuestExclude" value="False,False,False,False,False,False,False,False,False,False,False" />
+  <property name="SleeperVolumeFlags" value="0,2,0,2,3,0,3,0,3,3,0" />
+  <property name="SleeperVolumeTriggeredBy" value=" # # # #6,13# #7# #8#8# " />
+  <property name="TriggerVolumeSize" value="3, 2, 1#6, 3, 8#8, 4, 2" />
+  <property name="TriggerVolumeStart" value="11, 5, 22#19, 4, 32#6, 7, 19" />
+  <property name="TriggerVolumeTriggers" value="7#8#13" />
+  <property name="QuestTags" value="trader, orbdestroy, traderJen" />
+  <property class="IndexedBlockOffsets">
+    <property class="TraderOnOff">
+      <property name="0" value="37, 10, 35" />
+    </property>
+    <property class="POILight">
+      <property name="0" value="21, 11, 26" />
+      <property name="1" value="27, 18, 26" />
+      <property name="2" value="23, 19, 28" />
+      <property name="3" value="31, 18, 28" />
+      <property name="4" value="21, 11, 30" />
+      <property name="5" value="27, 18, 30" />
+      <property name="6" value="34, 7, 35" />
+    </property>
+    <property class="challenge_gore">
+      <property name="0" value="37, 6, 25" />
+    </property>
+    <property class="challenge_sinks">
+      <property name="0" value="29, 10, 38" />
+      <property name="1" value="30, 10, 38" />
+      <property name="2" value="31, 10, 38" />
+    </property>
+    <property class="quest_feather">
+      <property name="0" value="7, 16, 25" />
+    </property>
+    <property class="challenge_steel">
+      <property name="0" value="31, 15, 20" />
+      <property name="1" value="24, 24, 33" />
+    </property>
+    <property class="Rally">
+      <property name="0" value="21, 15, 2" />
+    </property>
+    <property class="challenge_polymers">
+      <property name="0" value="26, 15, 30" />
+    </property>
+    <property class="challenge_cars">
+      <property name="0" value="23, 15, 10" />
+    </property>
+    <property class="Trader">
+      <property name="0" value="35, 16, 17" />
+    </property>
+    <property class="challenge_mech_parts">
+      <property name="0" value="22, 21, 22" />
+      <property name="1" value="27, 15, 31" />
+    </property>
+    <property class="QuestRestorePower">
+      <property name="0" value="36, 15, 29" />
+    </property>
+    <property class="challenge_pallet">
+      <property name="0" value="23, 16, 32" />
+      <property name="1" value="23, 17, 32" />
+    </property>
+  </property>
+  <property class="Stats">
+    <property name="LightsVolume" value="13520.88" />
+    <property name="TotalVertices" value="1725334" />
+    <property name="TotalTriangles" value="777167" />
+    <property class="BlockEntities">
+      <property name="Vertices" value="1411920" />
+      <property name="Triangles" value="581000" />
+    </property>
+    <property class="ChunkMeshes0">
+      <property name="Vertices" value="269830" />
+      <property name="Triangles" value="168767" />
+    </property>
+    <property class="ChunkMeshes1">
+      <property name="Vertices" value="35712" />
+      <property name="Triangles" value="17856" />
+    </property>
+    <property class="ChunkMeshes2">
+      <property name="Vertices" value="2488" />
+      <property name="Triangles" value="1244" />
+    </property>
+    <property class="ChunkMeshes3">
+      <property name="Vertices" value="240" />
+      <property name="Triangles" value="120" />
+    </property>
+    <property class="ChunkMeshes4">
+      <property name="Vertices" value="0" />
+      <property name="Triangles" value="0" />
+    </property>
+    <property class="ChunkMeshes5">
+      <property name="Vertices" value="5144" />
+      <property name="Triangles" value="8180" />
+    </property>
+  </property>
+</prefab>

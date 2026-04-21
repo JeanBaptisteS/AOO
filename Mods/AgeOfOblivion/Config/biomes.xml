@@ -1,0 +1,69 @@
+<config>
+
+	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/subbiome[@noise='.0095, 0, .21']/decorations">
+		<decoration type="block" blockname="plantedStrawberryPlantHarvestAOO" prob="0.05"/>	
+		<decoration type="block" blockname="plantedRosePlantHarvestTSK_AOO" prob="0.02"/>
+		<decoration type="block" blockname="plantedFeverfewPlantHarvestTSK_AOO" prob="0.015"/>	
+		<decoration type="block" blockname="plantedEchinaceaPlantHarvestTSK_AOO" prob="0.015"/>			
+		<decoration type="block" blockname="plantedDevilsClawPlantHarvestTSK_AOO" prob="0.015"/>	
+		<decoration type="block" blockname="plantedCatsClawPlantHarvestTSK_AOO" prob="0.015"/>	
+		<decoration type="block" blockname="plantedValerianPlantHarvestTSK_AOO" prob="0.015"/>
+		<decoration type="block" blockname="plantedCarrotPlantHarvestAOO" prob="0.015"/>		
+	</append>	
+
+	<append xpath="/worldgeneration/biomes/biome[@name='pine_forest']/decorations">
+		<decoration type="prefab" name="AOO_Skitters"  onslopes="true" prob=".001" rotatemax="3"/>	
+		<decoration type="block" blockname="plantedWhiteOakTreePlantHarvestAOO" prob ="0.002"/>	
+		<decoration type="block" blockname="plantedSugarMapleTreePlantHarvestAOO" prob ="0.002"/>
+		<decoration type="block" blockname="plantedCarrotPlantHarvestAOO" prob="0.0005"/>
+<!--	<decoration type="block" blockname="plantedFeverfewPlantHarvestTSK_AOO" prob="0.0005"/>	
+		<decoration type="block" blockname="plantedEchinaceaPlantHarvestTSK_AOO" prob="0.0005"/>			
+		<decoration type="block" blockname="plantedDevilsClawPlantHarvestTSK_AOO" prob="0.0005"/>	
+		<decoration type="block" blockname="plantedCatsClawPlantHarvestTSK_AOO" prob="0.0005"/>	
+		<decoration type="block" blockname="plantedValerianPlantHarvestTSK_AOO" prob="0.0005"/> -->
+		<decoration type="block" blockname="TreeMonsterBlockAOO" prob ="0.0005"/> 
+		<!--<decoration type="block" blockname="cntCarcassForest_AOO" prob ="0.0007"/>-->
+	</append>
+
+	<append xpath="/worldgeneration/biomes/biome[@name='burnt_forest']/decorations">
+		<decoration type="prefab" name="AOO_Skitters"  onslopes="true" prob=".001" rotatemax="3"/>
+	</append>
+	
+	<append xpath="/worldgeneration/biomes/biome[@name='desert']/decorations">
+		<decoration type="prefab" name="AOO_Skitters"  onslopes="true" prob=".001" rotatemax="3"/>		
+<!--	<decoration type="prefab" name="AOO_Hole01"  onslopes="true" prob=".00005" rotatemax="3"/>	-->
+		<!--<decoration type="block" blockname="cntCarcassDesert_AOO" prob ="0.0005"/>	-->
+	</append>
+	
+	<append xpath="/worldgeneration/biomes/biome[@name='snow']/decorations">
+		<decoration type="prefab" name="AOO_Skitters"  onslopes="true" prob=".001" rotatemax="3"/>		
+<!--	<decoration type="prefab" name="SpiderSwarm2"  onslopes="true" prob=".0005" rotatemax="3"/>	
+		<decoration type="prefab" name="AOO_Hole01"  onslopes="true" prob=".001" rotatemax="3"/>	
+		<decoration type="block" blockname="cntOblivionCrate" prob="0.00002"/> -->
+		<decoration type="block" blockname="TreeMonsterBlockAOO" prob ="0.0005"/>	
+	</append>	
+	
+	<append xpath="/worldgeneration/biomes/biome[@name='wasteland']/decorations">
+		<decoration type="prefab" name="AOO_Skitters"  onslopes="true" prob=".001" rotatemax="3"/>		
+		<!--<decoration type="block" blockname="cntCarcassWasteland_AOO" prob ="0.0009"/>-->
+<!--	<decoration type="prefab" name="AOO_Hole01"  onslopes="true" prob=".001" rotatemax="3"/>	
+		<decoration type="block" blockname="cntOblivionCrate" prob="0.00008"/>	-->
+		<decoration type="block" blockname="TreeMonsterBlockAOO" prob ="0.0005"/> 
+	</append>			
+	
+	<append xpath="/worldgeneration/biomes/biome[@name='underwater']/decorations">
+		<decoration type="block" blockname="KyburCrystal_AOO" onslopes="true" prob="0.0005"/>
+		<decoration type="block" blockname="WaterSpawnTrigger_AOO" onslopes="true" prob="0.0015"/>	
+	</append>	
+
+
+	<append xpath="/worldgeneration/pois/poi[@name='City Asphalt']">
+		<blockontop blockname="cntVehicleBlocks" prob="0.001" rotatemax="3"/>
+	</append>	
+	<append xpath="/worldgeneration/pois/poi[@name='Country Road Asphalt']">
+		<blockontop blockname="cntVehicleBlocks" prob="0.001" rotatemax="3"/>
+	</append>	
+	<append xpath="/worldgeneration/pois/poi[@name='Road Gravel']">
+		<blockontop blockname="cntVehicleBlocks" prob="0.0002" rotatemax="3"/>
+	</append>		
+</config>

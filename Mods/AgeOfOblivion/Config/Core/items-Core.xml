@@ -1,0 +1,325 @@
+<configs>
+
+	<append xpath="/items/item[@name='masterSkillMagazine']">
+		<property name="Material" value="Magpaper"/>
+        <property name="Weight" value="1"/>	
+	</append>
+	
+	<append xpath="/items/item[@name='resourceLeather']/property[@name='Group']/@value">,Animals</append>
+	
+	<append xpath="/items">
+
+		<item name="ammoExplosionSmall">
+			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/AOO_VFX.unity3d?Energyexplosion$ammoExplosionSmall"/>
+				<property name="Explosion.AudioName" value="research_explosion"/>
+				<property name="Explosion.AudioDuration" value="1.7"/>
+				<property name="Explosion.SyncOnConnect" value="false"/>        
+				<property name="Explosion.RadiusBlocks" value="3"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="5"/> <!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.stone" value=".1"/>
+				<property name="Explosion.DamageBonus.metal" value=".05"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="1"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+			</property>
+			<effect_group name="ammoExplosionSmall" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkDemolitionsExpert"/>        
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/>    
+			</effect_group>
+		</item>
+		
+		<item name="ammoExplosionSmall2">
+			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>   
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke$ammoExplosionSmall2"/>
+				<property name="Explosion.AudioName" value="research_explosion"/>
+				<property name="Explosion.AudioDuration" value="1.7"/>
+				<property name="Explosion.SyncOnConnect" value="false"/>        
+				<property name="Explosion.RadiusBlocks" value="3"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="6"/> <!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.stone" value=".1"/>
+				<property name="Explosion.DamageBonus.metal" value=".05"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="1"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+			</property>
+			<effect_group name="ammoExplosionSmall" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="55" tags="perkDemolitionsExpert"/>        
+				<passive_effect name="BlockDamage" operation="base_set" value="200" tags="perkDemolitionsExpert"/>    
+			</effect_group>
+		</item>
+
+		<item name="ammoExplosion_Landmine">
+			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>  
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_Landmine$ammoExplosion_Landmine"/>
+				<property name="Explosion.AudioName" value="research_explosion"/>
+				<property name="Explosion.AudioDuration" value="1.7"/>
+				<property name="Explosion.SyncOnConnect" value="false"/>        
+				<property name="Explosion.RadiusBlocks" value="3"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="6"/> <!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.stone" value=".1"/>
+				<property name="Explosion.DamageBonus.metal" value=".05"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="1"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+			</property>
+			<effect_group name="ammoExplosionSmall" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="55" tags="perkDemolitionsExpert"/>        
+				<passive_effect name="BlockDamage" operation="base_set" value="200" tags="perkDemolitionsExpert"/>    
+			</effect_group>
+		</item>
+
+		<item name="ammoNukeExplosion">
+			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Nuke$ammoNukeExplosion"/>
+				<property name="Explosion.AudioName" value="Nuclear_explosion"/>
+				<property name="Explosion.AudioDuration" value="1.7"/>
+				<property name="Explosion.SyncOnConnect" value="false"/>        
+				<property name="Explosion.RadiusBlocks" value="30"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="24"/> <!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.stone" value="100"/>
+				<property name="Explosion.DamageBonus.metal" value="100"/>
+				<property name="Explosion.DamageBonus.earth" value="100"/>
+				<property name="Explosion.DamageBonus.wood" value="100"/>
+				<property name="Explosion.DamageBonus.water" value="100"/>
+			</property>
+			<effect_group name="ammoExplosionSmall" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="175" tags="perkDemolitionsExpert" />        
+				<passive_effect name="BlockDamage" operation="base_set" value="10000" tags="perkDemolitionsExpert" />    
+			</effect_group>
+		</item>
+
+
+		<item name="ammoGasExplosion_Green">
+			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/> 
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/AOO_VFX.unity3d?WFX_SmokeGrenade_Green$ammoGasExplosion_Green"/>
+				<property name="Explosion.AudioName" value="plasma_explosion"/>
+				<property name="Explosion.AudioDuration" value="1.7"/>
+				<property name="Explosion.SyncOnConnect" value="false"/>        
+				<property name="Explosion.RadiusBlocks" value="1"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="6"/> <!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.stone" value=".1"/>
+				<property name="Explosion.DamageBonus.metal" value=".05"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="1"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+			</property>
+			<effect_group name="ammoExplosionSmall" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1" tags="perkDemolitionsExpert"/>        
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/>    
+			</effect_group>
+		</item>
+
+		<item name="ammoGasExplosion_Blue">
+			<property name="Extends" value="ammoRocketHE"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="TraderStageTemplate" value="ammoTier1"/>
+			<property class="Action1">
+				<property name="Explosion.ParticleIndex" value="#@modfolder:Resources/AOO_VFX.unity3d?WFX_SmokeGrenade_Blue$ammoGasExplosion_Blue"/>
+				<property name="Explosion.AudioName" value="plasma_explosion"/>
+				<property name="Explosion.AudioDuration" value="1.7"/>
+				<property name="Explosion.SyncOnConnect" value="false"/>        
+				<property name="Explosion.RadiusBlocks" value="1"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="6"/> <!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.stone" value=".1"/>
+				<property name="Explosion.DamageBonus.metal" value=".05"/>
+				<property name="Explosion.DamageBonus.earth" value="0"/>
+				<property name="Explosion.DamageBonus.wood" value="1"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>
+			</property>
+			<effect_group name="ammoExplosionSmall" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1" tags="perkDemolitionsExpert"/>        
+				<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/>    
+			</effect_group>
+		</item>
+
+
+		<item name="scrapMagazine">
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="21"/>
+            <property name="Group" value="Special Items"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/bookPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Magpaper"/>
+            <property name="SellableToTrader" value="false"/>
+            <property name="Weight" value="1"/>
+            <property name="FuelValue" value="2"/>
+			<property name="DescriptionKey" value="AOOSkillPointDesc"/>
+		</item>	
+
+		<item name="AOOSkillPoint">
+            <property name="CreativeMode" value="Player"/>
+            <property name="HoldType" value="21"/>
+            <property name="Group" value="Special Items"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/bookPrefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab"/>
+            <property name="Material" value="Mpaper"/>
+            <property name="SellableToTrader" value="false"/>
+            <property name="Weight" value="2"/>
+            <property name="FuelValue" value="2"/>
+			<property name="CustomIcon" value="AOO-Logo-Red"/>
+			<property name="DescriptionKey" value="AOOSkillPointDesc"/>
+		</item>		
+
+		<item name="AOOQuestSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOQuestCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOQuestSkillsDesc"/>
+			<property name="Unlocks" value="AOOQuests"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOQuests" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOCraftingSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOCraftingCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOCraftingSkillsDesc"/>
+			<property name="Unlocks" value="AOOCrafting"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOCrafting" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOFarmingSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOFarmingCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOFarmingSkillsDesc"/>
+			<property name="Unlocks" value="AOOFarming"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOfarming" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOWeaponSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOWeaponCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOWeaponSkillsDesc"/>
+			<property name="Unlocks" value="AOOWeapons"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOWeapons" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOCookingSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOQCookingCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOCookingSkillsDesc"/>
+			<property name="Unlocks" value="AOOCooking"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOCooking" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOForgeSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOQForgeCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOForgeSkillsDesc"/>
+			<property name="Unlocks" value="AOOForge"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOForge" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOCloningSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOCloningCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOCloningSkillsDesc"/>
+			<property name="Unlocks" value="AOOCloning"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOCloning" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOPowerSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOQPowerCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOPowerSkillsDesc"/>
+			<property name="Unlocks" value="AOOPower"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOPower" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOAlchemySkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOAlchemyCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOAlchemySkillsDesc"/>
+			<property name="Unlocks" value="AOOAlchemy"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOAlchemy" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOHealthSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOHealthCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOHealthSkillsDesc"/>
+			<property name="Unlocks" value="AOOHealth"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOHealth" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+		<item name="AOOStaminaSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOStaminaCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOStaminaSkillsDesc"/>
+			<property name="Unlocks" value="AOOStamina"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOStamina" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>			
+
+		<item name="AOOToolSkills">
+			<property name="Extends" value="masterSkillMagazine"/>
+			<property name="Tags" value="AOOToolCSM"/>
+			<property name="CustomIcon" value="AOO-Logo-Blue"/>
+			<property name="DescriptionKey" value="AOOToolSkillsDesc"/>
+			<property name="Unlocks" value="AOOTools"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="AOOTools" level="1"/> <!-- level="-1" sets a perk to max level -->
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="250"/>
+			</effect_group>
+		</item>	
+
+	</append>
+	
+</configs>

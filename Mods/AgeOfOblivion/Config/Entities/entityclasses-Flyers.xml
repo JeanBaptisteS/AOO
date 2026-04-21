@@ -1,0 +1,54 @@
+<config>
+	<append xpath="/entity_classes" >
+
+		<entity_class name="zombieInsectAOO" extends="animalFlyingTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Flying.unity3d?Creature_Insect.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="monsterDensoptereAOO" extends="animalFlyingTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Flying.unity3d?Densoptere.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="monsterDrackmahreAOO" extends="animalFlyingTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="SizeScale" value="3"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Flying.unity3d?Drackmahre3.prefab"/>
+			<property name="HandItem" value="meleeHandDrackAOO"/>
+			<property name="RightHandJointName" value="Drackmahre_Head"/>			
+		</entity_class>	
+
+		<entity_class name="monsterMarhomorphAOO" extends="animalFlyingTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Flying.unity3d?Marhomorph.prefab"/> 
+			<property name="HandItem" value="meleeHandMantis"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=300"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>	
+		</entity_class>	
+
+		<entity_class name="monsterScyverAOO" extends="animalFlyingTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="HandItem" value="meleeHandGeist"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Flying.unity3d?Scyver.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="monsterVespomorphAOO" extends="animalFlyingTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+			<property name="Tags" value="entity,animal,hostile,template"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Flying.unity3d?Vespomorph.prefab"/> 
+		</entity_class>
+	
+	</append>
+</config>

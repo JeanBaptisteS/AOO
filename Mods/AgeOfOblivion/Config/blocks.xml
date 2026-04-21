@@ -1,0 +1,12 @@
+<configs>
+    <include filename="AdvancedPower/blocks-AdvancedPower.xml" />
+	<include filename="Core/blocks-Core.xml" />
+	<include filename="Crops/blocks-Crops.xml" />
+	<include filename="Entities/blocks-Entities.xml" />
+	<include filename="Vehicles/blocks-Vehicles.xml" />
+	<include filename="Workstations/blocks-Workstations.xml" />
+	<include filename="StorageDecor/blocks-Storage.xml" />
+	<include filename="StorageDecor/blocks-PropsDecor.xml" />
+	
+	<include filename="Entities/Animals/blocks-Animals.xml" />
+</configs>	

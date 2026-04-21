@@ -1,0 +1,1692 @@
+<configs>
+
+
+	<remove xpath="/buffs/buff[@name='buffLevelUpTracking']" />
+	<append xpath="/buffs">
+
+			<buff name="buffSoundCarnival" hidden="true">
+				<duration value="15"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="ComeIntoTheCarnivalAOO"/>
+			</effect_group>
+			</buff>
+			<buff name="buffSoundCoaster01" hidden="true">
+				<duration value="5"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="JumpScareAOO"/>
+			</effect_group>
+			</buff>
+			<buff name="buffSoundPlayAGame" hidden="true">
+				<duration value="15"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="IWantToPlayAGame"/>
+			</effect_group>
+			</buff>
+			<buff name="buffSoundLiveorDie" hidden="true">
+				<duration value="15"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="LiveOrDieMakeYourChoice"/>
+			</effect_group>
+			</buff>
+			<buff name="buffSoundWelcometomyworld" hidden="true">
+				<duration value="15"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Welcometomyworld"/>
+			</effect_group>
+			</buff>	
+
+	
+
+	
+	
+	
+
+	
+	
+		<buff name="buffPOIReset" hidden="true" >
+			<stack_type value="ignore"/>
+			<duration value="3"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="POIReset" >
+				</triggered_effect>					
+			</effect_group>			
+		</buff>
+		<buff name="buffSuicide" >
+			<stack_type value="replace"/>
+			<duration value="1" />
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="set" value="0">
+				</triggered_effect>	
+			</effect_group>
+		</buff>
+		<buff name="buffSuicideRandom" >
+			<stack_type value="replace"/>
+			<duration value="3" />
+			<update_rate value="1"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="0">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>				
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="set" value="0">
+				</triggered_effect>					
+			</effect_group>
+		</buff>
+
+		<buff name="buffSuicideDelayed" >
+			<stack_type value="replace"/>
+			<duration value="30" />
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="set" value="0">
+				</triggered_effect>					
+			</effect_group>
+		</buff>
+	
+		<buff name="buffSuicideBomb" >
+			<stack_type value="ignore"/>
+			<duration value="60" />
+			<update_rate value="10"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="0">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>				
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="set" value="0">
+				</triggered_effect>					
+			</effect_group>
+		</buff>		
+		<buff name="buffVehicleRecipes" >
+			<stack_type value="ignore"/>
+			<duration value="600"/>		
+			<update_rate value="1"/>
+			
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>				
+				
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW02Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW02Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW03Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW03Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW04Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW04Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW05Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW05Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW06Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW06Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW07Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW07Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW08Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW08Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW09Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRW09Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>				
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,8)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSuperCar01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSuperCar01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>				
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,8)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSuperCar02Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSuperCar02Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>				
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,8)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSuperCar03Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSuperCar03Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>				
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,20)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRocketToiletPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleRocketToiletPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>				
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,10)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleBatCar01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleBatCar01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,7)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSportsCarWhitePlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleSportsCarWhitePlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,7)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleCyberDeloreanPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleCyberDeloreanPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,7)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleHotRod01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleHotRod01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleFeature01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleFeature01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,2)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleBuggy01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleBuggy01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,3)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMuscleCar01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMuscleCar01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleApocRVPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleApocRVPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,4)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleHarleyPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleHarleyPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>			
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,4)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleChopperPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleChopperPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>			
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,4)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleApocTractorPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleApocTractorPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>		
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehiclePoliceCopterPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehiclePoliceCopterPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMotoPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMotoPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMCycle01Placeable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMCycle01Placeable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			<effect_group>	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RandomCVar" operation="set" value="randomint(1,5)">
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMotoPlaceable" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="Equals" value="1"/> 					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="vehicleMotoPlaceable" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RandomCVar" operation="NotEquals" value="1"/> 					
+				</triggered_effect>			
+			</effect_group>	
+			
+		
+			<effect_group>					
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffVehicleRecipes2" >
+				</triggered_effect>					
+			</effect_group> 
+		</buff>
+		<buff name="buffVehicleRecipes2" >
+			<duration value="1"/>
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffVehicleRecipes" >
+				</triggered_effect>		
+			</effect_group>
+					
+		</buff>
+		<buff name="buffLevelUpTracking" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="20"/>
+			<update_rate value=".1"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CreateItemSDX, SCore" item="AOOSkillPoint" count="1" >
+					<requirement name="PlayerLevel" operation="GT" value="@$LastPlayerLevel"/>
+				</triggered_effect>					
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$LastPlayerLevel" operation="add" value="1">
+					<requirement name="PlayerLevel" operation="GT" value="@$LastPlayerLevel"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromLootThisLevel" operation="set" value="@_xpFromLoot"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromHarvestingThisLevel" operation="set" value="@_xpFromHarvesting"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromKillThisLevel" operation="set" value="@_xpFromKill"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromLootThisLevel" operation="subtract" value="@$xpFromLootLast"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromHarvestingThisLevel" operation="subtract" value="@$xpFromHarvestingLast"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromKillThisLevel" operation="subtract" value="@$xpFromKillLast"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="XP gained during the last level:"/>
+				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$xpFromLootThisLevel"/>
+				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$xpFromHarvestingThisLevel"/>
+				<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$xpFromKillThisLevel"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromLootLast" operation="set" value="@_xpFromLoot"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromHarvestingLast" operation="set" value="@_xpFromHarvesting"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$xpFromKillLast" operation="set" value="@_xpFromKill"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$xpFromLootThisLevel" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$xpFromHarvestingThisLevel" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$xpFromKillThisLevel" operation="set" value="0"/>
+			</effect_group>
+		</buff>
+
+
+		<buff name="buffBegginerMode" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+			<display_value_key value="BeginnerMode"/> <display_value value="xxx"/>
+			<duration value="2"/>
+			<stack_type value="replace"/>		
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value="2"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="3"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="5"/>	
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary,secondary"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />			
+				<passive_effect name="StaminaMax" operation="perc_add" value="4" />
+			<!--	<passive_effect name="LootGamestage" operation="base_add" value="25"/> -->
+                <passive_effect name="CarryCapacity" operation="base_add" value="20"/>			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="25000"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="25000"/>			
+			</effect_group>
+		</buff>		
+		
+		<buff name="buffEarlygame" hidden="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffBegginerMode" >
+				<requirement name="PlayerLevel" operation="LTE" target="self"  value="10"/>	
+				</triggered_effect>
+			</effect_group>
+		</buff>
+
+			<buff name="buffAirDrop" hidden="true">
+				<duration value="1"/>
+				<update_rate value="1" />
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ExecuteConsoleCommand, SCore" command="SpawnAirdrop"/>
+			</effect_group>
+			</buff>
+
+
+			<buff name="buffSkitterQueen" hidden="true">
+				<update_rate value="6" />
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_SkitterQueen"/>
+			</effect_group>
+			</buff>
+
+
+			<buff name="buffAmusement" hidden="true">
+				<update_rate value="2" />
+				<stack_type value="ignore"/>				
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AmusementTempCVarAOO" operation="set" value="randomint(1,5)"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_AmusementSpawns1">
+						<requirement name="CVarCompare" cvar="InAmusement" operation="Equals" value="1"/>
+						<requirement name="CVarCompare" cvar="AmusementTempCVarAOO" operation="Equals" value="1"/>						
+					</triggered_effect>					
+				</effect_group>		
+
+			</buff>
+
+
+		<buff name="buffPlayerAOO" hidden="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RandomCVarAOO" operation="set" value="randomint(1,100)">
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_CheckPOI"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_SupplyCrate2">
+					<requirement name="CVarCompare" cvar="SCnear" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="SCSpawn" operation="NotEquals" value="1"/>					
+				</triggered_effect>
+			</effect_group>
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_CavesSpawnCheck">
+				</triggered_effect>					
+			</effect_group>				
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffCavesAOO">
+					<requirement name="CVarCompare" cvar="InCave" operation="Equals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>	
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffCavesAOO">
+					<requirement name="CVarCompare" cvar="InCave" operation="NotEquals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>					
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAmusement">
+					<requirement name="CVarCompare" cvar="InAmusement" operation="Equals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>				
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffAmusement">
+					<requirement name="CVarCompare" cvar="InAmusement" operation="NotEquals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>			
+
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffBlockDamage">
+					<requirement name="CVarCompare" cvar="NoBlockDamage" operation="Equals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>				
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffBlockDamage">
+					<requirement name="CVarCompare" cvar="NoBlockDamage" operation="NotEquals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>	
+			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="cave01" play_in_head="true">
+					<requirement name="CVarCompare" cvar="InCave" operation="Equals" value="1"/>						
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="StopSound" sound="cave01" play_in_head="true">
+					<requirement name="CVarCompare" cvar="InCave" operation="NotEquals" value="1"/>						
+				</triggered_effect>					
+			</effect_group>	
+			<effect_group>
+				<requirement name="CVarCompare" cvar="InAmusement" operation="Equals" value="1"/> 
+			
+				<triggered_effect trigger="onSelfBuffUpdate" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="ClownCarTriggerAOO" range="5,5,5" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="BumperCarTriggerAOO" range="5,5,5" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="BumperCar2TriggerAOO" range="5,5,5" directions="all"/>	
+
+			</effect_group>
+			
+			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="1">	
+					<requirement name="InBiome" biome="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="3">	
+					<requirement name="InBiome" biome="3"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="5">	
+					<requirement name="InBiome" biome="5"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="8">	
+					<requirement name="InBiome" biome="8"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="9">	
+					<requirement name="InBiome" biome="9"/>
+				</triggered_effect>						
+			</effect_group>		
+			<effect_group>			
+			<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="buffDeathTree" >
+				<requirement name="TriggerHasTags" tags="treemonster"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfDestroyedBlock" action="CallGameEvent" event="action_Balloon" >
+				<requirement name="TriggerHasTags" tags="Balloon"/>
+			</triggered_effect>		
+
+
+
+
+	
+			</effect_group>	
+		</buff>
+
+
+		<buff name="buffBlockDamage" hidden="true" >
+			<stack_type value="replace"/>
+				
+			<effect_group>		
+				<passive_effect name="BlockDamage" operation="perc_set" value="100"/> <!-- value="-95" -->
+			</effect_group>	
+			
+		</buff>
+
+
+
+		<buff name="buffRidePower" hidden="true" >
+			<stack_type value="ignore"/>
+			<duration value="5"/>
+				<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheCondorAOO" range="10,5,10" directions="all"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheOctopusAOO" range="10,5,10" directions="all"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyCoasterAOO" range="10,5,10" directions="all"/>
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheBoosterAOO" range="10,5,10" directions="all"/>			
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheFlyAwayAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheBreakDanceAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheFlyingCircusAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheFrisbeeAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheFreeFallAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyThePirateBoatAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheTakeoffAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheTopscanAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheTopspinAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheBigWheelAOO" range="10,5,10" directions="all"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="MinEventActionUpgradeBlockInRange, OblivionCore" block_name="decoyTheWildeMouseAOO" range="10,5,10" directions="all"/>	
+			</effect_group>				
+
+		</buff>
+		<buff name="buffCavesAOO" hidden="true" >
+			<stack_type value="ignore"/>
+			<duration value="15"/>
+			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="CaveCVar" operation="set" value="randomint(1,4)">
+				</triggered_effect>	
+			</effect_group>				
+				
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffRemove" action="CallGameEvent" event="action_CavesSpawns01">
+					<requirement name="CVarCompare" cvar="CaveCVar" operation="Equals" value="1"/>	
+					<requirement name="CVarCompare" cvar="spawncount" operation="LT" value="30"/>						
+				</triggered_effect>					
+			</effect_group>	
+			<effect_group>				
+				<triggered_effect trigger="onSelfBuffRemove" action="CallGameEvent" event="action_CavesSpawns02">
+					<requirement name="CVarCompare" cvar="CaveCVar" operation="Equals" value="2"/>	
+					<requirement name="CVarCompare" cvar="spawncount" operation="LT" value="30"/>						
+				</triggered_effect>					
+			</effect_group>			
+		</buff>
+
+
+
+		<buff name="buffArena_Darken" hidden="true" >
+			<stack_type value="replace"/>
+				
+			<effect_group>		
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Dark" intensity="1" fade=".01"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Dying" intensity="1" fade=".1"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade=".5"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dying" intensity="0" fade=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_Darken">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+
+
+				
+			</effect_group>	
+			
+		</buff>
+
+
+
+		
+		<!-- Arena Negative Effects -->
+
+		<buff name="buffArena_SlowPlayer" hidden="false" name_key="50% Slower" description_key="50% Slower" tooltip_key="50% Slower" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="WalkSpeed" operation="perc_add" value="-.5" />
+				<passive_effect name="RunSpeed" operation="perc_add" value="-.5" />
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="-.5" />
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_SlowPlayer">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+			</effect_group>	
+			
+		</buff>
+
+		<buff name="buffArena_ReduceDamageGiven" hidden="false" name_key="Do 50% Less Damage" description_key="Do 50% Less Damage" tooltip_key="Do 50% Less Damage" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_ReduceDamageGiven">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>			
+			</effect_group>			
+		</buff>
+		
+		
+		<buff name="buffArena_MaxHealth" hidden="false" name_key="50% Less Max Health" description_key="buffArena_MaxHealthDesc" tooltip_key="buffArena_MaxHealthTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="HealthMax" operation="perc_add" value="-.5"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_MaxHealth">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>		
+		
+		<buff name="buffArena_Melee" hidden="false" name_key="buffArena_SlowPlayerName" description_key="buffArena_SlowPlayerDesc" tooltip_key="buffArena_SlowPlayerTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+			<!-- -->
+			</effect_group>			
+		</buff>		
+		
+		<buff name="buffArena_Ranged" hidden="false" name_key="buffArena_SlowPlayerName" description_key="buffArena_SlowPlayerDesc" tooltip_key="buffArena_SlowPlayerTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+			<!-- -->
+			</effect_group>			
+		</buff>		
+		
+
+
+
+
+		<buff name="buffArena_Bleeding" name_key="Non Stop Bleeding!" description_key="Non Stop Bleeding!" tooltip_key="Non Stop Bleeding!" icon="ui_game_symbol_critical" icon_color="255,0,0" >
+			<display_value_key value="∞"/> <display_value value="xxx"/>
+			<damage_type value="bloodloss"/>
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
+				<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="1" />
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffArena_Bleeding"/>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_Bleeding">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>
+		</buff>
+		
+
+		<buff name="buffArena_FastEnemy" hidden="false" name_key="Faster Enemies" description_key="Faster Enemies" tooltip_key="Faster Enemies" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+				<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="80" buff="buffArena_FastEnemyEffect">
+					<requirement name="!EntityTagCompare" target="other" tags="player,trader,vehicle"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_FastEnemy">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" range="80" buff="buffArena_FastEnemyEffect">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>
+			</effect_group>				
+		</buff>			
+		<buff name="buffArena_FastEnemyEffect" hidden="false" name_key="buffArena_SlowPlayerName" description_key="buffArena_SlowPlayerDesc" tooltip_key="buffArena_SlowPlayerTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+				<effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".5" />
+				<passive_effect name="RunSpeed" operation="perc_add" value=".5" />
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".5" />
+			</effect_group>	
+		</buff>	
+
+		<buff name="buffArena_StrongEnemy" hidden="false" name_key="Stronger Enemies" description_key="Stronger Enemies" tooltip_key="Stronger Enemies" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="80" buff="buffArena_StrongEnemyEffect">
+					<requirement name="!EntityTagCompare" target="other" tags="player,trader,vehicle"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_StrongEnemy">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" range="80" buff="buffArena_StrongEnemyEffect">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+			</effect_group>	
+		</buff>			
+		<buff name="buffArena_StrongEnemyEffect" hidden="false" name_key="buffArena_SlowPlayerName" description_key="buffArena_SlowPlayerDesc" tooltip_key="buffArena_SlowPlayerTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			</effect_group>		
+		</buff>
+		
+		<buff name="buffArena_Teleport" hidden="false" name_key="Random Teleport" description_key="Random Teleport" tooltip_key="Random Teleport" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="2"/>
+			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_Arena_Teleport" >
+									<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>						
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_Teleport">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>			
+		
+		
+		<buff name="buffArena_ExplodeOnDeath" hidden="false" name_key="Enemies Explode on Death" description_key="Enemies Explode on Death" tooltip_key="Enemies Explode on Death" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="80" tags="zombie" buff="buffArena_ExplodeOnDeathEffect">
+				</triggered_effect>		
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_ExplodeOnDeath">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" tags="zombie" range="80" buff="buffArena_ExplodeOnDeathEffect">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+			</effect_group>				
+		</buff>	
+		
+		
+		<buff name="buffArena_ExplodeOnDeathEffect" hidden="false" name_key="buffArena_SlowPlayerName" description_key="buffArena_SlowPlayerDesc" tooltip_key="buffArena_SlowPlayerTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<triggered_effect trigger="onSelfDied" action="RangedExplosion, CustomParticleLoader" particle_index="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke$ammoExplosionSmall2" delay="0" />	
+			</effect_group>			
+		</buff>	
+
+
+		<buff name="buffArena_LooseHands" hidden="false" name_key="Loose Hands" description_key="Loose Hands - Randomly Drop your Weapon" tooltip_key="Loose Hands - Randomly Drop your Weapon" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+
+				<effect_group>
+				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_dropweapon" >
+						<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="2"/>
+					</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_LooseHands">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+				</effect_group>
+		
+		</buff>			
+
+		<buff name="buffArena_HeadShotsOnly" hidden="false" name_key="Head Shots Only" description_key="Head Shots Only" tooltip_key="Head Shots Only" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="HeadShotOnly" operation="base_set" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_HeadShotsOnly">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffArena_RagdollOnMiss" hidden="false" name_key="Ragdoll on Miss" description_key="You miss?  You fall down!" tooltip_key="You miss?  You fall down!" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<triggered_effect trigger="onSelfPrimaryActionRayMiss" action="Ragdoll" duration=".3">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayMiss" action="Ragdoll" duration=".3">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedBlock" action="Ragdoll" duration=".3">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_RagDollOnMiss">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>		
+		</buff>
+
+
+		<buff name="buffArena_Radiation" hidden="false" name_key="Radiation" description_key="Non Stop Radiation" tooltip_key="Non Stop Radiation" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<damage_type value="radiation"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value="2"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="2" />
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".45" fade="2"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="infectionCounter" operation="add" value="25">
+					<requirement name="HasBuff" buff="buffInfectionMain"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_Radiation">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>		
+		</buff>
+		<buff name="buffArena_SlowReload" hidden="false" name_key="Slow Reload" description_key="Reload 60% slower" tooltip_key="Reload 60% slower" icon="ui_game_symbol_critical" icon_color="255,0,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_subtract" value=".6"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_SlowReload">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>
+
+			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="firingMode"/>
+				<passive_effect name="MagazineSize" operation="perc_subtract" value=".5"/>
+			</effect_group>		
+		</buff>	
+
+
+		<buff name="buffArena_BadJump" hidden="false" name_key="Bad Jump" description_key="75% Less Jump Strength" tooltip_key="75% Less Jump Strength" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value=".75"/>
+
+				<triggered_effect trigger="onSelfJump" action="ModifyStats" stat="Stamina" operation="subtract" value="4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_BadJump">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>		
+		</buff>
+
+
+		
+		<!-- Arena Positive Effects -->
+
+		<buff name="buffArena_HealthSteal" hidden="false" name_key="Health Steal" description_key="15% Health Steal" tooltip_key="15% Health Steal" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<passive_effect name="HealthSteal" operation="base_set" value="0.15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_HealthSteal">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>		
+		</buff>	
+
+		<buff name="buffArena_SlowEnemy" hidden="false" name_key="Slow Enemies" description_key="Enemies Sloowed by 25%" tooltip_key="Enemies Sloowed by 25%" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="80" buff="buffArena_SlowEnemyEffect">
+					<requirement name="!EntityTagCompare" target="other" tags="player,trader,vehicle"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_SlowEnemy">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="selfAOE" range="80" buff="buffArena_SlowEnemyEffect">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>	
+		</buff>			
+
+		<buff name="buffArena_SlowEnemyEffect" hidden="false" name_key="buffArena_SlowPlayerName" description_key="buffArena_SlowPlayerDesc" tooltip_key="buffArena_SlowPlayerTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="-.25" />
+				<passive_effect name="RunSpeed" operation="perc_add" value="-.25" />
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="-.25" />
+			</effect_group>	
+		</buff>	
+
+		<buff name="buffArena_Jump" hidden="false" name_key="More Jump" description_key="Jump Strength Increased by 175%" tooltip_key="Jump Strength Increased by 175%" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>
+				<passive_effect name="JumpStrength" operation="perc_add" value="1.75"/>
+				<passive_effect name="Mobility" operation="perc_add" value=".75"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_Jump">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>		
+		</buff>
+
+		<buff name="buffArena_IncreasedDamageGiven" hidden="false" name_key="More Damage" description_key="Do 25% more Damage" tooltip_key="Do 25% more Damage" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="EntityDamage" operation="perc_add" value=".25"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_IncreasedDamageGiven">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffArena_FastPlayer" hidden="false" name_key="Speedy Gonzales" description_key="Move 35% faster" tooltip_key="Move 35% faster" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".35" />
+				<passive_effect name="RunSpeed" operation="perc_add" value=".35" />
+				<passive_effect name="CrouchSpeed" operation="perc_add" value=".35" />	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_FastPlayer">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffArena_IncreasedHealthRegen" hidden="false" name_key="Health Regen" description_key="Regenerate Health Faster" tooltip_key="Regenerate Health Faster" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="HealthChangeOT" operation="base_add" value="10"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_IncreasedHealthRegen">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>	
+
+
+		<buff name="buffArena_BetterMelee" hidden="false" name_key="Better Melee" description_key="Melee and Fist Kick Ass" tooltip_key="Melee and Fist Kick Ass" icon="ui_game_symbol_critical" icon_color="0,255,0"  >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			
+			<effect_group>			
+				<passive_effect name="EntityDamage" operation="perc_add" value="20" tags="melee,perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="1" tags="melee,perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArena_BetterMelee">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>	
+<!--
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="1" effect_name="Vibrant"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Vibrant"/>
+-->				
+
+
+
+
+<!-- ================================================================= -->
+
+		<buff name="buffArenaAOO" hidden="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<!-- ===== Arena 1 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_UnstoppableAOO">
+					<requirement name="CVarCompare" cvar="Arena1" operation="Equals" value="1"/>
+				</triggered_effect>
+				
+				<!-- ===== Arena 2 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_UnleashedAOO">
+					<requirement name="CVarCompare" cvar="Arena2" operation="Equals" value="1"/>
+				</triggered_effect>
+				
+				<!-- ===== Arena 3 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_AriseAOO">
+					<requirement name="CVarCompare" cvar="Arena3" operation="Equals" value="1"/>
+				</triggered_effect>				
+
+				<!-- ===== Arena 4 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_ActionAOO">
+					<requirement name="CVarCompare" cvar="Arena4" operation="Equals" value="1"/>
+				</triggered_effect>	
+
+				<!-- ===== Arena 5 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_FightAOO">
+					<requirement name="CVarCompare" cvar="Arena5" operation="Equals" value="1"/>
+				</triggered_effect>					
+				<!-- ===== Arena 6 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_GetReadyAOO">
+					<requirement name="CVarCompare" cvar="Arena6" operation="Equals" value="1"/>
+				</triggered_effect>					
+				<!-- ===== Arena 7 ===== -->
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Music_JumpAOO">
+					<requirement name="CVarCompare" cvar="Arena7" operation="Equals" value="1"/>
+				</triggered_effect>					
+				
+				<!-- ===== End Buff ===== -->
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArenaAOO">
+					<requirement name="CVarCompare" cvar="InArena" operation="Equals" value="2"/>
+				</triggered_effect>			
+				
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_UnstoppableAOO"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_UnleashedAOO"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_AriseAOO"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_FightAOO"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_ActionAOO"/>	
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_GetReadyAOO"/>				
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="Music_JumpAOO"/>
+
+				
+			</effect_group>
+		
+		</buff>
+
+
+		<buff name="buffStopArenaSound" hidden="true" >
+			<stack_type value="replace"/>
+			<duration value="2"/>
+		
+	
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_UnstoppableAOO" />
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_UnleashedAOO" />
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_AriseAOO" />
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_FightAOO" />
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_ActionAOO" />
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_GetReadyAOO" />		
+				<triggered_effect trigger="onSelfBuffStart" action="StopSound" sound="Music_JumpAOO"/>				
+			</effect_group>
+			
+			
+		</buff>
+
+
+
+		<buff name="buffRespawn" hidden="true" >
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="ILiveAgain" />
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="ArenaStage" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_Arena_02_StageFinal" />
+			</effect_group>			
+			<effect_group>
+				<requirement name="CVarCompare" cvar="ArenaStageT1" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_Arena_01_StageFinal" />
+			</effect_group>				
+		</buff>
+
+
+
+
+		<buff name="buffPlayerAOOSkills" hidden="true" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffBegginerMode" >
+				<requirement name="PlayerLevel" operation="Equals" target="self"  value="5"/>	
+				</triggered_effect>
+			</effect_group>
+		</buff>
+
+		<buff name="buffUnlockBlack" hidden="true" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockBlack"/>
+			</effect_group>
+		</buff>
+		<buff name="buffUnlockBlue" hidden="true" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockBlue"/>
+			</effect_group>
+		</buff>
+		<buff name="buffUnlockRed" hidden="true" >
+			<stack_type value="replace"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_UnlockRed"/>
+			</effect_group>
+		</buff>
+
+
+		<buff name="buffWaterSpawns" hidden="true">
+			<update_rate value="4" />
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="MinEventActionDowngradeBlockInRange, OblivionCore" block_name="WaterSpawnTrigger_AOO" range="35,10,35" directions="all" />
+			</effect_group>
+		</buff>
+		<buff name="buffAmusementSpawns" hidden="true">
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_AmusementSpawns3" />
+			</effect_group>
+		</buff>
+
+		
+		<buff name="buffGameStage" hidden="true">
+			<update_rate value="3" />
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_GameStage" />
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL1">
+					<requirement name="PlayerLevel" operation="GTE" value="20"/>
+					<requirement name="PlayerLevel" operation="LT" value="40"/>					
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL2">
+					<requirement name="PlayerLevel" operation="GTE" value="40"/>
+					<requirement name="PlayerLevel" operation="LT" value="60"/>					
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL3">
+					<requirement name="PlayerLevel" operation="GTE" value="60"/>
+					<requirement name="PlayerLevel" operation="LT" value="80"/>					
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL4">
+					<requirement name="PlayerLevel" operation="GTE" value="80"/>
+					<requirement name="PlayerLevel" operation="LT" value="100"/>					
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL5">
+					<requirement name="PlayerLevel" operation="GTE" value="100"/>
+					<requirement name="PlayerLevel" operation="LT" value="120"/>					
+				</triggered_effect>				
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL6">
+					<requirement name="PlayerLevel" operation="GTE" value="120"/>
+					<requirement name="PlayerLevel" operation="LT" value="140"/>					
+				</triggered_effect>				
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL7">
+					<requirement name="PlayerLevel" operation="GTE" value="140"/>
+					<requirement name="PlayerLevel" operation="LT" value="160"/>					
+				</triggered_effect>				
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL8">
+					<requirement name="PlayerLevel" operation="GTE" value="160"/>
+					<requirement name="PlayerLevel" operation="LT" value="180"/>					
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL9">
+					<requirement name="PlayerLevel" operation="GTE" value="180"/>
+					<requirement name="PlayerLevel" operation="LT" value="200"/>					
+				</triggered_effect>				
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL10">
+					<requirement name="PlayerLevel" operation="GTE" value="200"/>
+					<requirement name="PlayerLevel" operation="LT" value="220"/>					
+				</triggered_effect>				
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL11">
+					<requirement name="PlayerLevel" operation="GTE" value="220"/>
+					<requirement name="PlayerLevel" operation="LT" value="240"/>	
+				</triggered_effect>	
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL12">
+					<requirement name="PlayerLevel" operation="GTE" value="240"/>
+					<requirement name="PlayerLevel" operation="LT" value="260"/>	
+				</triggered_effect>	
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL13">
+					<requirement name="PlayerLevel" operation="GTE" value="260"/>
+					<requirement name="PlayerLevel" operation="LT" value="280"/>	
+				</triggered_effect>	
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL14">
+					<requirement name="PlayerLevel" operation="GTE" value="280"/>
+					<requirement name="PlayerLevel" operation="LT" value="300"/>	
+				</triggered_effect>	
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" tags="zombie" range="50" buff="buffEntityPL15">
+					<requirement name="PlayerLevel" operation="GTE" value="300"/>
+
+				</triggered_effect>	
+
+				
+			</effect_group>
+		</buff>
+
+
+		
+		<buff name="buffEntityPL1" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="2"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL1_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL1_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="2"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+		
+		<buff name="buffEntityPL2" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="3"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL2_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL2_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>		
+		
+		<buff name="buffEntityPL3" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="4"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL3_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL3_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="4"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>			
+		
+		<buff name="buffEntityPL4" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="5"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL4_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL4_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="5"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>			
+		
+		<buff name="buffEntityPL5" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="6"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL5_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL5_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="6"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>			
+
+		<buff name="buffEntityPL6" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="7"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL6_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL6_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="7"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>	
+
+		<buff name="buffEntityPL7" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="8"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL7_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL7_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="8"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL8" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="9"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL8_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL8_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="9"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL9" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="10"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL9_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL9_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL10" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="11"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL10_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL10_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="11"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL11" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="12"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL11_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL11_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="12"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL12" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="13"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL12_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL12_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="13"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL13" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="14"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL13_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL13_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="14"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+		<buff name="buffEntityPL14" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="15"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL14_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL14_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="15"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL15" hidden="true">
+			<duration value="1"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="EntityGS" operation="LT" value="16"/>				
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffEntityPL15_Start"/>
+				
+			</effect_group>
+		</buff>
+		<buff name="buffEntityPL15_Start" hidden="true">
+			<duration value="2"/>	
+			<stack_type value="ignore"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="EntityGS" operation="set" value="16"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="5000"/>				
+				
+			</effect_group>
+		</buff>
+
+<!-- ======================================= Pet Buffs ================================================= -->
+
+
+			<buff name="buffPetAOE" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+				<display_value_key value="PetAOE"/> <display_value value="xxx"/>
+				<stack_type value="ignore"/>
+			    <update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffPetHealth" />	
+					<requirement name="CVarCompare" cvar="Leader" operation="NotEquals" value="0"/>
+					<requirement name="EntityTagCompare" target="self" tags="buffHealth"/>
+				</effect_group>
+				
+				<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffPetStamina" />	
+					<requirement name="CVarCompare" cvar="Leader" operation="NotEquals" value="0"/>
+					<requirement name="EntityTagCompare" target="self" tags="buffStamina"/>
+				</effect_group>	
+				
+				<effect_group>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffPetSpeed" />	
+					<requirement name="CVarCompare" cvar="Leader" operation="NotEquals" value="0"/>
+					<requirement name="EntityTagCompare" target="self" tags="buffSpeed"/>
+				</effect_group>	
+				
+				<effect_group>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffPetLoot" />	
+					<requirement name="CVarCompare" cvar="Leader" operation="NotEquals" value="0"/>
+					<requirement name="EntityTagCompare" target="self" tags="buffLoot"/>
+				</effect_group>	
+				
+				<effect_group>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="buffPetChimp" />	
+					<requirement name="CVarCompare" cvar="Leader" operation="NotEquals" value="0"/>
+					<requirement name="EntityTagCompare" target="self" tags="buffChimp"/>
+				</effect_group>	
+			</buff>	
+
+			<buff name="buffPetChimp" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+				<display_value_key value="PetChimp"/> <display_value value="xxx"/>
+				<stack_type value="replace"/>
+				<duration value="10"/>	
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="4"/>	
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>
+				<effect_group>
+					<passive_effect name="StaminaChangeOT" operation="base_add" value="4"/>	
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>				
+				<effect_group>
+					<passive_effect name="RunSpeed" operation="perc_add" value="0.6" />
+					<passive_effect name="WalkSpeed" operation="perc_add" value="0.6" />	
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>				
+				<effect_group>
+					<passive_effect name="LootStage" operation="perc_add"  value=".4"/>
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>				
+			</buff>
+
+			<buff name="buffPetHealth" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+				<display_value_key value="PetHealth"/> <display_value value="xxx"/>
+				<stack_type value="replace"/>
+				<duration value="10"/>	
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="2"/>	
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>
+			</buff>	
+			
+			<buff name="buffPetStamina" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+				<display_value_key value="PetStamina"/> <display_value value="xxx"/>
+				<stack_type value="replace"/>
+				<duration value="10"/>	
+				<effect_group>
+					<passive_effect name="StaminaChangeOT" operation="base_add" value="2"/>	
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>
+			</buff>	
+			
+			<buff name="buffPetSpeed" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+				<display_value_key value="PetSpeed"/> <display_value value="xxx"/>
+				<stack_type value="replace"/>
+				<duration value="10"/>	
+				<effect_group>
+					<passive_effect name="RunSpeed" operation="perc_add" value="0.3" />
+					<passive_effect name="WalkSpeed" operation="perc_add" value="0.3" />	
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>
+			</buff>	
+			
+			<buff name="buffPetLoot" icon="ui_game_symbol_destruction2" icon_color="132,0,155">
+				<display_value_key value="PetLoot"/> <display_value value="xxx"/>
+				<stack_type value="replace"/>
+				<duration value="10"/>	
+				<effect_group>
+					<passive_effect name="LootStage" operation="perc_add"  value=".2"/>
+					<requirement name="EntityTagCompare" target="self" tags="player"/>				
+				</effect_group>
+			</buff>	
+
+
+
+
+	</append>
+</configs>	
+				<!--	<requirement name="CVarCompare" cvar="myGS" operation="Equals" value="50"/> -->

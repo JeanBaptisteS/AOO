@@ -1,0 +1,264 @@
+<config>
+	<append xpath="/entity_classes" >
+	
+		<!--<entity_class name="zombieSkitterAOO" extends="animalHostileTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral,skitter1"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 	
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Arack.prefab"/> 
+			<property name="MoveSpeed" value="0.6"/> 
+			<property name="MoveSpeedAggro" value="0.95, 3"/> 
+			<property name="MoveSpeedRand" value="-.1, .25"/> 
+			<property name="JumpMaxDistance" value="0, 0"/>	
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundHurt" value="Spider_HurtOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundGiveUp" value=""/>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="15"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="2"/>				
+			</effect_group>	
+		</entity_class>	-->
+
+
+		<entity_class name="zombieStrongAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect08,zstrong"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Monster_05.prefab"/>
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRandomMesh3"/> 
+			</effect_group>
+		</entity_class>		
+
+		<entity_class name="zombieMutatedZAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral,MutatedZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?MutantZ.prefab"/> 
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRandomMesh3"/> 
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBrutalButcherAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?BrutalButcher.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="zombieFreakyLadyAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?FreakyLady.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="zombieCrazyDoctorAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?CrazyDoctor.prefab"/> 
+		</entity_class>
+
+		<entity_class name="zombieOgreAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?FatOgre.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="zombieGhoulAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Ghoul.prefab"/> 
+		</entity_class>	
+
+		<!--<entity_class name="zombieSavageWerewolfAOO" extends="animalHostileTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="HandItem" value="meleeHandButcherAOO"/>
+			<property name="RootMotion" value="false"/>			
+			<property name="WalkType" value="2"/>
+			<property name="Faction" value="undead"/>
+			<property name="EntityFlags" value="zombie"/>
+			<property name="HasRagdoll" value="false"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?SavageWerewolf"/> 
+		</entity_class>	-->
+
+		<entity_class name="zombieSpikeAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Monster_4.prefab"/> 
+		</entity_class>			
+
+		<entity_class name="zombieVampireAOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>	
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Vampire.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="zombieVampire2AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Vampire2.prefab"/> 
+		</entity_class>	
+
+		<!--<entity_class name="zombieTreeMonsterAOO" extends="animalHostileTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?TreeMonster"/>
+
+			<effect_group>
+            <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTreeMonster" />
+			</effect_group>					
+		</entity_class>-->	
+
+		<!-- === Bosses === -->
+
+		<entity_class name="zombieBoss_01AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect08,zboss"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Monster_01.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBoss_02AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect08,zboss"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Monster_02.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBoss_03AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect08,zboss"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Monster_03.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBoss_04AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect08,zboss"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Monster_04.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBoss_05AOO" extends="animalHostileTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,zboss"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Creature_SlugN.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBoss_06AOO" extends="animalHostileTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,zboss"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Creature_MutantN.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="zombieBoss_07AOO" extends="zombieTemplateAOO">
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,zboss"/>			
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?JuggernautN.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="10000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="75"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieBoss_08AOO" extends="zombieTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,zboss"/>			
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?CockroachN.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="8000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="75"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieBoss_09AOO" extends="zombieTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,zboss"/>			
+			<property name="UserSpawnType" value="Menu"/>		
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>	
+			<property name="LookAtAngle" value="0"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_Special.unity3d?Reptile.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="9000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="20"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="75"/>
+			</effect_group>
+	
+		</entity_class>	
+
+
+		<entity_class name="zombieWendigo1AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/Wendigo.unity3d?Wendigo1.prefab"/> 
+		</entity_class>	
+
+		<entity_class name="zombieWendigo2AOO" extends="zombieTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,AOOZ"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/Wendigo.unity3d?Wendigo2.prefab"/> 
+		</entity_class>	
+	
+	</append>
+</config>

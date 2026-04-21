@@ -1,0 +1,5 @@
+<config>
+
+	<include filename="Entities/npc-Entities.xml" />
+
+</config>

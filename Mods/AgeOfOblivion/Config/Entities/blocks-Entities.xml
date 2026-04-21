@@ -1,0 +1,986 @@
+<config>
+	<append xpath="/blocks">
+
+		<block name="emptySpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="AOO-Logo"/>
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="Stabilitysupport" value="true"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder(0-SCore):Resources/PathingCube.unity3d?PathingCube"/>
+		</block>
+
+
+<!-- ============================================================== -->	
+<!-- ===================    Animal Carcass    ===================== -->
+<!-- ============================================================== -->	
+
+
+		<!--<block name="cntCarcassTemplate_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true"/> 
+		</block>
+		
+		<block name="cntCarcassForest_AOO" extends="cntCarcassTemplate_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true"/> 		
+		</block>
+		<block name="cntCarcassSnow_AOO" extends="cntCarcassTemplate_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true"/> 	
+		</block>
+		<block name="cntCarcassDesert_AOO" extends="cntCarcassTemplate_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true"/>  		
+		</block>			
+		<block name="cntCarcassWasteland_AOO" extends="cntCarcassTemplate_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true"/> 		
+		</block>		-->
+
+		<!--<block name="carcassTemplate_AOO">
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="goreBlockAnimal" />
+			<property name="Group" value="All"/>
+			<property name="FilterTags" value="fother"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="Material" value="Mbedrock"/>
+			<property name="StabilitySupport" value="true"/>			
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<drop event="Destroy" count="0" />
+			<property class="RepairItems">
+				<property name="resourceWood" value="10"/>
+			</property>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Gore/animalRemainsGorePrefab"/>
+			<property name="CanPickup" value="true" parameter="resourceCarcassBear_AOO"/> 
+		</block>
+
+		<block name="carcassBear_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassIbex_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassDeer_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassElephant_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassGoat_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" />  
+		</block>
+		<block name="carcassWolf_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassRabbit_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+
+		<block name="carcassBuffalo_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassScorpion_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassCow_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassPig_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassRhino_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+	
+		<block name="carcassScotCow_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>	
+		<block name="carcassTiger_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassCamel_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" />  
+		</block>
+		<block name="carcassPenguin_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" />  
+		</block>
+		<block name="carcassSpider_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassChicken_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" />  
+		</block>
+		<block name="carcassGoose_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassTurtle_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+
+		<block name="carcassSheep_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassComodo_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>
+		<block name="carcassLeopard_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" />  
+		</block>
+		<block name="carcassZebra_AOO">
+			<property name="Extends" value="carcassTemplate_AOO"/>	
+			<property name="CanPickup" value="true" /> 
+		</block>	-->
+
+
+	<!-- =========== Wild Animals ============== -->
+		<block name="RandomAnimalSpawner_AOO">
+			<property name="Group" value="All,Random"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="AOO-Logo" />
+			<property name="Config" value="eg=RandomAnimalAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?BrownBear"/>	
+		</block>
+		<block name="WildBrownBearSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="BrownBear" />
+			<property name="Config" value="ec=WildBearAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?BrownBear"/>	
+		</block>
+		<block name="WildIbexSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Ibex" />
+			<property name="Config" value="ec=WildIbexAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Ibex"/> 
+		</block>
+		<block name="WildDeerFemaleSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Deer_female" />
+			<property name="Config" value="ec=animalDoe;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Deer_female"/> 
+		</block>
+		<block name="WildDeerMaleSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Deer_male" />
+			<property name="Config" value="ec=animalStag;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Deer_male"/> 
+		</block>
+		<block name="WildElephantSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Elephant" />
+			<property name="Config" value="ec=WildElephantAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Elephant"/> 
+		</block>
+		<block name="WildWolfSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Wolf" />
+			<property name="Config" value="ec=WildWolfAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Wolf"/> 
+		</block>
+		<block name="WildGoatSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Goat" />
+			<property name="Config" value="ec=WildGoatAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Goat"/> 
+		</block>
+		<block name="WildRabbitSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Wild_rabbit" />
+			<property name="Config" value="ec=animalRabbit;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Wild_rabbit"/> 
+		</block>
+		<block name="WildCapeBuffaloSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Cape_buffalo" />
+			<property name="Config" value="ec=WildCapeBuffaloAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Cape_buffalo"/> 
+		</block>
+		<!--<block name="WildCelticWolfhoundSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Celtic_wolfhound" />
+			<property name="Config" value="ec=WildCelticWolfhoundAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Celtic_wolfhound"/> 
+		</block>-->
+		<block name="WildScorpionSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Scorpion1" />
+			<property name="Config" value="ec=WildScorpionAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Scorpion1"/> 
+		</block>
+		<block name="WildLonghornCattleSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Longhorn_cattle_v1" />
+			<property name="Config" value="ec=WildLonghornCattleAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Longhorn_cattle_v1"/> 
+		</block>
+		<block name="WildPigSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Mud_pig_v2" />
+			<property name="Config" value="ec=WildPigAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Mud_pig_v2"/> 
+		</block>
+		<block name="WildRhinoSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Rhinoceros" />
+			<property name="Config" value="ec=WildRhinoAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Rhinoceros"/> 
+		</block>
+		<block name="WildScottlandCattleSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Scottland_cattle" />
+			<property name="Config" value="ec=WildScottlandCattleAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Scottland_cattle"/> 
+		</block>
+		<block name="WildTigerSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Tiger" />
+			<property name="Config" value="ec=WildTigerAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Tiger"/> 
+		</block>
+		<block name="WildCamelSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Camel" />
+			<property name="Config" value="ec=WildCamelAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Camel"/> 
+		</block>
+
+		<block name="WildPenguinSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Penguin" />
+			<property name="Config" value="ec=WildPenguinAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Penguin"/> 
+		</block>
+
+		<block name="WildSpidersSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="spider01" />
+			<property name="Config" value="eg=WildSpiders;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?spider01"/> 
+		</block>
+		<block name="WildChickensSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Chicken_v1" />
+			<property name="Config" value="eg=WildChickens;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Chicken_v1"/> 
+		</block>
+		<!--<block name="WildGooseSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Goose" />
+			<property name="Config" value="ec=WildGooseAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Goose"/> 
+		</block>-->
+
+		<block name="WildTurtleSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Turtle" />
+			<property name="Config" value="ec=WildTortoiseAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Turtle"/> 
+		</block>
+		<block name="WildSheepSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Sheep" />
+			<property name="Config" value="ec=WildSheepAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Sheep"/> 
+		</block>
+		<block name="WildComodoDragonSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Comodo" />
+			<property name="Config" value="ec=WildKomodoDragonAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Comodo"/> 
+		</block>
+		<block name="WildLeopardSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Leopard" />
+			<property name="Config" value="ec=WildLeopardAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Leopard"/> 
+		</block>
+		<block name="WildZebraSpawner_AOO">
+			<property name="Group" value="All,WildAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Zebra" />
+			<property name="Config" value="ec=WildZebraAOO;task=stay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Zebra"/> 
+		</block>
+
+	<!-- ============ Pet Animals ================ -->
+
+		<!--<block name="PetGoatSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Goat" />
+			<property name="Config" value="ec=PetGoatAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Goat"/> 
+		</block>-->
+		
+		<!--<block name="PetRabbitSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Wild_rabbit" />
+			<property name="Config" value="ec=PetRabbitAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Wild_rabbit"/> 
+		</block>-->
+		<block name="PetCaneCorsoSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Cane_corso1" />
+			<property name="Config" value="ec=PetCaneCorsoAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Cane_corso1"/> 
+		</block>
+		<block name="PetCatSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Cat_v1" />
+			<property name="Config" value="ec=PetCatAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Cat_v1"/> 
+		</block>
+		<!--<block name="PetCatV2Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Cat_v2" />
+			<property name="Config" value="ec=PetCatV2AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Cat_v2"/> 
+		</block>-->
+		<!--<block name="PetCatV3Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Cat_v3" />
+			<property name="Config" value="ec=PetCatV3AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Cat_v3"/> 
+		</block>-->
+		<block name="PetHellenicHoundSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Hellenic_hound_v1" />
+			<property name="Config" value="ec=PetHellenicHoundAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Hellenic_hound_v1"/> 
+		</block>
+		<block name="PetWolfHoundSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Celtic_wolfhound" />
+			<property name="Config" value="ec=PetCelticWolfhoundAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Celtic_wolfhound"/> 
+		</block>
+		<block name="PetHorseSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Horse_v1" />
+			<property name="Config" value="ec=PetHorseAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Horse_v1"/> 
+		</block>
+		<!--<block name="PetHorseV2Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Horse_v2" />
+			<property name="Config" value="ec=PetHorseV2AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Horse_v2"/> 
+		</block>-->
+		<!--<block name="PetHorseV3Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Horse_v3" />
+			<property name="Config" value="ec=PetHorseV3AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Horse_v3"/> 
+		</block>-->
+		<!--<block name="PetHorseV4Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Horse_v4" />
+			<property name="Config" value="ec=PetHorseV4AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Horse_v4"/> 
+		</block>-->
+		<!--<block name="PetHorseV5Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Horse_v5" />
+			<property name="Config" value="ec=PetHorseV5AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Horse_v5"/> 
+		</block>-->
+		<!--<block name="PetHorseV6Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Horse_v6" />
+			<property name="Config" value="ec=PetHorseV6AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Horse_v6"/> 
+		</block>-->
+		<!--<block name="PetPigSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Domestic_pig" />
+			<property name="Config" value="ec=PetPigAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Domestic_pig"/> 
+		</block>-->
+		<!--<block name="PetPenguinSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Penguin" />
+			<property name="Config" value="ec=PetPenguinAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Penguin"/> 
+		</block>-->
+		<!--<block name="PetChickenV1Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Chicken_v1" />
+			<property name="Config" value="ec=PetChickenV1AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Chicken_v1"/> 
+		</block>-->
+		<!--<block name="PetChickenV2Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Chicken_v2" />
+			<property name="Config" value="ec=PetChickenV2AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Chicken_v2"/> 
+		</block>-->
+		<!--<block name="PetChickenV3Spawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Chicken_v3" />
+			<property name="Config" value="ec=PetChickenV3AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Chicken_v3"/> 
+		</block>-->
+		<!--<block name="PetGooseSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Goose" />
+			<property name="Config" value="ec=PetGooseAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Goose"/> 
+		</block>-->
+		<block name="PetPugSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Pug" />
+			<property name="Config" value="ec=PetPugAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Pug"/> 
+		</block>		
+		<block name="PetBeagleSpawner_AOO">
+			<property name="Group" value="All,PetAnimals"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Beagle" />
+			<property name="Config" value="ec=PetBeagleAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Beagle"/> 
+		</block>	
+
+<!--		<block name="PetChimpSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Lamb" />
+			<property name="Config" value="ec=PetChimpAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Chimp.unity3d?chimpanzee"/> 
+		</block>	 -->
+
+	<!--	<block name="GuardSlimeSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Lamb" />
+			<property name="Config" value="ec=GuardSlime01AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Slime_01"/>
+		</block> 
+
+		<block name="GuardSlimeSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Lamb" />
+			<property name="Config" value="ec=GuardSlime01AOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Slime_01"/>
+		</block>
+-->
+
+
+
+		<block name="RandomGuardSpawner_AOO">
+			<property name="Group" value="All,Random"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="AOO-Logo" />
+			<property name="Config" value="eg=RandomGuardAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?ApocGuard"/>	
+		</block>
+		<block name="RandomZombieGuardSpawner_AOO">
+			<property name="Group" value="All,Random"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="AOO-Logo" />
+			<property name="Config" value="eg=RandomZombieGuardAOO;buff=buffOrderStay;pc=0" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?copzombie"/>	
+		</block>
+
+		<block name="GuardApocGuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="apoguard"/>
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcApocGuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?ApocGuard"/>
+		</block>
+
+		<block name="GuardSoldier01GuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Soldier01" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcSoldier01GuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Soldier01"/>
+		</block>
+
+		<block name="GuardArcherGuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="ArcherGuard" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcArcherGuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?ArcherGuard"/>
+		</block>
+
+		<block name="GuardSoldier02PGuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Soldier02" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcSoldier02PGuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Soldier02"/>
+		</block>
+
+		<block name="GuardSoldier02SHGuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Soldier02" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcSoldier02SHGuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Soldier02"/>
+		</block>
+
+		<block name="GuardWarriorGuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Warrior" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcWarriorGuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Warrior"/>
+		</block>
+
+		<block name="GuardPirateGuardSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="PirateNPC" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=npcPirateGuardAOO;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?PirateNPC"/>
+		</block>
+
+		<block name="GuardMutantFighterSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Mutant_fighter" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardMutantFighter;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Mutant_fighter"/>
+		</block>
+
+		<block name="GuardCrazySpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="CrazyZombie" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardCrazy;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?CrazyZombie"/>
+		</block>
+
+		<block name="GuardPrisonerSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Prisoner" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardPrisoner;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Prisoner"/>
+		</block>
+
+		<block name="GuardMechanicSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Mechanic" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardMechanic;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Mechanic"/>
+		</block>
+
+		<block name="GuardPHulkSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="pumpkinhulk" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardPHulk;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?pumpkinhulk"/>
+		</block>
+		<block name="GuardGirlScoutSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="girlscout" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardGirlScout;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?girlscout"/>
+		</block>
+
+		<block name="GuardMutantSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Mutant" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardMutant;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Mutant"/>
+		</block>
+
+		<block name="GuardNightShadeSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="NightShade" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardNightShade;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?NightShade"/>
+		</block>
+
+		<block name="GuardParasiteSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Parasite" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardParasite;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Parasite"/>
+		</block>
+
+		<block name="GuardWhiteClownSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="WhiteClown" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardWhiteClown;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?WhiteClown"/>
+		</block>
+
+		<block name="GuardWarZSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="warzombie" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardWarZ;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?warzombie"/>
+		</block>
+
+		<block name="GuardYakuSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Yaku" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardYaku;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Yaku"/>
+		</block>
+
+		<block name="GuardMortimerSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="mortimerZ" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardMortimer;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?mortimerZ"/>
+		</block>
+
+		<block name="GuardDerrickSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="derrickZ" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardDerrick;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?derrickZ"/>
+		</block>
+
+		<block name="GuardCop01Spawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="copzombie" />
+			<property name="FilterTags" value="MC_playerBlocks - SC_playerHelpers"/>
+			<property name="Config" value="ec=GuardCop01;task=stay;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?copzombie"/>
+		</block>
+
+		<block name="WaterSpawnTrigger_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Material" value="Mstone"/>	
+			<property name="MultiBlockDim" value="1,1,1"/>		
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CustomIcon" value="fish"/>
+			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Sardine_X"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Tags" value="WaterSpawn"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WaterSpawner_AOO"/>
+			</property>			
+			<property name="DowngradeBlock" value="WaterSpawner_AOO"/>	
+		</block>	
+
+		<block name="WaterSpawner_AOO">
+			<property name="Group" value="All"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="CustomIcon" value="Lamb" />
+			<property name="Config" value="eg=WaterSpawns;pc=0;leader=yes" />
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Sardine_X" />
+			<property name="DowngradeBlock" value="WaterSpawnerTimer_AOO"/>				
+		</block>
+
+		<block name="WaterSpawnerTimer_AOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="emptySpawnAOO"/>
+			<property name="CustomIcon" value="fish"/>
+			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?Sardine_X" />			
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="MaxDamage" value="1500"/>	
+			<property name="Collide" value="melee"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="WaterSpawnTrigger_AOO"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="30"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+		</block>
+
+		<block name="TreeMonsterBlockAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="Tags" value="treemonster"/>			
+			<property name="CustomIcon" value="TreeMonster"/>
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="DescriptionKey" value="Tree of Death"/>
+			<property name="MaxDamage" value="1000"/>
+			<property name="MultiBlockDim" value="2,8,2"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Entities.unity3d?TreeMonster"/> 
+			<drop event="Harvest" name="resourceWood" count="750" tag="oreWoodHarvest"/>
+			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
+			<property name="DowngradeBlock" value="TreeMonsterBlockGrowingAOO"/>			
+		</block>
+
+		<block name="TreeMonsterBlockGrowingAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="cropsHarvestableMaster"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="Shape" value="BillboardPlant"/>
+			<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="MaxDamage" value="1500"/>	
+			<property name="Collide" value="melee"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="TreeMonsterBlockAOO"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="420"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+		</block>
+
+	
+	</append>
+</config>

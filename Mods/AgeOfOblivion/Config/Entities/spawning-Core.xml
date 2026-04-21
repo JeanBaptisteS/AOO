@@ -1,0 +1,24 @@
+<config>
+
+	<append xpath="/spawning/biome">
+	
+		<spawn id="aoodz01" maxcount="1" respawndelay=".1" time="Day" entitygroup="AOOStandard" notags="commercial,industrial,downtown" />
+		<spawn id="aoonz01" maxcount="2" respawndelay=".1" time="Night" entitygroup="AOOStandardNight" notags="commercial,industrial,downtown" />
+
+		<spawn id="aoodz02" maxcount="1" respawndelay="0.3" time="Day" entitygroup="AOOStandard" tags="commercial,industrial" notags="downtown" />
+		<spawn id="aoonz02" maxcount="2" respawndelay="0.15" time="Night" entitygroup="AOOStandardNight" tags="commercial,industrial" notags="downtown" />
+
+		<spawn id="aoodz03" maxcount="2" respawndelay="0.3" time="Day" entitygroup="AOOStandard" tags="downtown" />
+		<spawn id="aoonz03" maxcount="2" respawndelay="0.1" time="Night" entitygroup="AOOStandardNight" tags="downtown" />
+
+		<spawn id="aoo01" maxcount="1" respawndelay="5" time="Any" entitygroup="OblivionCrateAOO" />
+	
+	</append>
+
+	<append xpath="/spawning">
+		<biome name="water">
+		  <spawn id="w01" maxcount="10"  time="Any" entitygroup="WaterSpawns" />
+		</biome>
+	</append>
+	
+</config>

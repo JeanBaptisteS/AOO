@@ -1,0 +1,713 @@
+<configs>
+	<append xpath="/buffs">
+
+
+			<buff name="buffSupplyCrate" hidden="true">
+				<update_rate value="3" />	
+				<stack_type value="Ignore"/>				
+				<effect_group>
+				<!--	<requirement name="CVarCompare" cvar="SCSpawn" operation="NotEquals" value="1"/> -->	
+					<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_SupplyCrate"  />
+				</effect_group>
+			</buff>
+			<buff name="buffSupplyCrate2" hidden="true">
+				<duration value="100"/>	
+				<stack_type value="Ignore"/>				
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_SupplyCrate2">
+					<requirement name="EntityTagCompare" tags="player"/>	
+					</triggered_effect>	
+				</effect_group>
+			</buff>
+
+		<buff name="buffZombieGuard" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="15"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?frameBall"  parent_transform="Head"/>
+			</effect_group>
+		</buff>	
+
+		<buff name="buffRadiationBomb" hidden="true">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>			
+			<duration value="10"/>			
+			<effect_group>
+			<!--	<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke"  parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke"  parent_transform="Origin"/>-->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_SmokeGrenade_Green"  parent_transform="Collider"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="buffRadiationBombEffect" />	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="set" value="0" />					
+			</effect_group>
+		</buff>	
+		<buff name="buffRadiationBombEffect" hidden="true">
+			<stack_type value="replace"/>
+			<update_rate value="1"/>			
+			<duration value="3"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="multiply" value=".95">	
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect> 
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity=".5" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />
+			</effect_group>
+		</buff>
+
+		<buff name="buffFreezeBomb" hidden="true">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>			
+			<duration value="10"/>			
+			<effect_group>
+			<!--	<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke"  parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke"  parent_transform="Origin"/>-->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_SmokeGrenade_Blue"  parent_transform="Collider"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="buffFreezeBombEffect" />	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="set" value="0" />					
+			</effect_group>
+		</buff>	
+		<buff name="buffFreezeBombEffect" hidden="true">
+			<stack_type value="replace"/>
+			<update_rate value="1"/>			
+			<duration value="5"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.15" >
+
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.15" >
+
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="base_set" value="0.15" >
+
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="base_set" value="0.15" >
+
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="multiply" value=".96">	
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect> 
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementFreezing" />	
+			</effect_group>
+		</buff>
+
+		<buff name="buffFireBomb" hidden="true">
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>			
+			<duration value="10"/>			
+			<effect_group>
+			<!--	<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke"  parent_transform="Head"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_Explosion_StarSmoke"  parent_transform="Origin"/>-->
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WFX_SmokeGrenade_Red"  parent_transform="Collider"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="buffFireBombEffect" />	
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="set" value="0" />					
+			</effect_group>
+		</buff>	
+		<buff name="buffFireBombEffect" hidden="true">
+			<stack_type value="replace"/>
+			<update_rate value="1"/>			
+			<duration value="5"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="base_set" value="0.2" >
+
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="base_set" value="0.2" >
+
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="base_set" value="0.2" >
+
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="base_set" value="0.2" >
+
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="multiply" value=".97">	
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect> 
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffElementSweltering" />	
+			</effect_group>
+		</buff>
+
+
+
+		
+		<buff name="buffNarcoticsMantis" icon="ui_game_symbol_stunned" icon_color="255,255,255">
+			<stack_type value="replace"/>
+			<duration value="8"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="horde_spawn_warning" play_in_head="true"/>
+				<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="horde_spawn_warning" play_in_head="true"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="horde_spawn_warning" play_in_head="true"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Distortion"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="4" effect_name="VibrantDeSat"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="4"  effect_name="VibrantDeSat"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="4"  effect_name="Distortion"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffBiomeCheck" hidden="true"> 
+			<stack_type value="ignore"/>
+			<update_rate value=".2"/>				
+			<effect_group> 
+			<!-- Set Random CVars for Multiple Use -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathSpawnCVar" operation="set" value="randomint(1,100)"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathLootCVar" operation="set" value="randomint(1,100)"/>
+			<!-- Set Biome CVars for Use in Gameevents -->	
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="1">	
+					<requirement name="InBiome" biome="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="3">	
+					<requirement name="InBiome" biome="3"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="5">	
+					<requirement name="InBiome" biome="5"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="8">	
+					<requirement name="InBiome" biome="8"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="9">	
+					<requirement name="InBiome" biome="9"/>
+				</triggered_effect>				
+			</effect_group>
+		</buff>
+
+		<!--<buff name="buffZombie" hidden="true"> 
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>				
+			<effect_group> 
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathSpawnCVar" operation="set" value="randomint(1,100)"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathLootCVar" operation="set" value="randomint(1,100)"/>
+			
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="KillerClown" operation="set" value="1">
+					<requirement name="EntityTagCompare" target="self" tags="KillerClown"/>					
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Skitter" operation="set" value="1">
+					<requirement name="EntityTagCompare" target="self" tags="skitter1"/>					
+				</triggered_effect>	
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Skitter" operation="set" value="2">
+					<requirement name="EntityTagCompare" target="self" tags="skitter2"/>					
+				</triggered_effect>	
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Skitter" operation="set" value="3">
+					<requirement name="EntityTagCompare" target="self" tags="skitter3"/>					
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Skitter" operation="set" value="4">
+					<requirement name="EntityTagCompare" target="self" tags="skitter4"/>					
+				</triggered_effect>					
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="1">	
+					<requirement name="InBiome" biome="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="3">	
+					<requirement name="InBiome" biome="3"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="5">	
+					<requirement name="InBiome" biome="5"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="8">	
+					<requirement name="InBiome" biome="8"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="9">	
+					<requirement name="InBiome" biome="9"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onOtherDamagedSelf" action="CallGameEvent" event="action_DeathSpawns">
+				  <requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="0"/>
+				  <requirement name="IsAlive" target="self"/>
+				</triggered_effect>			
+				
+			</effect_group>
+		</buff>-->
+
+
+
+		<buff name="buffWeeperAttackMetal" >
+			<stack_type value="replace"/>
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackMetalEffect"/>
+			</effect_group>	
+
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffDontMoveAOO" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffShocked" />
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>	
+		
+		<buff name="buffWeeperAttackMetalEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperMetalVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperMetalVFX"/>				
+			</effect_group>	
+		</buff>			
+
+		<buff name="buffWeeperAttackBlue" >
+			<stack_type value="replace"/>
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackBlueEffect"/>	
+			</effect_group>	
+
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffDontMoveAOO" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffElementFreezing" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffDamagePlayerAOO" />				
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffWeeperAttackBlueEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperBlueVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperBlueVFX"/>				
+			</effect_group>	
+		</buff>			
+		
+		<buff name="buffWeeperAttackMarble" >
+			<stack_type value="replace"/>
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackMarbleEffect"/>	
+			</effect_group>	
+
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffPuking01" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffDamagePlayerAOO" />
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>			
+
+		<buff name="buffWeeperAttackMarbleEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperMarbleVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperMarbleVFX"/>				
+			</effect_group>	
+		</buff>	
+
+		
+		<buff name="buffWeeperAttackStone" >
+			<stack_type value="replace"/>
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackStoneEffect"/>			
+			</effect_group>	
+
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffInternalBleedingAOO" />
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffWeeperAttackStoneEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperStoneVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperStoneVFX"/>				
+			</effect_group>	
+		</buff>		
+		
+
+		<buff name="buffWeeperAttackBlack" >
+			<stack_type value="replace"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackBlackEffect"/>					
+			</effect_group>	
+
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffRadiationPool" />
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffWeeperAttackBlackEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperBlackVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperBlackVFX"/>				
+			</effect_group>	
+		</buff>
+
+
+		
+		
+		<buff name="buffWeeperAttackRed" >
+			<stack_type value="replace"/>
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackRedEffect"/>					
+			</effect_group>	
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffBurningMolotov" />
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffWeeperAttackRedEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperRedVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperRedVFX"/>				
+			</effect_group>	
+		</buff>
+
+		<buff name="buffWeeperAttackGreen" >
+			<stack_type value="replace"/>
+			<duration value="1"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffWeeperAttackGreenEffect"/>					
+			</effect_group>	
+			<effect_group>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffBanshee" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="selfAOE" range="7" buff="buffDamagePlayerAOO" />				
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</effect_group>			
+		</buff>	
+
+		<buff name="buffWeeperAttackGreenEffect" >
+			<stack_type value="ignore"/>
+			<duration value="1.5"/>			
+			<effect_group>			
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_VFX.unity3d?WeeperGreenVFX"  parent_transform="Collider"/>					
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="WeeperGreenVFX"/>				
+			</effect_group>	
+		</buff>
+
+
+		<buff name="buffDeathTree" >
+			<stack_type value="ignore"/>
+			<duration value="3"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_DeathTree"/>
+			</effect_group>	
+		</buff>	
+
+		<buff name="buffMotherClucker" >
+			<stack_type value="ignore"/>
+			<duration value="90"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_MotherCluckers"/>
+			</effect_group>	
+		</buff>	
+
+
+
+		<buff name="buffBlockUpgrades" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_UpgradeBlocks"/>
+			</effect_group>	
+		</buff>	
+		<buff name="buffBlockDowngrades" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>			
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CallGameEvent" event="action_DowngradeBlocks"/>
+			</effect_group>	
+		</buff>	
+
+	<!-- ==================================== Entity Buffs ======================================================= -->
+
+       <!--<buff name="buffDamagePlayerAOO" hidden="true">
+		<duration value="2"/>
+			<update_rate value=".5"/>
+			<effect_group>
+			<requirement name="EntityTagCompare" target="self" tags="player"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="5"/>	
+
+			</effect_group>
+		</buff>-->
+
+	<!--<buff name="buffDontMoveAOO" hidden="true" remove_on_death="false">
+		<stack_type value="replace"/>
+		<duration value="2"/>
+		
+		<effect_group>
+			<passive_effect name="DisableMovement" operation="base_set" value="1" />
+		</effect_group>
+	</buff>
+	<buff name="buffDontMoveAOO" hidden="true" remove_on_death="false">
+		<stack_type value="replace"/>
+		<duration value="2"/>
+		
+		<effect_group>
+			<passive_effect name="DisableMovement" operation="base_set" value="1" />
+		</effect_group>
+	</buff>-->
+	<!--<buff name="buffInternalBleedingAOO" name_key="buffInternalBleedingName" description_key="buffInternalBleedingDesc" tooltip_key="buffInternalBleedingTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="bloodloss"/>
+		<stack_type value="ignore"/>
+		<duration value="60"/>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value="3,2,50" duration="0,3,60"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffInternalBleeding"/>
+		</effect_group>
+	</buff>-->
+
+	<buff name="buffRingOfFireAOO" name_key="buffRingOfFireName" description_key="buffRingOfFireDesc" icon="ui_game_symbol_fire" icon_color="200,200,0" remove_on_death="false">
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<update_rate value=".7"/>
+		<display_value_key value="buffRingOfFireEffectNameShort"/>
+		<display_value value="xxx"/>
+
+		<effect_group>
+			<!-- Blinks the display -->
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,10" tags="buffRingOfFire"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="8" buff="buffRingOfFireEffect">
+				<requirement name="EntityTagCompare" target="other" tags="npc,player"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="FadeOutSound" sound="FireMediumLoop" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="forge_fire_die" play_in_head="true"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="buffAOOBleeding" name_key="buffInjuryBleedingName" description_key="buffInjuryBleedingDesc" tooltip_key="buffInjuryBleedingTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+		<damage_type value="bloodloss"/>
+		<damage_source value="Internal"/>
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<display_value value="$bleedDuration"/><display_value_format value="time"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$bleedDuration" operation="set" value="20"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$bleedDuration" operation="set" value="20"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$bleedDuration" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffLacerationBleedingStatus"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjuryBleeding">
+				<requirement name="CVarCompare" cvar="$bleedDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjuryBleeding">
+				<requirement name="CVarCompare" cvar="bleedCounter" operation="Equals" value="0"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$bleedAmount" operation="set" value="20"/>
+
+
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value="20"/>
+
+
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="bleedCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$bleedAmount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$bleedSlowdown" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$bleedDuration" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_bleeding" play_in_head="true"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="buff_bleeding" play_in_head="true"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Blur" intensity=".6" fade="0.5"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="1"/>
+			<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Infected" intensity="0" fade="0"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffInjuryBleeding"/>
+
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingParticle"/>
+		</effect_group>
+	</buff>
+
+	<buff name="ParasiteAttack" icon="ui_game_symbol_skull" icon_color="255,0,0" icon_blink="true">
+			<stack_type value="replace"/>
+			<display_value value="$parasite"/>
+			<effect_group>
+				<!--passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="1"/-->
+                <passive_effect name="HealthMax" operation="base_subtract" value="15"/>	<!--Removes 15 from base health for 5 seconds as per new setting below-->		
+				<!--triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$parasite" operation="set" value="10"/-->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$parasite" operation="set" value="5"/>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$parasite" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$parasite" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$parasite" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="ParasiteAttack">
+					<requirement name="CVarCompare" cvar="$parasite" operation="LTE" value="0"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+
+		<!--<buff name="zombieWightRadiationShowerAOEEffect" icon="ui_game_symbol_radiation" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="radiation"/>
+			<stack_type value="replace"/>
+			<duration value="4"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity=".15" fade=".5" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".5" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".3" fade="2"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+			</effect_group>
+		</buff>-->
+
+
+
+
+
+		<!--<buff name="buffBanshee" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity=".5" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="bansheebuff0" play_in_head="true">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="bansheebuff1" play_in_head="true">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>-->
+	<!--	<buff name="buffZombieGuard" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="15"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/AOO_Effects2.unity3d?frameBall"  parent_transform="Head"/>
+			</effect_group>
+		</buff>	-->
+	
+		<buff name="buffSkeletonKing" hidden="true">
+			<stack_type value="ignore"/>
+			<effect_group>
+			<!--	<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="selfAOE" range="10" buff="buffSpawnScorpions">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect> -->	
+				<triggered_effect trigger="onOtherDamagedSelf" 	action="ModifyStats" stat="Health" operation="add" value="200">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+				</triggered_effect>					
+				<triggered_effect trigger="onOtherDamagedSelf" 	action="AddBuff" buff="buffSkeletonEnraged" >
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>	
+				</effect_group>
+		</buff>	
+		
+		<!--<buff name="buffSkeletonEnraged" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="15"/>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Head"/>
+				<passive_effect name="WalkSpeed" operation="base_set" value="2"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="2.5"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="3"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.5"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />				
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+			</effect_group>
+		</buff>-->
+		
+		<buff name="buffSkeletonSlow" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="buff_slow" >
+				</triggered_effect>	
+			</effect_group>
+		</buff>		
+	
+		<!--<buff name="buffSkeletonBlur" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="buff_blur" >
+				</triggered_effect>	
+			</effect_group>
+		</buff>		-->
+		
+
+		<buff name="buffSpawnSkeleton" hidden="true">
+		<duration value="60"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+			
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_SpawnSkeleton" >
+				</triggered_effect>	
+
+			</effect_group>
+		</buff>	
+		
+		<buff name="buffSpawnScorpions" hidden="true">
+		<duration value="1"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+			
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_LightningSpawner2" >
+				</triggered_effect>	
+
+			</effect_group>
+		</buff>	
+		<buff name="buffDropWeapon" hidden="true">
+		<duration value="1"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+			
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_dropweapon" >
+				</triggered_effect>	
+
+			</effect_group>
+		</buff>	
+
+
+
+
+	
+	</append>
+</configs>			

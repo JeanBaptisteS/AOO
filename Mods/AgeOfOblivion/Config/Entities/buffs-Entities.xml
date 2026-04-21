@@ -1,0 +1,608 @@
+<config>
+
+	<append xpath="/buffs">
+	
+	<!-- ============= GENERAL ZOMBIE BUFFS ============= -->
+	
+		<buff name="buffZombie" hidden="true"> 
+			<stack_type value="ignore"/>
+			<update_rate value="1"/>				
+			<effect_group> 
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_CheckPOI"/>			
+			<!-- Set Random CVars for Multiple Use -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathSpawnCVar" operation="set" value="randomint(1,100)"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathLootCVar" operation="set" value="randomint(1,100)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="zRandomCVar" operation="set" value="randomint(1,100)"/>
+			<!-- Set Biome CVars for Use in Gameevents -->	
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="1">	
+					<requirement name="InBiome" biome="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="3">	
+					<requirement name="InBiome" biome="3"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="5">	
+					<requirement name="InBiome" biome="5"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="8">	
+					<requirement name="InBiome" biome="8"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="Biome" operation="set" value="9">	
+					<requirement name="InBiome" biome="9"/>
+				</triggered_effect>	
+				
+			<!-- Call Game Events on Death -->
+				<triggered_effect trigger="onOtherDamagedSelf" action="CallGameEvent" event="action_DeathSpawns">
+				  <requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="0"/>
+				  <requirement name="IsAlive" target="self"/>
+				</triggered_effect>	
+			</effect_group>	
+			<effect_group>	
+				<requirement name="CVarCompare" target="self" cvar="EnemyPL" operation="GT" value="@LastEnemyPL"/>		
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffZombieUpdate"/>
+			</effect_group>		
+			<effect_group name="Player Level Effects">
+				<passive_effect name="HealthMax" operation="perc_add" value="@ModifierHealth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="@Modifier1percent" />				
+				<passive_effect name="ExperienceGain" operation="perc_add" value="@Modifier1percent"/>	
+				<passive_effect name="LootDropProb" operation="perc_add" value="@ModifierLoot"/>				
+			</effect_group>
+			<effect_group name="Night Effects"> 
+				<requirement name="IsNight" />
+				<requirement name="RequirementIsBloodMoonDMT, SCore" invert="true"/>				
+				<passive_effect name="HealthMax" operation="perc_add" value=".8,1.2"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".15,.35" />
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".15,.35"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15,.35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="10,15"/>
+				<!-- <passive_effect name="HealthChangeOT" operation="base_add" value="2"/>		 -->
+				<passive_effect name="ExperienceGain" operation="base_add" value="200"/>
+				<passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="2"/>				
+				<passive_effect name="LootQuantity" operation="perc_add" value="5"/>				
+				<triggered_effect trigger="onSelfDied" action="RangedExplosion, CustomParticleLoader" particle_index="#@modfolder:Resources/AOO_VFX.unity3d?Energyexplosion$ammoExplosionSmall" delay="0">	
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+				</triggered_effect>
+			</effect_group>	
+			<effect_group>
+				<requirement name="IsNight" />
+				<requirement name="RequirementIsBloodMoonDMT, SCore" invert="true"/>
+				<requirement name="!HasBuff" buff="buffRadiatedRegenBlock"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="2"/>
+			</effect_group>
+			
+			<effect_group name="Wasteland Effects"> 
+				<requirement name="InBiome" biome="08"/>
+				<passive_effect name="HealthMax" operation="perc_add" value=".8,1.2"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".3,.7" />
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".15,.35"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".15,.35"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="10,30"/>
+				<!-- <passive_effect name="HealthChangeOT" operation="base_add" value="2"/>	 -->
+				<passive_effect name="ExperienceGain" operation="base_add" value="200"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Effect_18g"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_18g"/>
+					<requirement name="CVarCompare" cvar="DeathSpawnCVar" operation="LTE" value="20"/>					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="wastelandDSpawn" operation="set" value="1"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_18g"/>
+					<requirement name="CVarCompare" cvar="DeathSpawnCVar" operation="LTE" value="20"/>					
+				</triggered_effect>				
+			</effect_group>	
+			<effect_group>
+				<requirement name="InBiome" biome="08"/>
+				<requirement name="!HasBuff" buff="buffRadiatedRegenBlock"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="2"/>
+			</effect_group>
+
+			<effect_group name="Desert Effects"> 
+				<requirement name="InBiome" biome="05"/>
+				<passive_effect name="HealthMax" operation="perc_add" value=".15,.25"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".12,.22" />
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".1,.25"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1,.25"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5,10"/>
+				<!-- <passive_effect name="HealthChangeOT" operation="base_add" value="1"/>	 -->
+				<passive_effect name="ExperienceGain" operation="base_add" value="100"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Effect_18r"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_18r"/>
+					<requirement name="CVarCompare" cvar="DeathSpawnCVar" operation="LTE" value="20"/>					
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="desertDSpawn" operation="set" value="1"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_18r"/>
+					<requirement name="CVarCompare" cvar="DeathSpawnCVar" operation="LTE" value="20"/>					
+				</triggered_effect>				
+			</effect_group>	
+			<effect_group>
+				<requirement name="InBiome" biome="05"/>
+				<requirement name="!HasBuff" buff="buffRadiatedRegenBlock"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="1"/>
+			</effect_group>
+
+			<effect_group name="Snow Effects"> 
+				<requirement name="InBiome" biome="01"/>
+				<passive_effect name="HealthMax" operation="perc_add" value=".3,.5"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".1,.2" />
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".05,.15"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".05,.15"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5,10"/>	
+				<!-- <passive_effect name="HealthChangeOT" operation="base_add" value="1"/>	 -->
+				<passive_effect name="ExperienceGain" operation="base_add" value="100"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Effect_18b"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_18b"/>
+					<requirement name="CVarCompare" cvar="DeathSpawnCVar" operation="LTE" value="20"/>						
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="snowDSpawn" operation="set" value="1"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_18b"/>
+					<requirement name="CVarCompare" cvar="DeathSpawnCVar" operation="LTE" value="20"/>					
+				</triggered_effect>				
+			</effect_group>	
+			<effect_group>
+				<requirement name="InBiome" biome="01"/>
+				<requirement name="!HasBuff" buff="buffRadiatedRegenBlock"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="1"/>
+			</effect_group>
+
+			<effect_group name="BloodMoon Effects"> 
+				<requirement name="RequirementIsBloodMoonDMT, SCore" />
+				<passive_effect name="HealthMax" operation="perc_add" value=".5,.7"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".3,.5" />
+				<passive_effect name="WalkSpeed" operation="perc_add" value=".2,.4"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".2,.4"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="10,15"/>
+				<!-- <passive_effect name="HealthChangeOT" operation="base_add" value="4"/>	 -->
+				<passive_effect name="ExperienceGain" operation="base_add" value="150"/>
+				<passive_effect name="LootDropProb" operation="perc_add" value="4"/>				
+			</effect_group>	
+			<effect_group>
+				<requirement name="RequirementIsBloodMoonDMT, SCore" />
+				<requirement name="!HasBuff" buff="buffRadiatedRegenBlock"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="4"/>
+			</effect_group>
+
+			<effect_group name="Lightning Effects">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="DeathSpawnCVar" operation="set" value="101">	
+					<requirement name="EntityTagCompare" target="self" tags="effect_15"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="20"/>
+				</triggered_effect>				
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Effect_15"> 
+					<requirement name="EntityTagCompare" target="self" tags="effect_15"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="20"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffZombieShock">
+					<requirement name="EntityTagCompare" target="self" tags="effect_15"/>
+					<requirement name="StatCompareCurrent" stat="Health" operation="LTE" value="20"/>					
+				</triggered_effect>			
+			</effect_group>
+
+			<effect_group>	
+				<requirement name="EntityTagCompare" target="self" tags="nw"/>			
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="nwatcher" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNightWatcher" />				
+			</effect_group>	
+			<effect_group>	
+				<requirement name="EntityTagCompare" target="self" tags="zstrong"/>			
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="mummyvar" operation="set" value="randomint(1,3)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Monster_05_Mesh"> 
+					<requirement name="CVarCompare" cvar="mummyvar" operation="Equals" value="1"/>
+				</triggered_effect>						
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Monster_05_Mesh2"> 
+					<requirement name="CVarCompare" cvar="mummyvar" operation="Equals" value="2"/>
+				</triggered_effect>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Monster_05_Mesh3"> 
+					<requirement name="CVarCompare" cvar="mummyvar" operation="Equals" value="3"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group>	
+				<requirement name="EntityTagCompare" target="self" tags="MutatedZ"/>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mutant"> 
+				<requirement name="InBiome" biome="03"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mutant"> 
+				<requirement name="InBiome" biome="05"/>
+				</triggered_effect>					
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mutant2"> 
+				<requirement name="InBiome" biome="08"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mutant2"> 
+				<requirement name="InBiome" biome="09"/>
+				</triggered_effect>					
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mutant3"> 
+				<requirement name="InBiome" biome="01"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="Effect_08">
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Effect_08"> 
+				</triggered_effect>
+			</effect_group>
+			<effect_group>	
+				<requirement name="EntityTagCompare" target="self" tags="weeper"/>			
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="weeper" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffWeeper" />
+			</effect_group>	
+			
+			
+			
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="DemonHeavy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RandomAttack" operation="set" value="randomint(1,4)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetIntSDX, SCore" property="RandomAttack" value="@RandomAttack" />	
+			</effect_group>		
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="DemonHeavy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RandomDeath" operation="set" value="randomint(1,3)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetIntSDX, SCore" property="RandomDeath" value="@RandomDeath" />	
+			</effect_group>				
+			
+			
+			
+			<effect_group>	
+				<requirement name="EntityTagCompare" target="self" tags="skeletonboss"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="skeletonboss" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSkeletonBoss" />
+			</effect_group>	
+			<effect_group>	
+				<requirement name="EntityTagCompare" target="self" tags="Skeleton"/>			
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meshvar" operation="set" value="randomint(1,4)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh1"> 
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="1"/>
+				</triggered_effect>						
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh2"> 
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="2"/>
+				</triggered_effect>			
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh3"> 
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="3"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh4"> 
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="4"/>
+				</triggered_effect>					
+			</effect_group>			
+		</buff>
+		
+		<buff name="buffZombieUpdate" >
+			<stack_type value="ignore"/>
+			<duration value=".2"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="LastEnemyPL" operation="set" value="@EnemyPL"/>	
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffZombieModifiers"/>				
+			</effect_group>	
+		</buff>	
+
+		<buff name="buffZombieModifiers" >
+			<stack_type value="ignore"/>
+			<duration value=".6"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Modifier1percent" operation="set" value="@EnemyPL"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Modifier1percent" operation="divide" value="100"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Modifier2percent" operation="set" value="@EnemyPL"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="Modifier2percent" operation="divide" value="50"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ModifierHealth" operation="set" value="@EnemyPL"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ModifierHealth" operation="divide" value="25"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ModifierLoot" operation="set" value="@EnemyPL"/>	
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ModifierLoot" operation="divide" value="250"/>				
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffZombieHealth"/>					
+			</effect_group>	
+		</buff>	
+		<buff name="buffZombieHealth" >
+			<stack_type value="ignore"/>
+			<duration value=".2"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="50000"/>	
+			</effect_group>	
+		</buff>	
+
+	<!-- ============= ENTITY SPECIFIC ============= -->
+
+		<buff name="buffWeeper" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>	
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="darkcastle" operation="Equals" value="1"/>		
+				<passive_effect name="HealthMax" operation="perc_add" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1" />
+				<passive_effect name="ExperienceGain" operation="perc_add" value="2"/>				
+			</effect_group>	
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RandomAttack" operation="set" value="randomint(1,2)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AnimatorSetIntSDX, SCore" property="RandomAttack" value="@RandomAttack" />	
+			</effect_group>	
+			<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="33"/>		
+				<requirement name="EntityTagCompare" target="self" tags="weeperblack"/>	
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other" buff="zombieWightRadiationShowerAOEEffect" />
+			</effect_group>	
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="weeperblue"/>
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="33"/>						
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffDontMoveAOO" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffElementFreezing" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffDamagePlayerAOO" />			
+			</effect_group>	
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="weepergreen"/>		
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="33"/>	
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffBanshee" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffDamagePlayerAOO" />					
+			</effect_group>	
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="weeperred"/>		
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="33"/>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other" buff="buffBurningMolotov" />				
+			</effect_group>	
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="weepermarble"/>
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="33"/>	
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffPuking01" />
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other"  buff="buffDamagePlayerAOO" />				
+			</effect_group>	
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="weeperstone"/>
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other" buff="buffInternalBleedingAOO" />
+				
+			</effect_group>	
+			<effect_group>
+				<requirement name="EntityTagCompare" target="self" tags="weepermetal"/>	
+				<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="33"/>
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other" buff="buffShocked" />				
+				<triggered_effect trigger="onSelfDamagedOther" 	action="AddBuff" target="other" buff="buffDontMoveAOO" />				
+			</effect_group>				
+		</buff>	
+
+		<buff name="buffNightWatcher" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>	
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh02"> 
+					<requirement name="CVarCompare" cvar="EnemyPL" operation="GTE" value="40"/>
+				</triggered_effect>		
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="NWCVar" operation="set" value="1">
+					<requirement name="CVarCompare" cvar="EnemyPL" operation="GTE" value="20"/>
+					<requirement name="CVarCompare" cvar="zRandomCVar" operation="GTE" value="65"/>					
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="false" transform_path="Mesh01"> 
+					<requirement name="CVarCompare" cvar="EnemyPL" operation="GTE" value="40"/>
+				</triggered_effect>	
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Effect_08"> 
+					<requirement name="CVarCompare" cvar="NWCVar" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="buffShocked"> 
+					<requirement name="CVarCompare" cvar="NWCVar" operation="Equals" value="1"/>
+					<requirement name="EntityTagCompare" target="other" tags="player"/>						
+				</triggered_effect>					
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="EnemyPL" operation="GTE" value="40"/>	
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="40" />				
+			</effect_group>			
+		</buff>
+
+		<buff name="buffSkeletonBoss" >
+			<stack_type value="replace"/>
+			<update_rate value="1"/>	
+			<effect_group name="SkeletonKing"> 
+				<requirement name="EntityTagCompare" target="self" tags="skeletonking"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="skingvar" operation="set" value="randomint(1,4)"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Skeleton1"> 
+					<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="1"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Skeleton2"> 
+					<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="2"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Skeleton3"> 
+					<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="3"/>
+				</triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Skeleton4"> 
+					<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="4"/>
+				</triggered_effect>	
+		
+				<triggered_effect trigger="onOtherDamagedSelf" 	action="ModifyStats" stat="Health" operation="add" value="200">
+					<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="10"/>
+				</triggered_effect>					
+				<triggered_effect trigger="onOtherDamagedSelf" 	action="AddBuff" buff="buffSkeletonEnraged" >
+					<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="10"/>
+				</triggered_effect>	
+			</effect_group>	
+			
+			<effect_group name="SkeletonKingVar1"> 		
+				<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="1"/>			
+				<passive_effect name="DamageModifier" operation="perc_add" value=".5" />
+			</effect_group>
+			<effect_group name="SkeletonKingVar2"> 			
+				<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="2"/>	
+				<passive_effect name="HealthMax" operation="perc_add" value=".5"/>
+			</effect_group>				
+			<effect_group name="SkeletonKingVar3"> 			
+				<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="3"/>	
+				<passive_effect name="DamageModifier" operation="perc_add" value=".5" />
+			</effect_group>	
+			<effect_group name="SkeletonKingVar4"> 			
+				<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="4"/>	
+				<passive_effect name="HealthMax" operation="perc_add" value=".5"/>
+			</effect_group>				
+			<effect_group name="SkeletonBoss"> 
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other"  buff="buffFear">
+					<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="20"/>
+				</triggered_effect>					
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other"  buff="buffSkeletonBlur">
+					<requirement name="CVarCompare" target="self" cvar="zRandomCVar" operation="LTE" value="10"/>
+				</triggered_effect>									
+			</effect_group>			
+		</buff>	
+		
+	<!-- ============= EFFECTS ============= -->
+	
+		<buff name="buffSkeletonEnraged" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="15"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Skeleton4/Head3/Effect_16"> 
+					<requirement name="CVarCompare" cvar="skingvar" operation="Equals" value="4"/>
+				</triggered_effect>					
+				<passive_effect name="WalkSpeed" operation="base_set" value="2"/>
+				<passive_effect name="RunSpeed" operation="base_set" value="2.5"/> 
+				<passive_effect name="HealthChangeOT" operation="base_set" value="4"/>  <!-- heal x point of (red) health / minute -->
+				<passive_effect name="DamageModifier" operation="perc_add" value="2"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />				
+				<triggered_effect trigger="onSelfBuffRemove" action="SetTransformActive" active="false" transform_path="Effect_16"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSkeletonBlur" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="buff_blur" >
+				</triggered_effect>	
+			</effect_group>
+		</buff>		
+		
+		<buff name="zombieWightRadiationShowerAOEEffect" icon="ui_game_symbol_radiation" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="radiation"/>
+			<stack_type value="replace"/>
+			<duration value="4"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity=".15" fade=".5" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".5" effect_name="Hot">
+					<requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".3" fade="2"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFear" >
+			<stack_type value="ignore"/>
+			<duration value="30"/>		
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Scream" play_in_head="true"/>		
+				<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="Scream" play_in_head="true"/>					
+			<!--	<triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="action_Fear" allow_client_call="true"/> 
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Dark"/> -->				
+				<passive_effect name="WaterChangeOT" operation="perc_add" value="-.5"/>
+				<passive_effect name="FoodChangeOT" operation="perc_add" value="-.5"/> 
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.07"/>
+			</effect_group>	
+		</buff>	
+
+		<buff name="buffDontMoveAOO" hidden="true" remove_on_death="true">
+			<stack_type value="ignore"/>
+			<duration value="2"/>
+			
+			<effect_group>
+				<passive_effect name="DisableMovement" operation="base_set" value="1" />
+			</effect_group>
+		</buff>
+		
+       <buff name="buffDamagePlayerAOO" hidden="true">
+		<duration value="2"/>
+			<update_rate value=".5"/>
+			<effect_group>
+			<requirement name="EntityTagCompare" target="self" tags="player"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="5"/>	
+
+			</effect_group>
+		</buff>
+
+		<buff name="buffBanshee" hidden="true">
+			<stack_type value="replace"/>
+			<duration value="3"/>
+			<effect_group>
+				<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<passive_effect name="JumpStrength" operation="perc_subtract" value="0.8,.2" duration="0,4">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</passive_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="2" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity=".5" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Radiation" />
+				<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" intensity="0" effect_name="Drunk" fade="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="bansheebuff0" play_in_head="true">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="bansheebuff1" play_in_head="true">
+					<requirement name="EntityTagCompare" tags="player"/>
+				</triggered_effect>
+			</effect_group>
+		</buff>
+
+		<buff name="buffInternalBleedingAOO" name_key="buffInternalBleedingName" description_key="buffInternalBleedingDesc" tooltip_key="buffInternalBleedingTooltip" icon="ui_game_symbol_critical" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="bloodloss"/>
+			<stack_type value="ignore"/>
+			<duration value="45"/>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="2" />
+				<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="buffInternalBleeding"/>
+			</effect_group>
+		</buff>
+
+	<!-- ============= RARNDOM MESH ============= -->
+	
+		<buff name="buffRandomMesh2">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meshvar" operation="set" value="randomint(1,2)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh1">
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="1"/>
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh2">
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="2"/>
+				</triggered_effect>	
+			</effect_group>
+		</buff>
+		
+		<buff name="buffRandomMesh3">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<update_rate value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="meshvar" operation="set" value="randomint(1,3)"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh1">
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="1"/>
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh2">
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="2"/>
+				</triggered_effect>	
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="SetTransformActive" active="true" transform_path="Mesh3">
+					<requirement name="CVarCompare" cvar="meshvar" operation="Equals" value="3"/>
+				</triggered_effect>	
+			</effect_group>
+		</buff>
+	
+	</append>
+
+</config>

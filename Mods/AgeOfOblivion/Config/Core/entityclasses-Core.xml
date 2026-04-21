@@ -1,0 +1,232 @@
+<config>
+
+    <append xpath="//entity_class[@name='playerMale']">
+		<property name="ItemsOnEnterGame.GameModeSurvival" value="drinkJarBoiledWater,emote01AOO,drinkDrJenSodaTSK_AOO,foodBBQPorkRibsAOO,medicalFirstAidBandage,keystoneBlock,BegginerModeAOO,varStorageAOO,meleeToolRepairT0StoneAxe,DropBox_AOO"/>
+		<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="drinkJarBoiledWater,emote01AOO,drinkDrJenSodaTSK_AOO,foodBBQPorkRibsAOO,medicalFirstAidBandage,keystoneBlock,BegginerModeAOO,varStorageAOO,meleeToolRepairT0StoneAxe,DropBox_AOO"/>
+		<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="drinkJarBoiledWater,emote01AOO,drinkDrJenSodaTSK_AOO,foodBBQPorkRibsAOO,medicalFirstAidBandage,keystoneBlock,BegginerModeAOO,varStorageAOO,meleeToolRepairT0StoneAxe,DropBox_AOO"/>
+        <effect_group name="BlockUpgrades">
+            <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffGameStage" />
+            <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffGameStage" />
+            <triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffGameStage" />
+
+            <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffWaterSpawns" />
+            <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffWaterSpawns" />
+            <triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffWaterSpawns" />
+
+            <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffPlayerAOO" />
+            <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffPlayerAOO" />
+            <triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffPlayerAOO" />
+
+            <triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffVehicleRecipes" />
+            <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="buffVehicleRecipes" />
+            <triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffVehicleRecipes" />
+
+
+            <triggered_effect trigger="onSelfRespawn" action="AddBuff" buff="buffRespawn" />
+			<passive_effect name="RecipeTagUnlocked" tags="RW01">
+				<requirement name="CVarCompare" cvar="vehicleRW01Placeable" operation="Equals" value="1"/>			
+			</passive_effect>
+			<passive_effect name="RecipeTagUnlocked" tags="RW02">
+				<requirement name="CVarCompare" cvar="vehicleRW02Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW03">
+				<requirement name="CVarCompare" cvar="vehicleRW03Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW04">
+				<requirement name="CVarCompare" cvar="vehicleRW04Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW05">
+				<requirement name="CVarCompare" cvar="vehicleRW05Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW06">
+				<requirement name="CVarCompare" cvar="vehicleRW06Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW07">
+				<requirement name="CVarCompare" cvar="vehicleRW07Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW08">
+				<requirement name="CVarCompare" cvar="vehicleRW08Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RW09">
+				<requirement name="CVarCompare" cvar="vehicleRW09Placeable" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="Moto">
+				<requirement name="CVarCompare" cvar="Moto" operation="Equals" value="1"/>			
+			</passive_effect>
+			<passive_effect name="RecipeTagUnlocked" tags="MCycle">
+				<requirement name="CVarCompare" cvar="MCycle" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="MI17">
+				<requirement name="CVarCompare" cvar="MI17" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="PoliceCopter">
+				<requirement name="CVarCompare" cvar="PoliceCopter" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="ApocTractor">
+				<requirement name="CVarCompare" cvar="ApocTractor" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="Chopper">
+				<requirement name="CVarCompare" cvar="Chopper" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="Harley">
+				<requirement name="CVarCompare" cvar="Harley" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="ApocRV">
+				<requirement name="CVarCompare" cvar="ApocRV" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="MuscleCar">
+				<requirement name="CVarCompare" cvar="MuscleCar" operation="Equals" value="1"/>			
+			</passive_effect>			
+			
+			<passive_effect name="RecipeTagUnlocked" tags="Buggy">
+				<requirement name="CVarCompare" cvar="Buggy" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="Feature">
+				<requirement name="CVarCompare" cvar="Feature" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="Harley">
+				<requirement name="CVarCompare" cvar="Harley" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="HotRod">
+				<requirement name="CVarCompare" cvar="HotRod" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="Delorean">
+				<requirement name="CVarCompare" cvar="Delorean" operation="Equals" value="1"/>			
+			</passive_effect>		
+	
+			<passive_effect name="RecipeTagUnlocked" tags="SportCar">
+				<requirement name="CVarCompare" cvar="SportCar" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="BatCar">
+				<requirement name="CVarCompare" cvar="BatCar" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="RocketToilet">
+				<requirement name="CVarCompare" cvar="RocketToilet" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="SuperCar03">
+				<requirement name="CVarCompare" cvar="SuperCar03" operation="Equals" value="1"/>			
+			</passive_effect>			
+			<passive_effect name="RecipeTagUnlocked" tags="SuperCar02">
+				<requirement name="CVarCompare" cvar="SuperCar02" operation="Equals" value="1"/>			
+			</passive_effect>	
+			<passive_effect name="RecipeTagUnlocked" tags="SuperCar01">
+				<requirement name="CVarCompare" cvar="SuperCar01" operation="Equals" value="1"/>			
+			</passive_effect>
+		</effect_group>	 
+	</append>
+
+    <append xpath="//entity_class[@name='sc_General']">
+		<property name="Tags" value="SupplyCrate"/>
+	</append>
+
+	<append xpath="/entity_classes" >
+
+		<entity_class name="ArenaLoot2"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="ArenaLoot2"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+		<entity_class name="ArenaLoot3"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="ArenaLoot3"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+		<entity_class name="ArenaLoot4"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="ArenaLoot4"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+		<entity_class name="ArenaLoot5"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="ArenaLoot5"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+		<entity_class name="ArenaLoot6"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="ArenaLoot6"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+		<entity_class name="ArenaLoot7"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="ArenaLoot7"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+
+	
+		<entity_class name="OblivionLootAOO"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="oblivion"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+		
+		<entity_class name="OblivionLoot2AOO"> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#@modfolder:Resources/AOO_Decor.unity3d?OblivionCrate"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="1200"/>
+			<property name="LootListOnDeath" value="oblivion"/>
+			<property name="Faction" value="none"/>
+		</entity_class>	
+
+	</append>
+	
+</config>

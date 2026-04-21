@@ -1,0 +1,512 @@
+<configs>
+	<append xpath="/recipes">
+	
+
+<!-- FOOD -->
+
+<!-- Bundles -->
+
+		<recipe name="foodRawWildSteakAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawWildSteakAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawBaconAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawBaconAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawChickenBreastAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawChickenBreastAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawChickenLegsandWingsAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawChickenLegsandWingsAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawGroundBeefAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawGroundBeefAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawHamAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawHamAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawPorkLoinAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawPorkLoinAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawPorkRibsAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawPorkRibsAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawSausageLinkAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawSausageLinkAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawSteakAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawSteakAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="foodRawKobeSteakAOOBundle" count="1" craft_time="5">
+			<ingredient name="foodRawKobeSteakAOO" count="5"/>
+			<ingredient name="resourcePaper" count="1"/>
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+
+<!-- Kitchnaid -->
+
+		<recipe name="foodBBQSauceAOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep" >
+			<ingredient name="foodCropTomatoAOO" count="5"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="5"/>
+			<ingredient name="foodCropMixedSpicesAOO" count="5"/>
+			<ingredient name="foodSugarAOO" count="5"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="foodDoughAOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"  >
+			<ingredient name="foodFlourAOO" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="foodMilkAOO" count="1"/>
+		</recipe>
+		<recipe name="foodFlourAOO" count="1" craft_time="5" craft_area="KitchNaid" tags="learnable,foodprep"  >
+			<ingredient name="foodCropWheatAOO" count="2"/>
+		</recipe>
+		<recipe name="foodFlourAOO" count="1" craft_time="5" craft_area="KitchNaid" tags="learnable,foodprep"  >
+			<ingredient name="foodCropCorn" count="2"/>
+		</recipe>
+		<recipe name="foodRawPastaAOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"  >
+			<ingredient name="foodDoughAOO" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+		</recipe>
+		<recipe name="foodVegOilAOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"  >
+			<ingredient name="foodCropCorn" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="foodVegOilAOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"  >
+			<ingredient name="foodCropCoconutAOO" count="10"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="foodSugarAOO" count="2" craft_time="10" craft_area="KitchNaid" tags="learnable,foodprep"  >	
+			<ingredient name="foodCropSugarcaneStalkAOO" count="4"/>
+			<ingredient name="drinkJarBoiledWater" count="2"/>
+		</recipe>		
+		<recipe name="foodMixedFruitTSK_AOO" count="1" craft_time="20" craft_area="KitchNaid" tags="learnable,foodprep" >	
+			<ingredient name="foodCropBananaAOO" count="2"/>
+			<ingredient name="foodCropBlueberries" count="2"/>
+			<ingredient name="foodCropRaspberryAOO" count="2"/>
+			<ingredient name="foodCropApplesAOO" count="2"/>
+			<ingredient name="foodCropWatermelonTSK_AOO" count="2"/>
+		</recipe>
+		<recipe name="foodMixedFruitTSK_AOO" count="1" craft_time="20" craft_area="KitchNaid" tags="learnable,foodprep"  >	
+			<ingredient name="foodCropGrapesAOO" count="2"/>
+			<ingredient name="foodCropWatermelonTSK_AOO" count="2"/>
+			<ingredient name="foodCropRaspberryAOO" count="2"/>
+			<ingredient name="foodCropOrangeAOO" count="2"/>
+			<ingredient name="foodCropStrawberryAOO" count="2"/>
+		</recipe>
+		<recipe name="foodMixedFruitTSK_AOO" count="1" craft_time="20" craft_area="KitchNaid" tags="learnable,foodprep"  >	
+			<ingredient name="foodCropCherryAOO" count="2"/>
+			<ingredient name="foodCropMangoTSK_AOO" count="2"/>
+			<ingredient name="foodCropPeachTSK_AOO" count="2"/>
+			<ingredient name="foodCropPineappleAOO" count="2"/>
+			<ingredient name="foodCropCoconutAOO" count="2"/>
+		</recipe>		
+		<recipe name="foodMixedVeggiesTSK_AOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"   >	
+		  <ingredient name="foodCropOnionAOO" count="2"/>
+		  <ingredient name="foodCropPumpkin" count="2"/>
+		  <ingredient name="foodCropTomatoAOO" count="2"/>
+		  <ingredient name="foodCropMushrooms" count="2"/>
+		</recipe>	
+		<recipe name="foodMixedVeggiesTSK_AOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"   >	
+		  <ingredient name="foodCropCarrotAOO" count="2"/>
+		  <ingredient name="foodCropCabbageAOO" count="2"/>
+		  <ingredient name="foodCropCeleryAOO" count="2"/>
+		  <ingredient name="foodCropCucumberAOO" count="2"/>
+		</recipe>
+		<recipe name="foodMixedVeggiesTSK_AOO" count="1" craft_time="15" craft_area="KitchNaid" tags="learnable,foodprep"   >	
+		  <ingredient name="foodCropJalapenoPepperAOO" count="2"/>
+		  <ingredient name="foodCropIcebergLettuceAOO" count="2"/>
+		  <ingredient name="foodCropBroccoliAOO" count="2"/> 
+		  <ingredient name="foodCropSpinachAOO" count="2"/> 
+		</recipe>
+
+		<recipe name="foodRaspberryMousseTSK_AOO" count="1" craft_time="20" craft_area="KitchNaid"  tags="learnable,dessertaoo" >	
+			<ingredient name="foodEgg" count="2"/>
+			<ingredient name="foodCreamAOO" count="2"/>
+			<ingredient name="foodCropRaspberryAOO" count="8"/>
+		</recipe>
+		<recipe name="foodStrawberryMousseTSK_AOO" count="2" craft_time="20" craft_area="KitchNaid" tags="learnable,dessertaoo"  >	
+			<ingredient name="foodEgg" count="2"/>
+			<ingredient name="foodCreamAOO" count="2"/>
+			<ingredient name="foodCropStrawberryAOO" count="8"/>
+			<ingredient name="foodSugarAOO" count="2"/>
+		</recipe>
+
+<!-- Oven -->
+		<recipe name="foodBagelAOO" count="1" craft_time="40" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,ovenaoo">
+			<ingredient name="foodDoughAOO" count="1"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>					
+		<recipe name="foodBreadAOO" count="1" craft_time="40" craft_area="Gas Oven" tags="learnable,ovenaoo">
+			<ingredient name="foodDoughAOO" count="1"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>
+		<recipe name="foodGrandMasFamousSauceAOO" count="1" craft_time="1" craft_area="Gas Oven" tags="learnable,ovenaoo">
+			<ingredient name="foodCropTomatoAOO" count="5"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="4"/>
+			<ingredient name="foodRawGroundBeefAOO" count="1"/>
+			<ingredient name="foodRawSausageLinkAOO" count="1"/>
+		</recipe>
+		<recipe name="foodSugarAOO" count="2" craft_time="15" craft_area="Gas Oven" craft_tool="toolCookingPot" >
+			<ingredient name="foodCropSugarcaneStalkAOO" count="10"/>
+		</recipe>
+		<recipe name="foodBreakfastBaconSandwichAOO" count="1" craft_time="30" craft_area="Gas Oven"  tags="learnable,ovenaoo">
+			<ingredient name="foodRawBaconAOO" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="foodBagelAOO" count="1"/>
+			<ingredient name="foodCheeseAOO" count="1"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>
+		<recipe name="foodBreakfastSausageSandwichAOO" count="1" craft_time="30" craft_area="Gas Oven"  tags="learnable,ovenaoo">
+			<ingredient name="foodRawSausageLinkAOO" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="foodBagelAOO" count="1"/>
+			<ingredient name="foodCheeseAOO" count="1"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>
+
+		<recipe name="foodRamenTSK_AOO" count="1" craft_time="10" craft_area="Gas Oven" craft_tool="toolCookingPot"  tags="learnable,ovenaoo">	
+		  <ingredient name="foodCanMiso" count="1"/>
+		  <ingredient name="foodRawPastaAOO" count="1"/>  
+		  <ingredient name="foodEgg" count="1"/> 
+		  <ingredient name="foodRawKobeSteakAOO" count="1"/>  
+		  <ingredient name="foodMixedVeggiesTSK_AOO" count="1"/>
+		</recipe>	
+		<recipe name="foodRoyalGamePieTSK_AOO" count="1" craft_time="80" craft_area="Gas Oven" craft_tool="toolCookingPot"  tags="learnable,ovenaoo">	
+		  <ingredient name="foodDoughAOO" count="2"/>
+		  <ingredient name="foodMixedVeggiesTSK_AOO" count="2"/>  
+		  <ingredient name="foodRawWildSteakAOO" count="5"/>  
+		  <ingredient name="foodCropMixedHerbsAOO" count="1"/>
+		</recipe>
+		<recipe name="foodVenisonStewTSK_AOO" count="1" craft_time="80" craft_area="Gas Oven" craft_tool="toolCookingPot"  tags="learnable,ovenaoo">	
+		  <ingredient name="foodDoughAOO" count="1"/>
+		  <ingredient name="foodMixedVeggiesTSK_AOO" count="1"/>   
+		  <ingredient name="foodRawWildSteakAOO" count="5"/>  
+		  <ingredient name="foodCropMixedHerbsAOO" count="1"/>
+		</recipe>
+
+		<recipe name="foodChickenPotPieTSK_AOO" count="1" craft_time="60" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,ovenaoo" >	
+		  <ingredient name="foodDoughAOO" count="1"/>
+		  <ingredient name="foodMixedVeggiesTSK_AOO" count="1"/>   
+		  <ingredient name="foodRawChickenBreastAOO" count="2"/>  
+		  <ingredient name="foodCropMixedHerbsAOO" count="1"/>
+		</recipe>
+		<recipe name="foodHasenpfefferTSK_AOO" count="1" craft_time="60" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,ovenaoo" >	
+		  <ingredient name="foodRawBaconAOO" count="1"/>
+		  <ingredient name="foodRawWildSteakAOO" count="2"/>   
+		  <ingredient name="foodCropOnionAOO" count="1"/>  
+		  <ingredient name="foodCropMixedHerbsAOO" count="1"/>
+		  <ingredient name="drinkRedWineTSK_AOO" count="1"/> 
+		</recipe>
+		<recipe name="foodHomemadeChickenNoodleTSK_AOO" count="1" craft_time="15" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,ovenaoo" >	
+		  <ingredient name="foodCanChicken" count="1"/>
+		  <ingredient name="foodRawPastaAOO" count="1"/>  
+		  <ingredient name="foodCropMixedHerbsAOO" count="2"/>
+		  <ingredient name="foodCropCarrotAOO" count="2"/>
+		</recipe>
+		<recipe name="foodBeefwithBroccoliAOO" count="1" craft_time="50" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,ovenaoo">
+			<ingredient name="foodRawSteakAOO" count="1"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="5"/>
+			<ingredient name="foodCropBroccoliAOO" count="10"/>
+			<ingredient name="foodCropRiceAOO" count="10"/>
+		</recipe>
+        <recipe name="foodCabbageRollsandCoffeeAOO" count="1" craft_time="30" craft_area="Gas Oven" tags="learnable,ovenaoo">
+            <ingredient name="foodCropCabbageAOO" count="6"/>
+            <ingredient name="foodRawSausageLinkAOO" count="2"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="1"/>
+			<ingredient name="foodCropPotato" count="3"/>
+			<ingredient name="drinkJarCoffee" count="1"/>
+        </recipe>
+		<recipe name="foodFreshBaconMeatloafAOO" count="1" craft_time="60" craft_area="Gas Oven" tags="learnable,ovenaoo">
+			<ingredient name="foodRawBaconAOO" count="2"/>
+			<ingredient name="foodEgg" count="1"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="1"/>
+			<ingredient name="foodRawGroundBeefAOO" count="2"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>
+		<recipe name="foodFreshBakedChickenBreastAOO" count="1" craft_time="60" craft_area="Gas Oven" tags="learnable,ovenaoo">
+			<ingredient name="foodRawChickenBreastAOO" count="1"/>
+		</recipe>
+		 <recipe name="foodApplePieAOO" count="1" craft_time="30" craft_area="Gas Oven" tags="learnable,dessertaoo" >
+            <ingredient name="foodCropApplesAOO" count="10"/>
+            <ingredient name="foodFlourAOO" count="2"/>
+            <ingredient name="foodSugarAOO" count="2"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodButterAOO" count="1"/>
+        </recipe>
+		 <recipe name="foodBananaCreamPieAOO" count="1" craft_time="30" craft_area="Gas Oven" tags="learnable,dessertaoo" >
+            <ingredient name="foodCropBananaAOO" count="10"/>
+            <ingredient name="foodFlourAOO" count="2"/>
+            <ingredient name="foodSugarAOO" count="2"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodCreamAOO" count="1"/>
+        </recipe>
+		<recipe name="foodFriedRiceAOO" count="1" craft_time="80" craft_area="Gas Oven" tags="learnable,ovenaoo" >
+			<ingredient name="foodCropRiceAOO" count="10"/>
+			<ingredient name="foodRawChickenBreastAOO" count="1"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="1"/>
+			<ingredient name="foodCropCorn" count="1"/>
+		</recipe>	
+        <recipe name="foodSpaghettiandaMeataBallsAOO" craft_time="30" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,ovenaoo">
+            <ingredient name="foodRawPastaAOO" count="5"/>
+            <ingredient name="foodRawGroundBeefAOO" count="2"/>
+            <ingredient name="foodGrandMasFamousSauceAOO" count="2"/>
+            <ingredient name="foodCheeseAOO" count="2"/>
+		</recipe>
+		 <recipe name="foodCherryPieAOO" count="1" craft_time="30" craft_area="Gas Oven" tags="learnable,dessertaoo" >
+            <ingredient name="foodCropCherryAOO" count="12"/>
+            <ingredient name="foodFlourAOO" count="2"/>
+            <ingredient name="foodSugarAOO" count="2"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodButterAOO" count="1"/>
+        </recipe>
+		<recipe name="foodChocolateCakeTSK_AOO" count="1" craft_time="60" craft_area="Gas Oven"  tags="learnable,dessertaoo" >	
+			<ingredient name="foodChocolateBarTSK_AOO" count="1"/>
+			<ingredient name="foodFlourAOO" count="2"/>
+			<ingredient name="foodMilkAOO" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
+		</recipe>
+		 <recipe name="foodCoconutCreamPieAOO" count="1" craft_time="30" craft_area="Gas Oven" tags="learnable,dessertaoo" >
+            <ingredient name="foodCropCoconutAOO" count="6"/>
+            <ingredient name="foodFlourAOO" count="2"/>
+            <ingredient name="foodSugarAOO" count="2"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodCreamAOO" count="1"/>
+        </recipe>
+		<recipe name="foodPeachCobblerTSK_AOO" count="1" craft_time="60" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,dessertaoo"  >	
+			<ingredient name="foodCropPeachTSK_AOO" count="8"/>
+			<ingredient name="foodFlourAOO" count="2"/>
+			<ingredient name="foodSugarAOO" count="2"/>
+			<ingredient name="foodMilkAOO" count="2"/>
+		</recipe>
+		<recipe name="foodLemonCakeTSK_AOO" count="1" craft_time="60" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,dessertaoo"  >	
+			<ingredient name="foodCropLemonTSK_AOO" count="12"/>
+			<ingredient name="foodFlourAOO" count="2"/>
+			<ingredient name="foodMilkAOO" count="1"/>
+			<ingredient name="foodEgg" count="2"/>
+		</recipe>
+
+		<recipe name="foodSpecialBrowniesTSK_AOO" count="1" craft_time="100" craft_area="Gas Oven" craft_tool="toolCookingPot" tags="learnable,dessertaoo" >	
+			<ingredient name="foodChocolateBarTSK_AOO" count="2"/>
+			<ingredient name="foodCropHempAOO" count="20"/>
+			<ingredient name="foodButterAOO" count="1"/>
+			<ingredient name="foodSugarAOO" count="1"/>
+			<ingredient name="foodEgg" count="1"/>
+		</recipe>
+
+<!-- Grills -->
+
+      <recipe name="foodBBQPorkRibsAOO" count="1" craft_time="50" craft_area="Grill" tags="learnable,grillaoo" >
+            <ingredient name="foodRawPorkRibsAOO" count="1"/>
+            <ingredient name="foodBBQSauceAOO" count="2"/>
+            <ingredient name="foodCropMixedSpicesAOO" count="2"/>			
+        </recipe>
+        <recipe name="foodBeefChiliAOO" count="1" craft_time="60" craft_area="Grill" craft_tool="toolCookingPot" tags="learnable,grillaoo" >
+            <ingredient name="foodMixedVeggiesTSK_AOO" count="5"/>
+            <ingredient name="foodRawGroundBeefAOO" count="2"/>
+            <ingredient name="foodCropMixedSpicesAOO" count="2"/>
+            <ingredient name="foodCheeseAOO" count="2"/>
+		</recipe>
+		<recipe name="foodFreshBBQChickenLegsAOO" count="1" craft_time="40" craft_area="Grill" craft_tool="toolCookingGrill" tags="learnable,grillaoo" >
+			<ingredient name="foodRawChickenLegsandWingsAOO" count="2"/>
+            <ingredient name="foodBBQSauceAOO" count="2"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="1"/>
+			<ingredient name="foodCropMixedSpicesAOO" count="1"/>
+		</recipe>
+		<recipe name="foodFreshCheeseBurgerAOO" count="1" craft_time="50" craft_area="Grill" craft_tool="toolCookingGrill" tags="learnable,grillaoo" >
+			<ingredient name="foodRawGroundBeefAOO" count="1"/>
+			<ingredient name="foodCheeseAOO" count="1"/>
+			<ingredient name="foodBreadAOO" count="1"/>
+			<ingredient name="foodCropTomatoAOO" count="1"/>
+			<ingredient name="foodCropIcebergLettuceAOO" count="1"/>
+		</recipe>
+		<recipe name="foodExoticGrilledSteakTSK_AOO" count="1" craft_time="60" craft_area="Grill" tags="learnable,grillaoo" >	
+		  <ingredient name="foodRawWildSteakAOO" count="1"/>
+		  <ingredient name="foodButterAOO" count="1"/>  
+		  <ingredient name="foodCropMixedHerbsAOO" count="1"/>
+		</recipe>		
+		<recipe name="foodGrilledSteakAOO" count="1" craft_time="30" craft_area="Grill" craft_tool="toolCookingGrill" tags="learnable,grillaoo" >
+			<ingredient name="foodRawSteakAOO" count="1"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>	
+		<recipe name="foodSpicyHotWingsAOO" count="1" craft_time="45" craft_area="Grill" craft_tool="toolCookingGrill" tags="learnable,grillaoo" >
+			<ingredient name="foodRawChickenLegsandWingsAOO" count="8"/>
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="4"/>
+			<ingredient name="foodCropMixedSpicesAOO" count="4"/>
+		</recipe>
+
+<!-- Dairy Churn -->
+
+		<recipe name="foodButterAOO" count="10" craft_time="30" craft_area="Dairy Churn" tags="learnable,foodprep" >
+            <ingredient name="foodRawMilkAOO" count="1"/>
+            <ingredient name="foodOldSaltAOO" count="1"/>
+		</recipe>
+		<recipe name="foodCheeseAOO" count="1" craft_time="60" craft_area="Dairy Churn" tags="learnable,foodprep" >
+			<ingredient name="foodMilkAOO" count="5"/>
+			<ingredient name="foodOldSaltAOO" count="1"/>
+		</recipe>		
+		<recipe name="foodCreamAOO" count="1" craft_time="15" craft_area="Dairy Churn" tags="learnable,foodprep" >
+			<ingredient name="foodMilkAOO" count="3"/>
+			<ingredient name="foodSugarAOO" count="3"/>
+		</recipe>
+		<recipe name="foodCreamCheeseAOO" count="1" craft_time="15" craft_area="Dairy Churn" tags="learnable,foodprep" >
+			<ingredient name="foodCreamAOO" count="1"/>
+			<ingredient name="foodCheeseAOO" count="1"/>
+		</recipe>
+
+<!-- Deep Fryer -->
+
+        <recipe name="foodBloominOnionAOO" count="1" craft_time="30" craft_area="Fryer"  >
+            <ingredient name="foodCropOnionAOO" count="4"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="2"/>
+			<ingredient name="foodFlourAOO" count="4"/>
+			<ingredient name="foodVegOilAOO" count="1"/>
+        </recipe>		
+		<recipe name="foodFalafelAOO" count="1" craft_time="60" craft_area="Fryer" >
+			<ingredient name="foodCanChickPeasAOO" count="3"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="2"/>
+			<ingredient name="foodFlourAOO" count="4"/>
+			<ingredient name="foodVegOilAOO" count="1"/>
+		</recipe>		
+        <recipe name="foodFingersFriesAOO" count="1" craft_time="30" craft_area="Fryer"  >
+            <ingredient name="foodRawChickenBreastAOO" count="2"/>
+            <ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="2"/>
+			<ingredient name="foodFlourAOO" count="4"/>
+			<ingredient name="foodVegOilAOO" count="1"/>
+        </recipe>
+        <recipe name="foodJalapenoPoppersAOO" count="1" craft_time="30" craft_area="Fryer"  >
+            <ingredient name="foodCropJalapenoPepperAOO" count="10"/>
+            <ingredient name="foodCheeseAOO" count="2"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="2"/>
+			<ingredient name="foodFlourAOO" count="2"/>
+			<ingredient name="foodVegOilAOO" count="1"/>
+        </recipe>
+		<recipe name="foodFriesAOO" count="1" craft_time="60" craft_area="Fryer"  >
+			<ingredient name="foodCropPotato" count="5"/>
+			<ingredient name="foodVegOilAOO" count="1"/>
+		</recipe>
+		<recipe name="foodChipsTSK_AOO" count="1" craft_time="10" craft_area="Fryer"  >	
+		  <ingredient name="foodDoughAOO" count="2"/>
+		</recipe>		
+		<recipe name="foodOnionRingsAOO" count="1" craft_time="60" craft_area="Fryer" >
+			<ingredient name="foodCropOnionAOO" count="5"/>
+			<ingredient name="foodFlourAOO" count="2"/>
+			<ingredient name="foodVegOilAOO" count="1"/>
+		</recipe>	
+
+<!-- Smoker -->
+
+		<recipe name="foodFreshHoneyGlazedHamAOO" count="1" craft_time="120" craft_area="Smoker" tags="learnable,smokeraoo" >
+			<ingredient name="foodRawHamAOO" count="1"/>
+			<ingredient name="foodHoney" count="1"/>
+			<ingredient name="foodButterAOO" count="1"/>
+		</recipe>	
+		
+		<recipe name="foodFreshSmokedSausageAOO" count="1" craft_time="45" craft_area="Smoker" tags="learnable,smokeraoo"  >
+			<ingredient name="foodRawSausageLinkAOO" count="1"/>
+		</recipe>
+		<recipe name="foodSmokedChickenTSK_AOO" count="1" craft_time="30" craft_area="Smoker" tags="learnable,smokeraoo"  >	
+			<ingredient name="foodRawChickenBreastAOO" count="4"/>
+			<ingredient name="foodCropMixedHerbsAOO" count="1"/>  
+			<ingredient name="drinkJarBeer" count="1"/>    
+		</recipe>		
+		<recipe name="foodSmokedFishTSK_AOO" count="1" craft_time="30" craft_area="Smoker" tags="learnable,smokeraoo"  >	
+			<ingredient name="foodCanSalmon" count="6"/> 
+		</recipe>	
+		<recipe name="foodSmokedFishTSK_AOO" count="1" craft_time="30" craft_area="Smoker" tags="learnable,smokeraoo"  >	
+			<ingredient name="foodCanTuna" count="6"/> 
+		</recipe>
+
+
+<!-- Pizza Oven -->
+
+		<recipe name="foodPizzaAOO" count="1" craft_time="25" craft_area="Pizza Oven" >
+			<ingredient name="foodDoughAOO" count="1"/>
+			<ingredient name="foodGrandMasFamousSauceAOO" count="1"/>
+			<ingredient name="foodRawSausageLinkAOO" count="2"/>
+			<ingredient name="foodCheeseAOO" count="2"/>
+		</recipe>
+
+<!-- Alchemy Station -->
+
+		<recipe name="drugClawedPainkillersTSK_AOO" count="1" craft_time="10" craft_area="AlchemyStation"  >	
+		  <ingredient name="foodCropCatsClawTSK_AOO" count="10"/>
+		  <ingredient name="foodCropDevilsClawTSK_AOO" count="10"/>
+		</recipe> 
+
+		<recipe name="medicalLionBalmTSK_AOO" count="1" craft_time="10" craft_area="AlchemyStation"  >	
+		  <ingredient name="medicalAloeCream" count="5"/>
+		  <ingredient name="foodCropCatsClawTSK_AOO" count="4"/>
+		  <ingredient name="foodCropDevilsClawTSK_AOO" count="4"/>		  
+		</recipe> 
+		
+
+		<recipe name="drugRestorativeTabletTSK_AOO" count="2" craft_time="10" craft_area="AlchemyStation"  >	
+		  <ingredient name="foodCropFeverfewTSK_AOO" count="12"/>
+		  <ingredient name="foodCropEchinaceaTSK_AOO" count="12"/>
+		  <ingredient name="foodCropValerianTSK_AOO" count="12"/>
+		</recipe>
+
+<!-- Brew Station -->
+
+
+		<recipe name="foodMilkAOO" count="1" craft_time="10" craft_area="Brew Station" craft_tool="toolPasteurizerAOO" >
+			<ingredient name="foodRawMilkAOO" count="1"/>
+		</recipe>
+		<recipe name="drinkRedWineTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolWineTankAOO"  >	
+			<ingredient name="foodCropGrapesAOO" count="15"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="drinkWhiteWineTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolWineTankAOO"  >	
+			<ingredient name="foodCropGrapesAOO" count="15"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="drinkVodkaTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolAgedBarrelAOO"  >	
+			<ingredient name="foodCropPotato" count="15"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		
+		</recipe>
+		<recipe name="drinkVodkaTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolAgedBarrelAOO"  >	
+			<ingredient name="foodCropCorn" count="15"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="drinkVodkaTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolAgedBarrelAOO"  >	
+			<ingredient name="foodCropWheatAOO" count="15"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="drinkWhiskeyTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolAgedBarrelAOO"  >	
+			<ingredient name="foodCropWheatAOO" count="8"/>
+			<ingredient name="foodCropCorn" count="8"/>
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+		<recipe name="drinkRumTSK_AOO" count="1" craft_time="45" craft_area="Brew Station" craft_tool="toolAgedBarrelAOO"  >	
+			<ingredient name="foodCropWheatAOO" count="5"/>
+			<ingredient name="foodCropCorn" count="5"/>
+			<ingredient name="foodCropPotato" count="5"/>			
+			<ingredient name="drinkJarEmpty" count="1"/>
+		</recipe>
+
+	
+	</append>
+</configs>

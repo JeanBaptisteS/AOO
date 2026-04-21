@@ -1,0 +1,5 @@
+<config>
+
+	<include filename="Quests/quests-Quests.xml" />
+
+</config>

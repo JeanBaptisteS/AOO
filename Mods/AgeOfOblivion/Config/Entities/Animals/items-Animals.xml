@@ -1,0 +1,521 @@
+<config>
+	
+	<append xpath="/items/item[@name='foodRawMeat']">
+		<property name="Weight" value="1"/>
+	</append>
+	<setattribute xpath="/items/item[@name='foodRottingFlesh']/property[@name='Material']" name="value">MRottingFlesh</setattribute>
+	<append xpath="/items/item[@name='foodRottingFlesh']">
+		<property name="Weight" value="1"/>
+	</append>
+
+	<append xpath="/items">
+		
+		<!-- Carcasses -->
+		
+		<item name="itemCarcassZombieAnimal">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="goreBlockAnimal"/>
+            <property name="HoldType" value="31"/>
+			<property name="DisplayType" value="animalCarcass"/>
+			<property name="Meshfile" value="@:Other/Items/Food/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="ScrapTimeOverride" value="10.0"/>
+			<property name="Material" value="MZombieCarcass"/>
+			<property name="Weight" value="7"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Group" value="Food/Cooking,Basics"/>
+			<property name="SoundPickup" value="meat_raw_grab"/>
+			<property name="SoundPlace" value="meat_raw_place"/>
+			<property name="DescriptionKey" value="itemCarcassDesc"/>
+		</item>
+		<item name="itemCarcassTemplate">
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DisplayType" value="animalCarcass"/>
+			<property name="Material" value="MCarcass"/>
+			<property name="Smell" value="5"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassWrappedTemplate">
+			<property name="Extends" value="foodRawMeatBundle"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="goreBlockAnimal"/>
+			<property name="Meshfile" value="@:Other/Items/Food/sackPrefab.prefab"/>
+			<property name="DescriptionKey" value="itemCarcassWrappedDesc"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassBear"/>
+				<property name="Create_item_count" value="1"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassStag"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="8"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassStag_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassStag"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassDoe"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="6"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassDoe_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassDoe"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassCow"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="11"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassCow_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassCow"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassFox"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="5"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassFox_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassFox"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassGoat"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="6"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassGoat_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassGoat"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassPenguin"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="5"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassPenguin_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassPenguin"/>
+			</property>
+		</item>
+				
+		<item name="itemCarcassPig"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="8"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassPig_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassPig"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassSheep"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="6"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassSheep_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassSheep"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassElephant"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="20"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassElephant_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassElephant"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassZebra"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="8"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassZebra_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassZebra"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassCamel"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="10"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassCamel_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassCamel"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassBuffalo"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="12"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassBuffalo_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassBuffalo"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassKomodo"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="5"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassKomodo_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassKomodo"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassIbex"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="6"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassIbex_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassIbex"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassBear">
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="14"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassBear_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassBear"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassZombieBear">
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="14"/>
+		</item>
+		<item name="itemCarcassZombieBear_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassZombieBear"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassWolf"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="7"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassWolf_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassWolf"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassDireWolf">
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="10"/>
+		</item>
+		<item name="itemCarcassDireWolf_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassDireWolf"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassCoyote"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="6"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassCoyote_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassCoyote"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassVulture"> 
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="1"/>
+		</item>
+		<item name="itemCarcassVulture_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassVulture"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassZombieDog"> 
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="7"/>
+		</item>
+		<item name="itemCarcassZombieDog_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassZombieDog"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassZombieBoar">
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="14"/>
+		</item>
+		<item name="itemCarcassZombieBoar_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassZombieBoar"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassGrace">
+			<property name="Extends" value="itemCarcassZombieAnimal"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="25"/>
+		</item>
+		<item name="itemCarcassGrace_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassGrace"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassCroc"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="10"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassCroc_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassCroc"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassHippo"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="15"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassHippo_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassHippo"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassLion"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="10"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassLion_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassLion"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassTiger"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="11"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassTiger_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassTiger"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassRhino"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="15"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassRhino_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassRhino"/>
+			</property>
+		</item>
+		
+		<item name="itemCarcassLeopard"> 
+			<property name="Extends" value="itemCarcassTemplate"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Weight" value="10"/>
+			
+			<effect_group tiered="false">
+				<display_value name="dSmell" value="1"/>
+				<display_value name="dSmellUse" value="5"/> 
+			</effect_group>
+		</item>
+		<item name="itemCarcassLeopard_Wrapped">
+			<property name="Extends" value="itemCarcassWrappedTemplate"/>
+			<property class="Action0">
+				<property name="Create_item" value="itemCarcassLeopard"/>
+			</property>
+		</item>
+		
+	</append>
+</config>

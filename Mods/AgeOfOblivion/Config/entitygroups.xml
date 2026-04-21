@@ -1,0 +1,9 @@
+<config>
+
+	<include filename="AdvancedPower/entitygroups-AdvancedPower.xml" />
+	<!--<include filename="EntitiesOld/entitygroups-Entities.xml" />-->
+	<!--<include filename="NewEntities/entitygroups-Core.xml" />-->
+	<include filename="Entities/entitygroups-Entities.xml" />
+	<include filename="Entities/Animals/entitygroups-Animals.xml" />
+	
+</config>

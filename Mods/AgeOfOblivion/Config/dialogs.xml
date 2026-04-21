@@ -1,0 +1,5 @@
+<config>
+
+	<include filename="Entities/dialogs-Entities.xml" />
+	
+</config>

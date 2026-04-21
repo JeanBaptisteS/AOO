@@ -1,0 +1,2228 @@
+<config>
+
+	<!-- ========== Enable Toilet Salvaging for Rocket Toilet ========== -->
+
+    <append xpath="/blocks/block[@name='cntToilet01']">
+		<drop event="Harvest" name="vehicleRocketToiletPlaceable" count="1" prob=".03" tag="salvageHarvest"/>
+	</append>
+    <append xpath="/blocks/block[@name='cntToilet02']">
+		<drop event="Harvest" name="vehicleRocketToiletPlaceable" count="1" prob=".03" tag="salvageHarvest"/>
+	</append>
+    <append xpath="/blocks/block[@name='cntToilet03']">
+		<drop event="Harvest" name="vehicleRocketToiletPlaceable" count="1" prob=".03" tag="salvageHarvest"/>
+	</append>	
+
+
+	<append xpath="/blocks">
+
+
+		<block name="OctopusRideTriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Tags" value="bumper"/>			
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="CustomIcon" value="octopuscarousel"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Model" value="#@modfolder:Resources/AOO_Rides.unity3d?rideOctopus"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="OctopusRide_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="OctopusRide_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>	
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleOctopus;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+		</block>
+
+
+		<block name="CoasterRideTriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Tags" value="bumper"/>			
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="CustomIcon" value="rollercoaster"/>
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Model" value="#@modfolder:Resources/AOO_Rides.unity3d?rideCoaster"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="CoasterRide_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="CoasterRide_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleCoaster;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+		</block>
+
+		<block name="CondorRideTriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Tags" value="bumper"/>			
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="CustomIcon" value="condorcoaster"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Model" value="#@modfolder:Resources/AOO_Rides.unity3d?rideCondor"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="CondorRide_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="CondorRide_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleCondor;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Rides.unity3d?rideCondor"/>			
+		</block>
+
+		<block name="4X4_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicle4x4Truck;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+	
+		</block>
+		<block name="test_SpawnAOO">
+			<property name="Class" value="GameEvent" />
+			<property name="CustomIcon" value="missingIcon"/>
+			<property name="Extends" value="graveStone01"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="Entities/OutdoorDecor/graveStone01Prefab"/>
+			<property name="ActivateEvent" value="action_TestVehicle"/>
+			<property name="DestroyOnEvent" value="true" />
+	<property name="DowngradeEvent" value="action_TestVehicle" />
+		</block>
+		
+
+	
+		<block name="WildeMouseRideTriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Tags" value="bumper"/>			
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="CustomIcon" value="wildemousecoaster"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="Model" value="#@modfolder:Resources/AOO_Rides.unity3d?rideWildeMouse"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WildeMouseRide_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="WildeMouseRide_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>			
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleWildeMouse;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+		</block>
+
+
+		<block name="WildeMouse2RideTriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Tags" value="bumper"/>			
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="CustomIcon" value="wildemousecoasternopanel"/>
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Model" value="#@modfolder:Resources/AOO_Rides.unity3d?rideWildeMouse2"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="WildeMouse2Ride_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="WildeMouse2Ride_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Place" value="TowardsPlacerInverted"/>		
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleWildeMouse2;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+		</block>
+
+
+		<block name="BumperCarTriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Tags" value="bumper"/>			
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="CustomIcon" value="bumpercar"/>
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BumperCar2_d"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="BumperCar_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="BumperCar_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleBumpercar;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+		</block>	
+		<block name="BumperCar2TriggerAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Tags" value="bumper"/>			
+			<property name="Extends" value="emptyBlockAOO"/>
+			<property name="CustomIcon" value="bumpercar2"/>
+			<property name="FilterTags" value="MC_outdoor - SC_decor"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BumperCar_d"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="BumperCar2_SpawnAOO"/>
+				<property name="Item" value="resourceForgedIron"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+		</block>
+		<block name="BumperCar2_SpawnAOO">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="SpawnCube"/>
+			<property name="Class" value="SpawnCube2SDX, SCore" />
+			<property name="Config" value="ec=vehicleBumpercar2;task=stay;pc=0" />
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ModelOffset" value="0,0,0"/>	
+
+		</block>
+
+
+
+<!-- Car Respawning -->
+
+		<block name="respawnCar">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="8c5600"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="CreativeMode" value="Dev" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="carsRandomHelper" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+	
+		<block name="respawnSchoolBus">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="ffdc52"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntBusSchool" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+	
+		<block name="respawnShortSchoolBus">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="ffdc52"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>			
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntBusSchoolShort" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+
+		<block name="respawnShuttleBus">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="000612"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntBusShuttle" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+		
+		<block name="respawnCityBus">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="0942ad"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntBusCity" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+		
+		<block name="respawnAmbulance">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="f29085"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntAmbulanceTruck01" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+		
+		<block name="respawnMoPower">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="16abf0"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>	
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntServiceTruckMoPower" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+		
+		<block name="respawnWorkingStiff">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="f0af16"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>		
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntServiceTruckWorkingStiffTools" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+		
+		<block name="respawnArmyOpen">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="f0af16"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>	
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntArmyTruckOpen" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+
+		<block name="respawnArmyClosed">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="f0af16"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="Extends" value="decoEntityPolymerMaster"/>			
+			<property name="IsDeveloper" value="true" />
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="MaxDamage" value="99000"/>
+			<property name="StabilitySupport" value="false"/>
+		<property name="Shape" value="BillboardPlant"/>
+		<property name="Mesh" value="grass"/>
+			<property name="Texture" value="1"/>
+			<property name="Collide" value="melee"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="cntArmyTruckClosed" />
+			<property name="PlantGrowing.GrowthRate" value="420" /><!-- RL Minutes for respawn Default value: 420 which is 7 Hours RL or 7 in game days if 1 Hour RL = 1 Day In game -->
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="false" />
+		</block>
+		
+	</append>	
+	
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage2Master']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage1Master']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0Master']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0Master']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='cntCar03SedanDamage1Master']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='cntCar03SedanDamage2Master']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='cntSedan01White']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='burntSedan01']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='cntSedan3Wide01White']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='cntMinivan01White']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append> 
+		<append xpath="/blocks/block[@name='burntSedan3Wide01']"> 
+		<property name="DowngradeBlock" value="respawnCar"/>
+	</append>	
+	
+	
+	<append xpath="/blocks/block[@name='cntBusSchool']"> 
+		<property name="DowngradeBlock" value="respawnSchoolBus"/>
+	</append> 
+
+	<append xpath="/blocks/block[@name='cntBusSchoolShort']"> 
+		<property name="DowngradeBlock" value="respawnShortSchoolBus"/>
+	</append> 
+
+	<append xpath="/blocks/block[@name='cntBusShuttle']"> 
+		<property name="DowngradeBlock" value="respawnShuttleBus"/>
+	</append> 
+	
+	<append xpath="/blocks/block[@name='cntBusCity']"> 
+		<property name="DowngradeBlock" value="respawnCityBus"/>
+	</append> 
+
+	<append xpath="/blocks/block[@name='cntAmbulanceTruck01']"> 
+		<property name="DowngradeBlock" value="respawnAmbulance"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntServiceTruckMoPower']"> 
+		<property name="DowngradeBlock" value="respawnMoPower"/>
+	</append> 	
+
+	<append xpath="/blocks/block[@name='cntServiceTruckWorkingStiffTools']"> 
+		<property name="DowngradeBlock" value="respawnWorkingStiff"/>
+	</append> 	
+	
+	<append xpath="/blocks/block[@name='cntArmyTruckClosed']"> 
+		<property name="DowngradeBlock" value="respawnArmyClosed"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntArmyTruckOpen']"> 
+		<property name="DowngradeBlock" value="respawnArmyOpen"/>
+	</append>
+
+
+
+
+	<!-- ==========  Vehicle Blocks  ========== -->	
+
+	<append xpath="/blocks">	
+	
+
+		<!-- ==== Vehicle Blocks/Loot/Decor ==== -->
+
+	<block name="vehicleBlockTemplate">
+			<property name="Class" value="SecureLoot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="LockPickItem" value="CarKeyAOO"/>
+			<property name="LockPickTime" value="20"/>
+			<property name="LockPickBreakChance" value="0.75"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="ItemTypeIcon" value="lock"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/Policecar/policeCarPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="2,1,4"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="PlacementDistance" value="6"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="PassThroughDamage" value="true"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceScrapIron" count="35,90" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="SortOrder1" value="B867"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_building,SC_automotive,A21_NEW"/>
+			<property name="DowngradeBlock" value="respawnCar"/>
+		
+		</block>
+
+		<block name="vehicleBlockTemplateV1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="DisplayInfo" value="Name"/>			
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,1,4"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="FilterTags" value="floot"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="MaxDamage" value="500"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="3"/>
+			</property>
+		
+			<drop event="Destroy" count="0"/>			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0,3" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1,3" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="carBattery" count="1" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="ammoGasCan" count="50,100" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceAcid" prob=".15" count="1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceAcid" prob=".1" count="1" tag="WasteTreasuresAcidHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.3" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceOil" count="0,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="1,3" tag="salvageHarvest"/>				
+ 		</block>
+
+		<block name="vehicleBlockTemplateV2">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="vehicleXS"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,1,4"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="FilterTags" value="floot"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="MaxDamage" value="500"/>
+	
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+			<drop event="Destroy" count="0"/>			
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0,4" prob="0.1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1,3" prob="0.2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+			<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tag="salvageHarvest"/>
+			<drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="ammoGasCan" count="50,200" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/> 
+			<drop event="Harvest" name="resourceAcid" prob=".15" count="1" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceAcid" prob=".1" count="1" tag="WasteTreasuresAcidHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceOil" count="0,2" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceSpring" count="1,3" tag="salvageHarvest"/>			
+ 		</block>
+
+
+	
+		<!-- ===========  Placeholders  ============= -->
+
+		<block name="cntVehicleBlocks">
+			<property name="Extends" value="carsRandomHelper"/>
+		</block>
+		<block name="cntBlockBattle01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockBattle02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockBattle03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockBattle04">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockBattle05">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>		
+		<block name="cntBlockBattle06">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockSuperCar02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockSuperCar03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRickShawBlue">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>		
+		<block name="cntBlockCyberDelorean">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>		
+		<block name="cntBlockBatCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>		
+		<block name="cntBlockScooter">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>		
+		<block name="cntBlockSportsCarWhite">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockHotRod01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockFeature01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockBuggy01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockMuscleCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockApocRV">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockApocTractor">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockHarley">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockChopper">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockMCycle01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW04">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW05">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW06">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW07">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW08">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+		<block name="cntBlockRW09">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>
+			<block name="cntBlockPoliceCopter">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/> 
+		</block>	
+		
+		<!-- =============== Vehicle Blocks ================ -->	
+
+
+		<block name="vehicleBlockMoto">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="MultiBlockDim" value="3,2,3"/>	
+			<property name="ModelOffset" value="0,0,-.5"/>			
+			<property name="CustomIcon" value="AOO-Logo"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?vehicleMoto"/> 
+		</block>
+
+
+		
+		
+		<block name="vehicleBlockBattle01">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBattle01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+		
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBattle01"/>
+
+
+		</block>
+		<block name="vehicleLootBlockBattle01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+			<property name="DowngradeBlock" value="cntBlockBattle01"/>
+		</block>		
+		<block name="vehicleLoot2BlockBattle01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/> 
+		</block>			
+		<block name="vehicleBlockBattle01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleBattle01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/>
+ 		</block>
+		<block name="vehicleBlockBattle01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/>
+ 		</block>		
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBattle02">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBattle02"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBattle02"/>
+		</block>
+		<block name="vehicleLootBlockBattle02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/> 
+			<property name="DowngradeBlock" value="cntBlockBattle02"/>
+		</block>		
+		<block name="vehicleLoot2BlockBattle02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/> 
+		</block>			
+		<block name="vehicleBlockBattle02Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleBattle02Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/>
+ 		</block>
+		<block name="vehicleBlockBattle02Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/>
+ 		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBattle03">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBattle03"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBattle03"/>
+		</block>
+		<block name="vehicleLootBlockBattle03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/> 
+			<property name="DowngradeBlock" value="cntBlockBattle03"/>
+		</block>		
+		<block name="vehicleLoot2BlockBattle03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BattleCar03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/> 
+		</block>			
+		<block name="vehicleBlockBattle03Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar03"/>
+			<property name="CanPickup" value="true" param1="vehicleBattle03Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/>
+ 		</block>
+		<block name="vehicleBlockBattle03Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/>
+ 		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBattle04">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBattle04"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBattle04"/>
+		</block>
+		<block name="vehicleLootBlockBattle04">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/> 
+			<property name="DowngradeBlock" value="cntBlockBattle04"/>
+		</block>		
+		<block name="vehicleLoot2BlockBattle04">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BattleCar04"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/> 
+		</block>			
+			<block name="vehicleBlockBattle04Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleBattle04Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/>
+ 		</block>
+		<block name="vehicleBlockBattle04Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar04"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/>
+ 		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBattle05">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+				<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBattle05"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBattle05"/>
+		</block>
+		<block name="vehicleLootBlockBattle05">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/> 
+			<property name="DowngradeBlock" value="cntBlockBattle05"/>
+		</block>		
+		<block name="vehicleLoot2BlockBattle05">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BattleCar05"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/> 
+		</block>			
+			<block name="vehicleBlockBattle05Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleBattle05Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/>
+ 		</block>
+		<block name="vehicleBlockBattle05Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar05"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/>
+ 		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBattle06">
+			<property name="Tags" value="Unlockable,vehicleBlock"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBattle06"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBattle06"/>
+		</block>
+		<block name="vehicleLootBlockBattle06">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/> 
+			<property name="DowngradeBlock" value="cntBlockBattle06"/>
+		</block>		
+		<block name="vehicleLoot2BlockBattle06">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/> 
+		</block>			
+			<block name="vehicleBlockBattle06Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BattleCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleBattle06Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/>
+ 		</block>
+		<block name="vehicleBlockBattle06Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/>
+ 		</block>			
+
+<!-- ======================================================================== -->	
+<!--		<block name="vehicleBlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockSuperCar01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockSuperCar01"/>
+		</block>
+		<block name="vehicleLootBlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+			<property name="DowngradeBlock" value="cntBlockSuperCar01"/>
+		</block>		
+		<block name="vehicleLoot2BlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+		</block>			
+		<block name="vehicleBlockSuperCar01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleSuperCar01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+ 		</block>
+		<block name="vehicleBlockSuperCar01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+ 		</block>	-->	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockPoliceCopter">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockPoliceCopter"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockPoliceCopter"/>
+		</block>
+		<block name="vehicleLootBlockPoliceCopter">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/> 
+			<property name="DowngradeBlock" value="cntBlockPoliceCopter"/>
+		</block>		
+		<block name="vehicleLoot2BlockPoliceCopter">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="PoliceCopter"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/> 
+		</block>			
+			<block name="vehicleBlockPoliceCopterPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="PoliceCopter"/>
+			<property name="CanPickup" value="true" param1="vehiclePoliceCopterPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/>
+ 		</block>
+		<block name="vehicleBlockPoliceCopterEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="PoliceCopter"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/>
+ 		</block>	
+<!-- ======================================================================== -->
+
+
+
+
+
+<!-- ======================================================================== -->	
+		<block name="vehicleBlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockSuperCar01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockSuperCar01"/>
+		</block>
+		<block name="vehicleLootBlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+			<property name="DowngradeBlock" value="cntBlockSuperCar01"/>
+		</block>		
+		<block name="vehicleLoot2BlockSuperCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/> 
+		</block>			
+		<block name="vehicleBlockSuperCar01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleSuperCar01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+ 		</block>
+		<block name="vehicleBlockSuperCar01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+ 		</block>		
+<!-- ======================================================================== -->
+		<block name="vehicleBlockSuperCar02">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockSuperCar02"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockSuperCar02"/>
+		</block>
+		<block name="vehicleLootBlockSuperCar02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/> 
+			<property name="DowngradeBlock" value="cntBlockSuperCar02"/>
+		</block>		
+		<block name="vehicleLoot2BlockSuperCar02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/> 
+		</block>			
+			<block name="vehicleBlockSuperCar02Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleSuperCar02Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/>
+ 		</block>
+		<block name="vehicleBlockSuperCar02Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BattleCar02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/>
+ 		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockSuperCar03">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar03"/>
+			<property name="ModelOffset" value="0,.17,0"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockSuperCar03"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockSuperCar03"/>
+		</block>
+		<block name="vehicleLootBlockSuperCar03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/> 
+			<property name="DowngradeBlock" value="cntBlockSuperCar03"/>
+		</block>		
+		<block name="vehicleLoot2BlockSuperCar03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="SuperCar03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/> 
+		</block>			
+			<block name="vehicleBlockSuperCar03Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SuperCar03"/>
+			<property name="CanPickup" value="true" param1="vehicleSuperCar03Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/>
+ 		</block>
+		<block name="vehicleBlockSuperCar03Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="SuperCar03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/>
+ 		</block>
+<!-- ======================================================================== -->
+<!--		<block name="vehicleBlockTest">
+			<property name="Class" value="GameEvent"/>
+			<property name="Material" value="Mstone"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="ActivateEvent" value="action_Nothing"/>
+			<property name="DestroyOnEvent" value="true" />
+			<property name="Model" value="Entities/OutdoorDecor/graveStone07Prefab"/>
+			<property name="DowngradeBlock" value="cntBlockRickShawBlue"/>
+		</block> -->
+
+		<block name="vehicleBlockRickShawBlue">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRickShawBlue"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRickShawBlue"/>
+		</block>
+		<block name="vehicleLootBlockRickShawBlue">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/> 
+			<property name="DowngradeBlock" value="cntBlockRickShawBlue"/>
+		</block>		
+		<block name="vehicleLoot2BlockRickShawBlue">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/> 
+		</block>			
+			<block name="vehicleBlockRickShawBluePickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="CanPickup" value="true" param1="vehicleRickShawBluePlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/>
+ 		</block>
+		<block name="vehicleBlockRickShawBlueEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RickShawBlue"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/>
+ 		</block>
+<!-- ======================================================================== -->
+		<block name="vehicleBlockCyberDelorean">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="CyberDelorean"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockCyberDelorean"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockCyberDelorean"/>
+		</block>
+		<block name="vehicleLootBlockCyberDelorean">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel"/> 
+			<property name="DowngradeBlock" value="cntBlockCyberDelorean"/>
+		</block>		
+		<block name="vehicleLoot2BlockCyberDelorean">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="CyberDelorean"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel"/> 
+		</block>			
+			<block name="vehicleBlockCyberDeloreanPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="CyberDelorean"/>
+			<property name="CanPickup" value="true" param1="vehicleCyberDeloreanPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel"/>
+ 		</block>
+		<block name="vehicleBlockCyberDeloreanEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="CyberDelorean"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel"/>
+ 		</block>
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBatCar01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BatCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBatCar01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBatCar01"/>
+		</block>
+		<block name="vehicleLootBlockBatCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/> 
+			<property name="DowngradeBlock" value="cntBlockBatCar01"/>
+		</block>		
+		<block name="vehicleLoot2BlockBatCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="BatCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/> 
+		</block>			
+			<block name="vehicleBlockBatCar01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="BatCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleBatCar01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/>
+ 		</block>
+		<block name="vehicleBlockBatCar01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="BatCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockScooter">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Scooter"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockScooter"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockScooter"/>
+		</block>
+		<block name="vehicleLootBlockScooter">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/> 
+			<property name="DowngradeBlock" value="cntBlockScooter"/>
+		</block>		
+		<block name="vehicleLoot2BlockScooter">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="Scooter"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/> 
+		</block>			
+			<block name="vehicleBlockScooterPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Scooter"/>
+			<property name="CanPickup" value="true" param1="vehicleScooterPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/>
+ 		</block>
+		<block name="vehicleBlockScooterEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="Scooter"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockSportsCarWhite">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SportsCarWhite"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockSportsCarWhite"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockSportsCarWhite"/>
+		</block>
+		<block name="vehicleLootBlockSportsCarWhite">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/> 
+			<property name="DowngradeBlock" value="cntBlockSportsCarWhite"/>
+		</block>		
+		<block name="vehicleLoot2BlockSportsCarWhite">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="SportsCarWhite"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/> 
+		</block>			
+			<block name="vehicleBlockSportsCarWhitePickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="SportsCarWhite"/>
+			<property name="CanPickup" value="true" param1="vehicleSportsCarWhitePlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/>
+ 		</block>
+		<block name="vehicleBlockSportsCarWhiteEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="SportsCarWhite"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockHotRod01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="HotRod01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockHotRod01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockHotRod01"/>
+		</block>
+		<block name="vehicleLootBlockHotRod01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/> 
+			<property name="DowngradeBlock" value="cntBlockHotRod01"/>
+		</block>		
+		<block name="vehicleLoot2BlockHotRod01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="HotRod01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/> 
+		</block>			
+			<block name="vehicleBlockHotRod01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="HotRod01"/>
+			<property name="CanPickup" value="true" param1="vehicleHotRod01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/>
+ 		</block>
+		<block name="vehicleBlockHotRod01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="HotRod01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockFeature01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Feature01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockFeature01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockFeature01"/>
+		</block>
+		<block name="vehicleLootBlockFeature01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/> 
+			<property name="DowngradeBlock" value="cntBlockFeature01"/>
+		</block>		
+		<block name="vehicleLoot2BlockFeature01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="Feature01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/> 
+		</block>			
+			<block name="vehicleBlockFeature01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Feature01"/>
+			<property name="CanPickup" value="true" param1="vehicleFeature01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/>
+ 		</block>
+		<block name="vehicleBlockFeature01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="Feature01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockBuggy01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Buggy01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockBuggy01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockBuggy01"/>
+		</block>
+		<block name="vehicleLootBlockBuggy01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/> 
+			<property name="DowngradeBlock" value="cntBlockBuggy01"/>
+		</block>		
+		<block name="vehicleLoot2BlockBuggy01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="Buggy01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/> 
+		</block>			
+			<block name="vehicleBlockBuggy01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Buggy01"/>
+			<property name="CanPickup" value="true" param1="vehicleBuggy01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/>
+ 		</block>
+		<block name="vehicleBlockBuggy01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="Buggy01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockMuscleCar01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="MuscleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockMuscleCar01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockMuscleCar01"/>
+		</block>
+		<block name="vehicleLootBlockMuscleCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/> 
+			<property name="DowngradeBlock" value="cntBlockMuscleCar01"/>
+		</block>		
+		<block name="vehicleLoot2BlockMuscleCar01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="MuscleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/> 
+		</block>			
+			<block name="vehicleBlockMuscleCar01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="MuscleCar01"/>
+			<property name="CanPickup" value="true" param1="vehicleMuscleCar01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/>
+ 		</block>
+		<block name="vehicleBlockMuscleCar01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="MuscleCar01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockApocRV">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="ApocRV"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockApocRV"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockApocRV"/>
+		</block>
+		<block name="vehicleLootBlockApocRV">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/> 
+			<property name="DowngradeBlock" value="cntBlockApocRV"/>
+		</block>		
+		<block name="vehicleLoot2BlockApocRV">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="ApocRV"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/> 
+		</block>			
+			<block name="vehicleBlockApocRVPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="ApocRV"/>
+			<property name="CanPickup" value="true" param1="vehicleApocRVPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/>
+ 		</block>
+		<block name="vehicleBlockApocRVEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="ApocRV"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockApocTractor">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="ApocTractor"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockApocTractor"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockApocTractor"/>
+		</block>
+		<block name="vehicleLootBlockApocTractor">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/> 
+			<property name="DowngradeBlock" value="cntBlockApocTractor"/>
+		</block>		
+		<block name="vehicleLoot2BlockApocTractor">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="ApocTractor"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/> 
+		</block>			
+			<block name="vehicleBlockApocTractorPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="ApocTractor"/>
+			<property name="CanPickup" value="true" param1="vehicleApocTractorPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/>
+ 		</block>
+		<block name="vehicleBlockApocTractorEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="ApocTractor"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockHarley">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Harley"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockHarley"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockHarley"/>
+		</block>
+		<block name="vehicleLootBlockHarley">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/> 
+			<property name="DowngradeBlock" value="cntBlockHarley"/>
+		</block>		
+		<block name="vehicleLoot2BlockHarley">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="Harley"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/> 
+		</block>			
+			<block name="vehicleBlockHarleyPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Harley"/>
+			<property name="CanPickup" value="true" param1="vehicleHarleyPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/>
+ 		</block>
+		<block name="vehicleBlockHarleyEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="Harley"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockChopper">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Chopper"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockChopper"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockChopper"/>
+		</block>
+		<block name="vehicleLootBlockChopper">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/> 
+			<property name="DowngradeBlock" value="cntBlockChopper"/>
+		</block>		
+		<block name="vehicleLoot2BlockChopper">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="Chopper"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/> 
+		</block>			
+			<block name="vehicleBlockChopperPickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="Chopper"/>
+			<property name="CanPickup" value="true" param1="vehicleChopperPlaceable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/>
+ 		</block>
+		<block name="vehicleBlockChopperEmpty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="Chopper"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockMCycle01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="MCycle01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockMCycle01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockMCycle01"/>
+		</block>
+		<block name="vehicleLootBlockMCycle01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01"/> 
+			<property name="DowngradeBlock" value="cntBlockMCycle01"/>
+		</block>		
+		<block name="vehicleLoot2BlockMCycle01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="MCycle01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01"/> 
+		</block>			
+			<block name="vehicleBlockMCycle01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="MCycle01"/>
+			<property name="CanPickup" value="true" param1="vehicleMCycle01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01"/>
+ 		</block>
+		<block name="vehicleBlockMCycle01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="MCycle01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW01">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>				
+			<property name="CustomIcon" value="RW01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW01"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW01"/>
+		</block>
+		<block name="vehicleLootBlockRW01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/> 
+			<property name="DowngradeBlock" value="cntBlockRW01"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW01">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/> 
+		</block>			
+			<block name="vehicleBlockRW01Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW01"/>
+			<property name="CanPickup" value="true" param1="vehicleRW01Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/>
+ 		</block>
+		<block name="vehicleBlockRW01Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW01"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW02">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>				
+			<property name="CustomIcon" value="RW02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW02"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW02"/>
+		</block>
+		<block name="vehicleLootBlockRW02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/> 
+			<property name="DowngradeBlock" value="cntBlockRW02"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW02">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/> 
+		</block>			
+			<block name="vehicleBlockRW02Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW02"/>
+			<property name="CanPickup" value="true" param1="vehicleRW02Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/>
+ 		</block>
+		<block name="vehicleBlockRW02Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW02"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW03">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>	
+			<property name="CustomIcon" value="RW03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW03"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW03"/>
+		</block>
+		<block name="vehicleLootBlockRW03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/> 
+			<property name="DowngradeBlock" value="cntBlockRW03"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW03">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/> 
+		</block>			
+			<block name="vehicleBlockRW03Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW03"/>
+			<property name="CanPickup" value="true" param1="vehicleRW03Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/>
+ 		</block>
+		<block name="vehicleBlockRW03Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW03"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW04">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>	
+			<property name="CustomIcon" value="RW04"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW04"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW04"/>
+		</block>
+		<block name="vehicleLootBlockRW04">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="CustomIcon" value="RW04"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/> 
+			<property name="DowngradeBlock" value="cntBlockRW04"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW04">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW04"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/> 
+		</block>			
+			<block name="vehicleBlockRW04Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW04"/>
+			<property name="CanPickup" value="true" param1="vehicleRW04Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/>
+ 		</block>
+		<block name="vehicleBlockRW04Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW04"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW05">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>		
+			<property name="CustomIcon" value="RW05"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW05"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW05"/>
+		</block>
+		<block name="vehicleLootBlockRW05">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/> 
+			<property name="DowngradeBlock" value="cntBlockRW05"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW05">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW05"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/> 
+		</block>			
+			<block name="vehicleBlockRW05Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW05"/>
+			<property name="CanPickup" value="true" param1="vehicleRW05Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/>
+ 		</block>
+		<block name="vehicleBlockRW05Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW05"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW06">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>	
+			<property name="CustomIcon" value="RW06"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW06"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW06"/>
+		</block>
+		<block name="vehicleLootBlockRW06">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/> 
+			<property name="DowngradeBlock" value="cntBlockRW06"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW06">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW06"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/> 
+		</block>			
+			<block name="vehicleBlockRW06Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW06"/>
+			<property name="CanPickup" value="true" param1="vehicleRW06Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/>
+ 		</block>
+		<block name="vehicleBlockRW06Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW06"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW07">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>	
+			<property name="CustomIcon" value="RW07"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW07"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW07"/>
+		</block>
+		<block name="vehicleLootBlockRW07">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/> 
+			<property name="DowngradeBlock" value="cntBlockRW07"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW07">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW07"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/> 
+		</block>			
+			<block name="vehicleBlockRW07Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW07"/>
+			<property name="CanPickup" value="true" param1="vehicleRW07Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/>
+ 		</block>
+		<block name="vehicleBlockRW07Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW07"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW08">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>	
+			<property name="CustomIcon" value="RW08"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW08"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW08"/>
+		</block>
+		<block name="vehicleLootBlockRW08">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/> 
+			<property name="DowngradeBlock" value="cntBlockRW08"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW08">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW08"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/> 
+		</block>			
+			<block name="vehicleBlockRW08Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW08"/>
+			<property name="CanPickup" value="true" param1="vehicleRW08Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/>
+ 		</block>
+		<block name="vehicleBlockRW08Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW08"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/>
+		</block>	
+<!-- ======================================================================== -->
+		<block name="vehicleBlockRW09">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="DisplayInfo" value="Name"/>			
+			<property name="CustomIcon" value="RW09"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/> 
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="vehicleLootBlockRW09"/>
+				<property name="Item" value="CarKeyAOO"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="1"/>
+			</property>
+			<property name="DowngradeEvent" value="action_DowngradeVehicle" />
+			<property name="DowngradeBlock" value="vehicleLoot2BlockRW09"/>
+		</block>
+		<block name="vehicleLootBlockRW09">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>		
+			<property name="LootList" value="T1CarLoot"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/> 
+			<property name="DowngradeBlock" value="cntBlockRW09"/>
+		</block>		
+		<block name="vehicleLoot2BlockRW09">
+			<property name="Extends" value="vehicleBlockTemplate"/>
+			<property name="Class" value="Loot"/>
+			<property name="LootList" value="T2CarLoot"/>
+			<property name="CustomIcon" value="RW09"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/> 
+		</block>			
+			<block name="vehicleBlockRW09Pickup">
+			<property name="Extends" value="vehicleBlockTemplateV1"/>
+			<property name="CustomIcon" value="RW09"/>
+			<property name="CanPickup" value="true" param1="vehicleRW09Placeable"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/>
+ 		</block>
+		<block name="vehicleBlockRW09Empty">
+			<property name="Extends" value="vehicleBlockTemplateV2"/>
+			<property name="CustomIcon" value="RW09"/>
+			<property name="Model" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/>
+		</block>	
+
+	</append>	
+</config>	

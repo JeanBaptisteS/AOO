@@ -1,0 +1,188 @@
+<config>
+	<append xpath="/gameevents">
+
+		<action_sequence name="action_DeathSpawns">
+			<property name="action_type" value="Game" />
+			<property name="allow_while_dead" value="true" />			
+			<!-- === Wasteland Radiation Bomb === -->
+			<action class="SpawnEntity">			
+ 				<requirement class="CVar"> 
+					<property name="cvar" value="wastelandDSpawn"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="1"/> 				
+				</requirement> 	 				
+				<property name="phase" value="2" />
+				<property name="entity_names" value="RadiationBombAOO"  />
+				<property name="spawn_count" value="1"  />
+				<property name="min_distance" value="1" />
+				<property name="max_distance" value="1" />
+				<property name="safe_spawn" value="true" />
+				<property name="spawn_type" value="Position" />				
+			</action>
+			<!-- === Snow Freeze Bomb === -->
+			<action class="SpawnEntity">
+ 				<requirement class="CVar"> 
+					<property name="cvar" value="snowDSpawn"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="1"/> 				
+				</requirement> 	 				
+				<property name="phase" value="2" />
+				<property name="entity_names" value="FreezeBombAOO"  />
+				<property name="spawn_count" value="1"  />
+				<property name="min_distance" value="1" />
+				<property name="max_distance" value="1" />
+				<property name="safe_spawn" value="true" />
+				<property name="spawn_type" value="Position" />				
+			</action>	
+			<!-- === Desert Fire Bomb === -->
+			<action class="SpawnEntity">
+ 				<requirement class="CVar"> 			
+					<property name="cvar" value="desertDSpawn"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="1"/> 				
+				</requirement> 	 				
+				<property name="phase" value="2" />
+				<property name="entity_names" value="FireBombAOO"  />
+				<property name="spawn_count" value="1"  />
+				<property name="min_distance" value="1" />
+				<property name="max_distance" value="1" />
+				<property name="safe_spawn" value="true" />
+				<property name="spawn_type" value="Position" />
+			</action>	
+			<!-- === Lightning Bomb === -->
+			<action class="SpawnEntity">
+ 				<requirement class="CVar"> 			
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="101"/> 				
+				</requirement> 	 				
+				<property name="phase" value="2" />
+				<property name="entity_names" value="LightningBombAOO"  />
+				<property name="spawn_count" value="4"  />
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="7" />
+				<property name="safe_spawn" value="true" />
+				<property name="spawn_type" value="Position" />
+			</action>			
+			
+			<!-- === Killer Clown === -->
+			<action class="SpawnEntity">
+				<requirement class="CVar"> 
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="GTE"/> 					
+					<property name="value" value="1"/> 				
+				</requirement>
+ 				<requirement class="CVar"> 
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="LTE"/> 					
+					<property name="value" value="20"/> 				
+				</requirement> 	
+				<requirement class="CVar"> 
+					<property name="cvar" value="KillerClown"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="1"/> 				
+				</requirement>				
+ 				
+				<property name="phase" value="1" />
+				<property name="entity_names" value="zombieManiacClown1T1AOO,zombieManiacClown2T1AOO,zombieManiacClown3T1AOO,zombieManiacClown4T1AOO,,zombieManiacClown5T1AOO"  />
+				<property name="spawn_count" value="5"  />
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="true" />	
+		
+			</action>	
+			<action class="Delay">
+				<requirement class="CVar"> 
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="GTE"/> 					
+					<property name="value" value="1"/> 				
+				</requirement>
+ 				<requirement class="CVar"> 
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="LTE"/> 					
+					<property name="value" value="20"/> 				
+				</requirement> 	
+				<requirement class="CVar"> 
+					<property name="cvar" value="KillerClown"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="1"/> 				
+				</requirement>			
+				<property name="time" value="2" />
+				<property name="phase" value="1" />
+			</action>				
+			<action class="PlaySound">
+				<requirement class="CVar"> 
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="GTE"/> 					
+					<property name="value" value="1"/> 				
+				</requirement>
+ 				<requirement class="CVar"> 
+					<property name="cvar" value="DeathSpawnCVar"/> 
+					<property name="operation" value="LTE"/> 					
+					<property name="value" value="20"/> 				
+				</requirement> 	
+				<requirement class="CVar"> 
+					<property name="cvar" value="KillerClown"/> 
+					<property name="operation" value="Equals"/> 					
+					<property name="value" value="1"/> 				
+				</requirement>			
+				<property name="phase" value="2" />			
+				<property name="sound" value="meantdothat" />
+			</action>
+			
+		</action_sequence>
+
+	
+		<action_sequence name="action_DeathTree">
+			<property name="single_instance" value="true" />
+			<property name="action_type" value="Game" />
+			<action class="SpawnEntity">
+				<requirement class="CVar"> 
+					<property name="cvar" value="RandomCVarAOO"/> 
+					<property name="operation" value="LTE"/> 					
+					<property name="value" value="10"/> 		
+				</requirement> 
+ 				<property name="entity_names" value="zombieTreeMonsterAOO"/>
+				<property name="safe_spawn" value="true" />
+				<property name="phase" value="2" />
+				<property name="target_group" value="party" />
+				<property name="spawn_type" value="Position" />
+				<property name="min_distance" value="0" />
+				<property name="max_distance" value="1" />	
+			</action>
+		</action_sequence>	
+		
+		<action_sequence name="action_SkeletonBoss">
+			<action class="ExplodeTarget">
+				<property name="blast_power" value="75" />
+				<property name="block_damage" value="300" />
+				<property name="block_radius" value="1" />
+				<property name="entity_damage" value="20" />
+				<property name="entity_radius" value="1" />			
+				<property name="phase" value="1" />
+			</action>		
+		</action_sequence>
+
+		<action_sequence name="action_T1_Died">
+			<action class="ExplodeTarget">
+				<property name="blast_power" value="75" />
+				<property name="block_damage" value="300" />
+				<property name="block_radius" value="1" />
+				<property name="entity_damage" value="20" />
+				<property name="entity_radius" value="1" />			
+				<property name="phase" value="1" />
+			</action>		
+		</action_sequence>
+		
+		<action_sequence name="spawn_zLoot" >
+			<action class="SpawnContainer">
+				<property name="entity_names" value="LootContainerT1" />
+				<property name="spawn_count" value="1" />
+				<property name="min_distance" value="1" />
+				<property name="max_distance" value="1" />
+				<property name="safe_spawn" value="true" />
+			</action>
+		</action_sequence>
+	
+	</append>
+</config>	

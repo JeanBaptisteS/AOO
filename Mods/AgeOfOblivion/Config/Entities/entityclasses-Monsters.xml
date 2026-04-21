@@ -1,0 +1,521 @@
+<config>
+	<append xpath="/entity_classes">
+	
+		<entity_class name="monsterTemplateAOO">
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="UserSpawnType" value="None"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="Tags" value="entity,zombie,walker,feral,hostile,monster"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Enemies"/>
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot"/>
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up"/>
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down"/>
+			<property name="TrackerIcon" value="ui_game_symbol_run"/>
+			<property name="PhysicsBody" value=""/>
+			<property name="Weight" value="300"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="400"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="IsAnimalEntity" value="false"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="EntityFlags" value="zombie"/>
+			<property name="Faction" value="undead"/>
+			
+			<property name="SoundRandom" value="BeastCalm01AOO"/>
+			<property name="SoundHurt" value="BeastHurt04OO"/>
+			<property name="SoundDeath" value="BeastDie04AOO"/>
+			<property name="SoundSense" value="BeastCalm04AOO"/>
+			<property name="SoundAlert" value="BeastTense04AOO"/>
+			<property name="SoundAttack" value="BeastAttack04AOO"/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animalhoofstep"/>
+
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="3"/>
+			<property name="AISeeOffset" value=".8"/>
+			<property name="AIPathCostScale" value=".4, .6"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,25,EntityBandit,25,EntityAnimalStag,40,EntityZombie,30"/>
+			<property name="AITask-5" value="ApproachSpot"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,13,9,EntityBandit,0,-6,EntityAnimalStag,0,0,EntityZombie,0,-6"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+
+			<property name="MaxViewAngle" value="270"/>
+			<property name="SightRange" value="50"/>
+			<property name="SightLightThreshold" value="-2,150"/>
+			<property name="MoveSpeed" value=".6"/>
+			<property name="MoveSpeedAggro" value=".5, .9"/>
+			<property name="MoveSpeedRand" value="-.2, .2"/>
+			<property name="MoveSpeedPanic" value=".9"/>
+			<property name="MaxTurnSpeed" value="280"/>
+			<property name="PainResistPerHit" value="1"/>
+			<property name="JumpDelay" value=".1"/>
+			<property name="SwimSpeed" value="1.2"/>
+			<property name="SwimStrokeRate" value="1.1,1.5"/>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.4"/>
+			<property name="CanClimbLadders" value="false"/>
+			
+			<property name="SleeperNoiseToSense" value="3,8"/>
+			<property name="SleeperNoiseToSenseSoundChance" value=".5"/>
+			<property name="SleeperNoiseToWake" value="9,12"/>
+			<property name="SleeperSightToSenseMin" value="-10,0"/>
+			<property name="SleeperSightToSenseMax" value="200,300"/>
+			<property name="SleeperSightToWakeMin" value="-40,5"/>
+			<property name="SleeperSightToWakeMax" value="340,480"/>
+
+			<property name="HandItem" value="meleeHandMonsterShortAOO"/>
+			
+			<property name="ExperienceGain" value="800"/>
+			<property name="DeadBodyHitPoints" value="400"/>
+			<property name="LootDropProb" value="0"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+
+			<property name="NavObject" value="twitch_spawn,twitch_spawn_other,clear_sleeper"/>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<!--<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="0" prob="0"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0" prob="0"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="0" prob="0"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="0" prob="0"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="0" prob="0"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="0" prob="0"/>-->
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="600"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="-.2,.15"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffEntitySpawnHeal"/>
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="0">
+					<requirement name="NotHasBuff" buff="buffBrawlerNoTeeth"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="1">
+					<requirement name="HasBuff" buff="buffBrawlerNoTeeth"/></triggered_effect>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffZombie"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="monsterBossTemplateAOO" extends="monsterTemplateAOO">
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+			<property name="ExperienceGain" value="10000"/>
+			<property name="SightRange" value="160"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="monsterArthromahreAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Arthromahre.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/>
+		</entity_class>
+		
+		<entity_class name="monsterBuformorphAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Buformorph.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/>
+		</entity_class>
+		
+		<entity_class name="monsterCarcidonteAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Carcidonte.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/>
+		</entity_class>
+		
+		<entity_class name="monsterCaveCrawlerAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Cavecrawler.prefab"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/>
+		</entity_class>
+		
+		<entity_class name="monsterCeratoferoxAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Ceratoferox.prefab"/>
+			
+			<property name="SoundRandom" value="BeastCalm01AOO"/>
+			<property name="SoundAlert" value="BeastTense01AOO"/>
+			<property name="SoundHurt" value="BeastHurt01OO"/>
+			<property name="SoundDeath" value="BeastDie01AOO"/>
+			<property name="SoundAttack" value="BeastAttack01AOO"/>
+			<property name="SoundSense" value="BeastCalm01AOO"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/>
+		</entity_class>
+		
+		<entity_class name="monsterCeratoferoxBossAOO" extends="monsterBossTemplateAOO"> <!-- too big, can't hit -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?CeratoferoxBoss.prefab"/> 
+			<property name="SoundRandom" value="BeastCalm01AOO"/>
+			<property name="SoundAlert" value="BeastTense01AOO"/>
+			<property name="SoundHurt" value="BeastHurt01OO"/>
+			<property name="SoundDeath" value="BeastDie01AOO"/>
+			<property name="SoundAttack" value="BeastAttack01AOO"/>
+			<property name="SoundSense" value="BeastCalm01AOO"/>
+			<property name="SoundGiveUp" value=""/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="30"/>
+		</entity_class>
+
+		<entity_class name="monsterClypeosaurusAOO" extends="monsterTemplateAOO"> <!-- Damage a bit early in animation -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Clypeosaurus.prefab"/> 
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+			
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="15"/>
+		</entity_class>		
+		
+		<entity_class name="monsterArachnidAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Arachnid.prefab"/>
+			
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundHurt" value="Spider_HurtOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundGiveUp" value=""/>
+			
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRandomMesh2"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="monsterDarkSpiderAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?DarknessSpider.prefab"/>
+			<property name="HandItem" value="meleeHandButcherAOO"/>
+			
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundHurt" value="Spider_HurtOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animallightstep"/>
+		</entity_class>
+		
+		<entity_class name="monsterDeinodonteAOO" extends="monsterTemplateAOO"> <!-- Slightly floating -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Deinodonte.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterDeinodonteBossAOO" extends="monsterBossTemplateAOO"> <!-- floating above ground -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?DeinodonteBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterEntomoraneAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Entomorane.prefab"/>
+		</entity_class>
+		
+		<entity_class name="monsterGiantRatAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?GiantRat.prefab"/>
+			<property name="HandItem" value="meleeHandButcherAOO"/>
+			
+			<property name="SoundStepType" value="animallightstep"/>
+			
+			<property name="MoveSpeed" value="0.6"/> 
+			<property name="MoveSpeedAggro" value="0.95, 3"/> 
+			<property name="MoveSpeedRand" value="-.1, .25"/> 
+			<property name="JumpMaxDistance" value="1, 2"/>
+			
+			<property name="ExperienceGain" value="100"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="1"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="monsterGiantSlugAOO" extends="monsterTemplateAOO"> <!-- Floating raelly high & not attacking -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?GiantSlug.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterGorosaurusAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Gorosaurus.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterGorosaurusBossAOO" extends="monsterBossTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?GorosaurusBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterGryllunguisAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Gryllunguis.prefab"/>
+		</entity_class>
+		
+		<entity_class name="monsterHellcreeperAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Hellcreeper.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterHideoplastAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Hideoplast.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterHideoplastBossAOO" extends="monsterBossTemplateAOO"> <!-- slightly floating, slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?HideoplastBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterKarcinomorphAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Karcinomorph.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterKarckmahreAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Karckmahre.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterKarckmahreBossAOO" extends="monsterBossTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?KarckmahreBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>	
+		
+		<entity_class name="monsterLaminoferoxAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Laminoferox.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterLetalobrachAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Letalobrach.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterLetalobrachBossAOO" extends="monsterBossTemplateAOO"> <!-- Slightly floating, slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?LetalobrachBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterMorphorridAOO" extends="monsterTemplateAOO"> <!-- slight delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Morphorrid.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterMuscomorphAOO" extends="monsterTemplateAOO"> <!-- Ask Pipermac for the original asset and make this a flying creature -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Muscomorph.prefab"/>
+		</entity_class>
+		
+		<entity_class name="monsterOnyscidusAOO" extends="monsterTemplateAOO"> <!-- very slightly floating -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Onyscidus.prefab"/>
+			
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundHurt" value="Spider_HurtOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animallightstep"/>
+		</entity_class>
+		
+		<entity_class name="monsterPardathroxAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Pardathrox.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterPardathroxBossAOO" extends="monsterBossTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?PardathroxBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterPerderosAOO" extends="monsterTemplateAOO"> <!-- big delay on animation attacks -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Perderos.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterPerderosBossAOO" extends="monsterBossTemplateAOO"> <!-- Floating super high => can't attack -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?PerderosBoss.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterSavageWerewolfAOO" extends="monsterTemplateAOO"> <!-- Slow down running animations & increase move speed. Death state floating -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?SavageWerewolf.prefab"/>
+			<property name="HandItem" value="meleeHandButcherAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterScolomorphAOO" extends="monsterTemplateAOO"> <!-- Floating -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Scolomorph.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterSkitterAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,skitter1"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Skitter.prefab"/>
+			<property name="HandItem" value="meleeHandArackAOO"/>
+			
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundHurt" value="Spider_HurtOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animallightstep"/>
+			
+			<property name="MoveSpeed" value="0.6"/> 
+			<property name="MoveSpeedAggro" value="0.95, 3"/> 
+			<property name="MoveSpeedRand" value="-.1, .25"/> 
+			<property name="JumpMaxDistance" value="1, 2"/>
+			
+			<property name="ExperienceGain" value="50"/>
+			<property name="DeadBodyHitPoints" value="50"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="15"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="2"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="monsterSkitterQueenAOO" extends="monsterBossTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,skitter4"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Skitter_Queen.prefab"/>
+			<property name="HandItem" value="meleeHandArackQueenAOO"/>
+			
+			<property name="SoundRandom" value="Spider_RandomAOO"/>
+			<property name="SoundAlert" value="Spider_RandomAOO"/>
+			<property name="SoundHurt" value="Spider_HurtOO"/>
+			<property name="SoundDeath" value="Spider_DeathAOO"/>
+			<property name="SoundAttack" value="Spider_AttackAOO"/>
+			<property name="SoundSense" value="Spider_RandomAOO"/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="SoundStepType" value="animallightstep"/>
+			
+			<property name="MoveSpeed" value="0.8"/> 
+			<property name="MoveSpeedAggro" value="0.95, 3"/> 
+			<property name="MoveSpeedRand" value="-.1, .25"/> 
+			<property name="JumpMaxDistance" value="1, 2"/>
+			
+			<property name="ExperienceGain" value="2500"/>
+			<property name="DeadBodyHitPoints" value="500"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="30"/>
+			
+			<property name="Buffs" value="buffSkitterQueen"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="4500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
+				<passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="2"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="monsterSkorpmareAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Skorpmare.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterSlimeAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="HandItem" value="meleeHandSlimeAOO"/>
+			<property name="WalkType" value="4"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,slime"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Slime.prefab"/>
+			
+			<property name="SoundStepType" value=""/>
+			
+			<drop event="Harvest" name="resourceGreenSlimeAOO" tag="allToolsHarvest" count="1,3"/>
+		</entity_class>
+
+		<entity_class name="monsterTelluropodAOO" extends="monsterTemplateAOO"> <!-- Slightly floating -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Telluropod.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterXLongAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterTetrachnideAOO" extends="monsterTemplateAOO"> <!-- Slightly floating -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Tetrachnide.prefab"/>
+			
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffRandomMesh2"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="monsterTitanockarceAOO" extends="monsterTemplateAOO"> <!-- Falls through the ground -->
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Titanockarce.prefab"/>
+			<property name="HandItem" value="meleeHandButcherAOO"/>
+		</entity_class>
+		
+		<entity_class name="monsterTreeMonsterAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?TreeMonster.prefab"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTreeMonster" />
+			</effect_group>					
+		</entity_class>
+		
+		<entity_class name="monsterTyranopodeAOO" extends="monsterTemplateAOO">
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_Monsters.unity3d?Tyranopode.prefab"/>
+			<property name="HandItem" value="meleeHandMonsterLongAOO"/>
+		</entity_class>
+		
+	</append>
+</config>

@@ -1,0 +1,66 @@
+<config>
+	<append xpath="/entity_classes" >
+
+		<entity_class name="zombieNightWatcher01AOO" extends="zombieNightWatcherTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,nw"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>			
+			<property name="HandItem" value="meleeHandZombieNightWatcher01AOO"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_NightWatchers.unity3d?NW_01.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="15"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="25"/>
+			</effect_group>
+		</entity_class>	
+		
+		<entity_class name="zombieNightWatcher02AOO" extends="zombieNightWatcherTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,nw"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="HandItem" value="meleeHandZombieNightWatcher02AOO"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>			
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_NightWatchers.unity3d?NW_02.prefab"/> 
+				<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class>	
+		
+		<entity_class name="zombieNightWatcher03AOO" extends="zombieNightWatcherTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,nw"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="HandItem" value="meleeHandZombieNightWatcher03AOO"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_NightWatchers.unity3d?NW_03.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="zombieNightWatcher04AOO" extends="zombieNightWatcherTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,nw"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="HandItem" value="meleeHandZombieNightWatcher04AOO"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_NightWatchers.unity3d?NW_04.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class>	
+	
+		<entity_class name="zombieNightWatcher05AOO" extends="zombieNightWatcherTemplateAOO">
+			<property name="Tags" value="entity,male,zombie,walker,feral,nw"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HandItem" value="meleeHandZombieNightWatcher05AOO"/>
+			<property name="Mesh" value="#@modfolder:Resources/NewEntities/AOO_NightWatchers.unity3d?NW_05.prefab"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="600"/> 
+			</effect_group>
+		</entity_class>	
+
+	
+	</append>
+</config>

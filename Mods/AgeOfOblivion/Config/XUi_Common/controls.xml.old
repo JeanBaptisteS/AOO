@@ -1,0 +1,102 @@
+<aoo name="XUi_Common/controls.xml">
+
+<!--	// SMX // Window Design - Main Window -->
+
+		<append xpath="/controls">
+			<aoo_window_design>
+				<rect name="smxcore_window_design" depth="${depth}">
+					<sprite name="window_background_border" depth="6" width="${width}" height="${height}" sprite="window_background_border" type="sliced" color="128,128,128" globalopacitymod="1.0" />
+					<sprite name="smxcore_window_foreground" depth="1" width="${width}" height="${height}" sprite="smxlib_window_background" type="sliced" color="0,99,128,240" globalopacitymod="1.6" />
+					<sprite name="smxcore_window_header_background" depth="3" width="${width}" height="65" sprite="window_header_background" type="sliced" color="0,99,128" globalopacitymod="1.4" /> 
+					<sprite name="smxcore_window_header_separation" depth="4" pos="0,-62" width="${width}" height="3" sprite="separation_line_1" flip="vertically" color="128,128,128" globalopacitymod="1.2" />
+					<label name="${name}" depth="5" pos="${Round(width/2,0)},-40" width="${width-40}" height="36" style="smxcore_window_title" text="${text}" text_key="${text_key}" overflow="ShrinkContent" />
+				</rect>
+			</aoo_window_design>
+		</append>
+
+
+		<append xpath="/controls">
+			<aoo_window_design_menu_top>
+				<rect name="smxlib_window_design_menu_top" depth="${depth}">
+					<sprite name="smxui_window_category_background" depth="3" pos="0,-63" width="${width}" height="50" sprite="window_header_background" color="0,0,0" globalopacitymod="1.1" />
+					<sprite name="smxui_window_category_separation" depth="4" pos="0,-112" width="${width}" height="3" sprite="separation_line_2" flip="vertically" color="128,128,128" globalopacitymod="1.2" />
+				</rect>
+			</aoo_window_design_menu_top>
+		</append>
+
+		<append xpath="/controls">
+			<aoo_window_design_module_title>
+				<rect name="smxui_window_content_module_title" pos="${pos}" text="${text}">
+				<!--	<sprite name="smxui_module_title_separation" depth="3" pos="20,-15" width="300" height="5" sprite="smxlib_separation_line_1" flip="vertically" color="[smxui_element_separation_1]" globalopacitymod="1.2" /> -->
+				<!--	<sprite name="smxui_module_title_background" depth="4" pos="50,-5" width="240" height="30" sprite="smxlib_window_statsentry_background" rotation="2" color="[smxui_element_module_title_background]" globalopacitymod="1.8" /> -->
+					<label name="smxui_module_title_entry" depth="5" pos="50,-10" width="240" height="30" style="smxcore_label_normal" text="${text}" font_size="22" justify="center"  spacing_x="6" color="[smxui_element_labelcolor_1]" />
+				</rect>
+			</aoo_window_design_module_title>
+		</append>
+		<append xpath="/controls">
+			<aoo_window_design_content_bottom>
+				<!--<rect name="smxui_window_design_content_bottom" pos="${pos}" depth="${depth}">
+					<sprite name="smxui_window_module_separation" depth="4" pos="20,${-height+100}" width="${width-60}" height="2" sprite="smxlib_separation_line_2" flip="horizontally" color="[smxui_element_separation_1]" globalopacitymod="1.2" />
+					<sprite name="smxui_window_accent_glow" depth="3" pos="10,${-height+100}" width="${width-70}" height="80" sprite="smxlib_window_accent_glow" color="[smxui_element_accentcolor_1]" globalopacitymod="1.8" />
+					<sprite name="smxui_window_accent_glow" depth="4" pos="10,${-height+100}" width="${width-70}" height="80" sprite="smxlib_window_accent_overlay" color="[smxui_element_accentcolor_1]" globalopacitymod="1.8" />
+				</rect>-->
+			</aoo_window_design_content_bottom>
+		</append>
+		<append xpath="/controls">
+			<aoo_window_design_menu_right_wtop>
+				<rect name="smxcore_window_design_menu_right_wtop" depth="${depth}">
+					<sprite name="smxui_window_menu_separation" depth="4" pos="${width-100},-113" width="${height-112}" height="3" sprite="separation_line_1" rotation="270" color="128,128,128" />
+				</rect>
+			</aoo_window_design_menu_right_wtop>
+			<aoo_window_design_menu_right_wtop2>
+				<rect name="smxlib_window_design_menu_right_wtop" depth="${depth}">
+					<sprite name="smxui_window_menu_separation" depth="4" pos="${width-75},-113" width="${height-112}" height="3" sprite="separation_line_1" rotation="270" color="128,128,128" />
+				</rect>
+			</aoo_window_design_menu_right_wtop2>
+		</append>
+		<append xpath="/controls">
+			<aoo_window_design_menu_right>
+				<rect name="aoo_window_design_menu_right" depth="${depth}">
+					<sprite name="smxui_window_menu_separator" depth="4" pos="${width-75},-65" width="${height-65}" height="3" sprite="separation_line_1" rotation="270" color="128,128,128" />
+					<sprite name="smxui_window_menu_separator_background" depth="3" pos="${width},-65" width="${height-65}" height="75" sprite="window_header_background" rotation="270" color="0,0,0" />
+				</rect>
+			</aoo_window_design_menu_right>
+		</append>		
+		
+		<append xpath="/controls">
+			<aoo_window_design_menu_right_inventory>
+				<rect name="smxui_window_menu_content" depth="4" pos="${width-65},-90" width="45" height="${height-200}">
+
+					<rect name="smxui_container_options" depth="5" pos="0,0" width="45" height="250" controller="ContainerStandardControls" move_start_bottom_left="true">
+						<button name="btnMoveFillStacks" depth="3" pos="23,-40" size="50,50" style="press, hover, smxcore_icon_colors" pivot="center" sprite="smxlib_ui_game_symbol_dumpfill" sound_play_on_hover="[default_hover]" sound="[paging_click]" tooltip_key="lblStashFillStacks" visible="{lootingorvehiclestorage}" />
+						<button name="btnMoveSmart" depth="3" pos="23,-115" size="50,50" style="press, hover, smxcore_icon_colors" pivot="center" sprite="smxlib_ui_game_symbol_dumpsmart" sound_play_on_hover="[default_hover]" sound="[paging_click]" tooltip_key="lblStashSmart" visible="{lootingorvehiclestorage}" />
+						<button name="btnMoveAll" depth="3" pos="23,-190" size="50,50" style="press, hover, smxcore_icon_colors" pivot="center" sprite="smxlib_ui_game_symbol_dumpall" sound_play_on_hover="[default_hover]" sound="[paging_click]" tooltip_key="lblStashAll" visible="{lootingorvehiclestorage}" />
+
+						<smxui_lockedslots_combobox_vertical name="cbxLockedSlots" pos="0,-320"	 type="ComboBoxInt" value_min="0" value_max="200" value_wrap="true" value_increment="1" tooltip_key="xuiStashLockedSlots" />
+
+						<button name="btnSort" depth="3" pos="23,-570" size="50,50" style="press, hover, smxcore_icon_colors" pivot="center" sprite="smxlib_ui_game_symbol_sort" tooltip_key="lblSortContainer" sound_play_on_hover="[default_hover]" sound="[paging_click]" />
+						<label name="sortContainer" depth="3" pos="28,-605" width="60" height="18" style="smxcore_label_normal" text_key="lblSortContainer" font_size="18" pivot="center" overflow="ShrinkContent" color="[smxui_element_labelcolor_2]" />
+
+						<button name="btnClearInventory" depth="3" pos="23,-650" size="50,50" style="press, hover, smxcore_icon_colors" pivot="center" sprite="ui_game_symbol_trash" tooltip_key="lblClearInventory" sound_play_on_hover="[default_hover]" sound="[paging_click]" visible="{creativewindowopen}" />
+						<label name="clearInventory" depth="3" pos="28,-688" width="60" height="18" style="smxcore_label_normal" text_key="lblClearInventory" font_size="18" pivot="center" overflow="ShrinkContent" color="[red]" visible="{creativewindowopen}" />
+					</rect>
+				</rect>
+			</aoo_window_design_menu_right_inventory>
+		
+	
+			<aoo_modular_frame>
+				<rect name="smxui_modular_frame" depth="${depth}" pos="${pos}" width="${width}" height="${height}">
+					<rect pos="0,0" width="${width}" height="${height}">
+						<sprite name="background" depth="2" pos="-1,-2" width="${width-3}" height="${height-3}" sprite="menu_empty" type="sliced" color="[smxui_element_background]" globalopacitymod="${globalopacitymod}" />
+
+					<!--	<sprite name="frameLeft" depth="3" pos="0,0" width="${height}" height="3" sprite="smxlib_separation_line_1" rotation="270" color="${color}" globalopacitymod="1.8" />
+						<sprite name="frameTop" depth="4" pos="-1,1" width="${width}" height="3" sprite="smxlib_separation_line_1" color="${color}" globalopacitymod="1.8" />
+						<sprite name="frameRight" depth="3" pos="${width},-1" width="${height}" height="3" sprite="smxlib_separation_line_1" rotation="270" color="${color}" globalopacitymod="1.8" />
+						<sprite name="frameBottom" depth="4" pos="-3,${-height+1}" width="${width}" height="3" sprite="smxlib_separation_line_1" color="${color}" globalopacitymod="1.8" />
+-->
+					</rect>
+				</rect>
+			</aoo_modular_frame>
+		</append>
+	
+</aoo>

@@ -1,0 +1,155 @@
+<config>
+
+	<append xpath="/blockplaceholders/placeholder[@name='cntAllVendingMachinesRandomLootHelper']">
+		<block name="wksMagazineMachine" prob=".15"/>
+	</append>
+	<append xpath="/blockplaceholders/placeholder[@name='cntVendingMachineSnacksRandomLootHelper']">
+		<block name="wksMagazineMachine" prob=".15"/>
+	</append>
+	<append xpath="/blockplaceholders/placeholder[@name='cntVendingMachine2RandomLootHelper']">
+		<block name="wksMagazineMachine" prob=".15"/>
+	</append>
+	
+	
+	<append xpath="/blockplaceholders">
+	
+		<placeholder name="cntCavePlaceholderAOO">
+			<block name="NewFogA3_5x5" prob="1"/>
+			<block name="OblivionCrateAOO" prob=".05"/>	
+			<block name="lootCrate02_1X1_AOO" prob=".05"/>			
+		</placeholder>
+
+		<placeholder name="cntCarcassForest_AOO">
+			<block name="carcassBear_AOO" prob="1"/>
+			<block name="carcassIbex_AOO" prob="1"/>
+			<block name="carcassDeer_AOO" prob="1"/>	
+			<block name="carcassGoat_AOO" prob="1"/>
+			<block name="carcassWolf_AOO" prob="1"/>	
+			<block name="carcassRabbit" prob="1"/>	
+			<block name="carcassBuffalo_AOO" prob="1"/>	
+			<block name="carcassCow_AOO" prob="1"/>	
+			<block name="carcassPig_AOO" prob="1"/>	
+			<block name="carcassScotCow_AOO" prob="1"/>
+			<block name="carcassSpider_AOO" prob="1"/>
+			<block name="carcassChicken_AOO" prob="1"/>
+			<block name="carcassGoose_AOO" prob="1"/>
+			<block name="carcassTurtle_AOO" prob="1"/>
+			<block name="carcassSheep_AOO" prob="1"/>
+		</placeholder>
+		
+		<placeholder name="cntCarcassDesert_AOO">
+			<block name="carcassElephant_AOO" prob="1"/>
+			<block name="carcassScorpion_AOO" prob="1"/>
+			<block name="carcassRhino_AOO" prob="1"/>	
+			<block name="carcassTiger_AOO" prob="1"/>	
+			<block name="carcassCamel_AOO" prob="1"/>
+			<block name="carcassSpider_AOO" prob="1"/>
+			<block name="carcassComodo_AOO" prob="1"/>
+			<block name="carcassLeopard_AOO" prob="1"/>		
+			<block name="carcassZebra_AOO" prob="1"/>	
+		</placeholder>	
+		
+		<placeholder name="cntCarcassSnow_AOO">
+			<block name="carcassBear_AOOO" prob="1"/>
+			<block name="carcassIbex_AOO" prob="1"/>
+			<block name="carcassDeer_AOO" prob="1"/>	
+			<block name="carcassGoat_AOO" prob="1"/>	
+			<block name="carcassRabbit" prob="1"/>	
+			<block name="carcassCow_AOO" prob="1"/>	
+			<block name="carcassPig_AOO" prob="1"/>	
+			<block name="carcassScotCow_AOO" prob="1"/>	
+			<block name="carcassPenguin_AOO" prob="1"/>	
+			<block name="carcassSpider_AOO" prob="1"/>	
+			<block name="carcassChicken_AOO" prob="1"/>
+			<block name="carcassGoose_AOO" prob="1"/>
+			<block name="carcassSheep_AOO" prob="1"/>			
+		</placeholder>	
+		
+		<placeholder name="cntCarcassWasteland_AOO">
+			<block name="carcassBear_AOO" prob="1"/>
+			<block name="carcassIbex_AOO" prob="1"/>
+			<block name="carcassDeer_AOO" prob="1"/>	
+			<block name="carcassGoat_AOO" prob="1"/>
+			<block name="carcassWolf_AOO" prob="1"/>	
+			<block name="carcassRabbit" prob="1"/>	
+			<block name="carcassBuffalo_AOO" prob="1"/>	
+			<block name="carcassCow_AOO" prob="1"/>	
+			<block name="carcassPig_AOO" prob="1"/>	
+			<block name="carcassScotCow_AOO" prob="1"/>
+			<block name="carcassSpider_AOO" prob="1"/>
+			<block name="carcassChicken_AOO" prob="1"/>
+			<block name="carcassGoose_AOO" prob="1"/>
+			<block name="carcassTurtle_AOO" prob="1"/>
+			<block name="carcassSheep_AOO" prob="1"/>	
+			<block name="carcassPenguin_AOO" prob="1"/>	
+			<block name="carcassElephant_AOO" prob="1"/>
+			<block name="carcassScorpion_AOO" prob="1"/>
+			<block name="carcassRhino_AOO" prob="1"/>	
+			<block name="carcassTiger_AOO" prob="1"/>	
+			<block name="carcassCamel_AOO" prob="1"/>
+			<block name="carcassComodo_AOO" prob="1"/>
+			<block name="carcassLeopard_AOO" prob="1"/>		
+			<block name="carcassZebra_AOO" prob="1"/>	
+		</placeholder>	
+		
+
+		<placeholder name="cntDumpster">
+			<block name="Dumpster01AOO" prob="1"/>
+			<block name="Dumpster02AOO" prob="1"/>
+			<block name="Dumpster03AOO" prob="1"/>
+		</placeholder>
+		
+	</append> 
+		
+<!--
+	<append xpath="/blockplaceholders/placeholder[@name='cntForestRandomLootHelper']">
+		<block name="OblivionCrateAOO" prob=".2"/>
+	</append>
+
+	<append xpath="/blockplaceholders/placeholder[@name='cntWastelandRandomLootHelper']">
+		<block name="OblivionCrateAOO" prob=".2"/>
+	</append>
+
+	<append xpath="/blockplaceholders/placeholder[@name='cntDesertRandomLootHelper']">
+		<block name="OblivionCrateAOO" prob=".2"/>
+	</append>
+
+	<append xpath="/blockplaceholders/placeholder[@name='cntBurntForestRandomLootHelper']">
+		<block name="OblivionCrateAOO" prob=".2"/>
+	</append>
+
+
+	<append xpath="/blockplaceholders/placeholder[@name='cntStreetRandomLootHelper']">
+		<block name="OblivionCrateAOO" prob=".2"/>
+	</append>
+
+	<append xpath="/blockplaceholders/placeholder[@name='cntYardRandomLootHelper']">
+		<block name="OblivionCrateAOO" prob=".2"/>
+	</append> 
+-->
+
+	<append xpath="/blockplaceholders/placeholder[@name='treeSmallRandomHelper']">
+		<block name="plantedWhiteOakPlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedSugarMaplePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedRedApplePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedOrangePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedPearPlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedLimeTreePlantHarvestTSK_AOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedLemonTreePlantHarvestTSK_AOO" prob="1" biome="pine_forest" randomrotation="true"/> 
+	</append> 
+
+	<append xpath="/blockplaceholders/placeholder[@name='treeMediumRandomHelper']">
+		<block name="plantedWhiteOakPlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedSugarMaplePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedRedApplePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedOrangePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedPearPlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/> 
+	</append> 
+
+	<append xpath="/blockplaceholders/placeholder[@name='treeLargeRandomHelper']">
+		<block name="plantedWhiteOakPlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+		<block name="plantedSugarMaplePlantHarvestAOO" prob="1" biome="pine_forest" randomrotation="true"/>
+	</append> 		
+	
+
+</config>

@@ -1,0 +1,184 @@
+<configs>
+	<append xpath="/recipes">
+	
+		<recipe name="foodRawMeat" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+		<recipe name="foodRottingFlesh" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+
+	<!-- Wrapped Carcasses -->
+	
+		<recipe name="itemCarcassBear_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassBear" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassZombieBear_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassZombieBear" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassStag_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassStag" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassDoe_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassDoe" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassWolf_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassWolf" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassDireWolf_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassDireWolf" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassCoyote_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassCoyote" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassVulture_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassVulture" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassZombieDog_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassZombieDog" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassZombieBoar_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassZombieBoar" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassGrace_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassGrace" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassCow_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassCow" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassFox_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassFox" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassGoat_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassGoat" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassPenguin_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassPenguin" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassPig_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassPig" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassSheep_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassSheep" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassElephant_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassElephant" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassZebra_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassZebra" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassCamel_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassCamel" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassBuffalo_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassBuffalo" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassKomodo_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassKomodo" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassIbex_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassIbex" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassCroc_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassCroc" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassHippo_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassHippo" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassLion_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassLion" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassTiger_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassTiger" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassRhino_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassRhino" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+		<recipe name="itemCarcassLeopard_Wrapped" count="1" craft_time="5">
+			<ingredient name="itemCarcassLeopard" count="1"/>
+			<ingredient name="resourcePaper" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		
+	</append>
+</configs>

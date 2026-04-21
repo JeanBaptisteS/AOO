@@ -1,0 +1,4 @@
+<config>
+    <include filename="Core/blockplaceholders-Core.xml" />
+	<include filename="Vehicles/blockplaceholders-Vehicles.xml" />
+</config>	

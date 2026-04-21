@@ -1,0 +1,179 @@
+<configs>
+    <append xpath="/item_modifiers">
+	
+	<item_modifier name="modVehicleRWPlow1" installable_tags="vRWplow" modifier_tags="RwPlow,RWplow1" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow1"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>	
+
+	<item_modifier name="modVehicleRWPlow2" installable_tags="vRWplow" modifier_tags="RWPlow,RWplow2" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow2"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>		
+	
+	<item_modifier name="modVehicleRWPlow3" installable_tags="vRWplow" modifier_tags="RWPlow,RWplow3" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow3"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>	
+	
+	<item_modifier name="modVehicleRWPlow4" installable_tags="vRWplow" modifier_tags="RWPlow,RWplow4" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow4"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>
+
+	<item_modifier name="modVehicleRWPlow5" installable_tags="vRWplow" modifier_tags="RWPlow,RWplow5" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow5"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>
+
+	<item_modifier name="modVehicleRWPlow6" installable_tags="vRWplow" modifier_tags="RWPlow,RWplow6" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow6"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>
+
+	<item_modifier name="modVehicleRWPlow7" installable_tags="vRWplow" modifier_tags="RWPlow,RWplow7" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWPlow7"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleEntityDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleBlockDamage" operation="perc_add" value=".6"/>
+			<passive_effect name="VehicleStrongSelfDamage" operation="perc_set" value=".33"/>
+		</effect_group>
+	</item_modifier>	
+
+	<item_modifier name="modVehicleRWExhaust1" installable_tags="vRWExhaust" modifier_tags="RwExhaust,RWExhaust1" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWExhaust1"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>	
+
+	<item_modifier name="modVehicleRWExhaust2" installable_tags="vRWExhaust" modifier_tags="RWExhaust,RWExhaust2" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWExhaust2"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>		
+	
+	<item_modifier name="modVehicleRWExhaust3" installable_tags="vRWExhaust" modifier_tags="RWExhaust,RWExhaust3" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWExhaust3"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>	
+	
+	<item_modifier name="modVehicleRWExhaust4" installable_tags="vRWExhaust" modifier_tags="RWExhaust,RWExhaust4" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWExhaust4"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>
+
+	<item_modifier name="modVehicleRWExhaust5" installable_tags="vRWExhaust" modifier_tags="RWExhaust,RWExhaust5" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWExhaust5"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>
+
+	<item_modifier name="modVehicleRWExhaust6" installable_tags="vRWExhaust" modifier_tags="RWExhaust,RWExhaust6" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWExhaust6"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>	
+	
+	<item_modifier name="modVehicleRWArmor" installable_tags="vRWArmor" modifier_tags="RWArmor" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWArmor"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>	
+
+	<item_modifier name="modVehicleRWDecor" installable_tags="vRWDecor" modifier_tags="RWDecor" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWDecor"/>
+		<effect_group tiered="false">
+			<passive_effect name="VehicleCarryCapacity" operation="perc_set" value=".25"/>
+		</effect_group>
+	</item_modifier>		
+
+	<item_modifier name="modVehicleRWWeapon1" installable_tags="vRWeapon1" modifier_tags="RWWeapon,RWWeapon1" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="UnlockedBy" value="modVehiclePlowSchematic"/>
+		<property name="TraderStageTemplate" value="modsTier3"/>
+		<property name="CustomIcon" value="modVehicleRWWeapon1"/>
+		<effect_group tiered="false">
+
+		</effect_group>
+	</item_modifier>	
+	
+	</append>
+</configs>

@@ -1,0 +1,13 @@
+
+<config>
+    <include filename="AdvancedPower/buffs-AdvancedPower.xml" />
+	<include filename="Core/buffs-Core.xml" />
+	<include filename="Entities/buffs-Entities-Old.xml" />
+	<include filename="Entities/buffs-Entities.xml" />
+	<include filename="Food/buffs-Food.xml" />
+	<include filename="Vehicles/buffs-Vehicles.xml" />
+	<include filename="WeaponsTools/buffs-WeaponsTools.xml" />
+	
+	<set xpath="/buffs/buff[@name='god']/effect_group/passive_effect[@name='CarryCapacity']/@value">100</set>
+	<set xpath="/buffs/buff[@name='buffDrugSteroids']/effect_group/passive_effect[@name='CarryCapacity']/@value">150</set>
+</config>
