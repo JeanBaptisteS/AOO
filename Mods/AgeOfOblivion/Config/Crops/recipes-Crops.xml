@@ -108,9 +108,9 @@
             <ingredient name="foodCropStrawberryAOO" count="3"/>
         </recipe>
 		
-		<recipe name="plantedSugarMapleTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
+		<!--<recipe name="plantedSugarMapleTreeSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
             <ingredient name="resourceMapleWoodPlankAOO" count="3"/>
-        </recipe>
+        </recipe>-->
 		
         <recipe name="plantedSugarcaneSeedAOO" count="1" craft_time="4" craft_area="Farm Table" craft_tool="toolSeedProcessorAOO" >
             <ingredient name="foodCropSugarcaneStalkAOO" count="3"/>

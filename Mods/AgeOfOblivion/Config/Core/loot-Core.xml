@@ -257,7 +257,7 @@
 			<item name="foodCropSpinachAOO" count="1"/>
 			<item name="foodCropTomatoAOO" count="1"/>
 			<item name="foodCropWheatAOO" count="1"/>
-			<item name="resourceWhiteOakPlankAOO" count="1"/>
+			<!-- <item name="resourceWhiteOakPlankAOO" count="1"/> -->
 			<item name="foodCropMixedHerbsAOO" count="1"/>
 			<item name="foodCropHempAOO" count="1"/>
 			<item name="foodCropMixedSpicesAOO" count="1"/>
