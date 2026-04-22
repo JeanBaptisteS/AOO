@@ -1596,15 +1596,15 @@
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/MapleTreeBlock.prefab"/>
-			<drop event="Harvest" name="resourceMapleWoodPlankAOO" count="10,20" tag="wildCropsHarvest"/>
-			<property name="Create_item" value="resourceMapleWoodPlankAOO"/>
+			<drop event="Harvest" name="resourceWood" count="10,20" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="resourceWood"/>
 			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
 		</block>
 		<block name="plantedSugarMapleTreePlantHarvestAOO">
 			<property name="Extends" value="plantedSugarMapleTreePlantWildAOO"/>
 			<property name="DescriptionKey" value="plantedSugarMapleTreePlantHarvestAOO"/>
 			<property name="CreativeMode" value="Dev"/>
-			<drop event="Harvest" name="resourceMapleWoodPlankAOO" count="10,20" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="10,20" tag="cropHarvest"/>
 			<property name="MaxDamage" value="500"/>
 			<property name="DowngradeBlock" value="plantedSugarMapleTreeSeedAOO"/>
 			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
