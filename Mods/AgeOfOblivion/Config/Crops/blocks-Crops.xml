@@ -1893,15 +1893,15 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Plants.unity3d?aoo/plants/WhiteOakPrefab.prefab"/>
 			<property name="MaxDamage" value="800"/>
 			<drop event="Harvest" name="plantedWhiteOakTreeSeedAOO" count="1" tag="wildCropsHarvest"/>
-			<drop event="Harvest" name="resourceWhiteOakPlankAOO" count="10,20" tag="wildCropsHarvest"/>
-			<property name="Create_item" value="resourceWhiteOakPlankAOO"/>
+			<drop event="Harvest" name="resourceWood" count="10,20" tag="wildCropsHarvest"/>
+			<property name="Create_item" value="resourceWood"/>
 			<property name="Create_item_count" count="1" tag="wildCropsHarvest"/>
 		</block>
 		<block name="plantedWhiteOakTreePlantHarvestAOO">
 			<property name="Extends" value="plantedWhiteOakTreePlantWildAOO"/>
 			<property name="DescriptionKey" value="plantedWhiteOakTreePlantHarvestAOO"/>
 			<property name="CreativeMode" value="Dev"/>
-			<drop event="Harvest" name="resourceWhiteOakPlankAOO" count="10,20" tag="cropHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="10,20" tag="cropHarvest"/>
 			<property name="MaxDamage" value="500"/>
 			<property name="DowngradeBlock" value="plantedWhiteOakTreeSeedAOO"/>
 			<property name="ParticleOnDeath" value="treeGib_dead_01"/>
