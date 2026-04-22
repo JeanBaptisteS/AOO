@@ -849,7 +849,7 @@
         </item>   
 
 
-		<item name="resourceWhiteOakPlankAOO">
+		<!--<item name="resourceWhiteOakPlankAOO">
             <property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="resourceWhiteOakPlankAOO"/>			
             <property name="HoldType" value="31"/>
@@ -864,7 +864,7 @@
             <property name="CraftingIngredientTime" value="10"/>
             <property name="Weight" value="5"/>
             <property name="DescriptionKey" value="resourceWhiteOakPlankAOODesc"/>
-        </item>
+        </item>-->
 
 		<item name="foodCropMixedHerbsAOO">
 			<property name="CreativeMode" value="Player"/>
@@ -937,7 +937,7 @@
 			<property name="DescriptionKey" value="foodCropMixedSpicesAOODesc"/>
 		</item>
 
-		<item name="resourceMapleWoodPlankAOO">
+		<!--<item name="resourceMapleWoodPlankAOO">
             <property name="CreativeMode" value="Player"/>
 			<property name="CustomIcon" value="resourceMapleWoodPlankAOO"/>																  
             <property name="HoldType" value="31"/>
@@ -952,7 +952,7 @@
             <property name="CraftingIngredientTime" value="10"/>
             <property name="Weight" value="5"/>
             <property name="DescriptionKey" value="resourceMapleWoodPlankAOODesc"/>
-        </item>		
+        </item>		-->
 
 
 		<item name="foodCropSugarcaneStalkAOO">
