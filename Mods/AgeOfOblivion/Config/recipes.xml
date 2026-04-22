@@ -107,7 +107,7 @@
 
 
 		<recipe name="toolAgedBarrelAOO" count="1" craft_time="300" craft_area="MasterWorkBench">
-			<ingredient name="resourceWhiteOakPlankAOO" count="50"/> 
+			<ingredient name="resourceWood" count="50"/> 
         </recipe>		
 
 
