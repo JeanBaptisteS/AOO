@@ -528,7 +528,7 @@
 			</effect_group>
 		</entity_class>
 		
-		<entity_class name="WildLionessAOO" extends="animalMountainLion">
+		<entity_class name="WildLionessAOO" extends="WildLionAOO">
 			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_CoreAnimals.unity3d?Lioness.prefab"/> 
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>

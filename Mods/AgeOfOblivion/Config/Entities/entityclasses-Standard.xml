@@ -9,7 +9,7 @@
 			<property name="Faction" value="undead"/>
 			<property name="EntityFlags" value="zombie"/>
 			<property name="HasRagdoll" value="false"/>	
-			<property name="Tags" value="entity,male,zombie,walker,feral,effect_15"/>
+			<property name="Tags" value="entity,male,zombie,walker,feral,effect_15,effect_18r,effect_18b,effect_18g"/>
 			<property name="Prefab" value="#@modfolder:Resources/NewEntities/AOO_StandardEntities.unity3d?Butcher.prefab"/> 
 			<property name="SoundRandomTime" value="30"/> 
 			<property name="SoundRandom" value="zombieRandom3AOO"/>
