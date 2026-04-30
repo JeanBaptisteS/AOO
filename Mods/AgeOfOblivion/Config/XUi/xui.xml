@@ -40,7 +40,7 @@
 		
 		<window_group name="plantProducer" open_backpack_on_open="true" controller="XUiC_ProducerWindowGroup, OblivionCore" close_compass_on_open="true">
 			<window name="plantRecipesListWindow"/>
-			<window name="butcherToolsWindow"/>
+			<window name="HiddenToolsWindow"/>
 			<window name="plantInputWindow"/>
 			<window name="plantOutputWindow"/>
 			<window name="windowNonPagingHeader" />

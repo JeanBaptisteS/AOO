@@ -541,7 +541,8 @@
 <!-- Testing -->
 
 
-		<window name="plantRecipesListWindow" controller="ProducerRecipesList, OblivionCore" panel="Left" width="316" height="220" cursor_area="true" >
+		<!-- <window name="plantRecipesListWindow" controller="ProducerRecipesList, OblivionCore" panel="Left" width="316" height="220" cursor_area="true" > -->
+		<window name="plantRecipesListWindow" controller="ProducerRecipesList, OblivionCore" anchor="CenterTop" pos="-500,-60" width="316" height="220" cursor_area="true" >
 			
 			<rect name="content" pos="0,0">
 				<panel style="header.panel" pos="-3,0">
@@ -565,7 +566,8 @@
 				</scrollview>
 			</rect>
 		</window>	
-		<window name="plantInputWindow" height="125" width="316" panel="Left" cursor_area="true">
+		<!-- <window name="plantInputWindow" height="125" width="316" panel="Left" cursor_area="true"> -->
+		<window name="plantInputWindow" anchor="CenterTop" pos="-500,-500" height="125" width="316" cursor_area="true">
 
 
 			<rect name="content" pos="0,0">
@@ -584,7 +586,8 @@
 
 
 		
-		<window name="plantOutputWindow" height="150" width="316" panel="Left" cursor_area="true">
+		<!-- <window name="plantOutputWindow" height="150" width="316" panel="Left" cursor_area="true"> -->
+		<window name="plantOutputWindow" height="150" width="316" anchor="CenterTop" pos="-500,-650" cursor_area="true">
 			<rect name="content" pos="0,0">
 				<panel style="header.panel" pos="-3,50">
 					<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
