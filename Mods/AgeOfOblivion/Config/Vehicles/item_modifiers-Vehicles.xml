@@ -1,10 +1,8 @@
 <configs>
-
 	<append xpath="/item_modifiers">
-	
 		<item_modifier name="modVehicleWeaponBurstFire" installable_tags="vweapon" modifier_tags="trigger" blocked_tags="noMods" type="attachment">
 			<property name="Extends" value="modGeneralMaster"/>
-			<property name="UnlockedBy" value="modVehicleWeaponBurstFireSchematic"/>			
+			<property name="UnlockedBy" value="modVehicleWeaponBurstFireSchematic"/>
 			<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
 			<item_property_overrides name="*">
 				<property name="burstRepeat" value="2"/>
@@ -29,7 +27,7 @@
 				<property name="burstRepeat" value="10"/>
 			</item_property_overrides>
 		</item_modifier>
-		
+
 		<item_modifier name="modVehicleWeaponFireDamage" installable_tags="vweapon" modifier_tags="ammo" blocked_tags="noMods" type="attachment">
 			<property name="Extends" value="modGeneralMaster"/>
 			<property name="UnlockedBy" value="modVehicleWeaponFireDamageSchematic"/>
@@ -40,7 +38,7 @@
 				<property name="buffAppend" value="buffBurningFlamingArrow"/>
 			</item_property_overrides>
 		</item_modifier>
-
+		
 		<item_modifier name="modVehicleWeaponShockDamage" installable_tags="vweapon" modifier_tags="ammo" blocked_tags="noMods" type="attachment">
 			<property name="Extends" value="modGeneralMaster"/>
 			<property name="UnlockedBy" value="modVehicleWeaponShockDamageSchematic"/>
@@ -51,7 +49,5 @@
 				<property name="buffAppend" value="buffShocked"/>
 			</item_property_overrides>
 		</item_modifier>
-		
 	</append>
-
 </configs>

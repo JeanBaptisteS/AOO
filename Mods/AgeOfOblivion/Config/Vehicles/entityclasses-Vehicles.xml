@@ -274,7 +274,6 @@
 			<property name="NavObject" value="" />
 		</entity_class>
 
-
 		<entity_class name="vehicleFreeFall">
 			<property name="Tags" value="vehicle,nopickup"/>
 			<property name="Class" value="EntityVRide, OblivionCore"/>
@@ -359,8 +358,6 @@
 			<property name="NavObject" value="" />
 		</entity_class>		
 
-
-
 		<entity_class name="vehicleBumpercar">
 			<property name="Tags" value="vehicle,nopickup"/>
 			<property name="Class" value="EntityVJeep"/>
@@ -403,38 +400,40 @@
 			<property name="NavObject" value="" />
 		</entity_class>	
 	
+
+
 		<entity_class name="vehicleMoto">
-			<property name="Tags" value="vehicle,TPDestination"/>
-			<property name="Class" value="EntityMotorcycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?vehicleMoto"/>
+			<property name="Tags" value="vehicle,usesGas,bikerSetBonus,TPDestination"/>
+			<property name="Class" value="EntityMinibike"/>
+			<!-- <property name="Parent" value="Cars"/> -->
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?vehicleMoto.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleM"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="5"/>
-			<property name="Explosion.RadiusEntities" value="5"/>
-			<property name="Explosion.BlockDamage" value="100"/>
-			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="Explosion.ParticleIndex" value="26"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="40"/>
+			<property name="Explosion.EntityDamage" value="40"/>
 			<property name="RotateToGround" value="true"/>
 			<property name="Faction" value="none"/>
 			<property name="MapIcon" value="vehicleMoto"/>
-			<property name="NavObject" value="vehicleMoto" />
+			<property name="NavObject" value="vehicleMoto"/>
 		</entity_class>
 	
 		<entity_class name="vehicleSuperCar01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -446,16 +445,16 @@
 		</entity_class>
 		
 		<entity_class name="vehicleSuperCar02">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -467,16 +466,16 @@
 		</entity_class>
 
 		<entity_class name="vehicleSuperCar03">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -488,16 +487,16 @@
 		</entity_class>
 
 		<entity_class name="vehicleBattle01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -509,16 +508,16 @@
 		</entity_class>
 		
 		<entity_class name="vehicleBattle02">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -530,16 +529,16 @@
 		</entity_class>
 		
 		<entity_class name="vehicleBattle03">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -551,16 +550,16 @@
 		</entity_class>
 		
 		<entity_class name="vehicleBattle04">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -572,16 +571,16 @@
 		</entity_class>
 		
 		<entity_class name="vehicleBattle05">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -593,16 +592,16 @@
 		</entity_class>
 		
 		<entity_class name="vehicleBattle06">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -612,20 +611,20 @@
 			<property name="MapIcon" value="BattleCar06"/>
 			<property name="NavObject" value="BattleCar06" />
 		</entity_class>		
-<!-- ======================================================================= -->
+
 		<entity_class name="vehicleRocketToilet">
 			<property name="Tags" value="vehicle"/>
 			<property name="Class" value="EntityMotorcycle"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?DaToilet2"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?DaToilet2.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="vehicleM"/>
+			<property name="LootListAlive" value="vehicleXS"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="4"/>
-			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.ParticleIndex" value="26"/>
+			<property name="Explosion.RadiusBlocks" value="3"/>
+			<property name="Explosion.RadiusEntities" value="3"/>
 			<property name="Explosion.BlockDamage" value="50"/>
 			<property name="Explosion.EntityDamage" value="50"/>
 			<property name="RotateToGround" value="true"/>
@@ -639,38 +638,17 @@
 			<property name="Buffs" value="buffToiletFire"/>
 		</entity_class>
 
-		<entity_class name="vehicleRickShawBlue">
-			<property name="Tags" value="vehicle"/>
-			<property name="Class" value="EntityMotorcycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/> 
-			<property name="ModelType" value="Standard"/>
-			<property name="SurfaceCategory" value="metal"/>
-			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="vehicleS"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="5"/>
-			<property name="Explosion.RadiusEntities" value="5"/>
-			<property name="Explosion.BlockDamage" value="100"/>
-			<property name="Explosion.EntityDamage" value="100"/>
-			<property name="RotateToGround" value="true"/>
-			<property name="Faction" value="none"/>
-			<property name="MapIcon" value="Cruisericon"/>
-			<property name="NavObject" value="Motorcycle" />
-		</entity_class>	
-		
 		<entity_class name="vehicleCyberDelorean">
-			<property name="Tags" value="moto,pedals,Delorean"/>
+			<property name="Tags" value="vehicle,delorean,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -679,20 +657,19 @@
 			<property name="Faction" value="none"/>
 			<property name="MapIcon" value="Delorean"/>
 			<property name="NavObject" value="Delorean" />
-			<property name="Buffs" value="buffDelorean2" />
 		</entity_class>			
 		
 		<entity_class name="vehicleBatCar01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -705,38 +682,34 @@
 		</entity_class>		
 		
 		<entity_class name="vehicleScooter">
+			<property name="Class" value="EntityBicycle"/>
 			<property name="Tags" value="vehicle"/>
-			<property name="Class" value="EntityMotorcycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="paint" value="ElectricScooter"/>			
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXS"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="5"/>
-			<property name="Explosion.RadiusEntities" value="5"/>
-			<property name="Explosion.BlockDamage" value="100"/>
-			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="Explosion.ParticleIndex" value="25"/>
+			<property name="Explosion.RadiusBlocks" value="1"/>
+			<property name="Explosion.RadiusEntities" value="1"/>
 			<property name="RotateToGround" value="true"/>
 			<property name="Faction" value="none"/>
 			<property name="MapIcon" value="Scooter"/>
-			<property name="NavObject" value="Scooter" />
+			<property name="NavObject" value="Scooter"/>
 		</entity_class>
 
 		<entity_class name="vehicleSportsCarWhite">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleM"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -748,16 +721,16 @@
 		</entity_class>		
 		
 		<entity_class name="vehicleHotRod01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -769,16 +742,16 @@
 		</entity_class>		
 		
 		<entity_class name="vehicleFeature01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleM"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -790,16 +763,16 @@
 		</entity_class>	
 
 		<entity_class name="vehicleBuggy01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleS"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -811,16 +784,16 @@
 		</entity_class>	
 
 		<entity_class name="vehicleMuscleCar01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -832,16 +805,16 @@
 		</entity_class>		
 
 		<entity_class name="vehicleApocRV">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -853,17 +826,80 @@
 			<property name="Buffs" value="buffRV2" />
 		</entity_class>
 		
+		<entity_class name="vehicleHarley">
+			<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleM"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="27"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="50"/>
+			<property name="Explosion.EntityDamage" value="50"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="Cruisericon"/>
+			<property name="NavObject" value="motorcycle" />
+		</entity_class>
+
+		<entity_class name="vehicleChopper">
+			<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper.prefab"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleM"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="27"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="50"/>
+			<property name="Explosion.EntityDamage" value="50"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="Cruisericon"/>
+			<property name="NavObject" value="motorcycle" />
+		</entity_class>
+
+		<entity_class name="vehicleMCycle01">
+			<property name="Tags" value="vehicle,usesGas,bikerSetBonus"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleS"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="27"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="50"/>
+			<property name="Explosion.EntityDamage" value="50"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="Cruisericon"/>
+			<property name="NavObject" value="motorcycle" />
+		</entity_class>		
+
 		<entity_class name="vehicleApocTractor">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -874,80 +910,17 @@
 			<property name="NavObject" value="Tractor" />
 		</entity_class>
 
-		<entity_class name="vehicleHarley">
-			<property name="Tags" value="vehicle"/>
-			<property name="Class" value="EntityMotorcycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="SurfaceCategory" value="metal"/>
-			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="vehicleM"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="5"/>
-			<property name="Explosion.RadiusEntities" value="5"/>
-			<property name="Explosion.BlockDamage" value="100"/>
-			<property name="Explosion.EntityDamage" value="100"/>
-			<property name="RotateToGround" value="true"/>
-			<property name="Faction" value="none"/>
-			<property name="MapIcon" value="Cruisericon"/>
-			<property name="NavObject" value="Motorcycle" />
-		</entity_class>
-
-		<entity_class name="vehicleChopper">
-			<property name="Tags" value="vehicle"/>
-			<property name="Class" value="EntityMotorcycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/> 
-			<property name="ModelType" value="Standard"/>
-			<property name="SurfaceCategory" value="metal"/>
-			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="vehicleM"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="5"/>
-			<property name="Explosion.RadiusEntities" value="5"/>
-			<property name="Explosion.BlockDamage" value="100"/>
-			<property name="Explosion.EntityDamage" value="100"/>
-			<property name="RotateToGround" value="true"/>
-			<property name="Faction" value="none"/>
-			<property name="MapIcon" value="Cruisericon"/>
-			<property name="NavObject" value="Motorcycle" />
-		</entity_class>
-
-		<entity_class name="vehicleMCycle01">
-			<property name="Tags" value="vehicle,color1"/>
-			<property name="Class" value="EntityMotorcycle"/>
-			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Mcycle01"/>
-			<property name="ModelType" value="Standard"/>
-			<property name="SurfaceCategory" value="metal"/>
-			<property name="IgnoreTrigger" value="true"/>
-			<property name="LootListAlive" value="vehicleS"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
-			<property name="Explosion.RadiusBlocks" value="5"/>
-			<property name="Explosion.RadiusEntities" value="5"/>
-			<property name="Explosion.BlockDamage" value="100"/>
-			<property name="Explosion.EntityDamage" value="100"/>
-			<property name="RotateToGround" value="true"/>
-			<property name="Faction" value="none"/>
-			<property name="MapIcon" value="Cruisericon"/>
-			<property name="NavObject" value="Motorcycle" />
-		</entity_class>		
-
 		<entity_class name="vehiclePoliceCopter">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVGyroCopter"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="28"/>
 			<property name="Explosion.RadiusBlocks" value="3"/>
 			<property name="Explosion.RadiusEntities" value="3"/>
 			<property name="Explosion.BlockDamage" value="30"/>
@@ -959,16 +932,16 @@
 		</entity_class>	
 
 		<entity_class name="vehicleMI17">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVGyroCopter"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MI17"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MI17.prefab"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="28"/>
 			<property name="Explosion.RadiusBlocks" value="3"/>
 			<property name="Explosion.RadiusEntities" value="3"/>
 			<property name="Explosion.BlockDamage" value="30"/>
@@ -1000,17 +973,38 @@
 		</entity_class>
 -->
 
+		<entity_class name="vehicleRickShawBlue">
+			<property name="Tags" value="vehicle,usesGas"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue.prefab"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="vehicleS"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="26"/>
+			<property name="Explosion.RadiusBlocks" value="3"/>
+			<property name="Explosion.RadiusEntities" value="3"/>
+			<property name="Explosion.BlockDamage" value="20"/>
+			<property name="Explosion.EntityDamage" value="20"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="Cruisericon"/>
+			<property name="NavObject" value="minibike" />
+		</entity_class>	
+		
 		<entity_class name="vehicleRW01">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1020,17 +1014,18 @@
 			<property name="MapIcon" value="RW01"/>
 			<property name="NavObject" value="RW01" />
 		</entity_class>
+		
 		<entity_class name="vehicleRW02">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1042,16 +1037,16 @@
 		</entity_class>
 
 		<entity_class name="vehicleRW03">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1063,16 +1058,16 @@
 		</entity_class>
 
 		<entity_class name="vehicleRW04">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1084,16 +1079,16 @@
 		</entity_class>
 
 		<entity_class name="vehicleRW05">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1105,16 +1100,16 @@
 		</entity_class>
 
 		<entity_class name="vehicleRW06">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1126,16 +1121,16 @@
 		</entity_class>
 	
 		<entity_class name="vehicleRW07">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1147,16 +1142,16 @@
 		</entity_class>	
 
 		<entity_class name="vehicleRW08">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>
@@ -1168,16 +1163,16 @@
 		</entity_class>	
 
 		<entity_class name="vehicleRW09">
-			<property name="Tags" value="vehicle"/>
+			<property name="Tags" value="vehicle,usesGas"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
-			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/> 
+			<property name="Prefab" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09.prefab"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>
 			<property name="LootListAlive" value="vehicleXXL"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.ParticleIndex" value="29"/>
 			<property name="Explosion.RadiusBlocks" value="5"/>
 			<property name="Explosion.RadiusEntities" value="5"/>
 			<property name="Explosion.BlockDamage" value="100"/>

@@ -500,10 +500,10 @@
 		</item>
 
 		<item name="vehicleMotoPlaceable">
-			<property name="CustomIcon" value="vehicleMoto"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?vehicleMoto"/>
+			<property name="CustomIcon" value="vehicleMoto"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,vlight"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?vehicleMoto.prefab"/>
 			<property name="EconomicValue" value="10000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleMoto"/>
@@ -517,10 +517,10 @@
 		</item>	
 	
 		<item name="vehicleSuperCar01Placeable">
-			<property name="CustomIcon" value="SuperCar01"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01"/>
+			<property name="CustomIcon" value="SuperCar01"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar01.prefab"/>
 			<property name="EconomicValue" value="10000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleSuperCar01"/>
@@ -534,10 +534,10 @@
 		</item>
 
 		<item name="vehicleSuperCar02Placeable">
-			<property name="CustomIcon" value="SuperCar02"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02"/>
+			<property name="CustomIcon" value="SuperCar02"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar02.prefab"/>
 			<property name="EconomicValue" value="10000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleSuperCar02"/>
@@ -551,10 +551,10 @@
 		</item>
 
 		<item name="vehicleSuperCar03Placeable">
-			<property name="CustomIcon" value="SuperCar03"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03"/>
+			<property name="CustomIcon" value="SuperCar03"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SuperCar03.prefab"/>
 			<property name="EconomicValue" value="10000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleSuperCar03"/>
@@ -568,10 +568,10 @@
 		</item>
 		
 		<item name="vehicleBattle01Placeable">
-			<property name="CustomIcon" value="BattleCar01"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01"/>
+			<property name="CustomIcon" value="BattleCar01"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,noDye"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar01.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleBattle01"/>
@@ -585,10 +585,10 @@
 		</item>
 		
 		<item name="vehicleBattle02Placeable">
-			<property name="CustomIcon" value="BattleCar02"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02"/>
+			<property name="CustomIcon" value="BattleCar02"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar02.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleBattle02"/>
@@ -602,10 +602,10 @@
 		</item>	
 		
 		<item name="vehicleBattle03Placeable">
-			<property name="CustomIcon" value="BattleCar03"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03"/>
+			<property name="CustomIcon" value="BattleCar03"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar03.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleBattle03"/>
@@ -619,10 +619,10 @@
 		</item>	
 		
 		<item name="vehicleBattle04Placeable">
-			<property name="CustomIcon" value="BattleCar04"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04"/>
+			<property name="CustomIcon" value="BattleCar04"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar04.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleBattle04"/>
@@ -636,10 +636,10 @@
 		</item>	
 		
 		<item name="vehicleBattle05Placeable">
-			<property name="CustomIcon" value="BattleCar05"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05"/>
+			<property name="CustomIcon" value="BattleCar05"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,noDye"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar05.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleBattle05"/>
@@ -653,10 +653,10 @@
 		</item>	
 		
 		<item name="vehicleBattle06Placeable">
-			<property name="CustomIcon" value="BattleCar06"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06"/>
+			<property name="CustomIcon" value="BattleCar06"/>		
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BattleCar06.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleBattle06"/>
@@ -670,10 +670,10 @@
 		</item>		
 		
 		<item name="vehicleRocketToiletPlaceable">
-			<property name="CustomIcon" value="DaToilet"/>		
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?DaToilet2"/>
+			<property name="CustomIcon" value="DaToilet"/>		
+			<property name="Tags" value="vehicle,canHaveCosmetic"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?DaToilet2.prefab"/>
 			<property name="EconomicValue" value="10000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleRocketToilet"/>
@@ -688,13 +688,14 @@
 		</item>	
 
 		<item name="vehicleBatCar01Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
 			<property name="DescriptionKey" value="vehicleBatCar01PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="BatCar01"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?BatCar01.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -710,12 +711,12 @@
 		</item>	
 
 		<item name="vehicleScooterPlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight,canHaveCosmetic"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vlight,canHaveCosmetic"/>
 			<property name="CustomIcon" value="Scooter"/>
 			<property name="DescriptionKey" value="vehicleScooterPlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Scooter.prefab"/>
 			<property name="EconomicValue" value="1000"/>
 			<property name="SellableToTrader" value="true"/>
 			<property class="Action1">
@@ -730,11 +731,11 @@
 		</item>
 
 		<item name="vehicleSportsCarWhitePlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,canHaveCosmetic"/>
 			<property name="CustomIcon" value="SportsCarWhite"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?SportsCarWhite.prefab"/>
 			<property name="DescriptionKey" value="vehicleSportsCarWhitePlaceableDesc"/>
 			<property name="EconomicValue" value="40000"/>
 			<property class="Action1">
@@ -749,12 +750,12 @@
 		</item>	
 
 		<item name="vehicleCyberDeloreanPlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,canHaveCosmetic"/>
 			<property name="CustomIcon" value="Delorean"/>
 			<property name="DescriptionKey" value="vehicleCyberDeloreanPlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDelParked"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?CyberDel.prefab"/>
 			<property name="EconomicValue" value="11000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleCyberDelorean"/>
@@ -768,11 +769,11 @@
 		</item>	
 
 		<item name="vehicleHotRod01Placeable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,noDye"/>
 			<property name="CustomIcon" value="HotRod"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?HotRod01.prefab"/>
 			<property name="DescriptionKey" value="vehicleHotRod01Placeable"/>
 			<property name="EconomicValue" value="55000"/>
 			<property class="Action1">
@@ -787,11 +788,11 @@
 		</item>
 
 		<item name="vehicleFeature01Placeable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vstorage,canHaveCosmetic"/>
 			<property name="CustomIcon" value="Buggy01"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Feature01.prefab"/>
 			<property name="DescriptionKey" value="vehicleFeature01Placeable"/>
 			<property name="EconomicValue" value="50000"/>
 			<property class="Action1">
@@ -806,11 +807,11 @@
 		</item>
 
 		<item name="vehicleBuggy01Placeable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,vlight,vstorage,canHaveCosmetic"/>
 			<property name="CustomIcon" value="BuggyMulti"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Buggy01.prefab"/>
 			<property name="DescriptionKey" value="vehicleBuggy01PlaceableDesc"/>
 			<property name="EconomicValue" value="35000"/>
 			<property class="Action1">
@@ -825,12 +826,12 @@
 		</item>	
 
 		<item name="vehicleMuscleCar01Placeable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,canHaveCosmetic"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,canHaveCosmetic"/>
 			<property name="CustomIcon" value="MuscleMulti"/>
 			<property name="DescriptionKey" value="vehicleMuscleCar01PlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MuscleCar03.prefab"/>
 			<property name="EconomicValue" value="33000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleMuscleCar01"/>
@@ -844,31 +845,31 @@
 		</item>
 
 		<item name="vehicleApocRVPlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,vplow,varmor,vweapon,canHaveCosmetic"/>
 			<property name="CustomIcon" value="rv"/>
 			<property name="DescriptionKey" value="vehicleApocRVPlaceable"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocRV.prefab"/>
 			<property name="EconomicValue" value="41000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleApocRV"/>
 				<property name="VehicleSize" value="2.7, 2.8, 5"/>
 			</property>
 			<effect_group name="Base Effects">
-				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModSlots" operation="base_set" value="6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
 			</effect_group>
 		</item>	
 
 		<item name="vehicleHarleyPlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
 			<property name="CustomIcon" value="Harley"/>
 			<property name="DescriptionKey" value="vehicleHarleyPlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Harley.prefab"/>
 			<property name="EconomicValue" value="21000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleHarley"/>
@@ -882,12 +883,12 @@
 		</item>	
 
 		<item name="vehicleChopperPlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,noDye"/>
 			<property name="CustomIcon" value="Chopper"/>
 			<property name="DescriptionKey" value="vehicleChopperPlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?Chopper.prefab"/>
 			<property name="EconomicValue" value="31000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleChopper"/>
@@ -900,13 +901,32 @@
 			</effect_group>
 		</item>
 
-		<item name="vehicleApocTractorPlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight"/>
+		<item name="vehicleMCycle01Placeable">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,canHaveCosmetic"/>
+			<property name="CustomIcon" value="MCycle"/>
+			<property name="DescriptionKey" value="vehicleMCycleMultiPlaceableDesc"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MCycle01.prefab"/> 
+			<property name="EconomicValue" value="20000"/>
+			<property class="Action1">
+				<property name="Vehicle" value="vehicleMCycle01"/>
+				<property name="VehicleSize" value="1, 1, 1"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
+			</effect_group>
+		</item>
+
+		<item name="vehicleApocTractorPlaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,canHaveCosmetic"/>
 			<property name="CustomIcon" value="ApocTractor"/>
 			<property name="DescriptionKey" value="vehicleApocTractorPlaceable"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?ApocTractor.prefab"/>
 			<property name="EconomicValue" value="31000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleApocTractor"/>
@@ -920,11 +940,12 @@
 		</item>	
 
 		<item name="vehiclePoliceCopterPlaceable">
-			<property name="Group" value="Vehicles,All"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vstorage,noDye"/>
 			<property name="CustomIcon" value="PoliceCopter"/>
 			<property name="DescriptionKey" value="vehiclePoliceCopterPlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?PoliceCopter.prefab"/>
 			<property name="EconomicValue" value="15000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehiclePoliceCopter"/>
@@ -938,11 +959,12 @@
 		</item>
 
 		<item name="vehicleMI17Placeable">
-			<property name="Group" value="Vehicles,All"/>
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vstorage,noDye"/>
 			<property name="CustomIcon" value="MI17"/>
 			<property name="DescriptionKey" value="vehicleMI17PlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MI17"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MI17.prefab"/>
 			<property name="EconomicValue" value="15000"/>
 			<property class="Action1">
 				<property name="Vehicle" value="vehicleMI17"/>
@@ -955,13 +977,13 @@
 			</effect_group>
 		</item>
 
-			<item name="vehicleRickShawBluePlaceable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vfuel,vlight"/>
+		<item name="vehicleRickShawBluePlaceable">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Group" value="Vehicles,All"/>
+			<property name="Tags" value="vehicle,vengine,vfuel,vlight,noDye"/>
 			<property name="CustomIcon" value="RickShaw"/>
 			<property name="DescriptionKey" value="vehicleRickShaw01PlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RickShawBlue.prefab"/>
 			<property name="EconomicValue" value="3000"/>
 			<property name="SellableToTrader" value="true"/>
 			<property class="Action1">
@@ -974,14 +996,16 @@
 				<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
 			</effect_group>
 		</item>	
+		
 		<item name="vehicleRW01Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,varmor,vweapon,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW02PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar01"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar01.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -997,13 +1021,14 @@
 		</item>	
 
 		<item name="vehicleRW02Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,vweapon,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW02PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar02"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar02.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1019,13 +1044,14 @@
 		</item>	
 
 		<item name="vehicleRW03Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,vweapon,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW02PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar03"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar03.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1041,13 +1067,14 @@
 		</item>		
 
 		<item name="vehicleRW04Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,vweapon,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW02PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RW04"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar04.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1063,13 +1090,14 @@
 		</item>		
 
 		<item name="vehicleRW05Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,vstorage,vweapon,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW02PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar05"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar05.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1085,13 +1113,14 @@
 		</item>		
 
 		<item name="vehicleRW06Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW06PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar06"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar06.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1107,13 +1136,14 @@
 		</item>				
 
 		<item name="vehicleRW07Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW06PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar07"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar07.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1129,13 +1159,14 @@
 		</item>		
 	
 		<item name="vehicleRW08Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW06PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar08"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar08.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1151,13 +1182,14 @@
 		</item>		
 
 		<item name="vehicleRW09Placeable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vfuel,vlight"/>
+			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,vplow,varmor,noDye"/>
 			<property name="DescriptionKey" value="vehicleRW09PlaceableDesc"/>
 			<property name="HoldType" value="7"/>
 			<property name="CustomIcon" value="RWCar09"/>
 			<property name="HoldingItemHidden" value="true"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09"/>
+			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?RWCar09.prefab"/>
 			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="EconomicValue" value="30000"/>
@@ -1171,25 +1203,6 @@
 				<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
 			</effect_group>
 		</item>	
-
-		<item name="vehicleMCycle01Placeable">
-			<property name="Group" value="Vehicles,All"/>
-			<property name="Tags" value="vehicle,vengine,vengine150,vfuel,vlight,canHaveCosmetic"/>
-			<property name="Extends" value="vehicleMinibikePlaceable"/>
-			<property name="CustomIcon" value="MCycle"/>
-			<property name="DescriptionKey" value="vehicleMCycleMultiPlaceableDesc"/>
-			<property name="Meshfile" value="#@modfolder:Resources/AOO_Vehicles.unity3d?MCycle01"/> 
-			<property name="EconomicValue" value="20000"/>
-			<property class="Action1">
-				<property name="Vehicle" value="vehicleMCycle01"/>
-				<property name="VehicleSize" value="1, 1, 1"/>
-			</property>
-			<effect_group name="Base Effects">
-				<passive_effect name="ModSlots" operation="base_set" value="4"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="25000"/>
-			</effect_group>
-		</item>
 
 		
 	</append>

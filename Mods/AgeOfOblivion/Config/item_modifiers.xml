@@ -3,4 +3,6 @@
 	<include filename="Core/item_modifiers-Core.xml" />
 	<include filename="Vehicles/item_modifiers-Vehicles.xml" />
 	
+	<setAttribute xpath="/item_modifiers/item_modifier[contains(@name, 'Dye')]" name="blocked_tags">noDye</setAttribute>
+	
 </config>

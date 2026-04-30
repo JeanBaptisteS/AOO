@@ -283,7 +283,7 @@
 				</grid>
 
 
-				<!--	<rect width="62" height="62" pos="0,0" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+					<!--<rect width="62" height="62" pos="0,0" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
 
 
 			
@@ -313,9 +313,10 @@
 					</rect>-->
 	
 
-				<rect name="hud" pos="-1515,0" rows="1" cols="1" width="1200" side="right" controller="Quartz.VehicleGas, Quartz" visible="{statvisible}" >
+				<rect name="hud" pos="-1515,0" rows="1" cols="1" width="1200" side="right" controller="Quartz.VehicleHealth, Quartz" visible="{statvisible}" >
 	
-
+					<sprite name="fuelindicator_gauge" depth="4" pos="597, 95" width="1200" height="200" sprite="dashboard" pivot="center" globalopacitymod="1.8" />
+					
 					<rect width="5" height="100" pos="343,99" controller="Quartz.HUDHealth, Quartz" stat_type="Health" visible="{statvisible}">
 						<sprite name="BarContent" depth="6" size="5,88" sprite="menu_empty2px" color="[playerHealthBar]" type="filled" fill="0" filldirection="vertical"  />
 					</rect>
@@ -332,18 +333,18 @@
 						<sprite name="BarContent" depth="6" size="5,88" sprite="menu_empty2px" color="[playerThirstBar]" type="filled" fill="0" filldirection="horizontal"  />
 					</rect>					
 					
-					<rect name="VehicleDash" depth="2" pos="597, 95" width="2000" height="330" controller="Quartz.VehicleGas, Quartz" visible="{statvisible}">
-						<sprite name="fuelindicator_gauge" depth="4" pos="0,0" width="1200" height="200" sprite="dashboard" pivot="center" globalopacitymod="1.8" />					
+					<rect name="VehicleDash" depth="2" pos="597, 95" width="2000" height="330" controller="Quartz.VehicleGas, Quartz" visible="{statvisible}">					
 						<rect name="fuelindicator" depth="2" pos="155, -27" width="200" height="200" controller="Quartz.VehicleGas, Quartz" visible="{statvisible}">
 							<sprite name="indicator_needle" depth="6" pos="0,0" size="125,125" sprite="Pointer2" pivot="center" globalopacitymod="1.8" controller="Quartz.DialIndicator, Quartz" indicator_value="{statuipercentage}" start_angle="93" end_angle="-93" range_min="0" range_max="1" limit_indicator_to_range="true" animation_duration="0.3" />
 						</rect>	
-						<rect name="damageindicator" depth="2" pos="0,0" width="200" height="200" controller="Quartz.VehicleHealth, Quartz" visible="{statvisible}">
-							<sprite name="indicator_needle" depth="6" pos="-155,-27" size="125,125" sprite="Pointer2" pivot="center" globalopacitymod="1.8" controller="Quartz.DialIndicator, Quartz" indicator_value="-{statuipercentage}" start_angle="-117" end_angle="0" range_min="-1" range_max="0" limit_indicator_to_range="true" animation_duration="0.3" />
-							<label name="TextContent" depth="7" pos="-155,-67" size="74,20" text="{stat}" color="[red]" font_face="#@modfolder:Resources/fonts.unity3d?DS-Digital" font_size="16" crispness="Never"  upper_case="true" justify="center" pivot="center" />
-						</rect>	
-						<rect name="speedindicator" depth="2" pos="-4, 126" width="200" height="200" controller="Quartz.Speedometer, Quartz" >
-							<sprite name="indicator_needle" depth="6" pos="5,-147" size="125,125" sprite="Pointer2" pivot="center" globalopacitymod="1.8" controller="Quartz.DialIndicator, Quartz" indicator_value="{currentforwardspeed}" start_angle="160" end_angle="-160" range_min="0" range_max="200" limit_indicator_to_range="false" animation_duration="0.3" />
-						</rect>							
+													
+					</rect>
+					<rect name="damageindicator" depth="2" pos="597, 95" width="200" height="200" controller="Quartz.VehicleHealth, Quartz" visible="{statvisible}">
+						<sprite name="indicator_needle" depth="6" pos="-155,-27" size="125,125" sprite="Pointer2" pivot="center" globalopacitymod="1.8" controller="Quartz.DialIndicator, Quartz" indicator_value="-{statuipercentage}" start_angle="-117" end_angle="0" range_min="-1" range_max="0" limit_indicator_to_range="true" animation_duration="0.3" />
+						<label name="TextContent" depth="7" pos="-155,-67" size="74,20" text="{stat}" color="[red]" font_face="#@modfolder:Resources/fonts.unity3d?DS-Digital" font_size="16" crispness="Never"  upper_case="true" justify="center" pivot="center" />
+					</rect>	
+					<rect name="speedindicator" depth="2" pos="593, 221" width="200" height="200" controller="Quartz.Speedometer, Quartz" >
+						<sprite name="indicator_needle" depth="6" pos="5,-147" size="125,125" sprite="Pointer2" pivot="center" globalopacitymod="1.8" controller="Quartz.DialIndicator, Quartz" indicator_value="{currentforwardspeed}" start_angle="160" end_angle="-160" range_min="0" range_max="200" limit_indicator_to_range="false" animation_duration="0.3" />
 					</rect>
 				</rect>	
 			</window>
