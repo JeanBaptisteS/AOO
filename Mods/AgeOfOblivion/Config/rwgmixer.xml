@@ -1,11 +1,16 @@
 <config>
 
-	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_rekt']"/>
-	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_jen']"/>
-	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_bob']"/>
-	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_hugh']"/>
-	<remove xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_joel']"/>
-
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_rekt']" name="min_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_rekt']" name="max_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_jen']" name="min_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_jen']" name="max_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_bob']" name="min_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_bob']" name="max_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_hugh']" name="min_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_hugh']" name="max_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_joel']" name="min_count">0</setAttribute>
+	<setAttribute xpath="/rwgmixer/prefab_spawn_adjust[@partial_name='trader_joel']" name="max_count">0</setAttribute>
+	
 	<append xpath="/rwgmixer" >
 		<prefab_spawn_adjust partial_name="trader_rekt_AOO" biomeTags="forest" bias="20" min_count="2" max_count="4"/>
 		<prefab_spawn_adjust partial_name="trader_jen_AOO" biomeTags="burntforest" bias="20" min_count="2" max_count="4"/>
