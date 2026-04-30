@@ -1,8 +1,9 @@
 <config>
+
 	<append xpath="/blocks">
 	
-	
 		<!--  Hatch door for Temple Trader Chamber -->
+		
 		<block name="floorHatch01_AOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Class" value="SecureLoot"/>
@@ -99,11 +100,13 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?GroundFogA2_5x5_Prefab"/>
 			<property name="ModelOffset" value="0,-1.3,0"/>			
 		</block>
+		
 		<block name="NewFogA3_5x5">
 			<property name="Extends" value="NewFogA1_3x3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?GroundFogA2_5x5_Prefab"/>
 			<property name="ModelOffset" value="0,.3,0"/>			
-		</block>		
+		</block>	
+		
 		<block name="HardAirAOO">
 			<property name="CustomIcon" value="shapeCube"/>
 			<property name="CreativeMode" value="Dev"/>
@@ -148,6 +151,7 @@
 			<property name="FilterTags" value="floot,ffurniture"/>
 			<property name="DowngradeBlock" value="Dumpster01EmptyAOO"/>
 		</block>
+		
 		<block name="Dumpster01EmptyAOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Tags" value="safes,door,hardenedSafe"/>
@@ -174,31 +178,34 @@
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 			<property name="EconomicValue" value="690"/>
 			<property name="FilterTags" value="floot,ffurniture"/>
-		</block>	
+		</block>
+		
 		<block name="Dumpster02AOO">
 			<property name="Extends" value="Dumpster01AOO"/>
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Dumpster02"/>
 			<property name="DowngradeBlock" value="Dumpster02EmptyAOO"/>
 		</block>
+		
 		<block name="Dumpster02EmptyAOO">
 			<property name="Extends" value="Dumpster01EmptyAOO"/>
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Dumpster02"/>
 		</block>	
+		
 		<block name="Dumpster03AOO">
 			<property name="Extends" value="Dumpster01AOO"/>
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Dumpster03"/>
 			<property name="DowngradeBlock" value="Dumpster03EmptyAOO"/>
 		</block>
+		
 		<block name="Dumpster03EmptyAOO">
 			<property name="Extends" value="Dumpster01EmptyAOO"/>
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Dumpster03"/>
 		</block>	
 
-		
 		<!-- =========    Decoration Template    ========= -->
 
 			<block name="TemplateDecoAOE">
@@ -275,8 +282,6 @@
 			<property name="Model" value="#@modfolder(0-SCore):Resources/PathingCube.unity3d?PathingCube"/>
 		</block>
 
-		
-	
 		<!-- =========    Floor Block Template    ========= -->	
 
 		<block name="TemplateFloorBlock">
@@ -299,10 +304,8 @@
 			<property name="Group" value="Building"/>
 		</block>
 
-
 		<!-- ======================================================== -->
 		
-
 		<block name="KyburCrystal_AOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateDecoration"/>
@@ -407,7 +410,6 @@
 		</block>	
 		
 		<block name="Chamber01AOO">
-
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Chamber01"/>
 			<property name="MultiBlockDim" value="2,3,2"/>
@@ -417,7 +419,6 @@
 		</block>
 
 		<block name="Cage01_AOO">
-
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cage01"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cage01"/>
@@ -432,7 +433,8 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ControlPanel"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
-		</block>		
+		</block>	
+		
 		<block name="FloorGrate_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FloorGrate"/>
@@ -445,6 +447,7 @@
 				<property name="resourceScrapIron" value="10"/> 
 			</property>
 		</block>	
+		
 		<block name="FloorLever_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FloorLever"/>
@@ -452,6 +455,7 @@
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="FloorSafe1_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="FloorSafe1"/>
@@ -460,6 +464,7 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="MaxDamage" value="2500"/>
 		</block>	
+		
 		<block name="FloorSafe2_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="FloorSafe2"/>
@@ -468,6 +473,7 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="MaxDamage" value="2500"/>
 		</block>	
+		
 		<block name="LabLaser_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="LabLaser"/>
@@ -475,20 +481,23 @@
 			<property name="MultiBlockDim" value="3,3,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="LabProp1_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="LabProp1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?LabProp1"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
-			</block>				
+			</block>		
+			
 		<block name="LabProp2_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="LabProp2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?LabProp2"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
-		</block>		
+		</block>	
+		
 		<block name="LabProp3_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="LabProp3"/>
@@ -496,6 +505,7 @@
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="LabProp4_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="LabProp4"/>
@@ -503,6 +513,7 @@
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="OldSink1_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="oldsink1"/>
@@ -510,6 +521,7 @@
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="OldSink2_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="oldsink2"/>
@@ -517,13 +529,15 @@
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="OpTable_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="OpTable"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?OpTable"/>
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="ModelOffset" value="0,0,0"/>
-			</block>		
+			</block>	
+			
 		<block name="OpTable2_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="OpTable2"/>
@@ -531,6 +545,7 @@
 			<property name="MultiBlockDim" value="2,1,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="OpTable3_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="OpTable3"/>
@@ -546,6 +561,7 @@
 			<property name="MultiBlockDim" value="3,2,2"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>	
+		
 		<block name="Tesla_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="Tesla"/>
@@ -553,6 +569,7 @@
 			<property name="MultiBlockDim" value="1,3,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="ToolTable_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="tooltable"/>
@@ -560,6 +577,7 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="WallPanel1_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="WallPanel1"/>
@@ -567,6 +585,7 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="WallPanel2_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="WallPanel2"/>
@@ -574,6 +593,7 @@
 			<property name="MultiBlockDim" value="2,1,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="WallPanel3_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="WallPanel3"/>
@@ -581,6 +601,7 @@
 			<property name="MultiBlockDim" value="2,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="WallPanel4_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="WallPanel4"/>
@@ -588,6 +609,7 @@
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 		</block>
+		
 		<block name="WallSafe1_AOO">
 				<property name="Extends" value="TemplateDecoration"/>
 				<property name="CustomIcon" value="Wallsafe1"/>
@@ -1410,6 +1432,7 @@
 			<property name="ModelOffset" value="0,0,0"/>			
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Throne_01"/>
 		</block>
+		
 		<block name="decorWallDecor01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="WallDecor01"/>	
@@ -1434,12 +1457,10 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?WallWheel"/>
 		</block>
 
-
-
 		<block name="decorOldChair01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="woodchair"/>	
-			<property name="FilterTags" value="MC_building - SC_decor"/>
+			<property name="CustomIcon" value="decoroldchair01aoo"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_building - SC_decor"/><!-- ===== changé ===== -->
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,.5,0"/>			
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?guppyNewChair01"/>
@@ -1447,8 +1468,8 @@
 
 		<block name="decorOldChair02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="leatherchair"/>	
-			<property name="FilterTags" value="MC_building - SC_decor"/>
+			<property name="CustomIcon" value="decoroldchair02aoo"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_building - SC_decor"/><!-- ===== changé ===== -->
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,.5,0"/>			
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?guppyVictorianChair1"/>
@@ -1456,8 +1477,8 @@
 
 		<block name="decorWheelChair01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="wheelchair"/>
-			<property name="FilterTags" value="MC_building - SC_decor"/>
+			<property name="CustomIcon" value="decorwheelchairaoo"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_building - SC_decor"/><!-- ===== changé ===== -->
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,.5,0"/>				
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?guppyWheelchair"/>
@@ -1545,7 +1566,7 @@
 
 		<block name="decorGuillotineAOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="guillotine"/>
+			<property name="CustomIcon" value="Guillotine"/>
 			<property name="MultiBlockDim" value="2,4,2"/>
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Guillotine"/>
@@ -1726,6 +1747,7 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?DeskShelf"/>
 		</block>
+		
 		<block name="decorPicture07AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="painting_rush"/>
@@ -1734,6 +1756,7 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="Model" value="#@modfolder:Resources/picture.unity3d?PictureRush"/>
 		</block>
+		
 		<block name="decorPicture01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="painting_woman"/>
@@ -1742,6 +1765,7 @@
 			<property name="ModelOffset" value="0,-.5,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Picture01_2X3"/>
 		</block>
+		
 		<block name="decorPicture02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="painting_darkwood"/>
@@ -1771,7 +1795,7 @@
 		
 		<block name="decorPicture05AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="painting_darkbluewood"/>
+			<property name="CustomIcon" value="painting_darkbluewood"/><!-- =====changé ===== -->
 			<property name="FilterTags" value="MC_building - SC_decor"/>
 			<property name="MultiBlockDim" value="3,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
@@ -1780,7 +1804,7 @@
 
 		<block name="decorPicture06AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="painting_menonhorse2"/>
+			<property name="CustomIcon" value="painting_menonhorse2"/><!-- =====changé ===== -->
 			<property name="FilterTags" value="MC_building - SC_decor"/>
 			<property name="MultiBlockDim" value="3,2,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
@@ -1795,6 +1819,7 @@
 			<property name="ModelOffset" value="0,-.5,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Picture01_2X3"/>
 		</block>
+		
 		<block name="decorPicture02bAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="painting_darkwood"/>
@@ -1944,9 +1969,6 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?SwordBarrel"/>
 		</block>
 
-
-
-
 		<block name="decorFlag01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="decorFlag01"/>
@@ -2021,7 +2043,7 @@
 
 		<block name="CrystalRock_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="CrystalRock"/>
+			<property name="CustomIcon" value="crystalformation"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="Material" value="Mbedrock"/>
@@ -2043,12 +2065,14 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?tube01"/>
 		</block>
+		
 		<block name="decorCircusTube02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="tube02"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?tube02"/>
 		</block>
+		
 		<block name="decorCircusTube03AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="tube03"/>
@@ -2064,6 +2088,7 @@
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?SpinWin"/>
 		</block>	
+		
 	<!--
 		<block name="decorSlot01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
@@ -2079,7 +2104,8 @@
 			<property name="Class" value="BlockSlotMachine, SlotMachine"/>
 		</block>	
 	-->
-	<block name="decorSlot02AOO">
+	
+		<block name="decorSlot02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Slot2"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2101,7 +2127,6 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Roulette"/>
 		</block>
 
-
 		<!-- ================= Circus/Amusement Park =============================================== -->
 
 		<block name="decorCircusCannonAOO">
@@ -2110,12 +2135,14 @@
 			<property name="MultiBlockDim" value="3,4,3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cannon"/>
 		</block>
+		
 		<block name="decorCircusPostAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CircusPost"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CircusPost"/>
 		</block>
+		
 		<block name="decorCircusPost2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CircusPost2"/>
@@ -2129,42 +2156,49 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop01"/>
 			<property name="CustomIcon" value="Prop01"/>
 		</block>
+		
 		<block name="decorCircusProp02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop02"/>
 			<property name="CustomIcon" value="Prop02"/>
 		</block>
+		
 		<block name="decorCircusProp03AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop03"/>
 			<property name="CustomIcon" value="Prop03"/>
 		</block>
+		
 		<block name="decorCircusProp04AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop04"/>
 			<property name="CustomIcon" value="Prop04"/>
 		</block>
+		
 		<block name="decorCircusProp05AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop05"/>
 			<property name="CustomIcon" value="Prop05"/>
 		</block>
+		
 		<block name="decorCircusProp06AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop06"/>
 			<property name="CustomIcon" value="Prop06"/>
 		</block>
+		
 		<block name="decorCircusProp07AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop07"/>
 			<property name="CustomIcon" value="Prop07"/>
 		</block>
+		
 		<block name="decorCircusProp08AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="2,2,2"/>
@@ -2179,6 +2213,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?wagon1"/>
 			<property name="CustomIcon" value="wagon1"/>
 		</block>
+		
 		<block name="decorCircusWagon2AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2186,6 +2221,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?wagon2"/>
 			<property name="CustomIcon" value="wagon2"/>
 		</block>
+		
 		<block name="decorCircusWagon3AOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2212,6 +2248,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?Swings"/> 
 			<property name="CustomIcon" value="Swings"/>
 		</block>
+		
 		<block name="decorCircusTagadaAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="ActivationDistance" value="12"/>
@@ -2220,6 +2257,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?tagada"/> 
 			<property name="CustomIcon" value="tagada"/>
 		</block>
+		
 		<block name="decorCircusRotoShakeAOO">
 			<property name="Extends" value="TemplateDecoration" />			
 			<property name="ActivationDistance" value="12"/>
@@ -2228,6 +2266,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?TheRotoShake"/> 
 			<property name="CustomIcon" value="TheRotoShake"/>
 		</block>
+		
 		<block name="decorRollerCoasterAOO">
 			<property name="Extends" value="TemplateDecoration" />		
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2236,18 +2275,21 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?Coaster"/> 
 			<property name="CustomIcon" value="Coaster"/>
 		</block>
+		
 		<block name="decorCoaster2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Coaster3"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?Coaster3"/>
 		</block>		
+		
 		<block name="decorGoRoundAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="GoRound"/>	
 			<property name="MultiBlockDim" value="7,1,7"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?GoRound"/>
 		</block>
+		
 		<block name="decorFerris02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FerrisWheel2"/>	
@@ -2269,12 +2311,14 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?bumpertrack"/>
 			<property name="CustomIcon" value="bumpertrack"/>
 		</block>
+		
 		<block name="decorCircusRoundAboutAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?RoundAbout"/>
 			<property name="CustomIcon" value="RoundAbout"/>
-		</block>			
+		</block>	
+		
 <!--		<block name="decorCircusSwingsAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="ActivationDistance" value="18"/>				
@@ -2283,6 +2327,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?Swings"/> 
 			<property name="CustomIcon" value="Swings"/>
 		</block> 
+		
 		<block name="decorCircusTagadaAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="ActivationDistance" value="12"/>
@@ -2291,6 +2336,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?tagada"/> 
 			<property name="CustomIcon" value="tagada"/>
 		</block>
+		
 		<block name="decorCircusRotoShakeAOO">
 			<property name="Extends" value="TemplateDecoration" />			
 			<property name="ActivationDistance" value="12"/>
@@ -2299,6 +2345,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?TheRotoShake"/> 
 			<property name="CustomIcon" value="TheRotoShake"/>
 		</block>
+		
 		<block name="decorRollerCoasterAOO">
 			<property name="Extends" value="TemplateDecoration" />		
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2306,14 +2353,15 @@
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?Coaster"/>
 			<property name="CustomIcon" value="Coaster"/>
-		</block>			
-		-->
+		</block>			-->
+		
 		<block name="decorCircusTicketBoothAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ticketbooth"/>
 			<property name="CustomIcon" value="ticketbooth"/>
 		</block>
+		
 		<block name="decorToyBearAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2321,6 +2369,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ToyBear"/>
 			<property name="CustomIcon" value="ToyBear"/>
 		</block>
+		
 		<block name="decorToyMonkeyAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2328,6 +2377,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ToyMonkey"/>
 			<property name="CustomIcon" value="ToyMonkey"/>
 		</block>
+		
 		<block name="decorToyPenguinAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2335,6 +2385,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ToyPenguin"/>
 			<property name="CustomIcon" value="ToyPenguin"/>
 		</block>
+		
 		<block name="decorToyPigAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2342,6 +2393,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ToyPig"/>
 			<property name="CustomIcon" value="ToyPig"/>
 		</block>
+		
 		<block name="decorToySheepAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2349,6 +2401,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ToySheep"/>
 			<property name="CustomIcon" value="ToySheep"/>
 		</block>
+		
 		<block name="decorToyRabbitAOO">
 			<property name="Extends" value="TemplateDecoration" />
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -2356,32 +2409,38 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ToyRabbit"/>
 			<property name="CustomIcon" value="ToyRabbit"/>
 		</block>
+		
 <!--
 		<block name="decorArcade1AOO">
 			<property name="Extends" value="TemplateDecoration"/>			
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_ArcadeGames.unity3d?Arcade1"/>
 		</block>
+		
 		<block name="decorArcade2AOO">
 			<property name="Extends" value="TemplateDecoration"/>	
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_ArcadeGames.unity3d?Arcade2"/>
-		</block>			
+		</block>	
+		
 		<block name="decorArcade3AOO">
 			<property name="Extends" value="TemplateDecoration"/>	
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_ArcadeGames.unity3d?Arcade3"/>
-		</block>			
+		</block>		
+		
 		<block name="decorArcade4AOO">
 			<property name="Extends" value="TemplateDecoration"/>	
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_ArcadeGames.unity3d?Arcade4"/>
 		</block>	
+		
 		<block name="decorArcade5AOO">
 			<property name="Extends" value="TemplateDecoration"/>	
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_ArcadeGames.unity3d?Arcade5"/>
 		</block>
+		
 		<block name="decorArcade6AOO">
 			<property name="Extends" value="TemplateDecoration"/>	
 			<property name="MultiBlockDim" value="1,2,1"/>
@@ -2409,18 +2468,21 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Vending06"/>
 		</block>
+		
 		<block name="decorCircusVending07AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Vending06"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Vending07"/>
 		</block>
+		
 		<block name="decorCircusVending08AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Vending08"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Vending08"/>
 		</block>
+		
 		<block name="decorCircusVending09AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Vending09"/>
@@ -2445,6 +2507,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>		
 		</block>
+		
 		<block name="decorCircusFlyingCircus2AOO">			
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheFlyingCircus"/>
@@ -2478,6 +2541,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>		
 		</block>
+		
 		<block name="decorCircusBooster2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheBooster"/>
@@ -2497,12 +2561,6 @@
 			</property>		
 		</block>			
 		
-		
-
-
-
-		
-		
 		<block name="decorCircusBigWheelAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheBigWheel"/>	
@@ -2517,6 +2575,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>
+		
 		<block name="decorCircusBigWheel2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheBigWheel"/>	
@@ -2534,7 +2593,6 @@
 			</property>	
 		</block>			
 		
-	
 		<block name="decorCircusBreakDanceAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheBreakDance"/>
@@ -2550,6 +2608,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>	
 		</block>
+		
 		<block name="decorCircusBreakDance2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheBreakDance"/>			
@@ -2568,7 +2627,6 @@
 			</property>	
 		</block>			
 		
-
 		<block name="decoyCoasterAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="The_Condor"/>	
@@ -2600,6 +2658,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>
+		
 		<block name="decoyTheOctopusAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheOctopus"/>	
@@ -2615,10 +2674,11 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>
+		
 		<block name="decoyTheFreeFallAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="Tags" value="freefall"/>			
-			<property name="CustomIcon" value="TheFreeFall"/>	
+			<property name="CustomIcon" value="The_FreeFall"/>	
 			<property name="ActivationDistance" value="18"/>			
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,2,0"/>
@@ -2662,7 +2722,8 @@
 				<property name="ItemCount" value="4"/>
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
-		</block>			
+		</block>		
+		
 		<block name="decoyTheBreakDanceAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheBreakDance"/>	
@@ -2677,7 +2738,8 @@
 				<property name="ItemCount" value="4"/>
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
-		</block>		
+		</block>	
+		
 		<block name="decoyTheFlyingCircusAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheFlyingCircus"/>	
@@ -2693,6 +2755,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>			
+		
 		<block name="decoyTheFrisbeeAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheFrisbee"/>	
@@ -2708,6 +2771,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>
+		
 		<block name="decoyThePirateBoatAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="ThePirate_Boat"/>	
@@ -2723,6 +2787,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>	
+		
 		<block name="decoyTheTakeoffAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheTakeoff"/>	
@@ -2738,6 +2803,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>
+		
 		<block name="decoyTheTopscanAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheTopscan"/>	
@@ -2753,6 +2819,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>
+		
 		<block name="decoyTheTopspinAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheTopspin"/>	
@@ -2784,6 +2851,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>	
+		
 		<block name="decoyTheWildeMouseAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheWildeMouse"/>	
@@ -2815,6 +2883,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>					
 		</block>	
+		
 		<block name="decorCircusTheCondor2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="The_Condor"/>	
@@ -2848,6 +2917,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>	
 		</block>	
+		
 		<block name="decorCircusTheFlyAway2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheFlyaway"/>	
@@ -2879,7 +2949,8 @@
 				<property name="ItemCount" value="4"/>
 				<property name="UpgradeHitCount" value="1"/>
 			</property>	
-		</block>		
+		</block>	
+		
 		<block name="decorCircusTheFreeFall2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="The_FreeFall"/>	
@@ -2897,7 +2968,6 @@
 			</property>	
 		</block>	
 
-		
 		<block name="decorCircusTheFrisbeeAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheFrisbee"/>	
@@ -2913,6 +2983,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>	
+		
 		<block name="decorCircusTheFrisbee2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheFrisbee"/>	
@@ -2945,6 +3016,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>
+		
 		<block name="decorCircusTheOctopus2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheOctopus"/>		
@@ -2963,7 +3035,6 @@
 			</property>
 		</block>
 
-		
 		<block name="decorCircusThePirateBoatAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="ThePirate_Boat"/>
@@ -2979,6 +3050,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>	
+		
 		<block name="decorCircusThePirateBoat2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="ThePirate_Boat"/>		
@@ -3011,6 +3083,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>	
+		
 		<block name="decorCircusTheSteamKaroussell2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheSteamKaroussell"/>		
@@ -3043,6 +3116,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>	
+		
 		<block name="decorCircusTheTakeOff2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheTakeoff"/>			
@@ -3076,6 +3150,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>
+		
 		<block name="decorCircusTheTopScan2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheTopscan"/>			
@@ -3109,6 +3184,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>				
 		</block>
+		
 		<block name="decorCircusTheTopSpin2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheTopspin"/>	
@@ -3141,6 +3217,7 @@
 				<property name="UpgradeHitCount" value="1"/>
 			</property>
 		</block>
+		
 		<block name="decorCircusWasserride2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TheWasserride"/>			
@@ -3192,7 +3269,7 @@
 
 		<block name="decorRingSpinAOO">
 			<property name="Extends" value="TemplateDecoration" />		
-			<property name="CustomIcon" value="TheRing"/>
+			<property name="CustomIcon" value="TheRing"/><!-- ===== changé ===== -->
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="MaxDamage" value="20000"/>
 			<property name="BuffsWhenWalkedOn" value="buffRagdoll"/>					
@@ -3205,6 +3282,7 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BeachChair01"/>
 		</block>	
+		
 		<block name="decorCircusBeachChair02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BeachChair02"/>		
@@ -3218,50 +3296,56 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Statue_01"/>
 		</block>	
+		
 		<block name="decorCircusStatue02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Statue_02"/>		
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Statue_02"/>
 		</block>	
+		
 <!--		<block name="decorCircusStatue02BigAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Statue_02"/>		
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,.5,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Statue_02Big"/>
-		</block>	-->		
+		</block>	-->	
+		
 		<block name="decorCircusSkullStaffAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="SkullStaff"/>		
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?SkullStaff"/>
-		</block>		
+		</block>	
+		
 		<block name="decorCircusBowlingBall01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BowlingBall01"/>			
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BowlingBall01"/>
 		</block>		
+		
 		<block name="decorCircusBowlingBall02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BowlingBall02"/>		
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BowlingBall02"/>
 		</block>	
+		
 		<block name="decorCircusBowlingBall03AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BowlingBall03"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BowlingBall03"/>
 		</block>	
+		
 		<block name="decorCircusBowlingPinsAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="bowlingpins"/>		
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?bowlingpins"/>
 		</block>	
-
 
 		<block name="decorCircusClownCarAOO">
 			<property name="Extends" value="TemplateDecoration"/>
@@ -3278,6 +3362,7 @@
 			<property name="ModelOffset" value="0,1,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?target01"/>
 		</block>
+		
 		<block name="Rocket01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Rocket01"/>	
@@ -3285,8 +3370,7 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Rocket01"/>
 		</block>
 
-
-			<block name="decorPuncherAOO">
+		<block name="decorPuncherAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Punch"/>	
 			<property name="MultiBlockDim" value="1,3,1"/>
@@ -3305,7 +3389,6 @@
 			<property name="CustomIcon" value="Balloons01"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Balloons01"/>
-		
 		</block>
 
 		<block name="decorBooth01AOO">
@@ -3342,22 +3425,21 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Entrance02"/>
 		</block>
-<!--
-		<block name="decorGoRoundAOO">
+<!--	<block name="decorGoRoundAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="GoRound"/>	
 			<property name="MultiBlockDim" value="7,1,7"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Rides2.unity3d?GoRound"/>
-		</block>
-		-->
+		</block>	-->
+		
 		<block name="decorCircusTable01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Table01"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?cTable01"/> 
-		</block>		
-<!--
-		<block name="decorFerris02AOO">
+		</block>	
+		
+<!--	<block name="decorFerris02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FerrisWheel2"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
@@ -3370,18 +3452,21 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?barricade"/>
 		</block>
+		
 		<block name="decorBarricade2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="barricade2"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?barricade2"/>
 		</block>
+		
 		<block name="decorBumperBoatTrackAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BumperBoats"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BumperBoats"/>
 		</block>
+		
 		<block name="decorBarricade3AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="barricade"/>	
@@ -3389,6 +3474,7 @@
 			<property name="ModelOffset" value=".5,0,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?barricade"/>
 		</block>
+		
 		<block name="decorBumperBoatAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BumperBoat"/>	
@@ -3404,6 +3490,7 @@
 			<property name="Tags" value="Balloon"/>
 			<property name="MaxDamage" value="5"/>			
 		</block>
+		
 		<block name="decorCircusBalloon2AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Balloon2"/>	
@@ -3412,6 +3499,7 @@
 			<property name="Tags" value="Balloon"/>	
 			<property name="MaxDamage" value="5"/>				
 		</block>
+		
 		<block name="decorCircusBalloon3AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Balloon3"/>	
@@ -3426,13 +3514,15 @@
 			<property name="CustomIcon" value="Bench01"/>	
 			<property name="MultiBlockDim" value="2,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Bench01"/>
-		</block>			
+		</block>		
+		
 		<block name="decorCircusBench02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Bench02"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Bench02"/>
-		</block>			
+		</block>		
+		
 		<block name="decorCircusBench03AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Bench02"/>	
@@ -3448,7 +3538,6 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Booth03"/>
 		</block>				
 		
-
 		<block name="decorCircusBleacher01AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Bleacher01"/>	
@@ -3470,10 +3559,6 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Prop09"/>
 		</block>
 
-
-
-
-
 		<block name="decorCircusGame01AOO">
 			<property name="AllowAllRotations" value="true"/>
 			<property name="CustomIcon" value="ResTable"/>
@@ -3494,7 +3579,6 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Game01"/>
 		</block>	
 
-
 		<block name="decorCircusTicketBooth02AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TicketBooth2"/>	
@@ -3502,10 +3586,9 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?TicketBooth2"/>
 		</block>	
 
-
 		<block name="decorTent05AOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="Tient05"/>	
+			<property name="CustomIcon" value="Tent05"/>	
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Tent05"/>
 		</block>
@@ -3523,25 +3606,27 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Fountain_02"/>
 		</block>
+		
 		<block name="decorCircusFountain03AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Fountain_03"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Fountain_03"/>
 		</block>
+		
 		<block name="decorCircusFountain04AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Fountain_04"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Fountain_04"/>
 		</block>
+		
 		<block name="decorCircusFountain05AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Fountain_05"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Fountain_05"/>
 		</block>
-
 
 		<block name="decorCircusFountain08AOO">
 			<property name="Extends" value="TemplateDecoration"/>
@@ -3559,31 +3644,34 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CrownAnchor"/>
 		</block>
 
-
 		<block name="decorCircusSignAOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="Sign_clowntown"/>
+			<property name="CustomIcon" value="sign_clowntown"/><!-- ===== changé ===== -->
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Sign01"/>
 		</block>
+		
 		<block name="decorFunhouseSignAOO">
 			<property name="Extends" value="TemplateDecoration"/>
-			<property name="CustomIcon" value="sign_Funhouse"/>
+			<property name="CustomIcon" value="signfunhouse"/><!-- ===== changé ===== -->
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?FunhouseSign2"/>
 		</block>
+		
 		<block name="decorAOOSignAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signAOO"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?signAOO"/>
 		</block>
+		
 		<block name="decorColdDrinksSignAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signColdDrinks"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?signColdDrinks"/>
 		</block>
+		
 		<block name="decorPizzaSignAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signPizza"/>
@@ -3591,25 +3679,27 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?signPizza"/>
 		</block>			
 		
-		
 		<block name="decorSignBurgersAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signBestBurgers"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?signBestBurgers"/>
-		</block>			
+		</block>		
+		
 		<block name="decorSignCoffeeAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signCoffee"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?signCoffee"/>
-		</block>				
+		</block>			
+		
 		<block name="decorSignDessertAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signDessert"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Signs.unity3d?signDessert"/>
 		</block>	
+		
 		<block name="decorSignIceCreamAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="signIceCream"/>
@@ -3623,30 +3713,35 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Counter01"/>
 		</block>
+		
 		<block name="decorCupRackAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CupRack"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CupRack"/>
 		</block>
+		
 		<block name="decorFoodRackAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FoodRack"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?FoodRack"/>
 		</block>
+		
 		<block name="decorFumeHoodAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FumeHood"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?FumeHood"/>
 		</block>
+		
 		<block name="decorHeaterAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Heater"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Heater"/>
 		</block>
+		
 		<block name="decorPizzaDisplayAOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="PizzaDisplay"/>
@@ -3667,7 +3762,6 @@
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?lifeguard"/>
 		</block>
-
 
 		<block name="decorCircusBChair1AOO">
 			<property name="Extends" value="TemplateDecoration"/>
@@ -3704,9 +3798,9 @@
 			<property name="CustomIcon" value="Wagon04"/>
 			<property name="MultiBlockDim" value="2,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Wagon04"/>
-		</block>		
-<!--
-		<block name="decorMask08AOO">
+		</block>
+		
+<!--	<block name="decorMask08AOO">
 			<property name="ActivationDistance" value="12"/>
 			<property name="AllowAllRotations" value="true"/>
 			<property name="CustomIcon" value="ResTable"/>
@@ -3756,8 +3850,7 @@
 			</property>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Masks.unity3d?Mask_12"/>
-		</block>
-		-->
+		</block>	-->
 		
 	<block name="decorCircusRingAOO">
 			<property name="ActivationDistance" value="12"/>
@@ -3780,37 +3873,41 @@
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?TheRing"/>
 		</block>	
 
-
 		<block name="decorCage_2X1_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cage_2X1"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cage_2X1"/>
 		</block>
+		
 		<block name="decorCageRope_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CageRope"/>
 			<property name="MultiBlockDim" value="2,4,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CageRope"/>
 		</block>
+		
 		<block name="decorCageWheel_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CageWheel"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CageWheel"/>
 		</block>
+		
 		<block name="decorCandleabre01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Candlelabre01"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Candlelabre01"/>
 		</block>
+		
 		<block name="decorCandleabre02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Candlelabre02"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Candlelabre02"/>
 		</block>
+		
 		<block name="decorFirePlaceSkull_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="FireplaceSkull"/>
@@ -3818,162 +3915,189 @@
 			<property name="MultiBlockDim" value="3,5,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?FireplaceSkull"/>
 		</block>
+		
 		<block name="decorMiscDecor01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="MiscDecor01"/>
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?MiscDecor01"/>
 		</block>
+		
 		<block name="decorMiscDecor02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="MiscDecor02"/>
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?MiscDecor02"/>
 		</block>
+		
 		<block name="decorMiscDecor03_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="MiscDecor03"/>
 			<property name="MultiBlockDim" value="3,1,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?MiscDecor03"/>
-		</block>		
+		</block>
+		
 		<block name="decorChandelier_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Chandelier"/>
 			<property name="MultiBlockDim" value="2,3,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Chandelier"/>
-		</block>		
+		</block>
+		
 		<block name="decorTorture01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture01"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture01"/>
-		</block>			
+		</block>	
+		
 		<block name="decorTorture02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture02"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture02"/>
 		</block>
+		
 		<block name="decorTorture03_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture03"/>
 			<property name="MultiBlockDim" value="1,1,3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture03"/>
 		</block>
+		
 		<block name="decorTorture04_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture04"/>
 			<property name="MultiBlockDim" value="1,1,3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture04"/>
 		</block>
+		
 		<block name="decorTorture05_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture05"/>
 			<property name="MultiBlockDim" value="1,3,3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture05"/>
 		</block>
+		
 		<block name="decorTorture06_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture06"/>
 			<property name="MultiBlockDim" value="1,3,3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture06"/>
 		</block>
+		
 		<block name="decorTorture07_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture07"/>
 			<property name="MultiBlockDim" value="1,1,3"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture07"/>
 		</block>
+		
 		<block name="decorTorture08_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture08"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture08"/>
 		</block>
+		
 		<block name="decorTorture09_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture09"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture09"/>
 		</block>
+		
 		<block name="decorTorture10_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture10"/>
 			<property name="MultiBlockDim" value="2,3,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture10"/>
 		</block>
+		
 		<block name="decorTorture11_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture11"/>
 			<property name="MultiBlockDim" value="2,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture11"/>
 		</block>
+		
 		<block name="decorTorture12_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Torture12"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Torture12"/>
 		</block>		
+		
 		<block name="decorPotStove_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="PotStove"/>
 			<property name="MultiBlockDim" value="2,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?PotStove"/>
-		</block>			
+		</block>		
+		
 		<block name="decoShelves01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Shelves"/>
 			<property name="MultiBlockDim" value="2,3,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Shelves"/>
-		</block>		
+		</block>	
+		
 		<block name="decoBoneThrone_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BoneThrone"/>
 			<property name="MultiBlockDim" value="3,3,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BoneThrone"/>
-		</block>			
+		</block>		
+		
 		<block name="decoBrokenTable_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="TableBroken"/>
 			<property name="MultiBlockDim" value="2,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?TableBroken"/>
-		</block>			
+		</block>	
+		
 		<block name="decoBoneJar01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BoneJar01"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BoneJar01"/>
 		</block>
+		
 		<block name="decoBoneJar02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BoneJar02"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BoneJar02"/>
 		</block>
+		
 		<block name="decoBrokenCupboard01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CupboardBroken1"/>
 			<property name="MultiBlockDim" value="3,1,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CupboardBroken1"/>
 		</block>
+		
 		<block name="decoBrokenCupboard02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CupboardBroken2"/>
 			<property name="MultiBlockDim" value="3,1,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CupboardBroken2"/>
 		</block>
+		
 		<block name="decoCupboard01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cupboard2X2"/>
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cupboard2X2"/>
 		</block>
+		
 		<block name="decoCupboard02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cupboard2X2_2"/>
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cupboard2X2_2"/>
 		</block>
+		
 		<block name="decoCupboard03_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cupboard2x2_3"/>
@@ -3981,12 +4105,14 @@
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cupboard2x2_3"/>
 		</block>
+		
 		<block name="decoCageBonesSide_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="CageBonesSide"/>
 			<property name="MultiBlockDim" value="1,2,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?CageBonesSide"/>
 		</block>
+		
 		<block name="decoCage3X1_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cage_3X1"/>
@@ -3994,6 +4120,7 @@
 			<property name="MultiBlockDim" value="1,3,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cage_3X1"/>
 		</block>
+		
 		<block name="decoCage2X2X4_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cage_2X2X4"/>
@@ -4001,67 +4128,78 @@
 			<property name="MultiBlockDim" value="3,4,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cage_2X2X4"/>
 		</block>
+		
 		<block name="decoCage2X2X4_Rope_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Cage_2X2X4_Rope"/>
 			<property name="FilterTags" value="MC_building - SC_decor"/>
 			<property name="MultiBlockDim" value="3,6,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cage_2X2X4_Rope"/>
-		</block>			
+		</block>		
+		
 		<block name="decoBrokenBookcase_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BookcaseBroken01"/>
 			<property name="MultiBlockDim" value="2,1,4"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BookcaseBroken01"/>
 		</block>
+		
 		<block name="decoBookcase01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Bookcase1X2"/>
 			<property name="MultiBlockDim" value="1,2,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Bookcase1X2"/>
 		</block>
+		
 		<block name="decoBookcase02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Bookcase2X3"/>
 			<property name="MultiBlockDim" value="1,3,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Bookcase2X3"/>
 		</block>
+		
 		<block name="decoBones01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="Bones"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Bones"/>
 		</block>
+		
 		<block name="decoBoneTable_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BoneTable"/>
 			<property name="MultiBlockDim" value="3,1,2"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BoneTable"/>
-		</block>		
+		</block>	
+		
 		<block name="decoBoneBasket_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BonesBasket"/>
 			<property name="MultiBlockDim" value="2,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BonesBasket"/>
 		</block>
+		
 		<block name="decoBoneBarrel01_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BarrelBones01"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BarrelBones01"/>
 		</block>		
+		
 		<block name="decoBoneBarrel02_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BarrelBones02"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BarrelBones02"/>
-		</block>			
+		</block>
+		
 		<block name="decoBoneBarrel03_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="BarrelBones03"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BarrelBones03"/>
-		</block>		
+		</block>	
+		
 		<block name="decoIronMaiden_AOO">
 			<property name="Extends" value="TemplateDecoration"/>
 			<property name="CustomIcon" value="IronMaiden"/>
@@ -4094,7 +4232,6 @@
 		</block>	
 		
 <!-- ======================= LOOT ========================================= -->
-
 
 		<block name="keyRackBoxMetalloot">
 			<property name="CreativeMode" value="Dev"/>
@@ -4138,39 +4275,38 @@
 			<property name="CustomIcon" value="storagebox"/>	
 			<property name="LootList" value="CircusLoot1"/>	
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?box_supply"/>
-
 		</block>
+		
 		<block name="lootCircus02AOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
 			<property name="CustomIcon" value="storagebox"/>	
 			<property name="LootList" value="CircusLoot2"/>	
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?box_supply"/>
-
 		</block>
+		
 		<block name="lootCircus03AOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
 			<property name="CustomIcon" value="storagebox"/>	
 			<property name="LootList" value="CircusLoot3"/>	
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?box_supply"/>
-
 		</block>
+		
 		<block name="lootCircus04AOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
 			<property name="CustomIcon" value="storagebox"/>	
 			<property name="LootList" value="CircusLoot4"/>	
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?box_supply"/>
-
 		</block>
+		
 		<block name="lootCircus05AOO">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
 			<property name="CustomIcon" value="storagebox"/>	
 			<property name="LootList" value="CircusLoot5"/>	
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?box_supply"/>
-
 		</block>
 
 		<!-- Teleporter Part Loot -->
@@ -4181,12 +4317,14 @@
 			<property name="LootList" value="chamberJen"/>			
 				<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorCrateMulti10"/>
 		</block>
+		
 		<block name="chamberHughLoot">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
 			<property name="LootList" value="chamberHugh"/>			
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorCrateMulti10"/>
 		</block>
+		
 		<block name="chamberRektLoot">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
@@ -4200,13 +4338,13 @@
 			<property name="LootList" value="chamberBob"/>			
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorCrateMulti10"/>
 		</block>
+		
 		<block name="chamberJoelLoot">
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Extends" value="TemplateLoot"/>
 			<property name="LootList" value="chamberJoel"/>			
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorCrateMulti10"/>
 		</block>
-
 
 		<!--  Misc Loot  -->
 
@@ -4391,7 +4529,8 @@
 		</block>
 
 		<block name="Cockpit03Red_AOO">
-			<property name="CreativeMode" value="Dev"/>			<property name="Extends" value="TemplateLoot"/>
+			<property name="CreativeMode" value="Dev"/>			
+			<property name="Extends" value="TemplateLoot"/>
 			<property name="CustomIcon" value="Cockpit03Red"/>	
 			<property name="LootList" value="podLoot"/>
 			<property name="MultiBlockDim" value="2,2,2"/>
@@ -4408,7 +4547,6 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?Cockpit03Black"/>
 		</block>
-
 
 		<block name="CryoPodRed_AOO">
 			<property name="CreativeMode" value="Dev"/>
@@ -4532,8 +4670,6 @@
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,.5,0"/>
 		</block>
-
-
 
 		<block name="lootCrate01_1X1_AOO">
 			<property name="CreativeMode" value="Dev"/>
@@ -4898,7 +5034,7 @@
 <!-- ===================       Fences       =========================== -->
 <!-- ================================================================== -->	
 
-<block name="decorCircusFence04AOO">
+		<block name="decorCircusFence04AOO">
 			<property name="ActivationDistance" value="12"/>
 			<property name="AllowAllRotations" value="true"/>
 			<property name="CustomIcon" value="ResTable"/>
@@ -4918,6 +5054,7 @@
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?circusFence04"/>
 		</block>
+		
 		<block name="decorCircusFence04BAOO">
 			<property name="ActivationDistance" value="12"/>
 			<property name="AllowAllRotations" value="true"/>
@@ -4937,7 +5074,8 @@
 			</property>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?circusFence04"/>
-		</block>			
+		</block>	
+		
 		<block name="decorCircusFence05AOO">
 			<property name="ActivationDistance" value="12"/>
 			<property name="AllowAllRotations" value="true"/>
@@ -4958,6 +5096,7 @@
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?circusFence05"/>
 		</block>
+		
 		<block name="decorCircusFence05BAOO">
 			<property name="ActivationDistance" value="12"/>
 			<property name="AllowAllRotations" value="true"/>
@@ -5028,6 +5167,7 @@
 			<property class="RepairItems"> <property name="resourceClayLump" value="10"/> </property>
 			<property name="Group" value="Building"/>
 		</block>
+		
 		<block name="fenceChainLinkElectricAOO" tag="Fence">
 			<property name="Material" value="Mmetal_medium"/>
 			<property name="Class" value="ElectricWire"/>			
@@ -5052,6 +5192,7 @@
 			<property name="BuffChance" value="1"/>
 			<property name="Group" value="Tools/Traps,Science"/>
 		</block>	
+		
 		<block name="fenceBMFencePostAOO">
 			<property name="Material" value="Mmetal_medium"/>
 			<property name="Shape" value="ModelEntity"/>
@@ -5070,6 +5211,7 @@
 			<property name="Group" value="Building"/>
 			<property name="DescriptionKey" value="IronFenceDesc"/>
 		</block>
+		
 		<block name="fenceBMFence2AOO">
 			<property name="Material" value="Mmetal_medium"/>
 			<property name="Shape" value="ModelEntity"/>
@@ -5088,6 +5230,7 @@
 			<property name="Group" value="Building"/>
 			<property name="DescriptionKey" value="IronFenceDesc"/>
 		</block>
+		
 		<block name="fenceBMFence3AOO">
 			<property name="Material" value="Mmetal_medium"/>
 			<property name="Shape" value="ModelEntity"/>
@@ -5106,6 +5249,7 @@
 			<property name="Group" value="Building"/>
 			<property name="DescriptionKey" value="IronFenceDesc"/>
 		</block>
+		
 		<block name="fenceBMFence4AOO">
 			<property name="Material" value="Mmetal_medium"/>
 			<property name="Shape" value="ModelEntity"/>
@@ -5124,6 +5268,7 @@
 			<property name="MaxDamage" value="5000"/>
 			<property name="DescriptionKey" value="IronFenceDesc"/>
 		</block> 
+		
 		<block name="fenceBMGate1AOO">
 			<property name="Class" value="DoorSecure" />
 			<property name="Material" value="MwoodMetal" />
@@ -5155,6 +5300,7 @@
 			<property name="EconomicValue" value="5" />
 			<property name="EconomicBundleSize" value="10" />
 		</block>	
+		
 		<block name="fenceBMGate2AOO">
 			<property name="Class" value="DoorSecure" />
 			<property name="Material" value="MwoodMetal" />
@@ -5188,7 +5334,7 @@
 		</block>		
 
 <!-- ================================================================== -->	
-<!-- ===================    Doors    ============================ -->
+<!-- ===================    Doors    ======================================== -->
 <!-- ================================================================== -->	
 
 		<!-- =========    Door Template    ========= -->
@@ -5236,6 +5382,7 @@
 			<property name="MultiBlockDim" value="3,3,1" />
 			<property name="Pickable" value="false" />
 		</block>
+		
 		<block name="door_CastleDoor03_AOO">
 			<property name="Extends" value="TemplateDoor" />
 			<property name="CustomIcon" value="doorCastleDoor03" />		
@@ -5245,32 +5392,30 @@
 			<property name="Pickable" value="false" />
 		</block>
 
-	
-	
-			<block name="soundCarnivalAOO">
-				<property name="Extends" value="TemplateDecoAOE"/>
-				<property name="ActiveRadiusEffects" value="buffSoundCarnival(4)"/>			
-				<property name="ActivationDistance" value="4"/>
-			</block>
-			<block name="soundCoasterSound01AOO">
-				<property name="Extends" value="TemplateDecoAOE"/>
-				<property name="ActiveRadiusEffects" value="buffSoundCoaster01(5)"/>			
-				<property name="ActivationDistance" value="5"/>
-			</block>
-			<block name="soundLiveorDieAOO">
-				<property name="Extends" value="TemplateDecoAOE"/>
-				<property name="ActiveRadiusEffects" value="buffSoundLiveorDie(3)"/>			
-				<property name="ActivationDistance" value="3"/>
-			</block>
-			<block name="soundWelcometomyworld">
-				<property name="Extends" value="TemplateDecoAOE"/>
-				<property name="ActiveRadiusEffects" value="buffSoundWelcometomyworld(3)"/>			
-				<property name="ActivationDistance" value="3"/>
-			</block>
+		<block name="soundCarnivalAOO">
+			<property name="Extends" value="TemplateDecoAOE"/>
+			<property name="ActiveRadiusEffects" value="buffSoundCarnival(4)"/>			
+			<property name="ActivationDistance" value="4"/>
+		</block>
+		
+		<block name="soundCoasterSound01AOO">
+			<property name="Extends" value="TemplateDecoAOE"/>
+			<property name="ActiveRadiusEffects" value="buffSoundCoaster01(5)"/>			
+			<property name="ActivationDistance" value="5"/>
+		</block>
+		
+		<block name="soundLiveorDieAOO">
+			<property name="Extends" value="TemplateDecoAOE"/>
+			<property name="ActiveRadiusEffects" value="buffSoundLiveorDie(3)"/>			
+			<property name="ActivationDistance" value="3"/>
+		</block>
+		
+		<block name="soundWelcometomyworld">
+			<property name="Extends" value="TemplateDecoAOE"/>
+			<property name="ActiveRadiusEffects" value="buffSoundWelcometomyworld(3)"/>			
+			<property name="ActivationDistance" value="3"/>
+		</block>
 
-	
-	
-	
-	
 	</append>
+	
 </config>

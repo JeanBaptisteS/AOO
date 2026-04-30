@@ -62,7 +62,6 @@
 	    </property>
 	</append>	
 
-	
 <!-- ============================================================ -->
 <!-- ==========      Make CO2 Canisters available      ========== -->
 <!-- ============================================================ -->
@@ -74,24 +73,25 @@
 		<drop event="Harvest" name="toolCO2CanisterAOO" count="1" prob=".15" tag="salvageHarvest"/>	
 	</append>
 	
-	
 <!-- ============================================================ -->
 <!-- ==========        Enable Pick up of items         ========== -->
 <!-- ============================================================ -->	
 	
 	<!-- ========= Enable Pick up of Lanterns ========= -->
+	
 	<append xpath="/blocks/block[@name='lanternDecorLightWhite']">
 		<property name="CanPickup" value="true" param1="lanternDecorLightWhite_player"/>
 		<property name="TakeDelay" value="2"/>		
 		<property name="Class" value=""/>
 	</append>
+	
 	<!-- ========= Enable Pick up of Burning Barrels ========= -->	
+	
 	<append xpath="/blocks/block[@name='burningBarrel']"> 
 		<property name="CanPickup" value="true" param1="burningBarrelPlayer"/>
 		<property name="TakeDelay" value="2"/>		
 		<property name="Class" value=""/>
 	</append>	
-
 
 	<append xpath="/blocks/block[@name='cntBirdnest']"> 
 		<property name="AlwaysActive" value="true" />
@@ -100,7 +100,6 @@
 		<property name="Tags" value="birdnest"/>
 	</append>	
 
-	
 	<append xpath="/blocks">
 	
 		<block name="paintingVariantHelper">
@@ -272,7 +271,7 @@
 			<property name="ActivateEvent" value="action_BossSpawn"/>
 			<property name="DestroyOnEvent" value="true" />
 			<property name="Shape" value="ModelEntity"/>
-			<property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIcon" value="statue_head"/>  <!-- ===== changé ===== -->
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?GreekHead"/>
 			<property name="DowngradeBlock" value="BossSpawnerLocked_AOO"/>
 		</block>
@@ -329,7 +328,8 @@
 			<property name="DestroyOnEvent" value="false" />
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BarrelBones02"/>
-			<property name="CustomIcon" value="skeletonsbarel"/>			
+			<property name="CustomIcon" value="skeletonsbarel"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/>	<!-- ===== changé ===== -->			
 		</block>
 
 		<block name="MonsterSpawner_AOO">
@@ -342,8 +342,8 @@
 			<property name="DestroyOnEvent" value="false" />
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BarrelBones02"/>
-			<property name="CustomIcon" value="skeletonsbarel"/>		
-			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/>		
+			<property name="CustomIcon" value="skeletonsbarel"/><!-- ===== changé ===== -->	
+			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/>	<!-- ===== changé ===== -->		
 		</block>
 
 
@@ -509,7 +509,7 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BarrelBones02"/>
-			<property name="CustomIcon" value="skeletonsbarel"/>	
+			<property name="CustomIcon" value="skeletonsbarel"/><!-- ===== changé ===== -->	
 		</block>
 	
 	
@@ -1087,8 +1087,8 @@
 			<drop event="Destroy" name="resourceNail" count="5,6" tag="salvageHarvest" tool_category="Disassemble"/>
 			<drop event="Destroy" name="resourceMechanicalParts" count="1,2" tag="salvageHarvest" tool_category="Disassemble"/>
 			<drop event="Fall" name="resourceWood" count="5" prob="0.75" stick_chance="1" />
-			<property name="CustomIcon" value="forcefield"/>
-			<property name="FilterTags" value="MC_building" />
+			<property name="CustomIcon" value="Forcefield"/><!-- ===== changé ===== -->	
+			<property name="FilterTags" value="MC_building"/><!-- ===== changé ===== -->	
 			<property name="EconomicValue" value="5" />
 			<property name="EconomicBundleSize" value="10" />	
 			<property name="Pickable" value="false" />
@@ -1124,8 +1124,8 @@
 			<drop event="Destroy" name="resourceNail" count="5,6" tag="salvageHarvest" tool_category="Disassemble"/>
 			<drop event="Destroy" name="resourceMechanicalParts" count="1,2" tag="salvageHarvest" tool_category="Disassemble"/>
 			<drop event="Fall" name="resourceWood" count="5" prob="0.75" stick_chance="1" />
-			<property name="CustomIcon" value="forcefield"/>
-			<property name="FilterTags" value="MC_building" />
+			<property name="CustomIcon" value="Forcefield"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_building"/><!-- ===== changé ===== -->
 			<property name="EconomicValue" value="5" />
 			<property name="EconomicBundleSize" value="10" />	
 			<property name="Pickable" value="false" />
@@ -1196,8 +1196,8 @@
 				<property name="resourceForgedIron" value="2"/> 
 			</property>
 			<property name="Group" value="Building,advBuilding"/>
-			<property name="CustomIcon" value="keycarddoor"/>
-			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="CustomIcon" value="keycarddoor"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_playerBlocks - SC_decor"/><!-- ===== changé ===== -->
 		</block>
 		
 		<block name="doorKeycardBlackOpenAOO">
@@ -1218,8 +1218,8 @@
 				<property name="resourceForgedIron" value="2"/> 
 			</property>
 			<property name="Group" value="Building,advBuilding"/>
-			<property name="CustomIcon" value="keycarddoor"/>
-			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="CustomIcon" value="keycarddoor"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_playerBlocks - SC_decor"/><!-- ===== changé ===== -->
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.Next" value="doorKeycardBlackClosedAOO"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
@@ -1249,8 +1249,8 @@
 				<property name="resourceForgedIron" value="2"/> 
 			</property>
 			<property name="Group" value="Building,advBuilding"/>
-			<property name="CustomIcon" value="keycarddoor"/>
-			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="CustomIcon" value="keycarddoor"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_playerBlocks - SC_decor"/><!-- ===== changé ===== -->
 		</block>
 		
 		<block name="doorKeycardBlueOpenAOO">
@@ -1271,8 +1271,8 @@
 				<property name="resourceForgedIron" value="2"/> 
 			</property>
 			<property name="Group" value="Building,advBuilding"/>
-			<property name="CustomIcon" value="keycarddoor"/>
-			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="CustomIcon" value="keycarddoor"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_playerBlocks - SC_decor"/><!-- ===== changé ===== -->
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.Next" value="doorKeycardBlueClosedAOO"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
@@ -1302,8 +1302,8 @@
 				<property name="resourceForgedIron" value="2"/> 
 			</property>
 			<property name="Group" value="Building,advBuilding"/>
-			<property name="CustomIcon" value="keycarddoor"/>
-			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="CustomIcon" value="keycarddoor"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_playerBlocks - SC_decor"/><!-- ===== changé ===== -->
 		</block>
 		
 		<block name="doorKeycardRedOpenAOO">
@@ -1324,8 +1324,8 @@
 				<property name="resourceForgedIron" value="2"/> 
 			</property>
 			<property name="Group" value="Building,advBuilding"/>
-			<property name="CustomIcon" value="keycarddoor"/>
-			<property name="FilterTags" value="fdecor,fdoors"/>
+			<property name="CustomIcon" value="keycarddoor"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_playerBlocks - SC_decor"/><!-- ===== changé ===== -->
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.Next" value="doorKeycardRedClosedAOO"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
@@ -1344,8 +1344,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="ActivateEvent" value="action_teleport_bedroll"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>	
@@ -1358,8 +1358,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="ActivateEvent" value="action_teleport_landclaim"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1372,8 +1372,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="ActivateEvent" value="action_teleport_backpack"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1386,8 +1386,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="ActivateEvent" value="action_Teleport10UP"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1399,8 +1399,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="ActivateEvent" value="action_Teleport37UP"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1414,8 +1414,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="ActivateEvent" value="action_ResearchEnter"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1429,8 +1429,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="TriggeredEvent" value="action_ResearchExit1"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1444,8 +1444,8 @@
 			<property name="ModelOffset" value="0,0,0"/>		
 			<property name="TriggeredEvent" value="action_ResearchExit3"/>
 			<property name="DestroyOnEvent" value="false" />
-			<property name="CustomIcon" value="decorVPhone"/>
-			<property name="FilterTags" value="MC_helpers"/>
+			<property name="CustomIcon" value="decorVPhone"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_helpers"/><!-- ===== changé ===== -->
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?decorVPhone"/>
 		</block>
@@ -1454,8 +1454,8 @@
 			<property name="Extends" value="powerSwitch01"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="SingleUse" value="false"/>
-			<property name="CustomIcon" value="trigger_switch"/>
-			<property name="FilterTags" value="MC_building - SC_decor"/>
+			<property name="CustomIcon" value="trigger_switch"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_building - SC_decor"/><!-- ===== changé ===== -->
 			<property name="ModelOffset" value=".5,.5,0"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_LeverSwitch.unity3d?Lever_2"/>
 		</block>
@@ -1511,8 +1511,8 @@
 			<property name="Extends" value="emptyBlockAOO"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?BennyHill"/>
-			<property name="CustomIcon" value="jesterinbox"/>
-			<property name="FilterTags" value="MC_building - SC_decor"/>
+			<property name="CustomIcon" value="jesterinbox"/><!-- ===== changé ===== -->
+			<property name="FilterTags" value="MC_building - SC_decor"/><!-- ===== changé ===== -->
 		</block>
 		
 		<block name="ClownCarTriggerAOO">
@@ -1526,18 +1526,18 @@
 				<property name="ItemCount" value="4"/>
 				<property name="UpgradeHitCount" value="4"/>
 			</property>
-			<property name="CustomIcon" value="ClownCar"/>   		
-			<property name="FilterTags" value="MC_building - SC_decor"/>
+			<property name="CustomIcon" value="ClownCar"/><!-- ===== changé ===== -->   		
+			<property name="FilterTags" value="MC_building - SC_decor"/><!-- ===== changé ===== -->
 		</block>
 		
 		<block name="ClownCar_SpawnAOO">
 			<property name="Extends" value="SpawnCube"/>
+			<property name="CustomIcon" value="ClownCar"/><!-- ===== changé ===== -->   
 			<property name="Class" value="SpawnCube2SDX, SCore" />
 			<property name="Model" value="#@modfolder:Resources/AOO_Decor.unity3d?ClownCar"/>
 			<property name="Config" value="eg=wanderClowns" />
 			<property name="MultiBlockDim" value="1,1,1"/>
 			<property name="ModelOffset" value="0,0,0"/>	
-			<property name="CustomIcon" value="ClownCar"/>
 			<property name="DowngradeBlock" value="ClownCarSpawnTimerAOO"/>
 		</block>
 		
@@ -1549,11 +1549,10 @@
 			<property name="MaxDamage" value="1500"/>	
 			<property name="Collide" value="melee"/>
             <property name="Class" value="UpgradeRated"/>
-			<property name="CustomIcon" value="ClownCar"/>
             <property name="UpgradeRated.Rate" value="100"/>
             <property name="UpgradeRated.ToBlock" value="ClownCarTriggerAOO"/>
-			<property name="DowngradeBlock" value="ClownCarTriggerAOO"/>
-			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/>
+			<property name="CustomIcon" value="ClownCar"/><!-- ===== changé ===== -->   					
+			<property name="FilterTags" value="MC_helpers - SC_helperSleeper"/><!-- ===== changé ===== --> 
 		</block>
 		
 	</append>
