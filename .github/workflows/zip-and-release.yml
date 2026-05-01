@@ -25,9 +25,10 @@ jobs:
         type: 'zip'
         filename: 'AgeOfOblivion.zip'
         exclusions: '*.git* /*node_modules/* .editorconfig'
-    - name: Upload Release
-      uses: ncipollo/release-action@v1.12.0
+    - name: create release
+      uses: ading2210/gh-large-releases@v1
+      if: startsWith(github.ref, 'refs/tags/')
       with:
-        tag: "${{ env.MOD_VERSION }}"
-        artifacts: "AgeOfOblivion.zip"
-        token: ${{ secrets.TOKEN }}
+        draft: true
+        files: 'AgeOfOblivion.zip'
+        tag_name: "${{ env.MOD_VERSION }}"
