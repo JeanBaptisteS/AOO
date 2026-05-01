@@ -15,8 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-      with:
-        ref: "${{ env.MOD_VERSION }}"
     - name: Update ModInfo.xml
       run: sed -i "s|<Version value=\"[^\"]*\" />|<Version value=\"{${{ env.MOD_VERSION }}}\" />|" Mods/AgeOfOblivion/ModInfo.xml
     - name: Archive Release
@@ -28,5 +26,6 @@ jobs:
     - name: Upload Release
       uses: ncipollo/release-action@v1.12.0
       with:
-        artifacts: "release.zip"
+        ref: "${{ env.MOD_VERSION }}"
+        artifacts: "AgeOfOblivion.zip"
         token: ${{ secrets.TOKEN }}
