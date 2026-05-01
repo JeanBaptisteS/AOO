@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Update ModInfo.xml
-      run: sed -i "s|<Version value=\"[^\"]*\" />|<Version value=\"{${{ env.MOD_VERSION }}}\" />|" ModInfo.xml
+      run: sed -i "s|<Version value=\"[^\"]*\" />|<Version value=\"{${{ env.MOD_VERSION }}}\" />|" Mods/AgeOfOblivion/ModInfo.xml
     - name: Archive Release
       uses: thedoctor0/zip-release@0.7.5
       with:
