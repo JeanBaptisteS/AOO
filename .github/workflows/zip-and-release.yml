@@ -14,7 +14,10 @@ jobs:
   package:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: 🚚 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: "${{ env.MOD_VERSION }}"
     - name: Update ModInfo.xml
       run: sed -i "s|<Version value=\"[^\"]*\" />|<Version value=\"{${{ env.MOD_VERSION }}}\" />|" Mods/AgeOfOblivion/ModInfo.xml
     - name: Archive Release
