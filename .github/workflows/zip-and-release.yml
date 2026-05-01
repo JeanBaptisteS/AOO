@@ -14,8 +14,7 @@ jobs:
   package:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@master
       with:
         ref: "${{ env.MOD_VERSION }}"
     - name: Update ModInfo.xml
