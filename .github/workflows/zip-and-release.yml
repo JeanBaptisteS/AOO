@@ -26,6 +26,6 @@ jobs:
     - name: Upload Release
       uses: ncipollo/release-action@v1.12.0
       with:
-        ref: "${{ env.MOD_VERSION }}"
+        tag: "${{ env.MOD_VERSION }}"
         artifacts: "AgeOfOblivion.zip"
         token: ${{ secrets.TOKEN }}
