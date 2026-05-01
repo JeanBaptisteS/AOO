@@ -1,0 +1,30 @@
+name: Zip and Release
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'New release version'
+        required: true
+        type: string
+        
+env:
+  MOD_VERSION: ${{ github.event.inputs.release_tag }}
+  
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Update ModInfo.xml
+      run: sed -i "s|<Version value=\"[^\"]*\" />|<Version value=\"{${{ env.MOD_VERSION }}}\" />|" ModInfo.xml
+    - name: Archive Release
+      uses: thedoctor0/zip-release@0.7.5
+      with:
+        type: 'zip'
+        filename: 'AgeOfOblivion.zip'
+        exclusions: '*.git* /*node_modules/* .editorconfig'
+    - name: Upload Release
+      uses: ncipollo/release-action@v1.12.0
+      with:
+        artifacts: "release.zip"
+        token: ${{ secrets.TOKEN }}
